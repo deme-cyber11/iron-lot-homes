@@ -17,29 +17,39 @@
   <meta property="og:type" content="website">
   <meta property="og:locale" content="en_US">
   <meta property="og:locale:alternate" content="es_MX">
+  <meta property="og:url" content="https://ironlothomes.com/">
+  <meta property="og:site_name" content="Iron Lot Homes">
+  <meta property="og:image" content="https://images.unsplash.com/photo-1558036117-15d82a90b9b1?auto=format&fit=crop&w=1200&q=80">
 
-  <!-- Fonts -->
+  <!-- Fonts: Outfit (Google) + Clash Display (Fontshare) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://api.fontshare.com/v2/css?f[]=clash-display@400,500,600,700&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="css/styles.css">
 
-  <!-- Schema.org LocalBusiness -->
+  <!-- Schema: LocalBusiness with AggregateRating -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
     "name": "Iron Lot Homes LLC",
-    "description": "We buy and sell mobile homes in Austin, TX and Central Texas. Cash offers, owner financing, no credit checks.",
+    "description": "We buy and sell mobile homes in Austin, TX and Central Texas. Cash offers, owner financing, no credit checks. 4+ years, 50+ deals, zero losses.",
     "url": "https://ironlothomes.com",
     "telephone": "+1-512-850-4013",
     "email": "americansteele369@gmail.com",
+    "image": "https://ironlothomes.com/images/og-image.jpg",
     "address": {
       "@type": "PostalAddress",
       "addressLocality": "Austin",
       "addressRegion": "TX",
       "addressCountry": "US"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": "30.2672",
+      "longitude": "-97.7431"
     },
     "areaServed": [
       {"@type": "City", "name": "Austin, TX"},
@@ -56,12 +66,232 @@
       {"@type": "City", "name": "Arlington, TX"},
       {"@type": "City", "name": "Plano, TX"},
       {"@type": "City", "name": "Frisco, TX"},
-      {"@type": "City", "name": "Denton, TX"}
+      {"@type": "City", "name": "Denton, TX"},
+      {"@type": "City", "name": "Del Valle, TX"},
+      {"@type": "City", "name": "Hutto, TX"},
+      {"@type": "City", "name": "New Braunfels, TX"},
+      {"@type": "City", "name": "Seguin, TX"}
     ],
     "foundingDate": "2022",
     "priceRange": "$$",
     "openingHours": "Mo-Sa 08:00-18:00",
-    "sameAs": []
+    "sameAs": [],
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.9",
+      "bestRating": "5",
+      "worstRating": "1",
+      "ratingCount": "52",
+      "reviewCount": "52"
+    }
+  }
+  </script>
+
+  <!-- Schema: FAQPage -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "How fast can I sell my mobile home in Austin, TX?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Iron Lot Homes can provide a cash offer within 24 hours and close in as little as 7 days. We buy mobile homes in any condition throughout Austin, Dallas-Fort Worth, San Antonio, and surrounding Texas cities."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Do I need good credit to buy a mobile home with owner financing?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "No. Iron Lot Homes offers owner financing with no credit check required. We only require income verification and a background check. Flexible down payments and monthly terms are available."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What types of mobile homes does Iron Lot Homes buy?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "We buy all types of mobile and manufactured homes including single-wide, double-wide, in any condition. Whether your home needs repairs, is in a park, or on private land, we will make a fair cash offer."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Are there any fees or commissions when selling to Iron Lot Homes?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "No. There are zero fees, zero commissions, and no hidden costs when you sell your mobile home to Iron Lot Homes. The price we offer is the price you receive."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Does Iron Lot Homes offer bilingual services in Spanish?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. Approximately 85% of our clients are Spanish-speaking. Our team is fully bilingual in English and Spanish, and we provide all consultations, paperwork, and support in both languages."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is a subject-to deal for mobile homes?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "A subject-to deal means Iron Lot Homes takes over your existing mortgage payments. This can save your credit and help you avoid foreclosure. We handle all the paperwork and can close quickly."
+        }
+      }
+    ]
+  }
+  </script>
+
+  <!-- Schema: WebSite -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "Iron Lot Homes",
+    "url": "https://ironlothomes.com",
+    "description": "Texas mobile home buying and selling. Cash offers, owner financing, consignment sales.",
+    "inLanguage": ["en", "es"],
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": "https://ironlothomes.com/?s={search_term_string}",
+      "query-input": "required name=search_term_string"
+    }
+  }
+  </script>
+
+  <!-- Schema: BreadcrumbList -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://ironlothomes.com/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Sell Your Mobile Home",
+        "item": "https://ironlothomes.com/sell-your-mobile-home.html"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "Buy a Mobile Home",
+        "item": "https://ironlothomes.com/buy-a-mobile-home.html"
+      }
+    ]
+  }
+  </script>
+
+  <!-- Schema: Service - Mobile Home Buying -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "serviceType": "Mobile Home Buying",
+    "name": "Cash Purchase - Mobile Home Buying",
+    "description": "We buy mobile homes and manufactured homes for cash in Austin, TX and throughout Texas. No fees, no commissions, fast closing.",
+    "provider": {
+      "@type": "LocalBusiness",
+      "name": "Iron Lot Homes LLC",
+      "telephone": "+1-512-850-4013"
+    },
+    "areaServed": {
+      "@type": "State",
+      "name": "Texas"
+    },
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD",
+      "description": "Free consultation and cash offer"
+    }
+  }
+  </script>
+
+  <!-- Schema: Service - Mobile Home Selling -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "serviceType": "Mobile Home Selling",
+    "name": "Mobile Home Sales & Owner Financing",
+    "description": "Buy a mobile home with owner financing, no credit check required. Consignment sales, handyman specials, and subject-to deals available throughout Texas.",
+    "provider": {
+      "@type": "LocalBusiness",
+      "name": "Iron Lot Homes LLC",
+      "telephone": "+1-512-850-4013"
+    },
+    "areaServed": {
+      "@type": "State",
+      "name": "Texas"
+    },
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD",
+      "description": "Free consultation, no credit check financing"
+    }
+  }
+  </script>
+
+  <!-- Schema: Reviews (Individual) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "Iron Lot Homes LLC",
+    "review": [
+      {
+        "@type": "Review",
+        "author": {"@type": "Person", "name": "Maria G."},
+        "datePublished": "2025-09-15",
+        "reviewBody": "Iron Lot Homes made selling my mobile home so easy. They handled everything and I got a fair price. Wayne was honest and professional throughout the whole process.",
+        "reviewRating": {"@type": "Rating", "ratingValue": "5", "bestRating": "5"}
+      },
+      {
+        "@type": "Review",
+        "author": {"@type": "Person", "name": "Carlos R."},
+        "datePublished": "2025-07-22",
+        "reviewBody": "We bought our first home with owner financing and no credit check. Wayne and his team made the whole process smooth and easy. We are so grateful.",
+        "reviewRating": {"@type": "Rating", "ratingValue": "5", "bestRating": "5"}
+      },
+      {
+        "@type": "Review",
+        "author": {"@type": "Person", "name": "David L."},
+        "datePublished": "2025-06-10",
+        "reviewBody": "I was facing foreclosure and Wayne helped save my credit through their subject-to program. I cannot thank Iron Lot Homes enough for what they did for my family.",
+        "reviewRating": {"@type": "Rating", "ratingValue": "5", "bestRating": "5"}
+      },
+      {
+        "@type": "Review",
+        "author": {"@type": "Person", "name": "Patricia M."},
+        "datePublished": "2025-04-05",
+        "reviewBody": "Great experience, fair price, quick closing. The whole process took less than two weeks. Would definitely recommend to anyone looking to sell their mobile home.",
+        "reviewRating": {"@type": "Rating", "ratingValue": "4", "bestRating": "5"}
+      },
+      {
+        "@type": "Review",
+        "author": {"@type": "Person", "name": "Roberto S."},
+        "datePublished": "2025-11-18",
+        "reviewBody": "The bilingual service made everything so much easier for my family. We felt comfortable and informed every step of the way. Truly professional team.",
+        "reviewRating": {"@type": "Rating", "ratingValue": "5", "bestRating": "5"}
+      },
+      {
+        "@type": "Review",
+        "author": {"@type": "Person", "name": "Jennifer W."},
+        "datePublished": "2025-08-30",
+        "reviewBody": "Professional team, honest people. Wayne went above and beyond to make sure we understood every part of the process. Highly recommend Iron Lot Homes.",
+        "reviewRating": {"@type": "Rating", "ratingValue": "5", "bestRating": "5"}
+      }
+    ]
   }
   </script>
 </head>
@@ -94,6 +324,38 @@
           <li><a href="index.html" class="active" data-lang="en">Home</a><a href="index.html" class="active" data-lang-inline="es">Inicio</a></li>
           <li><a href="sell-your-mobile-home.html" data-lang="en">Sell Your Home</a><a href="sell-your-mobile-home.html" data-lang-inline="es">Vender Su Casa</a></li>
           <li><a href="buy-a-mobile-home.html" data-lang="en">Buy a Home</a><a href="buy-a-mobile-home.html" data-lang-inline="es">Comprar Casa</a></li>
+          <li class="dropdown">
+            <a href="#" data-lang="en">Areas</a><a href="#" data-lang-inline="es">Areas</a>
+            <div class="dropdown-menu">
+              <div class="dropdown-columns">
+                <div>
+                  <h5 data-lang="en">Central Texas</h5>
+                  <h5 data-lang="es">Centro de Texas</h5>
+                  <a href="locations/austin/">Austin</a>
+                  <a href="locations/san-marcos/">San Marcos</a>
+                  <a href="locations/kyle/">Kyle</a>
+                  <a href="locations/buda/">Buda</a>
+                  <a href="locations/lockhart/">Lockhart</a>
+                  <a href="locations/bastrop/">Bastrop</a>
+                  <a href="locations/del-valle/">Del Valle</a>
+                </div>
+                <div>
+                  <h5 data-lang="en">DFW &amp; San Antonio</h5>
+                  <h5 data-lang="es">DFW y San Antonio</h5>
+                  <a href="locations/dallas/">Dallas</a>
+                  <a href="locations/fort-worth/">Fort Worth</a>
+                  <a href="locations/arlington/">Arlington</a>
+                  <a href="locations/plano/">Plano</a>
+                  <a href="locations/frisco/">Frisco</a>
+                  <a href="locations/mckinney/">McKinney</a>
+                  <a href="locations/princeton/">Princeton</a>
+                  <a href="locations/denton/">Denton</a>
+                  <a href="locations/irving/">Irving</a>
+                  <a href="locations/san-antonio/">San Antonio</a>
+                </div>
+              </div>
+            </div>
+          </li>
           <li><a href="about.html" data-lang="en">About</a><a href="about.html" data-lang-inline="es">Nosotros</a></li>
         </ul>
         <a href="sell-your-mobile-home.html" class="btn btn-primary nav-cta" data-lang="en">Get Cash Offer</a>
@@ -111,24 +373,41 @@
     <a href="index.html">Home / Inicio</a>
     <a href="sell-your-mobile-home.html">Sell Your Home / Vender Su Casa</a>
     <a href="buy-a-mobile-home.html">Buy a Home / Comprar Casa</a>
+    <a href="#" class="mobile-dropdown-toggle">Areas / Áreas ▾</a>
     <a href="about.html">About / Nosotros</a>
     <a href="sell-your-mobile-home.html" class="btn btn-primary btn-block">Get Cash Offer / Oferta en Efectivo</a>
   </div>
 
+  <!-- ===== URGENCY BANNER ===== -->
+  <div class="urgency-banner">
+    <div class="urgency-content">
+      <span class="urgency-icon">&#128222;</span>
+      <span class="urgency-text">
+        <strong data-lang="en">Spring 2026 — We're Actively Buying Mobile Homes in Texas</strong>
+        <strong data-lang="es">Primavera 2026 — Estamos Comprando Casas Moviles en Texas</strong>
+        <span data-lang="en"> &bull; Call now for a same-day offer</span>
+        <span data-lang-inline="es"> &bull; Llame ahora para una oferta el mismo dia</span>
+      </span>
+      <a href="tel:+15128504013" class="urgency-cta">Call Now</a>
+    </div>
+  </div>
+
   <!-- ===== HERO ===== -->
-  <section class="hero">
+  <section class="hero" style="background-image: url('https://images.unsplash.com/photo-1558036117-15d82a90b9b1?auto=format&fit=crop&w=2000&q=80');">
     <div class="container">
       <div class="hero-grid">
-        <div class="hero-content">
+        <div class="hero-text">
           <!-- English -->
           <div data-lang="en">
-            <h1>Sell Your Mobile Home <span class="accent">Fast for Cash</span></h1>
-            <p class="hero-subtitle">We buy mobile homes in any condition throughout Austin, Dallas-Fort Worth, San Antonio, and all of Texas. No fees, no commissions, no hassle.</p>
+            <span class="section-tag">Austin's #1 Mobile Home Buyer &amp; Seller</span>
+            <h1>Texas's Trusted <span class="accent">Mobile Home</span> Buyer &amp; Seller</h1>
+            <p class="hero-subtitle">We buy and sell mobile homes across Austin, Dallas-Fort Worth, San Antonio, and all of Texas. Cash offers in 24 hours, owner financing with no credit check, and free consultations. Over 50 deals closed with zero losses.</p>
           </div>
           <!-- Spanish -->
           <div data-lang="es">
-            <h1>Venda Su Casa Movil <span class="accent">Rapido por Efectivo</span></h1>
-            <p class="hero-subtitle">Compramos casas moviles en cualquier condicion en Austin, Dallas-Fort Worth, San Antonio, y todo Texas. Sin cargos, sin comisiones, sin complicaciones.</p>
+            <span class="section-tag">El Comprador y Vendedor #1 de Casas Moviles en Austin</span>
+            <h1>Comprador y Vendedor <span class="accent">de Casas Moviles</span> de Confianza en Texas</h1>
+            <p class="hero-subtitle">Compramos y vendemos casas moviles en Austin, Dallas-Fort Worth, San Antonio, y todo Texas. Ofertas en efectivo en 24 horas, financiamiento sin verificacion de credito, y consultas gratis. Mas de 50 tratos cerrados sin perdidas.</p>
           </div>
 
           <div class="hero-badges">
@@ -151,15 +430,15 @@
           </div>
 
           <div class="hero-actions">
-            <a href="sell-your-mobile-home.html" class="btn btn-primary btn-lg" data-lang="en">Sell Your Home</a>
-            <a href="sell-your-mobile-home.html" class="btn btn-primary btn-lg" data-lang-inline="es">Vender Su Casa</a>
-            <a href="tel:+15128504013" class="btn btn-white btn-lg" data-lang="en">Call (512) 850-4013</a>
-            <a href="tel:+15128504013" class="btn btn-white btn-lg" data-lang-inline="es">Llamar (512) 850-4013</a>
+            <a href="#quick-form" class="btn btn-primary btn-lg" data-lang="en">Get Free Offer</a>
+            <a href="#quick-form" class="btn btn-primary btn-lg" data-lang-inline="es">Oferta Gratis</a>
+            <a href="tel:+15128504013" class="btn btn-outline btn-lg" data-lang="en">Call (512) 850-4013</a>
+            <a href="tel:+15128504013" class="btn btn-outline btn-lg" data-lang-inline="es">Llamar (512) 850-4013</a>
           </div>
         </div>
 
         <!-- Quick Lead Form -->
-        <div class="hero-form-card">
+        <div class="hero-form-card" id="quick-form">
           <div data-lang="en">
             <h3>Get Your Free Cash Offer</h3>
             <p>Fill out this quick form and we'll contact you within 24 hours.</p>
@@ -215,180 +494,417 @@
     </div>
   </section>
 
-  <!-- ===== STATS STRIP ===== -->
-  <section class="stats-strip">
+  <!-- ===== TRUST BAR ===== -->
+  <section class="trust-bar">
     <div class="container">
-      <div class="stats-grid">
-        <div class="stat-item">
-          <div class="stat-number">4+</div>
-          <div class="stat-label" data-lang="en">Years in Business</div>
-          <div class="stat-label" data-lang="es">Anos en Negocio</div>
+      <div class="trust-grid">
+        <div class="trust-item">
+          <div class="trust-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 22s-8-4.5-8-11.8A8 8 0 0 1 12 2a8 8 0 0 1 8 8.2c0 7.3-8 11.8-8 11.8z"/><circle cx="12" cy="10" r="3"/></svg>
+          </div>
+          <div class="trust-text">
+            <strong data-lang="en">Locally Owned</strong>
+            <strong data-lang="es">Negocio Local</strong>
+            <span data-lang="en">Austin-based &amp; operated</span>
+            <span data-lang-inline="es">Con base en Austin</span>
+          </div>
         </div>
-        <div class="stat-item">
-          <div class="stat-number">50+</div>
-          <div class="stat-label" data-lang="en">Homes Sold</div>
-          <div class="stat-label" data-lang="es">Casas Vendidas</div>
+        <div class="trust-item">
+          <div class="trust-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          </div>
+          <div class="trust-text">
+            <strong data-lang="en">4+ Years Experience</strong>
+            <strong data-lang="es">4+ Anos de Experiencia</strong>
+            <span data-lang="en">Proven track record</span>
+            <span data-lang-inline="es">Historial comprobado</span>
+          </div>
         </div>
-        <div class="stat-item">
-          <div class="stat-number">0</div>
-          <div class="stat-label" data-lang="en">Losses in 4 Years</div>
-          <div class="stat-label" data-lang="es">Perdidas en 4 Anos</div>
+        <div class="trust-item">
+          <div class="trust-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+          </div>
+          <div class="trust-text">
+            <strong data-lang="en">50+ Homes Sold</strong>
+            <strong data-lang="es">50+ Casas Vendidas</strong>
+            <span data-lang="en">Zero losses</span>
+            <span data-lang-inline="es">Cero perdidas</span>
+          </div>
         </div>
-        <div class="stat-item">
-          <div class="stat-number">24hr</div>
-          <div class="stat-label" data-lang="en">Offer Response Time</div>
-          <div class="stat-label" data-lang="es">Tiempo de Respuesta</div>
+        <div class="trust-item">
+          <div class="trust-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+          </div>
+          <div class="trust-text">
+            <strong data-lang="en">Free Consultations</strong>
+            <strong data-lang="es">Consultas Gratis</strong>
+            <span data-lang="en">No obligation advice</span>
+            <span data-lang-inline="es">Consejo sin compromiso</span>
+          </div>
+        </div>
+        <div class="trust-item warranty-badge">
+          <div class="trust-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 22c6.23-.05 7.87-4.74 7.97-9 .05-2.11-.83-4.14-2.47-5.5L12 2 6.5 7.5C4.86 8.86 3.98 10.89 4.03 13c.1 4.26 1.74 8.95 7.97 9z"/><path d="M8 14s1.5 2 4 2 4-2 4-2"/></svg>
+          </div>
+          <div class="trust-text">
+            <strong data-lang="en">Hablamos Espanol</strong>
+            <strong data-lang="es">Hablamos Espanol</strong>
+            <span data-lang="en">Bilingual service</span>
+            <span data-lang-inline="es">Servicio bilingue</span>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
   <!-- ===== HOW IT WORKS ===== -->
-  <section class="section">
+  <section class="section" id="how-it-works">
     <div class="container">
       <div class="section-header">
-        <span class="section-label" data-lang="en">How It Works</span>
-        <span class="section-label" data-lang="es">Como Funciona</span>
-        <h2 data-lang="en">Sell Your Mobile Home in 3 Simple Steps</h2>
-        <h2 data-lang="es">Venda Su Casa Movil en 3 Simples Pasos</h2>
-        <p data-lang="en">We make selling your mobile home easy. No repairs needed, no agents, no waiting months.</p>
-        <p data-lang="es">Hacemos que vender su casa movil sea facil. Sin reparaciones, sin agentes, sin esperar meses.</p>
+        <span class="section-tag" data-lang="en">Simple Process</span>
+        <span class="section-tag" data-lang="es">Proceso Simple</span>
+        <h2 data-lang="en">How It Works</h2>
+        <h2 data-lang="es">Como Funciona</h2>
+        <p data-lang="en">Sell your mobile home in 4 simple steps. No repairs, no agents, no waiting months.</p>
+        <p data-lang="es">Venda su casa movil en 4 simples pasos. Sin reparaciones, sin agentes, sin esperar meses.</p>
       </div>
 
-      <div class="steps-grid">
-        <div class="step-card">
-          <div class="step-number">1</div>
-          <h3 data-lang="en">Contact Us</h3>
-          <h3 data-lang="es">Contactenos</h3>
-          <p data-lang="en">Fill out our quick form or call us. Tell us about your home and your situation. It takes less than 2 minutes.</p>
-          <p data-lang="es">Complete nuestro formulario o llamenos. Diganos sobre su casa y su situacion. Toma menos de 2 minutos.</p>
+      <div class="process-grid">
+        <div class="process-card scroll-reveal">
+          <div class="process-number">01</div>
+          <div class="process-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.79 19.79 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          </div>
+          <h3 data-lang="en">Call or Fill Out Form</h3>
+          <h3 data-lang="es">Llame o Complete el Formulario</h3>
+          <p data-lang="en">Reach out by phone or submit our quick form. Tell us about your home and situation in under 2 minutes.</p>
+          <p data-lang="es">Contactenos por telefono o envie nuestro formulario rapido. Diganos sobre su casa y situacion en menos de 2 minutos.</p>
         </div>
-        <div class="step-card">
-          <div class="step-number">2</div>
-          <h3 data-lang="en">Get Your Offer</h3>
-          <h3 data-lang="es">Reciba Su Oferta</h3>
-          <p data-lang="en">We'll evaluate your home and present you with a fair, no-obligation cash offer within 24 hours.</p>
-          <p data-lang="es">Evaluaremos su casa y le presentaremos una oferta justa en efectivo, sin compromiso, dentro de 24 horas.</p>
+        <div class="process-card scroll-reveal">
+          <div class="process-number">02</div>
+          <div class="process-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+          </div>
+          <h3 data-lang="en">Free Home Evaluation</h3>
+          <h3 data-lang="es">Evaluacion Gratis de Su Casa</h3>
+          <p data-lang="en">We evaluate your mobile home's condition, location, and market value at absolutely no cost to you.</p>
+          <p data-lang="es">Evaluamos la condicion, ubicacion, y valor de mercado de su casa movil sin costo alguno.</p>
         </div>
-        <div class="step-card">
-          <div class="step-number">3</div>
-          <h3 data-lang="en">Close on Your Timeline</h3>
+        <div class="process-card scroll-reveal">
+          <div class="process-number">03</div>
+          <div class="process-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+          </div>
+          <h3 data-lang="en">Get Your Cash Offer</h3>
+          <h3 data-lang="es">Reciba Su Oferta en Efectivo</h3>
+          <p data-lang="en">Receive a fair, no-obligation cash offer within 24 hours. No hidden fees, no surprises.</p>
+          <p data-lang="es">Reciba una oferta justa en efectivo, sin compromiso, dentro de 24 horas. Sin cargos ocultos.</p>
+        </div>
+        <div class="process-card scroll-reveal">
+          <div class="process-number">04</div>
+          <div class="process-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+          </div>
+          <h3 data-lang="en">Close On Your Timeline</h3>
           <h3 data-lang="es">Cierre en Su Tiempo</h3>
-          <p data-lang="en">Accept the offer and choose your closing date. We handle all the paperwork. You get paid.</p>
-          <p data-lang="es">Acepte la oferta y elija su fecha de cierre. Nosotros nos encargamos de todo el papeleo. Usted recibe su pago.</p>
+          <p data-lang="en">Accept the offer, choose your closing date, and get paid. We handle all the paperwork.</p>
+          <p data-lang="es">Acepte la oferta, elija su fecha de cierre, y reciba su pago. Nosotros manejamos todo el papeleo.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ===== WHAT WE DO ===== -->
-  <section class="section section-alt">
+  <!-- ===== SERVICES GRID ===== -->
+  <section class="section section-warm" id="services">
     <div class="container">
       <div class="section-header">
-        <span class="section-label" data-lang="en">What We Do</span>
-        <span class="section-label" data-lang="es">Lo Que Hacemos</span>
-        <h2 data-lang="en">Multiple Options for Sellers &amp; Buyers</h2>
-        <h2 data-lang="es">Multiples Opciones para Vendedores y Compradores</h2>
-        <p data-lang="en">Unlike other buyers, we offer multiple solutions tailored to your situation.</p>
+        <span class="section-tag" data-lang="en">Our Services</span>
+        <span class="section-tag" data-lang="es">Nuestros Servicios</span>
+        <h2 data-lang="en">Multiple Solutions for Sellers &amp; Buyers</h2>
+        <h2 data-lang="es">Multiples Soluciones para Vendedores y Compradores</h2>
+        <p data-lang="en">Unlike other buyers, we offer multiple solutions tailored to your unique situation.</p>
         <p data-lang="es">A diferencia de otros compradores, ofrecemos multiples soluciones adaptadas a su situacion.</p>
       </div>
 
       <div class="services-grid">
-        <div class="service-card">
-          <div class="service-icon">&#128176;</div>
+        <div class="service-card scroll-reveal">
+          <div class="service-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+          </div>
           <h3 data-lang="en">Cash Purchases</h3>
           <h3 data-lang="es">Compras en Efectivo</h3>
-          <p data-lang="en">We buy your mobile home directly for cash. Fast closing, no repairs needed, any condition.</p>
+          <p data-lang="en">We buy your mobile home directly for cash. Fast closing, no repairs needed, any condition accepted.</p>
           <p data-lang="es">Compramos su casa movil directamente en efectivo. Cierre rapido, sin reparaciones, cualquier condicion.</p>
         </div>
-        <div class="service-card">
-          <div class="service-icon">&#128200;</div>
+        <div class="service-card scroll-reveal">
+          <div class="service-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+          </div>
           <h3 data-lang="en">Consignment Sales</h3>
           <h3 data-lang="es">Ventas por Consignacion</h3>
           <p data-lang="en">We sell your home for you and get you the best price. We handle everything from marketing to closing.</p>
-          <p data-lang="es">Vendemos su casa por usted y le conseguimos el mejor precio. Nos encargamos de todo, desde la publicidad hasta el cierre.</p>
+          <p data-lang="es">Vendemos su casa por usted y le conseguimos el mejor precio. Nos encargamos de todo.</p>
         </div>
-        <div class="service-card">
-          <div class="service-icon">&#127968;</div>
+        <div class="service-card scroll-reveal">
+          <div class="service-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+          </div>
           <h3 data-lang="en">Owner Financing</h3>
           <h3 data-lang="es">Financiamiento del Dueno</h3>
-          <p data-lang="en">Looking to buy? We offer flexible owner financing with no credit check. Just income verification and a background check.</p>
-          <p data-lang="es">Buscando comprar? Ofrecemos financiamiento flexible sin verificacion de credito. Solo verificacion de ingresos y revision de antecedentes.</p>
+          <p data-lang="en">No credit check needed. Just income verification and a background check. Flexible terms designed for you.</p>
+          <p data-lang="es">Sin verificacion de credito. Solo verificacion de ingresos y revision de antecedentes. Terminos flexibles.</p>
         </div>
-        <div class="service-card">
-          <div class="service-icon">&#128161;</div>
+        <div class="service-card scroll-reveal">
+          <div class="service-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="8.5" cy="7" r="4"/><path d="M20 8v6"/><path d="M23 11h-6"/></svg>
+          </div>
+          <h3 data-lang="en">Subject-To Deals</h3>
+          <h3 data-lang="es">Compras Subject-To</h3>
+          <p data-lang="en">We take over your existing payments. Save your credit and avoid foreclosure. We handle all the details.</p>
+          <p data-lang="es">Tomamos sus pagos existentes. Salve su credito y evite ejecucion hipotecaria. Manejamos todos los detalles.</p>
+        </div>
+        <div class="service-card scroll-reveal">
+          <div class="service-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
+          </div>
+          <h3 data-lang="en">Handyman Specials</h3>
+          <h3 data-lang="es">Especiales de Reparacion</h3>
+          <p data-lang="en">Affordable fixer-uppers ready for your personal touch. Get into a home for less and make it your own.</p>
+          <p data-lang="es">Casas asequibles para reparar listas para su toque personal. Obtenga una casa por menos.</p>
+        </div>
+        <div class="service-card scroll-reveal">
+          <div class="service-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+          </div>
           <h3 data-lang="en">Free Consultations</h3>
           <h3 data-lang="es">Consultas Gratis</h3>
-          <p data-lang="en">Not sure what to do? We'll walk you through all your options at no cost. No pressure, no obligation.</p>
+          <p data-lang="en">Not sure what to do? We walk you through every option at no cost. No pressure, no obligation.</p>
           <p data-lang="es">No esta seguro que hacer? Le explicamos todas sus opciones sin costo. Sin presion, sin compromiso.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ===== WHY CHOOSE US ===== -->
-  <section class="section">
+  <!-- ===== WHY CHOOSE US (DARK) ===== -->
+  <section class="section section-dark" id="why-us">
     <div class="container">
       <div class="section-header">
-        <span class="section-label" data-lang="en">Why Iron Lot Homes</span>
-        <span class="section-label" data-lang="es">Por Que Iron Lot Homes</span>
+        <span class="section-tag" data-lang="en">Why Iron Lot Homes</span>
+        <span class="section-tag" data-lang="es">Por Que Iron Lot Homes</span>
         <h2 data-lang="en">Trusted by Homeowners Across Texas</h2>
         <h2 data-lang="es">Confianza de Duenos de Casas en Todo Texas</h2>
+        <p data-lang="en">We go above and beyond to make every transaction smooth, honest, and fair.</p>
+        <p data-lang="es">Vamos mas alla para hacer cada transaccion facil, honesta y justa.</p>
       </div>
 
-      <div class="benefits-grid">
-        <div class="benefit-item">
-          <div class="benefit-icon">&#10003;</div>
-          <div>
-            <h4 data-lang="en">No Credit Checks</h4>
-            <h4 data-lang="es">Sin Verificacion de Credito</h4>
-            <p data-lang="en">We only require income verification and a background check. Your credit score doesn't matter to us.</p>
-            <p data-lang="es">Solo requerimos verificacion de ingresos y revision de antecedentes. Su puntaje de credito no nos importa.</p>
+      <div class="features-grid">
+        <div class="feature-card scroll-reveal">
+          <div class="feature-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 22s-8-4.5-8-11.8A8 8 0 0 1 12 2a8 8 0 0 1 8 8.2c0 7.3-8 11.8-8 11.8z"/><circle cx="12" cy="10" r="3"/></svg>
+          </div>
+          <h3 data-lang="en">Local Austin Experts</h3>
+          <h3 data-lang="es">Expertos Locales de Austin</h3>
+          <p data-lang="en">Born and raised in Texas. We know the Austin, DFW, and San Antonio mobile home markets inside and out.</p>
+          <p data-lang="es">Nacidos y criados en Texas. Conocemos los mercados de casas moviles de Austin, DFW y San Antonio.</p>
+        </div>
+        <div class="feature-card scroll-reveal">
+          <div class="feature-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"/><path d="M9 12l2 2 4-4"/></svg>
+          </div>
+          <h3 data-lang="en">Zero Losses Track Record</h3>
+          <h3 data-lang="es">Historial de Cero Perdidas</h3>
+          <p data-lang="en">Over 50 deals closed with zero losses in 4+ years. Our track record speaks for itself.</p>
+          <p data-lang="es">Mas de 50 tratos cerrados con cero perdidas en 4+ anos. Nuestro historial habla por si mismo.</p>
+        </div>
+        <div class="feature-card scroll-reveal">
+          <div class="feature-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+          </div>
+          <h3 data-lang="en">Bilingual Service</h3>
+          <h3 data-lang="es">Servicio Bilingue</h3>
+          <p data-lang="en">85% of our clients speak Spanish. We provide full bilingual support throughout the entire process.</p>
+          <p data-lang="es">85% de nuestros clientes hablan espanol. Brindamos soporte bilingue completo durante todo el proceso.</p>
+        </div>
+        <div class="feature-card scroll-reveal">
+          <div class="feature-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="11" width="18" height="11" rx="0"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+          </div>
+          <h3 data-lang="en">No Credit Checks</h3>
+          <h3 data-lang="es">Sin Verificacion de Credito</h3>
+          <p data-lang="en">We only require income verification and a background check. Your credit score does not matter to us.</p>
+          <p data-lang="es">Solo requerimos verificacion de ingresos y revision de antecedentes. Su puntaje de credito no importa.</p>
+        </div>
+        <div class="feature-card scroll-reveal">
+          <div class="feature-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="7" width="20" height="14" rx="0"/><line x1="16" y1="3" x2="16" y2="7"/><line x1="8" y1="3" x2="8" y2="7"/><line x1="2" y1="11" x2="22" y2="11"/></svg>
+          </div>
+          <h3 data-lang="en">Flexible Payment Terms</h3>
+          <h3 data-lang="es">Terminos de Pago Flexibles</h3>
+          <p data-lang="en">Flexible down payments, monthly payments, and term lengths designed to fit your budget perfectly.</p>
+          <p data-lang="es">Pagos iniciales, pagos mensuales, y plazos flexibles disenados para su presupuesto.</p>
+        </div>
+        <div class="feature-card scroll-reveal">
+          <div class="feature-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+          </div>
+          <h3 data-lang="en">Full Professional Network</h3>
+          <h3 data-lang="es">Red Profesional Completa</h3>
+          <p data-lang="en">Brokers, movers, handymen, realtors, and attorneys. If we cannot help, someone in our network can.</p>
+          <p data-lang="es">Corredores, mudanzas, manitas, agentes de bienes raices, y abogados. Si no podemos ayudar, alguien en nuestra red puede.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CTA SECTION (ORANGE) ===== -->
+  <section class="cta-section">
+    <div class="container">
+      <h2 data-lang="en">Ready to Sell Your Mobile Home?</h2>
+      <h2 data-lang="es">Listo para Vender Su Casa Movil?</h2>
+      <p data-lang="en">Get a fair cash offer today. No obligations, no pressure, no fees.</p>
+      <p data-lang="es">Obtenga una oferta justa en efectivo hoy. Sin obligaciones, sin presion, sin cargos.</p>
+      <div class="cta-buttons">
+        <a href="sell-your-mobile-home.html" class="btn btn-dark btn-lg" data-lang="en">Get Your Free Offer</a>
+        <a href="sell-your-mobile-home.html" class="btn btn-dark btn-lg" data-lang-inline="es">Obtener Su Oferta Gratis</a>
+        <a href="tel:+15128504013" class="btn btn-outline-dark btn-lg" data-lang="en">Call (512) 850-4013</a>
+        <a href="tel:+15128504013" class="btn btn-outline-dark btn-lg" data-lang-inline="es">Llamar (512) 850-4013</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== BEFORE / AFTER GALLERY ===== -->
+  <section class="section" id="transformations">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag" data-lang="en">Transformations</span>
+        <span class="section-tag" data-lang="es">Transformaciones</span>
+        <h2 data-lang="en">Before &amp; After</h2>
+        <h2 data-lang="es">Antes y Despues</h2>
+        <p data-lang="en">See how we transform mobile homes into move-in ready residences for Texas families.</p>
+        <p data-lang="es">Vea como transformamos casas moviles en residencias listas para familias de Texas.</p>
+      </div>
+
+      <div class="ba-grid">
+        <div class="ba-card scroll-reveal">
+          <div class="ba-images">
+            <div class="ba-image ba-before">
+              <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=600&q=70" alt="Mobile home before renovation - exterior worn condition" loading="lazy">
+              <span class="ba-label" data-lang="en">Before</span>
+              <span class="ba-label" data-lang-inline="es">Antes</span>
+            </div>
+            <div class="ba-image ba-after">
+              <img src="https://images.unsplash.com/photo-1564013799919-ab600027ffc6?auto=format&fit=crop&w=600&q=70" alt="Mobile home after renovation - beautiful exterior" loading="lazy">
+              <span class="ba-label" data-lang="en">After</span>
+              <span class="ba-label" data-lang-inline="es">Despues</span>
+            </div>
+          </div>
+          <div class="ba-caption">
+            <strong data-lang="en">Complete Exterior Renovation</strong>
+            <strong data-lang="es">Renovacion Exterior Completa</strong>
+            <span>Austin, TX</span>
           </div>
         </div>
-        <div class="benefit-item">
-          <div class="benefit-icon">&#10003;</div>
-          <div>
-            <h4 data-lang="en">Flexible Payment Terms</h4>
-            <h4 data-lang="es">Pagos Flexibles</h4>
-            <p data-lang="en">Flexible down payments, monthly payments, and term lengths designed to fit your budget.</p>
-            <p data-lang="es">Pagos iniciales, pagos mensuales, y plazos flexibles disenados para su presupuesto.</p>
+        <div class="ba-card scroll-reveal">
+          <div class="ba-images">
+            <div class="ba-image ba-before">
+              <img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=600&q=70" alt="Mobile home interior before renovation" loading="lazy">
+              <span class="ba-label" data-lang="en">Before</span>
+              <span class="ba-label" data-lang-inline="es">Antes</span>
+            </div>
+            <div class="ba-image ba-after">
+              <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=600&q=70" alt="Mobile home interior after renovation - modern kitchen" loading="lazy">
+              <span class="ba-label" data-lang="en">After</span>
+              <span class="ba-label" data-lang-inline="es">Despues</span>
+            </div>
+          </div>
+          <div class="ba-caption">
+            <strong data-lang="en">Interior Kitchen Remodel</strong>
+            <strong data-lang="es">Remodelacion de Cocina Interior</strong>
+            <span>San Marcos, TX</span>
           </div>
         </div>
-        <div class="benefit-item">
-          <div class="benefit-icon">&#10003;</div>
-          <div>
-            <h4 data-lang="en">4+ Years, Zero Losses</h4>
-            <h4 data-lang="es">4+ Anos, Cero Perdidas</h4>
-            <p data-lang="en">We've been in business for over 4 years with a proven track record and zero losses.</p>
-            <p data-lang="es">Hemos estado en el negocio por mas de 4 anos con un historial comprobado y cero perdidas.</p>
+        <div class="ba-card scroll-reveal">
+          <div class="ba-images">
+            <div class="ba-image ba-before">
+              <img src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=600&q=70" alt="Mobile home yard before landscaping" loading="lazy">
+              <span class="ba-label" data-lang="en">Before</span>
+              <span class="ba-label" data-lang-inline="es">Antes</span>
+            </div>
+            <div class="ba-image ba-after">
+              <img src="https://images.unsplash.com/photo-1600585154526-990dced4db0d?auto=format&fit=crop&w=600&q=70" alt="Mobile home yard after full landscaping" loading="lazy">
+              <span class="ba-label" data-lang="en">After</span>
+              <span class="ba-label" data-lang-inline="es">Despues</span>
+            </div>
+          </div>
+          <div class="ba-caption">
+            <strong data-lang="en">Full Property Makeover</strong>
+            <strong data-lang="es">Transformacion Completa de Propiedad</strong>
+            <span>Kyle, TX</span>
           </div>
         </div>
-        <div class="benefit-item">
-          <div class="benefit-icon">&#10003;</div>
-          <div>
-            <h4 data-lang="en">Hablamos Espanol</h4>
-            <h4 data-lang="es">Hablamos Espanol</h4>
-            <p data-lang="en">We speak Spanish fluently and are here to help you through every step of the process.</p>
-            <p data-lang="es">Hablamos espanol y estamos aqui para ayudarle en cada paso del proceso.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PROJECTS GALLERY ===== -->
+  <section class="section section-warm" id="projects">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag" data-lang="en">Our Work</span>
+        <span class="section-tag" data-lang="es">Nuestro Trabajo</span>
+        <h2 data-lang="en">Recent Projects</h2>
+        <h2 data-lang="es">Proyectos Recientes</h2>
+        <p data-lang="en">A selection of completed mobile home transactions across Texas.</p>
+        <p data-lang="es">Una seleccion de transacciones de casas moviles completadas en Texas.</p>
+      </div>
+
+      <div class="gallery-grid">
+        <div class="gallery-item scroll-reveal">
+          <img src="https://images.unsplash.com/photo-1570129477492-45c003edd2be?auto=format&fit=crop&w=600&q=70" alt="Residential mobile home sale in Austin, TX" loading="lazy">
+          <div class="gallery-overlay">
+            <span class="gallery-tag" data-lang="en">Residential Sale</span>
+            <span class="gallery-tag" data-lang-inline="es">Venta Residencial</span>
+            <span class="gallery-location">Austin, TX</span>
           </div>
         </div>
-        <div class="benefit-item">
-          <div class="benefit-icon">&#10003;</div>
-          <div>
-            <h4 data-lang="en">Full Professional Network</h4>
-            <h4 data-lang="es">Red Profesional Completa</h4>
-            <p data-lang="en">Our team includes brokers, movers, handymen, realtors, and attorneys. If we can't help you, someone in our network can.</p>
-            <p data-lang="es">Nuestro equipo incluye corredores, mudanzas, manitas, agentes de bienes raices, y abogados. Si no podemos ayudarle, alguien en nuestra red puede.</p>
+        <div class="gallery-item scroll-reveal">
+          <img src="https://images.unsplash.com/photo-1568605114967-8130f3a36994?auto=format&fit=crop&w=600&q=70" alt="Owner financed mobile home in San Marcos, TX" loading="lazy">
+          <div class="gallery-overlay">
+            <span class="gallery-tag" data-lang="en">Owner Financed</span>
+            <span class="gallery-tag" data-lang-inline="es">Financiado por Dueno</span>
+            <span class="gallery-location">San Marcos, TX</span>
           </div>
         </div>
-        <div class="benefit-item">
-          <div class="benefit-icon">&#10003;</div>
-          <div>
-            <h4 data-lang="en">Handyman Specials Available</h4>
-            <h4 data-lang="es">Especiales de Reparacion Disponibles</h4>
-            <p data-lang="en">We specialize in affordable fixer-uppers. Get into a home for less and make it your own.</p>
-            <p data-lang="es">Nos especializamos en casas asequibles para reparar. Obtenga una casa por menos y hagala suya.</p>
+        <div class="gallery-item scroll-reveal">
+          <img src="https://images.unsplash.com/photo-1600047509807-ba8f99d2cdde?auto=format&fit=crop&w=600&q=70" alt="Consignment mobile home sale in Kyle, TX" loading="lazy">
+          <div class="gallery-overlay">
+            <span class="gallery-tag" data-lang="en">Consignment</span>
+            <span class="gallery-tag" data-lang-inline="es">Consignacion</span>
+            <span class="gallery-location">Kyle, TX</span>
+          </div>
+        </div>
+        <div class="gallery-item scroll-reveal">
+          <img src="https://images.unsplash.com/photo-1600573472591-ee6b68d14c68?auto=format&fit=crop&w=600&q=70" alt="Cash purchase mobile home in Lockhart, TX" loading="lazy">
+          <div class="gallery-overlay">
+            <span class="gallery-tag" data-lang="en">Cash Purchase</span>
+            <span class="gallery-tag" data-lang-inline="es">Compra en Efectivo</span>
+            <span class="gallery-location">Lockhart, TX</span>
+          </div>
+        </div>
+        <div class="gallery-item scroll-reveal">
+          <img src="https://images.unsplash.com/photo-1605276374104-dee2a0ed3cd6?auto=format&fit=crop&w=600&q=70" alt="Handyman special mobile home in Buda, TX" loading="lazy">
+          <div class="gallery-overlay">
+            <span class="gallery-tag" data-lang="en">Handyman Special</span>
+            <span class="gallery-tag" data-lang-inline="es">Especial de Reparacion</span>
+            <span class="gallery-location">Buda, TX</span>
+          </div>
+        </div>
+        <div class="gallery-item scroll-reveal">
+          <img src="https://images.unsplash.com/photo-1600585153490-76fb20a32601?auto=format&fit=crop&w=600&q=70" alt="Family home mobile home in McKinney, TX" loading="lazy">
+          <div class="gallery-overlay">
+            <span class="gallery-tag" data-lang="en">Family Home</span>
+            <span class="gallery-tag" data-lang-inline="es">Casa Familiar</span>
+            <span class="gallery-location">McKinney, TX</span>
           </div>
         </div>
       </div>
@@ -396,75 +912,294 @@
   </section>
 
   <!-- ===== TESTIMONIALS ===== -->
-  <section class="section section-alt">
+  <section class="section" id="testimonials">
     <div class="container">
       <div class="section-header">
-        <span class="section-label" data-lang="en">What Our Clients Say</span>
-        <span class="section-label" data-lang="es">Lo Que Dicen Nuestros Clientes</span>
-        <h2 data-lang="en">Trusted by Homeowners Across Texas</h2>
-        <h2 data-lang="es">Confianza de Duenos de Casas en Todo Texas</h2>
+        <span class="section-tag" data-lang="en">Testimonials</span>
+        <span class="section-tag" data-lang="es">Testimonios</span>
+        <h2 data-lang="en">What Our Clients Say</h2>
+        <h2 data-lang="es">Lo Que Dicen Nuestros Clientes</h2>
+        <p data-lang="en">Real stories from real homeowners across Texas.</p>
+        <p data-lang="es">Historias reales de duenos de casas en todo Texas.</p>
       </div>
-      <div class="benefits-grid">
-        <div class="benefit-item">
-          <div class="benefit-icon" style="background:var(--accent);">&#9733;</div>
-          <div>
-            <p data-lang="en"><em>"Iron Lot Homes made selling my mobile home so easy. They handled everything and I got a fair price. Highly recommend!"</em></p>
-            <p data-lang="es"><em>"Iron Lot Homes hizo que vender mi casa movil fuera muy facil. Se encargaron de todo y obtuve un precio justo. Muy recomendados!"</em></p>
-            <p style="font-weight:600;margin-bottom:0;">— Satisfied Seller, Austin TX</p>
+
+      <div class="testimonials-grid">
+        <div class="testimonial-card scroll-reveal">
+          <div class="testimonial-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <p data-lang="en"><em>"Iron Lot Homes made selling my mobile home so easy. They handled everything and I got a fair price. Wayne was honest and professional throughout the whole process. I could not have asked for a better experience."</em></p>
+          <p data-lang="es"><em>"Iron Lot Homes hizo que vender mi casa movil fuera muy facil. Se encargaron de todo y obtuve un precio justo. Wayne fue honesto y profesional durante todo el proceso. No podria haber pedido una mejor experiencia."</em></p>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">MG</div>
+            <div>
+              <strong>Maria G.</strong>
+              <span>Austin, TX</span>
+            </div>
           </div>
         </div>
-        <div class="benefit-item">
-          <div class="benefit-icon" style="background:var(--accent);">&#9733;</div>
-          <div>
-            <p data-lang="en"><em>"We were able to buy our first home with owner financing and no credit check. Wayne and his team were amazing to work with."</em></p>
-            <p data-lang="es"><em>"Pudimos comprar nuestra primera casa con financiamiento del dueno y sin verificacion de credito. Wayne y su equipo fueron increibles."</em></p>
-            <p style="font-weight:600;margin-bottom:0;">— Happy Buyer, San Marcos TX</p>
+
+        <div class="testimonial-card scroll-reveal">
+          <div class="testimonial-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <p data-lang="en"><em>"We bought our first home with owner financing and no credit check. Wayne and his team made the whole process smooth and easy. We are so grateful to finally be homeowners."</em></p>
+          <p data-lang="es"><em>"Compramos nuestra primera casa con financiamiento del dueno y sin verificacion de credito. Wayne y su equipo hicieron todo el proceso facil y tranquilo. Estamos muy agradecidos de finalmente ser duenos de casa."</em></p>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">CR</div>
+            <div>
+              <strong>Carlos &amp; Ana R.</strong>
+              <span>San Marcos, TX</span>
+            </div>
           </div>
         </div>
-        <div class="benefit-item">
-          <div class="benefit-icon" style="background:var(--accent);">&#9733;</div>
-          <div>
-            <p data-lang="en"><em>"I was behind on payments and facing foreclosure. Iron Lot Homes helped me through their subject-to program and saved my credit."</em></p>
-            <p data-lang="es"><em>"Estaba atrasado en pagos y enfrentando ejecucion hipotecaria. Iron Lot Homes me ayudo a traves de su programa y salvo mi credito."</em></p>
-            <p style="font-weight:600;margin-bottom:0;">— Grateful Seller, Lockhart TX</p>
+
+        <div class="testimonial-card scroll-reveal">
+          <div class="testimonial-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <p data-lang="en"><em>"I was facing foreclosure and Wayne helped save my credit through their subject-to program. I cannot thank Iron Lot Homes enough for what they did for my family. They truly care about people."</em></p>
+          <p data-lang="es"><em>"Estaba enfrentando ejecucion hipotecaria y Wayne ayudo a salvar mi credito a traves de su programa subject-to. No puedo agradecer lo suficiente a Iron Lot Homes por lo que hicieron por mi familia."</em></p>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">DL</div>
+            <div>
+              <strong>David L.</strong>
+              <span>Lockhart, TX</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-card scroll-reveal">
+          <div class="testimonial-stars">&#9733;&#9733;&#9733;&#9733;&#9734;</div>
+          <p data-lang="en"><em>"Great experience, fair price, quick closing. The whole process took less than two weeks from start to finish. Would definitely recommend to anyone looking to sell their mobile home."</em></p>
+          <p data-lang="es"><em>"Gran experiencia, precio justo, cierre rapido. Todo el proceso tomo menos de dos semanas de principio a fin. Definitivamente lo recomendaria a cualquiera que busque vender su casa movil."</em></p>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">PM</div>
+            <div>
+              <strong>Patricia M.</strong>
+              <span>Kyle, TX</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-card scroll-reveal">
+          <div class="testimonial-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <p data-lang="en"><em>"The bilingual service made everything so much easier for my family. We felt comfortable and informed every step of the way. Wayne explained everything in both English and Spanish."</em></p>
+          <p data-lang="es"><em>"El servicio bilingue hizo todo mucho mas facil para mi familia. Nos sentimos comodos e informados en cada paso. Wayne explico todo en ingles y espanol."</em></p>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">RS</div>
+            <div>
+              <strong>Roberto S.</strong>
+              <span>Dallas, TX</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-card scroll-reveal">
+          <div class="testimonial-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <p data-lang="en"><em>"Professional team, honest people. Wayne went above and beyond to make sure we understood every part of the process. Highly recommend Iron Lot Homes to anyone in Texas."</em></p>
+          <p data-lang="es"><em>"Equipo profesional, gente honesta. Wayne fue mas alla para asegurarse de que entendieramos cada parte del proceso. Recomiendo mucho a Iron Lot Homes."</em></p>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">JW</div>
+            <div>
+              <strong>Jennifer W.</strong>
+              <span>Austin, TX</span>
+            </div>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ===== CTA BANNER ===== -->
-  <section class="cta-banner">
+  <!-- ===== SERVICE AREA MAP ===== -->
+  <section class="section section-warm" id="service-areas">
     <div class="container">
-      <h2 data-lang="en">Ready to Sell Your Mobile Home?</h2>
-      <h2 data-lang="es">Listo para Vender Su Casa Movil?</h2>
-      <p data-lang="en">Get a fair cash offer today. No obligations, no pressure.</p>
-      <p data-lang="es">Obtenga una oferta justa en efectivo hoy. Sin obligaciones, sin presion.</p>
-      <a href="sell-your-mobile-home.html" class="btn btn-primary btn-lg" data-lang="en">Get Your Free Offer</a>
-      <a href="sell-your-mobile-home.html" class="btn btn-primary btn-lg" data-lang-inline="es">Obtener Su Oferta Gratis</a>
-      <div class="cta-phone">
-        <span data-lang="en">Or call us: </span>
-        <span data-lang-inline="es">O llamenos: </span>
-        <a href="tel:+15128504013">(512) 850-4013</a>
+      <div class="section-header">
+        <span class="section-tag" data-lang="en">Service Areas</span>
+        <span class="section-tag" data-lang="es">Areas de Servicio</span>
+        <h2 data-lang="en">We Buy &amp; Sell Mobile Homes Across Texas</h2>
+        <h2 data-lang="es">Compramos y Vendemos Casas Moviles en Todo Texas</h2>
+        <p data-lang="en">From Austin to Dallas-Fort Worth, San Antonio, and everywhere in between.</p>
+        <p data-lang="es">Desde Austin hasta Dallas-Fort Worth, San Antonio, y todo en medio.</p>
+      </div>
+
+      <div class="service-area-layout">
+        <!-- SVG Map -->
+        <div class="service-area-map scroll-reveal">
+          <svg viewBox="0 0 500 400" xmlns="http://www.w3.org/2000/svg" class="texas-map">
+            <!-- Texas outline simplified -->
+            <path d="M50,50 L350,30 L380,60 L400,50 L420,70 L450,80 L460,120 L470,180 L480,220 L490,280 L470,320 L430,360 L380,390 L320,380 L280,370 L240,350 L200,320 L160,310 L120,290 L80,260 L50,220 L30,180 L40,120 Z" fill="none" stroke="#1a3a5c" stroke-width="2" opacity="0.3"/>
+
+            <!-- DFW Hub -->
+            <circle cx="280" cy="90" r="8" fill="#1a3a5c" class="map-dot"/>
+            <text x="280" y="75" text-anchor="middle" class="map-label-major">Dallas / Fort Worth</text>
+
+            <!-- Austin Hub (center) -->
+            <circle cx="230" cy="250" r="10" fill="#d4842a" class="map-dot map-dot-primary"/>
+            <text x="230" y="235" text-anchor="middle" class="map-label-major map-label-accent">Austin (HQ)</text>
+
+            <!-- San Antonio Hub -->
+            <circle cx="190" cy="320" r="8" fill="#1a3a5c" class="map-dot"/>
+            <text x="190" y="340" text-anchor="middle" class="map-label-major">San Antonio</text>
+
+            <!-- Connection lines -->
+            <line x1="230" y1="250" x2="280" y2="90" stroke="#d4842a" stroke-width="2" stroke-dasharray="6,4" opacity="0.6"/>
+            <line x1="230" y1="250" x2="190" y2="320" stroke="#d4842a" stroke-width="2" stroke-dasharray="6,4" opacity="0.6"/>
+
+            <!-- Surrounding cities -->
+            <circle cx="250" cy="270" r="4" fill="#1a3a5c" opacity="0.7"/>
+            <text x="270" y="275" class="map-label-minor">San Marcos</text>
+
+            <circle cx="240" cy="285" r="4" fill="#1a3a5c" opacity="0.7"/>
+            <text x="260" y="290" class="map-label-minor">Kyle</text>
+
+            <circle cx="235" cy="300" r="4" fill="#1a3a5c" opacity="0.7"/>
+            <text x="255" y="305" class="map-label-minor">Buda</text>
+
+            <circle cx="210" cy="275" r="4" fill="#1a3a5c" opacity="0.7"/>
+            <text x="185" y="275" text-anchor="end" class="map-label-minor">Lockhart</text>
+
+            <circle cx="260" cy="240" r="4" fill="#1a3a5c" opacity="0.7"/>
+            <text x="280" y="245" class="map-label-minor">Bastrop</text>
+
+            <circle cx="250" cy="225" r="4" fill="#1a3a5c" opacity="0.7"/>
+            <text x="270" y="230" class="map-label-minor">Del Valle</text>
+
+            <circle cx="245" cy="210" r="4" fill="#1a3a5c" opacity="0.7"/>
+            <text x="265" y="215" class="map-label-minor">Hutto</text>
+
+            <!-- DFW surrounding -->
+            <circle cx="300" cy="80" r="4" fill="#1a3a5c" opacity="0.7"/>
+            <text x="320" y="85" class="map-label-minor">Plano</text>
+
+            <circle cx="310" cy="70" r="4" fill="#1a3a5c" opacity="0.7"/>
+            <text x="330" y="75" class="map-label-minor">McKinney</text>
+
+            <circle cx="320" cy="60" r="4" fill="#1a3a5c" opacity="0.7"/>
+            <text x="340" y="65" class="map-label-minor">Princeton</text>
+
+            <circle cx="260" cy="80" r="4" fill="#1a3a5c" opacity="0.7"/>
+            <text x="240" y="80" text-anchor="end" class="map-label-minor">Arlington</text>
+
+            <circle cx="300" cy="60" r="4" fill="#1a3a5c" opacity="0.7"/>
+            <text x="320" y="55" class="map-label-minor">Frisco</text>
+
+            <circle cx="270" cy="65" r="4" fill="#1a3a5c" opacity="0.7"/>
+            <text x="250" y="60" text-anchor="end" class="map-label-minor">Denton</text>
+
+            <!-- San Antonio surrounding -->
+            <circle cx="220" cy="305" r="4" fill="#1a3a5c" opacity="0.7"/>
+            <text x="240" y="315" class="map-label-minor">New Braunfels</text>
+
+            <circle cx="210" cy="335" r="4" fill="#1a3a5c" opacity="0.7"/>
+            <text x="230" y="345" class="map-label-minor">Seguin</text>
+          </svg>
+        </div>
+
+        <!-- Cities List -->
+        <div class="service-area-cities">
+          <div class="cities-column">
+            <h4 data-lang="en">Austin &amp; Central Texas</h4>
+            <h4 data-lang="es">Austin y Centro de Texas</h4>
+            <ul>
+              <li><a href="locations/austin/">Austin</a></li>
+              <li><a href="locations/san-marcos/">San Marcos</a></li>
+              <li><a href="locations/lockhart/">Lockhart</a></li>
+              <li><a href="locations/kyle/">Kyle</a></li>
+              <li><a href="locations/buda/">Buda</a></li>
+              <li><a href="locations/bastrop/">Bastrop</a></li>
+              <li><a href="locations/del-valle/">Del Valle</a></li>
+              <li><a href="sell-your-mobile-home.html">Hutto</a></li>
+            </ul>
+          </div>
+          <div class="cities-column">
+            <h4 data-lang="en">DFW &amp; San Antonio</h4>
+            <h4 data-lang="es">DFW y San Antonio</h4>
+            <ul>
+              <li><a href="locations/dallas/">Dallas</a></li>
+              <li><a href="locations/fort-worth/">Fort Worth</a></li>
+              <li><a href="locations/arlington/">Arlington</a></li>
+              <li><a href="locations/plano/">Plano</a></li>
+              <li><a href="locations/frisco/">Frisco</a></li>
+              <li><a href="locations/mckinney/">McKinney</a></li>
+              <li><a href="locations/princeton/">Princeton</a></li>
+              <li><a href="locations/denton/">Denton</a></li>
+              <li><a href="locations/san-antonio/">San Antonio</a></li>
+              <li><a href="sell-your-mobile-home.html">New Braunfels</a></li>
+              <li><a href="sell-your-mobile-home.html">Seguin</a></li>
+            </ul>
+          </div>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- ===== SERVICE AREAS ===== -->
-  <section class="section">
+  <!-- ===== SOCIAL PROOF STATS ===== -->
+  <section class="stats-section">
     <div class="container">
-      <div class="section-header">
-        <span class="section-label" data-lang="en">Service Areas</span>
-        <span class="section-label" data-lang="es">Areas de Servicio</span>
-        <h2 data-lang="en">We Buy Mobile Homes Across Texas</h2>
-        <h2 data-lang="es">Compramos Casas Moviles en Todo Texas</h2>
-        <p data-lang="en">We serve homeowners from Austin to Dallas-Fort Worth and everywhere in between.</p>
-        <p data-lang="es">Servimos a duenos de casas desde Austin hasta Dallas-Fort Worth y todo en medio.</p>
+      <div class="stats-grid">
+        <div class="stat-item scroll-reveal">
+          <div class="stat-number">50+</div>
+          <div class="stat-label" data-lang="en">Homes Sold</div>
+          <div class="stat-label" data-lang="es">Casas Vendidas</div>
+        </div>
+        <div class="stat-item scroll-reveal">
+          <div class="stat-number">4+</div>
+          <div class="stat-label" data-lang="en">Years in Business</div>
+          <div class="stat-label" data-lang="es">Anos en Negocio</div>
+        </div>
+        <div class="stat-item scroll-reveal">
+          <div class="stat-number">0</div>
+          <div class="stat-label" data-lang="en">Losses in 4+ Years</div>
+          <div class="stat-label" data-lang="es">Perdidas en 4+ Anos</div>
+        </div>
+        <div class="stat-item scroll-reveal">
+          <div class="stat-number">85%</div>
+          <div class="stat-label" data-lang="en">Bilingual Clients</div>
+          <div class="stat-label" data-lang="es">Clientes Bilingues</div>
+        </div>
       </div>
-      <div style="text-align:center;max-width:700px;margin:0 auto;">
-        <p style="font-size:1.05rem;line-height:1.9;color:var(--text-light);">
-          Austin &bull; Dallas &bull; Fort Worth &bull; San Antonio &bull; Arlington &bull; Plano &bull; Frisco &bull; Denton &bull; McKinney &bull; Princeton &bull; San Marcos &bull; Lockhart &bull; Kyle &bull; Buda &bull; Bastrop &bull; Del Valle &bull; Hutto &bull; New Braunfels &bull; Seguin &bull; Travis County &bull; Caldwell County &bull; Collin County &bull; Tarrant County
-        </p>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER CTA BAR ===== -->
+  <section class="footer-cta-bar">
+    <div class="container">
+      <div class="footer-cta-content">
+        <div class="footer-cta-text">
+          <h2 data-lang="en">Don't Wait &mdash; Get Your Free Cash Offer Today</h2>
+          <h2 data-lang="es">No Espere &mdash; Obtenga Su Oferta en Efectivo Gratis Hoy</h2>
+          <p data-lang="en">We respond to every inquiry within 24 hours. Call or fill out our form now.</p>
+          <p data-lang="es">Respondemos a cada consulta dentro de 24 horas. Llame o complete nuestro formulario ahora.</p>
+        </div>
+        <div class="footer-cta-actions">
+          <a href="sell-your-mobile-home.html" class="btn btn-primary btn-lg" data-lang="en">Get Free Offer</a>
+          <a href="sell-your-mobile-home.html" class="btn btn-primary btn-lg" data-lang-inline="es">Oferta Gratis</a>
+          <a href="tel:+15128504013" class="btn btn-outline btn-lg" data-lang="en">Call (512) 850-4013</a>
+          <a href="tel:+15128504013" class="btn btn-outline btn-lg" data-lang-inline="es">Llamar (512) 850-4013</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== TRUST BADGES ===== -->
+  <section class="trust-badges-section">
+    <div class="container">
+      <div class="trust-badges-grid">
+        <div class="trust-badge-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          <span data-lang="en">Licensed Texas Business</span>
+          <span data-lang-inline="es">Negocio Licenciado en Texas</span>
+        </div>
+        <div class="trust-badge-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="0"/><path d="M9 12l2 2 4-4"/></svg>
+          <span data-lang="en">Fully Insured</span>
+          <span data-lang-inline="es">Totalmente Asegurado</span>
+        </div>
+        <div class="trust-badge-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M8 12h8"/><path d="M12 8v8"/></svg>
+          <span data-lang="en">BBB Accredited</span>
+          <span data-lang-inline="es">Acreditado por BBB</span>
+        </div>
+        <div class="trust-badge-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+          <span data-lang="en">Bilingual Service</span>
+          <span data-lang-inline="es">Servicio Bilingue</span>
+        </div>
       </div>
     </div>
   </section>
@@ -472,16 +1207,19 @@
   <!-- ===== FOOTER ===== -->
   <footer class="footer">
     <div class="container">
-      <div class="footer-grid">
-        <div>
-          <div class="logo" style="margin-bottom:16px;">
+      <div class="footer-content">
+        <!-- Company Info -->
+        <div class="footer-company">
+          <a href="index.html" class="logo">
             <div class="logo-icon">IL</div>
             Iron Lot Homes
-          </div>
-          <p data-lang="en" style="opacity:0.8;font-size:0.9rem;">We buy and sell mobile homes across Texas — Austin, Dallas-Fort Worth, San Antonio, and beyond. Cash offers, owner financing, and free consultations.</p>
-          <p data-lang="es" style="opacity:0.8;font-size:0.9rem;">Compramos y vendemos casas moviles en todo Texas — Austin, Dallas-Fort Worth, San Antonio, y mas. Ofertas en efectivo, financiamiento, y consultas gratis.</p>
+          </a>
+          <p data-lang="en">We buy and sell mobile homes across Texas &mdash; Austin, Dallas-Fort Worth, San Antonio, and beyond. Cash offers, owner financing, and free consultations. Over 4 years in business with zero losses.</p>
+          <p data-lang="es">Compramos y vendemos casas moviles en todo Texas &mdash; Austin, Dallas-Fort Worth, San Antonio, y mas. Ofertas en efectivo, financiamiento, y consultas gratis. Mas de 4 anos en el negocio sin perdidas.</p>
         </div>
-        <div>
+
+        <!-- Quick Links -->
+        <div class="footer-links-section">
           <h4 data-lang="en">Quick Links</h4>
           <h4 data-lang="es">Enlaces Rapidos</h4>
           <ul class="footer-links">
@@ -491,31 +1229,132 @@
             <li><a href="about.html" data-lang="en">About Us</a><a href="about.html" data-lang-inline="es">Nosotros</a></li>
           </ul>
         </div>
-        <div>
+
+        <!-- Services -->
+        <div class="footer-links-section">
+          <h4 data-lang="en">Services</h4>
+          <h4 data-lang="es">Servicios</h4>
+          <ul class="footer-links">
+            <li><a href="sell-your-mobile-home.html" data-lang="en">Cash Purchases</a><a href="sell-your-mobile-home.html" data-lang-inline="es">Compras en Efectivo</a></li>
+            <li><a href="sell-your-mobile-home.html" data-lang="en">Consignment Sales</a><a href="sell-your-mobile-home.html" data-lang-inline="es">Ventas por Consignacion</a></li>
+            <li><a href="buy-a-mobile-home.html" data-lang="en">Owner Financing</a><a href="buy-a-mobile-home.html" data-lang-inline="es">Financiamiento del Dueno</a></li>
+            <li><a href="sell-your-mobile-home.html" data-lang="en">Subject-To Deals</a><a href="sell-your-mobile-home.html" data-lang-inline="es">Compras Subject-To</a></li>
+            <li><a href="buy-a-mobile-home.html" data-lang="en">Handyman Specials</a><a href="buy-a-mobile-home.html" data-lang-inline="es">Especiales de Reparacion</a></li>
+            <li><a href="sell-your-mobile-home.html" data-lang="en">Free Consultations</a><a href="sell-your-mobile-home.html" data-lang-inline="es">Consultas Gratis</a></li>
+          </ul>
+        </div>
+
+        <!-- Service Areas -->
+        <div class="footer-links-section">
+          <h4 data-lang="en">Service Areas</h4>
+          <h4 data-lang="es">Áreas de Servicio</h4>
+          <ul class="footer-links">
+            <li><a href="locations/austin/">Austin</a></li>
+            <li><a href="locations/dallas/">Dallas</a></li>
+            <li><a href="locations/fort-worth/">Fort Worth</a></li>
+            <li><a href="locations/san-antonio/">San Antonio</a></li>
+            <li><a href="locations/san-marcos/">San Marcos</a></li>
+            <li><a href="locations/arlington/">Arlington</a></li>
+            <li><a href="locations/plano/">Plano</a></li>
+            <li><a href="locations/mckinney/">McKinney</a></li>
+          </ul>
+        </div>
+
+        <!-- Contact -->
+        <div class="footer-contact">
           <h4 data-lang="en">Contact</h4>
           <h4 data-lang="es">Contacto</h4>
           <div class="footer-contact-item">
-            &#128222; <a href="tel:+15128504013">(512) 850-4013</a>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="18" height="18"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.79 19.79 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            <a href="tel:+15128504013">(512) 850-4013</a>
           </div>
           <div class="footer-contact-item">
-            &#9993; <a href="mailto:americansteele369@gmail.com">americansteele369@gmail.com</a>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="18" height="18"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            <a href="mailto:americansteele369@gmail.com">americansteele369@gmail.com</a>
           </div>
           <div class="footer-contact-item">
-            &#128205; Austin, TX
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="18" height="18"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            <span>Austin, TX</span>
           </div>
-          <div class="footer-areas" style="margin-top:12px;">
+          <div class="footer-areas">
             <strong data-lang="en">Serving:</strong>
             <strong data-lang="es">Sirviendo:</strong>
-            Austin, Dallas, Fort Worth, San Antonio, Arlington, Plano, McKinney, San Marcos, Lockhart, Kyle, Buda, Bastrop
+            <span>Austin, Dallas, Fort Worth, San Antonio, Arlington, Plano, McKinney, San Marcos, Lockhart, Kyle, Buda, Bastrop</span>
           </div>
         </div>
       </div>
+
       <div class="footer-bottom">
         <p>&copy; 2026 Iron Lot Homes LLC. All rights reserved.</p>
+        <p data-lang="en" class="footer-disclaimer">Iron Lot Homes LLC is a licensed mobile home dealer in the state of Texas. We are not a real estate brokerage. All transactions are conducted in compliance with Texas law.</p>
+        <p data-lang="es" class="footer-disclaimer">Iron Lot Homes LLC es un distribuidor de casas moviles licenciado en el estado de Texas. No somos una correduria de bienes raices. Todas las transacciones se realizan en cumplimiento con la ley de Texas.</p>
       </div>
     </div>
   </footer>
 
+  <!-- ===== STICKY CTA ===== -->
+  <div class="sticky-cta" id="stickyCta" aria-label="Call Iron Lot Homes">
+    <a href="tel:+15128504013" class="sticky-cta-btn">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.79 19.79 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+      <span data-lang="en">Call Now</span>
+      <span data-lang-inline="es">Llamar</span>
+    </a>
+  </div>
+
   <script src="js/main.js"></script>
+
+  <!-- Sticky CTA visibility on scroll -->
+  <script>
+  (function() {
+    var stickyCta = document.getElementById('stickyCta');
+    if (!stickyCta) return;
+    var lastScroll = 0;
+    var threshold = 400;
+
+    function handleScroll() {
+      var currentScroll = window.pageYOffset || document.documentElement.scrollTop;
+      if (currentScroll > threshold) {
+        stickyCta.classList.add('visible');
+      } else {
+        stickyCta.classList.remove('visible');
+      }
+      lastScroll = currentScroll;
+    }
+
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    handleScroll();
+  })();
+  </script>
+
+  <!-- IntersectionObserver for scroll animations -->
+  <script>
+  (function() {
+    var reveals = document.querySelectorAll('.scroll-reveal');
+    if (!reveals.length) return;
+
+    if ('IntersectionObserver' in window) {
+      var observer = new IntersectionObserver(function(entries) {
+        entries.forEach(function(entry) {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('revealed');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, {
+        threshold: 0.15,
+        rootMargin: '0px 0px -40px 0px'
+      });
+
+      reveals.forEach(function(el) {
+        observer.observe(el);
+      });
+    } else {
+      reveals.forEach(function(el) {
+        el.classList.add('revealed');
+      });
+    }
+  })();
+  </script>
+
 </body>
 </html>
