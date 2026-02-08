@@ -4,21 +4,640 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>About Iron Lot Homes | Mobile Home Buyers &amp; Sellers in Austin TX</title>
-  <meta name="description" content="Iron Lot Homes LLC has been buying and selling mobile homes in Austin, TX for 4+ years. 50+ homes sold, zero losses. Meet the team behind Central Texas's trusted mobile home buyer.">
-  <meta name="keywords" content="Iron Lot Homes, mobile home buyer Austin TX, about us, mobile home investor Texas, sell mobile home Austin">
+  <meta name="description" content="Iron Lot Homes LLC has been buying and selling mobile homes in Austin, TX for 4+ years. 50+ homes sold, zero losses. Meet Wayne, the founder behind Texas's trusted mobile home buyer.">
+  <meta name="keywords" content="Iron Lot Homes, mobile home buyer Austin TX, about us, mobile home investor Texas, sell mobile home Austin, Wayne Iron Lot Homes, mobile home seller DFW">
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://ironlothomes.com/about.html">
   <link rel="alternate" hreflang="en" href="https://ironlothomes.com/about.html">
   <link rel="alternate" hreflang="es" href="https://ironlothomes.com/es/sobre-nosotros.html">
 
+  <!-- Open Graph -->
   <meta property="og:title" content="About Iron Lot Homes | Austin TX Mobile Home Buyer">
-  <meta property="og:description" content="4+ years in business, 50+ homes sold, zero losses. Learn about Iron Lot Homes, Austin's trusted mobile home buyer.">
+  <meta property="og:description" content="4+ years in business, 50+ homes sold, zero losses. Learn about Iron Lot Homes, Austin's trusted mobile home buyer and seller.">
   <meta property="og:type" content="website">
+  <meta property="og:url" content="https://ironlothomes.com/about.html">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:locale:alternate" content="es_MX">
 
+  <!-- Fonts: Outfit (Google Fonts) + Clash Display (Fontshare) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://api.fontshare.com/v2/css?f[]=clash-display@400;500;600;700&display=swap" rel="stylesheet">
+
   <link rel="stylesheet" href="css/styles.css">
+
+  <!-- Schema.org: LocalBusiness -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "Iron Lot Homes LLC",
+    "description": "We buy and sell mobile homes in Austin, TX and across Texas. Cash offers, owner financing, consignment sales, subject-to deals. 4+ years, 50+ deals, zero losses.",
+    "url": "https://ironlothomes.com",
+    "telephone": "+1-512-850-4013",
+    "email": "americansteele369@gmail.com",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Austin",
+      "addressRegion": "TX",
+      "addressCountry": "US"
+    },
+    "areaServed": [
+      {"@type": "City", "name": "Austin, TX"},
+      {"@type": "City", "name": "Dallas, TX"},
+      {"@type": "City", "name": "Fort Worth, TX"},
+      {"@type": "City", "name": "San Antonio, TX"},
+      {"@type": "City", "name": "Arlington, TX"},
+      {"@type": "City", "name": "Plano, TX"},
+      {"@type": "City", "name": "McKinney, TX"},
+      {"@type": "City", "name": "San Marcos, TX"},
+      {"@type": "City", "name": "Lockhart, TX"},
+      {"@type": "City", "name": "Kyle, TX"},
+      {"@type": "City", "name": "Buda, TX"},
+      {"@type": "City", "name": "Bastrop, TX"},
+      {"@type": "City", "name": "Frisco, TX"},
+      {"@type": "City", "name": "Denton, TX"},
+      {"@type": "City", "name": "Princeton, TX"}
+    ],
+    "foundingDate": "2022",
+    "founder": {
+      "@type": "Person",
+      "name": "Wayne",
+      "jobTitle": "Founder",
+      "worksFor": {
+        "@type": "Organization",
+        "name": "Iron Lot Homes LLC"
+      }
+    },
+    "priceRange": "$$",
+    "openingHours": "Mo-Sa 08:00-18:00",
+    "sameAs": []
+  }
+  </script>
+
+  <!-- Schema.org: Person (Wayne) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Wayne",
+    "jobTitle": "Founder",
+    "worksFor": {
+      "@type": "Organization",
+      "name": "Iron Lot Homes LLC",
+      "url": "https://ironlothomes.com"
+    },
+    "knowsLanguage": ["en", "es"],
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Austin",
+      "addressRegion": "TX",
+      "addressCountry": "US"
+    }
+  }
+  </script>
+
+  <style>
+    /* ===== About Page Enhancements ===== */
+
+    /* --- Location Hero (About) --- */
+    .location-hero {
+      position: relative;
+      background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary) 100%);
+      color: var(--text-inverse);
+      padding: 100px 0 70px;
+      text-align: center;
+      overflow: hidden;
+    }
+    .location-hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: url('https://images.unsplash.com/photo-1531218150217-54595bc2b934?auto=format&fit=crop&w=1920&q=80') center/cover no-repeat;
+      opacity: 0.15;
+    }
+    .location-hero::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 4px;
+      background: var(--accent);
+    }
+    .location-hero .container {
+      position: relative;
+      z-index: 2;
+    }
+    .location-hero h1 {
+      color: var(--text-inverse);
+      margin-bottom: 16px;
+      letter-spacing: -0.5px;
+    }
+    .location-hero p {
+      opacity: 0.92;
+      font-size: 1.15rem;
+      max-width: 640px;
+      margin: 0 auto 20px;
+    }
+    .breadcrumb {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      font-size: 0.85rem;
+      opacity: 0.75;
+      margin-bottom: 24px;
+    }
+    .breadcrumb a {
+      color: var(--text-inverse);
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+    .breadcrumb a:hover { color: var(--accent-light); }
+    .breadcrumb span { opacity: 0.6; }
+
+    /* --- Texture Overlay Utility --- */
+    .texture-overlay {
+      position: relative;
+    }
+    .texture-overlay::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.03'/%3E%3C/svg%3E");
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    /* --- Content Grid (Our Story) --- */
+    .content-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 40px;
+      align-items: center;
+    }
+    @media (min-width: 768px) {
+      .content-grid {
+        grid-template-columns: 320px 1fr;
+        gap: 56px;
+      }
+    }
+    @media (min-width: 1024px) {
+      .content-grid {
+        grid-template-columns: 380px 1fr;
+        gap: 72px;
+      }
+    }
+    .founder-photo {
+      width: 100%;
+      max-width: 320px;
+      aspect-ratio: 3/4;
+      margin: 0 auto;
+      background: var(--bg-alt);
+      border: 4px solid var(--accent);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--text-light);
+      font-size: 0.95rem;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    @media (min-width: 768px) {
+      .founder-photo { max-width: 100%; }
+    }
+    .founder-photo::after {
+      content: '';
+      position: absolute;
+      bottom: -4px;
+      right: -4px;
+      width: 80px;
+      height: 80px;
+      background: var(--accent);
+      opacity: 0.15;
+    }
+    .founder-info .founder-name {
+      font-family: var(--font-display);
+      font-size: clamp(1.5rem, 3vw, 2rem);
+      font-weight: 700;
+      color: var(--primary-dark);
+      margin-bottom: 4px;
+    }
+    .founder-info .founder-role {
+      color: var(--accent);
+      font-weight: 600;
+      font-size: 1rem;
+      margin-bottom: 20px;
+    }
+    .founder-info p {
+      font-size: 1.05rem;
+      line-height: 1.85;
+      color: var(--text);
+    }
+    .accent-line {
+      width: 48px;
+      height: 3px;
+      background: var(--accent);
+      margin-bottom: 20px;
+    }
+
+    /* --- Stats Strip (About variant) --- */
+    .stats-strip--about {
+      background: var(--primary-dark);
+      color: var(--text-inverse);
+      padding: 48px 0;
+      border-top: 4px solid var(--accent);
+    }
+    .stats-strip--about .stat-number {
+      color: var(--accent);
+      font-size: clamp(2rem, 5vw, 3rem);
+    }
+    .stats-strip--about .stat-label {
+      color: rgba(255,255,255,0.8);
+      font-size: 0.9rem;
+      font-weight: 500;
+    }
+
+    /* --- Why Choose (Dark Section) --- */
+    .section-dark {
+      background: var(--primary-dark);
+      color: var(--text-inverse);
+      padding: 80px 0;
+      position: relative;
+    }
+    .section-dark::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");
+      pointer-events: none;
+    }
+    .section-dark .container { position: relative; z-index: 1; }
+    .section-dark .section-label { color: var(--accent); }
+    .section-dark .section-header h2 { color: var(--text-inverse); }
+    .section-dark .section-header p { color: rgba(255,255,255,0.75); }
+    .values-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 20px;
+    }
+    @media (min-width: 768px) {
+      .values-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (min-width: 1024px) {
+      .values-grid { grid-template-columns: repeat(3, 1fr); }
+    }
+    .value-card {
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.1);
+      padding: 28px 24px;
+      transition: background var(--transition), transform var(--transition);
+    }
+    .value-card:hover {
+      background: rgba(255,255,255,0.1);
+      transform: translateY(-3px);
+    }
+    .value-card-icon {
+      width: 48px;
+      height: 48px;
+      background: var(--accent);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 16px;
+      font-size: 1.4rem;
+      color: white;
+    }
+    .value-card h4 {
+      color: var(--text-inverse);
+      font-size: 1.1rem;
+      margin-bottom: 8px;
+    }
+    .value-card p {
+      color: rgba(255,255,255,0.7);
+      font-size: 0.92rem;
+      margin-bottom: 0;
+      line-height: 1.7;
+    }
+
+    /* --- CTA Orange Section --- */
+    .cta-orange {
+      background: linear-gradient(135deg, var(--accent) 0%, #b8711f 100%);
+      color: var(--text-inverse);
+      padding: 64px 0;
+      text-align: center;
+      position: relative;
+    }
+    .cta-orange::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 4px;
+      background: var(--primary-dark);
+    }
+    .cta-orange h2 { color: var(--text-inverse); margin-bottom: 12px; }
+    .cta-orange p { opacity: 0.95; font-size: 1.1rem; margin-bottom: 28px; max-width: 520px; margin-left: auto; margin-right: auto; }
+    .cta-orange .btn-white { color: var(--accent-hover); font-weight: 700; }
+    .cta-orange .btn-white:hover { color: var(--primary-dark); }
+    .cta-orange .btn-outline-white {
+      background: transparent;
+      color: var(--text-inverse);
+      border: 2px solid var(--text-inverse);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: 16px 40px;
+      font-size: 1rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all var(--transition);
+    }
+    .cta-orange .btn-outline-white:hover {
+      background: var(--text-inverse);
+      color: var(--accent);
+    }
+
+    /* --- Network Grid --- */
+    .network-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 20px;
+    }
+    @media (min-width: 768px) {
+      .network-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (min-width: 1024px) {
+      .network-grid { grid-template-columns: repeat(3, 1fr); }
+    }
+    .network-card {
+      background: var(--card);
+      border-left: 4px solid var(--accent);
+      padding: 28px 24px;
+      box-shadow: var(--shadow-sm);
+      transition: box-shadow var(--transition), transform var(--transition);
+    }
+    .network-card:hover {
+      box-shadow: var(--shadow-md);
+      transform: translateY(-2px);
+    }
+    .network-card-icon {
+      width: 44px;
+      height: 44px;
+      background: var(--accent-light);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 14px;
+      font-size: 1.3rem;
+    }
+    .network-card h4 {
+      font-size: 1.05rem;
+      margin-bottom: 6px;
+    }
+    .network-card p {
+      color: var(--text-light);
+      font-size: 0.92rem;
+      margin-bottom: 0;
+    }
+
+    /* --- Service Areas Map --- */
+    .areas-map-section {
+      background: var(--bg-alt);
+      padding: 80px 0;
+    }
+    .areas-map-wrap {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 40px;
+      align-items: center;
+    }
+    @media (min-width: 768px) {
+      .areas-map-wrap { grid-template-columns: 1fr 1fr; }
+    }
+    .areas-svg {
+      max-width: 480px;
+      margin: 0 auto;
+    }
+    .areas-svg svg {
+      width: 100%;
+      height: auto;
+    }
+    .areas-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+    .areas-list .area-tag {
+      display: inline-block;
+      background: var(--card);
+      border: 1px solid var(--border);
+      padding: 8px 16px;
+      font-size: 0.88rem;
+      font-weight: 500;
+      color: var(--primary-dark);
+      transition: all var(--transition);
+    }
+    .areas-list .area-tag:hover {
+      background: var(--accent);
+      color: white;
+      border-color: var(--accent);
+    }
+    .areas-list .area-tag--primary {
+      background: var(--primary-dark);
+      color: white;
+      border-color: var(--primary-dark);
+      font-weight: 700;
+    }
+
+    /* --- Testimonials (About) --- */
+    .testimonial-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 24px;
+    }
+    @media (min-width: 768px) {
+      .testimonial-grid { grid-template-columns: repeat(3, 1fr); }
+    }
+    .testimonial-card {
+      background: var(--card);
+      padding: 32px 24px;
+      box-shadow: var(--shadow-sm);
+      border-top: 3px solid var(--accent);
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+    .testimonial-stars {
+      color: var(--accent);
+      font-size: 1.1rem;
+      letter-spacing: 2px;
+    }
+    .testimonial-card blockquote {
+      font-size: 0.95rem;
+      line-height: 1.75;
+      color: var(--text);
+      font-style: italic;
+      flex: 1;
+    }
+    .testimonial-card cite {
+      font-style: normal;
+      font-weight: 600;
+      font-size: 0.9rem;
+      color: var(--primary-dark);
+    }
+
+    /* --- Footer CTA Bar --- */
+    .footer-cta-bar {
+      background: var(--primary);
+      color: var(--text-inverse);
+      padding: 40px 0;
+      text-align: center;
+    }
+    .footer-cta-bar h3 {
+      color: var(--text-inverse);
+      margin-bottom: 20px;
+      font-size: clamp(1.2rem, 3vw, 1.6rem);
+    }
+    .footer-cta-bar .cta-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      justify-content: center;
+    }
+    .footer-cta-bar .btn-accent {
+      background: var(--accent);
+      color: white;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: 16px 36px;
+      font-size: 1rem;
+      font-weight: 600;
+      border: none;
+      cursor: pointer;
+      transition: all var(--transition);
+    }
+    .footer-cta-bar .btn-accent:hover {
+      background: var(--accent-hover);
+      transform: translateY(-1px);
+      color: white;
+    }
+    .footer-cta-bar .btn-outline-light {
+      background: transparent;
+      color: var(--text-inverse);
+      border: 2px solid rgba(255,255,255,0.5);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: 16px 36px;
+      font-size: 1rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all var(--transition);
+    }
+    .footer-cta-bar .btn-outline-light:hover {
+      background: rgba(255,255,255,0.1);
+      border-color: rgba(255,255,255,0.8);
+      color: white;
+    }
+
+    /* --- Trust Badges --- */
+    .trust-badges {
+      background: var(--bg);
+      padding: 40px 0;
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+    }
+    .trust-badges-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+      text-align: center;
+    }
+    @media (min-width: 768px) {
+      .trust-badges-grid { grid-template-columns: repeat(4, 1fr); }
+    }
+    .trust-badge {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+      padding: 16px;
+    }
+    .trust-badge-icon {
+      width: 56px;
+      height: 56px;
+      border: 2px solid var(--accent);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.5rem;
+      color: var(--accent);
+    }
+    .trust-badge-label {
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: var(--primary-dark);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    /* --- Urgency Banner --- */
+    .urgency-banner {
+      background: var(--accent);
+      color: white;
+      text-align: center;
+      padding: 10px 16px;
+      font-size: 0.88rem;
+      font-weight: 600;
+    }
+    .urgency-banner a {
+      color: white;
+      text-decoration: underline;
+      text-underline-offset: 2px;
+    }
+
+    /* --- Scroll Animations --- */
+    .fade-in {
+      opacity: 0;
+      transform: translateY(24px);
+      transition: opacity 0.6s ease, transform 0.6s ease;
+    }
+    .fade-in.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* --- Sticky CTA (mobile) --- */
+    .sticky-cta {
+      display: none;
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: var(--primary-dark);
+      padding: 12px 16px;
+      z-index: 90;
+      box-shadow: 0 -2px 12px rgba(0,0,0,0.2);
+    }
+    .sticky-cta .container {
+      display: flex;
+      gap: 10px;
+      justify-content: center;
+    }
+    .sticky-cta .btn { padding: 12px 24px; font-size: 0.9rem; }
+    @media (max-width: 767px) {
+      .sticky-cta.show { display: block; }
+    }
+  </style>
 </head>
 <body>
 
@@ -49,6 +668,38 @@
           <li><a href="index.html" data-lang="en">Home</a><a href="index.html" data-lang-inline="es">Inicio</a></li>
           <li><a href="sell-your-mobile-home.html" data-lang="en">Sell Your Home</a><a href="sell-your-mobile-home.html" data-lang-inline="es">Vender Su Casa</a></li>
           <li><a href="buy-a-mobile-home.html" data-lang="en">Buy a Home</a><a href="buy-a-mobile-home.html" data-lang-inline="es">Comprar Casa</a></li>
+          <li class="dropdown">
+            <a href="#" data-lang="en">Areas</a><a href="#" data-lang-inline="es">Areas</a>
+            <div class="dropdown-menu">
+              <div class="dropdown-columns">
+                <div>
+                  <h5 data-lang="en">Central Texas</h5>
+                  <h5 data-lang="es">Centro de Texas</h5>
+                  <a href="locations/austin/">Austin</a>
+                  <a href="locations/san-marcos/">San Marcos</a>
+                  <a href="locations/kyle/">Kyle</a>
+                  <a href="locations/buda/">Buda</a>
+                  <a href="locations/lockhart/">Lockhart</a>
+                  <a href="locations/bastrop/">Bastrop</a>
+                  <a href="locations/del-valle/">Del Valle</a>
+                </div>
+                <div>
+                  <h5 data-lang="en">DFW &amp; San Antonio</h5>
+                  <h5 data-lang="es">DFW y San Antonio</h5>
+                  <a href="locations/dallas/">Dallas</a>
+                  <a href="locations/fort-worth/">Fort Worth</a>
+                  <a href="locations/arlington/">Arlington</a>
+                  <a href="locations/plano/">Plano</a>
+                  <a href="locations/frisco/">Frisco</a>
+                  <a href="locations/mckinney/">McKinney</a>
+                  <a href="locations/princeton/">Princeton</a>
+                  <a href="locations/denton/">Denton</a>
+                  <a href="locations/irving/">Irving</a>
+                  <a href="locations/san-antonio/">San Antonio</a>
+                </div>
+              </div>
+            </div>
+          </li>
           <li><a href="about.html" class="active" data-lang="en">About</a><a href="about.html" class="active" data-lang-inline="es">Nosotros</a></li>
         </ul>
         <a href="sell-your-mobile-home.html" class="btn btn-primary nav-cta" data-lang="en">Get Cash Offer</a>
@@ -66,59 +717,84 @@
     <a href="index.html">Home / Inicio</a>
     <a href="sell-your-mobile-home.html">Sell Your Home / Vender Su Casa</a>
     <a href="buy-a-mobile-home.html">Buy a Home / Comprar Casa</a>
+    <a href="#" class="mobile-dropdown-toggle">Areas / Áreas ▾</a>
     <a href="about.html">About / Nosotros</a>
     <a href="sell-your-mobile-home.html" class="btn btn-primary btn-block">Get Cash Offer / Oferta en Efectivo</a>
   </div>
 
-  <!-- ===== ABOUT HERO ===== -->
-  <section class="about-hero">
+  <!-- ===== URGENCY BANNER ===== -->
+  <div class="urgency-banner">
+    <span data-lang="en">We are actively buying mobile homes in Austin &amp; DFW. <a href="sell-your-mobile-home.html">Get your cash offer today.</a></span>
+    <span data-lang-inline="es">Estamos comprando casas moviles en Austin y DFW. <a href="sell-your-mobile-home.html">Obtenga su oferta en efectivo hoy.</a></span>
+  </div>
+
+  <!-- ===== ABOUT HERO (location-hero style) ===== -->
+  <section class="location-hero">
     <div class="container">
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <a href="index.html" data-lang="en">Home</a>
+        <a href="index.html" data-lang-inline="es">Inicio</a>
+        <span>/</span>
+        <span data-lang="en">About Us</span>
+        <span data-lang-inline="es">Nosotros</span>
+      </nav>
       <h1 data-lang="en">About Iron Lot Homes</h1>
       <h1 data-lang="es">Sobre Iron Lot Homes</h1>
-      <p data-lang="en">Texas's trusted mobile home buyer and seller — Austin, Dallas-Fort Worth, San Antonio — since 2022.</p>
-      <p data-lang="es">El comprador y vendedor de casas moviles de confianza en Texas — Austin, Dallas-Fort Worth, San Antonio — desde 2022.</p>
+      <p data-lang="en">Texas's trusted mobile home buyer and seller &mdash; Austin, Dallas-Fort Worth, San Antonio &mdash; since 2022.</p>
+      <p data-lang="es">El comprador y vendedor de casas moviles de confianza en Texas &mdash; Austin, Dallas-Fort Worth, San Antonio &mdash; desde 2022.</p>
     </div>
   </section>
 
-  <!-- ===== OUR STORY ===== -->
-  <section class="section">
+  <!-- ===== OUR STORY (content-grid style) ===== -->
+  <section class="section" style="background:#F5F3EF;">
     <div class="container">
-      <div class="team-section">
-        <div class="team-photo-placeholder">
-          Photo Coming Soon
+      <div class="section-header fade-in">
+        <span class="section-label" data-lang="en">Our Story</span>
+        <span class="section-label" data-lang="es">Nuestra Historia</span>
+        <h2 data-lang="en">Meet the Founder</h2>
+        <h2 data-lang="es">Conozca al Fundador</h2>
+      </div>
+      <div class="content-grid fade-in">
+        <!-- Founder Photo -->
+        <div class="founder-photo">
+          <span>Photo Coming Soon</span>
         </div>
-        <div class="team-info">
-          <h3>Wayne</h3>
-          <p class="role" data-lang="en">Founder, Iron Lot Homes LLC</p>
-          <p class="role" data-lang="es">Fundador, Iron Lot Homes LLC</p>
+        <!-- Founder Info -->
+        <div class="founder-info">
+          <div class="accent-line"></div>
+          <div class="founder-name">Wayne</div>
+          <p class="founder-role" data-lang="en">Founder, Iron Lot Homes LLC</p>
+          <p class="founder-role" data-lang="es">Fundador, Iron Lot Homes LLC</p>
           <div data-lang="en">
             <p>Iron Lot Homes was founded in 2022 with a simple mission: make buying and selling mobile homes easier, faster, and more accessible for everyday people across Texas.</p>
-            <p>After seeing how complicated and stressful the process can be — especially for families facing foreclosure, relocating, or simply looking for an affordable path to homeownership — Wayne built Iron Lot Homes to offer real solutions without the red tape.</p>
+            <p>After seeing how complicated and stressful the process can be &mdash; especially for families facing foreclosure, relocating, or simply looking for an affordable path to homeownership &mdash; Wayne built Iron Lot Homes to offer real solutions without the red tape.</p>
             <p>Over 4 years and 50+ successful deals later, Iron Lot Homes has earned the trust of homeowners, park managers, and fellow investors from Austin to Dallas-Fort Worth and beyond. We've maintained a perfect track record with zero losses because we treat every deal and every person with integrity.</p>
+            <p>With 85% of our clients being Spanish-speaking families, bilingual service isn't an add-on &mdash; it's who we are. From Austin to DFW to San Antonio, we're building a company that reflects the communities we serve.</p>
           </div>
           <div data-lang="es">
             <p>Iron Lot Homes fue fundada en 2022 con una mision simple: hacer que comprar y vender casas moviles sea mas facil, rapido, y accesible para las personas comunes en todo Texas.</p>
-            <p>Despues de ver lo complicado y estresante que puede ser el proceso — especialmente para familias enfrentando ejecucion hipotecaria, mudanzas, o simplemente buscando un camino accesible a ser duenos de casa — Wayne creo Iron Lot Homes para ofrecer soluciones reales sin burocracia.</p>
+            <p>Despues de ver lo complicado y estresante que puede ser el proceso &mdash; especialmente para familias enfrentando ejecucion hipotecaria, mudanzas, o simplemente buscando un camino accesible a ser duenos de casa &mdash; Wayne creo Iron Lot Homes para ofrecer soluciones reales sin burocracia.</p>
             <p>Despues de 4 anos y mas de 50 negocios exitosos, Iron Lot Homes ha ganado la confianza de duenos de casas, gerentes de parques, e inversores desde Austin hasta Dallas-Fort Worth y mas alla. Hemos mantenido un historial perfecto con cero perdidas porque tratamos cada negocio y cada persona con integridad.</p>
+            <p>Con el 85% de nuestros clientes siendo familias hispanohablantes, el servicio bilingue no es un extra &mdash; es parte de quienes somos. Desde Austin hasta DFW y San Antonio, estamos construyendo una empresa que refleja las comunidades que servimos.</p>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ===== STATS ===== -->
-  <section class="stats-strip" style="border-top:1px solid var(--border);">
+  <!-- ===== STATS STRIP ===== -->
+  <section class="stats-strip--about">
     <div class="container">
-      <div class="stats-grid">
+      <div class="stats-grid fade-in">
+        <div class="stat-item">
+          <div class="stat-number">50+</div>
+          <div class="stat-label" data-lang="en">Homes Sold</div>
+          <div class="stat-label" data-lang="es">Casas Vendidas</div>
+        </div>
         <div class="stat-item">
           <div class="stat-number">4+</div>
           <div class="stat-label" data-lang="en">Years in Business</div>
           <div class="stat-label" data-lang="es">Anos en Negocio</div>
-        </div>
-        <div class="stat-item">
-          <div class="stat-number">50+</div>
-          <div class="stat-label" data-lang="en">Deals Closed</div>
-          <div class="stat-label" data-lang="es">Negocios Cerrados</div>
         </div>
         <div class="stat-item">
           <div class="stat-number">0</div>
@@ -126,61 +802,90 @@
           <div class="stat-label" data-lang="es">Perdidas</div>
         </div>
         <div class="stat-item">
-          <div class="stat-number">5</div>
-          <div class="stat-label" data-lang="en">Rental Properties</div>
-          <div class="stat-label" data-lang="es">Propiedades en Renta</div>
+          <div class="stat-number">85%</div>
+          <div class="stat-label" data-lang="en">Bilingual Clients</div>
+          <div class="stat-label" data-lang="es">Clientes Bilingues</div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ===== WHAT WE BELIEVE ===== -->
-  <section class="section section-alt">
+  <!-- ===== OUR VALUES / WHAT SETS US APART (dark section) ===== -->
+  <section class="section-dark">
     <div class="container">
-      <div class="section-header">
+      <div class="section-header fade-in">
         <span class="section-label" data-lang="en">Our Values</span>
         <span class="section-label" data-lang="es">Nuestros Valores</span>
         <h2 data-lang="en">What Sets Us Apart</h2>
         <h2 data-lang="es">Lo Que Nos Hace Diferentes</h2>
+        <p data-lang="en">Six principles that guide every deal we make and every family we serve.</p>
+        <p data-lang="es">Seis principios que guian cada negocio que hacemos y cada familia que servimos.</p>
       </div>
+      <div class="values-grid">
+        <!-- 1. Integrity First -->
+        <div class="value-card fade-in">
+          <div class="value-card-icon">&#9878;</div>
+          <h4 data-lang="en">Integrity First</h4>
+          <h4 data-lang="es">Integridad Primero</h4>
+          <p data-lang="en">We treat every person and every deal with honesty and transparency. No hidden fees, no surprises, no pressure.</p>
+          <p data-lang="es">Tratamos a cada persona y cada negocio con honestidad y transparencia. Sin cargos ocultos, sin sorpresas, sin presion.</p>
+        </div>
+        <!-- 2. Accessible Homeownership -->
+        <div class="value-card fade-in">
+          <div class="value-card-icon">&#127968;</div>
+          <h4 data-lang="en">Accessible Homeownership</h4>
+          <h4 data-lang="es">Vivienda Accesible</h4>
+          <p data-lang="en">Owner financing with no credit checks. We believe everyone deserves a path to owning their home, regardless of credit history.</p>
+          <p data-lang="es">Financiamiento del dueno sin verificacion de credito. Creemos que todos merecen un camino a ser duenos de su casa, sin importar su historial crediticio.</p>
+        </div>
+        <!-- 3. Bilingual Service -->
+        <div class="value-card fade-in">
+          <div class="value-card-icon">&#127758;</div>
+          <h4 data-lang="en">Bilingual Service</h4>
+          <h4 data-lang="es">Servicio Bilingue</h4>
+          <p data-lang="en">Fluent Spanish service for our Hispanic community from Austin to DFW. 85% of our clients are Spanish-speaking families. Hablamos su idioma.</p>
+          <p data-lang="es">Servicio fluido en espanol para nuestra comunidad hispana desde Austin hasta DFW. El 85% de nuestros clientes son familias hispanohablantes. Hablamos su idioma.</p>
+        </div>
+        <!-- 4. Full-Service Network -->
+        <div class="value-card fade-in">
+          <div class="value-card-icon">&#128279;</div>
+          <h4 data-lang="en">Full-Service Network</h4>
+          <h4 data-lang="es">Red de Servicio Completo</h4>
+          <p data-lang="en">Access our network of licensed brokers, professional movers, skilled handymen, realtors, and attorneys with every deal.</p>
+          <p data-lang="es">Acceda a nuestra red de corredores con licencia, mudanzas profesionales, manitas expertos, agentes inmobiliarios y abogados con cada negocio.</p>
+        </div>
+        <!-- 5. Flexible Solutions -->
+        <div class="value-card fade-in">
+          <div class="value-card-icon">&#128736;</div>
+          <h4 data-lang="en">Flexible Solutions</h4>
+          <h4 data-lang="es">Soluciones Flexibles</h4>
+          <p data-lang="en">Cash purchases, consignment sales, subject-to deals, and owner financing. We tailor solutions to your unique situation.</p>
+          <p data-lang="es">Compras en efectivo, ventas por consignacion, acuerdos subject-to, y financiamiento del dueno. Adaptamos soluciones a su situacion unica.</p>
+        </div>
+        <!-- 6. Zero Loss Record -->
+        <div class="value-card fade-in">
+          <div class="value-card-icon">&#128200;</div>
+          <h4 data-lang="en">Zero Loss Record</h4>
+          <h4 data-lang="es">Cero Perdidas</h4>
+          <p data-lang="en">4+ years, 50+ deals, and a perfect track record. Zero losses means we know how to structure deals that work for everyone.</p>
+          <p data-lang="es">Mas de 4 anos, mas de 50 negocios, y un historial perfecto. Cero perdidas significa que sabemos estructurar negocios que funcionan para todos.</p>
+        </div>
+      </div>
+    </div>
+  </section>
 
-      <div class="benefits-grid">
-        <div class="benefit-item">
-          <div class="benefit-icon">&#10003;</div>
-          <div>
-            <h4 data-lang="en">People Over Profit</h4>
-            <h4 data-lang="es">Personas Sobre Ganancias</h4>
-            <p data-lang="en">We offer free consultations and walk people through their options even when we don't end up doing business together.</p>
-            <p data-lang="es">Ofrecemos consultas gratis y guiamos a las personas a traves de sus opciones incluso cuando no terminamos haciendo negocios juntos.</p>
-          </div>
-        </div>
-        <div class="benefit-item">
-          <div class="benefit-icon">&#10003;</div>
-          <div>
-            <h4 data-lang="en">Community First</h4>
-            <h4 data-lang="es">Comunidad Primero</h4>
-            <p data-lang="en">We work closely with park managers to fill vacant lots and keep communities thriving. When parks succeed, everyone succeeds.</p>
-            <p data-lang="es">Trabajamos estrechamente con gerentes de parques para llenar lotes vacantes y mantener las comunidades prosperas. Cuando los parques tienen exito, todos tienen exito.</p>
-          </div>
-        </div>
-        <div class="benefit-item">
-          <div class="benefit-icon">&#10003;</div>
-          <div>
-            <h4 data-lang="en">Accessibility</h4>
-            <h4 data-lang="es">Accesibilidad</h4>
-            <p data-lang="en">We believe homeownership should be accessible. That's why we offer owner financing with no credit check and flexible terms.</p>
-            <p data-lang="es">Creemos que ser dueno de casa debe ser accesible. Por eso ofrecemos financiamiento con sin verificacion de credito y terminos flexibles.</p>
-          </div>
-        </div>
-        <div class="benefit-item">
-          <div class="benefit-icon">&#10003;</div>
-          <div>
-            <h4 data-lang="en">Bilingual Service</h4>
-            <h4 data-lang="es">Servicio Bilingue</h4>
-            <p data-lang="en">We speak fluent Spanish and serve a large Spanish-speaking community across Texas — from Austin to Dallas-Fort Worth. Hablamos su idioma.</p>
-            <p data-lang="es">Hablamos espanol con fluidez y servimos a una gran comunidad hispanohablante en todo Texas — desde Austin hasta Dallas-Fort Worth. Hablamos su idioma.</p>
-          </div>
-        </div>
+  <!-- ===== CTA SECTION (orange) ===== -->
+  <section class="cta-orange">
+    <div class="container">
+      <h2 data-lang="en">Let's Talk About Your Mobile Home</h2>
+      <h2 data-lang="es">Hablemos Sobre Su Casa Movil</h2>
+      <p data-lang="en">Whether you're selling, buying, or exploring options &mdash; we'll give you an honest answer, every time.</p>
+      <p data-lang="es">Ya sea que quiera vender, comprar o explorar opciones &mdash; le daremos una respuesta honesta, siempre.</p>
+      <div style="display:flex;flex-wrap:wrap;gap:12px;justify-content:center;">
+        <a href="sell-your-mobile-home.html" class="btn btn-white btn-lg" data-lang="en">Get Cash Offer</a>
+        <a href="sell-your-mobile-home.html" class="btn btn-white btn-lg" data-lang-inline="es">Oferta en Efectivo</a>
+        <a href="tel:+15128504013" class="btn-outline-white" data-lang="en">Call (512) 850-4013</a>
+        <a href="tel:+15128504013" class="btn-outline-white" data-lang-inline="es">Llamar (512) 850-4013</a>
       </div>
     </div>
   </section>
@@ -188,7 +893,7 @@
   <!-- ===== OUR NETWORK ===== -->
   <section class="section">
     <div class="container">
-      <div class="section-header">
+      <div class="section-header fade-in">
         <span class="section-label" data-lang="en">Our Network</span>
         <span class="section-label" data-lang="es">Nuestra Red</span>
         <h2 data-lang="en">A Full Team Behind Every Deal</h2>
@@ -196,55 +901,225 @@
         <p data-lang="en">When you work with Iron Lot Homes, you get access to our entire professional network.</p>
         <p data-lang="es">Cuando trabaja con Iron Lot Homes, tiene acceso a toda nuestra red profesional.</p>
       </div>
-
-      <div class="services-grid">
-        <div class="service-card">
-          <div class="service-icon">&#128188;</div>
-          <h3 data-lang="en">Brokers &amp; Realtors</h3>
-          <h3 data-lang="es">Corredores y Agentes</h3>
-          <p data-lang="en">Licensed professionals who can assist with any type of real estate transaction.</p>
-          <p data-lang="es">Profesionales con licencia que pueden ayudar con cualquier tipo de transaccion inmobiliaria.</p>
+      <div class="network-grid">
+        <!-- Licensed Real Estate Brokers -->
+        <div class="network-card fade-in">
+          <div class="network-card-icon">&#128188;</div>
+          <h4 data-lang="en">Licensed Real Estate Brokers</h4>
+          <h4 data-lang="es">Corredores de Bienes Raices con Licencia</h4>
+          <p data-lang="en">Licensed professionals who can assist with any type of real estate transaction across Texas.</p>
+          <p data-lang="es">Profesionales con licencia que pueden ayudar con cualquier tipo de transaccion inmobiliaria en todo Texas.</p>
         </div>
-        <div class="service-card">
-          <div class="service-icon">&#128295;</div>
-          <h3 data-lang="en">Handymen &amp; Contractors</h3>
-          <h3 data-lang="es">Manitas y Contratistas</h3>
-          <p data-lang="en">Experienced repair professionals who can get your home ready for sale or move-in.</p>
+        <!-- Professional Movers -->
+        <div class="network-card fade-in">
+          <div class="network-card-icon">&#128666;</div>
+          <h4 data-lang="en">Professional Movers</h4>
+          <h4 data-lang="es">Mudanzas Profesionales</h4>
+          <p data-lang="en">Professional mobile home transport and relocation services when your home needs to move.</p>
+          <p data-lang="es">Servicios profesionales de transporte y reubicacion de casas moviles cuando su casa necesita moverse.</p>
+        </div>
+        <!-- Skilled Handymen -->
+        <div class="network-card fade-in">
+          <div class="network-card-icon">&#128295;</div>
+          <h4 data-lang="en">Skilled Handymen</h4>
+          <h4 data-lang="es">Manitas Expertos</h4>
+          <p data-lang="en">Experienced repair professionals who can get your home ready for sale or move-in condition.</p>
           <p data-lang="es">Profesionales de reparacion con experiencia que pueden preparar su casa para la venta o mudanza.</p>
         </div>
-        <div class="service-card">
-          <div class="service-icon">&#128666;</div>
-          <h3 data-lang="en">Home Movers</h3>
-          <h3 data-lang="es">Mudanzas de Casas</h3>
-          <p data-lang="en">Professional mobile home transport and relocation services when needed.</p>
-          <p data-lang="es">Servicios profesionales de transporte y reubicacion de casas moviles cuando sea necesario.</p>
+        <!-- Texas Attorneys -->
+        <div class="network-card fade-in">
+          <div class="network-card-icon">&#9878;</div>
+          <h4 data-lang="en">Texas Attorneys</h4>
+          <h4 data-lang="es">Abogados de Texas</h4>
+          <p data-lang="en">Legal professionals for complex transactions, title issues, contract review, and compliance.</p>
+          <p data-lang="es">Profesionales legales para transacciones complejas, problemas de titulo, revision de contratos, y cumplimiento.</p>
         </div>
-        <div class="service-card">
-          <div class="service-icon">&#9878;</div>
-          <h3 data-lang="en">Attorneys</h3>
-          <h3 data-lang="es">Abogados</h3>
-          <p data-lang="en">Legal professionals for complex transactions, title issues, and contract review.</p>
-          <p data-lang="es">Profesionales legales para transacciones complejas, problemas de titulo, y revision de contratos.</p>
+        <!-- Mobile Home Park Managers -->
+        <div class="network-card fade-in">
+          <div class="network-card-icon">&#127969;</div>
+          <h4 data-lang="en">Mobile Home Park Managers</h4>
+          <h4 data-lang="es">Gerentes de Parques de Casas Moviles</h4>
+          <p data-lang="en">Direct relationships with park managers to streamline lot placement, approvals, and community requirements.</p>
+          <p data-lang="es">Relaciones directas con gerentes de parques para agilizar la colocacion de lotes, aprobaciones, y requisitos comunitarios.</p>
+        </div>
+        <!-- Fellow Investors -->
+        <div class="network-card fade-in">
+          <div class="network-card-icon">&#128176;</div>
+          <h4 data-lang="en">Fellow Investors</h4>
+          <h4 data-lang="es">Inversionistas Asociados</h4>
+          <p data-lang="en">A network of trusted mobile home investors for deal partnerships, referrals, and co-ventures across Texas.</p>
+          <p data-lang="es">Una red de inversionistas de casas moviles de confianza para asociaciones, referencias, y coinversiones en todo Texas.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ===== CTA ===== -->
-  <section class="cta-banner">
+  <!-- ===== SERVICE AREAS (with SVG map) ===== -->
+  <section class="areas-map-section">
     <div class="container">
-      <h2 data-lang="en">Let's Work Together</h2>
-      <h2 data-lang="es">Trabajemos Juntos</h2>
-      <p data-lang="en">Whether you're looking to sell, buy, or just explore your options, we're here to help.</p>
-      <p data-lang="es">Ya sea que quiera vender, comprar, o simplemente explorar sus opciones, estamos aqui para ayudar.</p>
-      <div style="display:flex;flex-wrap:wrap;gap:12px;justify-content:center;">
-        <a href="sell-your-mobile-home.html" class="btn btn-primary btn-lg" data-lang="en">Sell Your Home</a>
-        <a href="sell-your-mobile-home.html" class="btn btn-primary btn-lg" data-lang-inline="es">Vender Su Casa</a>
-        <a href="buy-a-mobile-home.html" class="btn btn-white btn-lg" data-lang="en">Buy a Home</a>
-        <a href="buy-a-mobile-home.html" class="btn btn-white btn-lg" data-lang-inline="es">Comprar Casa</a>
+      <div class="section-header fade-in">
+        <span class="section-label" data-lang="en">Service Areas</span>
+        <span class="section-label" data-lang="es">Areas de Servicio</span>
+        <h2 data-lang="en">Serving Communities Across Texas</h2>
+        <h2 data-lang="es">Sirviendo Comunidades en Todo Texas</h2>
       </div>
-      <div class="cta-phone" style="margin-top:20px;">
-        <a href="tel:+15128504013">(512) 850-4013</a>
+      <div class="areas-map-wrap fade-in">
+        <!-- SVG Map: Texas with Austin, DFW, San Antonio connections -->
+        <div class="areas-svg">
+          <svg viewBox="0 0 500 480" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Texas service area map showing Austin, Dallas-Fort Worth, and San Antonio">
+            <!-- Texas outline (simplified) -->
+            <path d="M120,30 L260,30 L310,55 L355,45 L395,60 L440,50 L460,80 L470,120 L460,165 L470,195 L480,235 L475,270 L450,310 L420,340 L385,370 L360,390 L340,410 L315,430 L290,445 L265,455 L240,465 L210,470 L180,460 L160,440 L140,420 L120,400 L100,370 L80,340 L65,310 L55,280 L50,250 L48,220 L55,190 L65,160 L75,130 L85,100 L95,70 L105,45 Z"
+              fill="#E8E4DD" stroke="#1a3a5c" stroke-width="2.5" stroke-linejoin="round"/>
+            <!-- Connection lines -->
+            <line x1="310" y1="115" x2="265" y2="275" stroke="#d4842a" stroke-width="2" stroke-dasharray="6,4" opacity="0.6"/>
+            <line x1="265" y1="275" x2="210" y2="335" stroke="#d4842a" stroke-width="2" stroke-dasharray="6,4" opacity="0.6"/>
+            <line x1="310" y1="115" x2="210" y2="335" stroke="#d4842a" stroke-width="1.5" stroke-dasharray="6,4" opacity="0.4"/>
+            <!-- DFW marker -->
+            <circle cx="310" cy="115" r="14" fill="#1a3a5c" stroke="white" stroke-width="3"/>
+            <circle cx="310" cy="115" r="6" fill="#d4842a"/>
+            <text x="310" y="100" text-anchor="middle" fill="#1a3a5c" font-family="Outfit, sans-serif" font-weight="700" font-size="13">DFW</text>
+            <!-- Austin marker -->
+            <circle cx="265" cy="275" r="16" fill="#d4842a" stroke="white" stroke-width="3"/>
+            <circle cx="265" cy="275" r="7" fill="white"/>
+            <text x="265" y="260" text-anchor="middle" fill="#1a3a5c" font-family="Outfit, sans-serif" font-weight="700" font-size="14">AUSTIN</text>
+            <text x="265" y="305" text-anchor="middle" fill="#d4842a" font-family="Outfit, sans-serif" font-weight="600" font-size="10">HQ</text>
+            <!-- San Antonio marker -->
+            <circle cx="210" cy="335" r="14" fill="#1a3a5c" stroke="white" stroke-width="3"/>
+            <circle cx="210" cy="335" r="6" fill="#d4842a"/>
+            <text x="210" y="360" text-anchor="middle" fill="#1a3a5c" font-family="Outfit, sans-serif" font-weight="700" font-size="12">SAN ANTONIO</text>
+          </svg>
+        </div>
+        <!-- City Tags -->
+        <div>
+          <h3 style="margin-bottom:20px;" data-lang="en">Cities We Serve</h3>
+          <h3 style="margin-bottom:20px;" data-lang="es">Ciudades Que Servimos</h3>
+          <div class="areas-list">
+            <span class="area-tag area-tag--primary">Austin</span>
+            <span class="area-tag area-tag--primary">Dallas</span>
+            <span class="area-tag area-tag--primary">Fort Worth</span>
+            <span class="area-tag area-tag--primary">San Antonio</span>
+            <span class="area-tag">Arlington</span>
+            <span class="area-tag">Plano</span>
+            <span class="area-tag">Frisco</span>
+            <span class="area-tag">Denton</span>
+            <span class="area-tag">McKinney</span>
+            <span class="area-tag">Princeton</span>
+            <span class="area-tag">San Marcos</span>
+            <span class="area-tag">Lockhart</span>
+            <span class="area-tag">Kyle</span>
+            <span class="area-tag">Buda</span>
+            <span class="area-tag">Bastrop</span>
+            <span class="area-tag">Del Valle</span>
+            <span class="area-tag">Hutto</span>
+            <span class="area-tag">New Braunfels</span>
+            <span class="area-tag">Seguin</span>
+          </div>
+          <p style="margin-top:16px;font-size:0.92rem;color:var(--text-light);" data-lang="en">Don't see your city? We likely serve your area too. <a href="tel:+15128504013">Call us to find out.</a></p>
+          <p style="margin-top:16px;font-size:0.92rem;color:var(--text-light);" data-lang="es">No ve su ciudad? Probablemente servimos su area tambien. <a href="tel:+15128504013">Llamenos para averiguar.</a></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== TESTIMONIALS ===== -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header fade-in">
+        <span class="section-label" data-lang="en">What Our Clients Say</span>
+        <span class="section-label" data-lang="es">Lo Que Dicen Nuestros Clientes</span>
+        <h2 data-lang="en">Trusted by Homeowners Across Texas</h2>
+        <h2 data-lang="es">Confianza de Duenos de Casas en Todo Texas</h2>
+      </div>
+      <div class="testimonial-grid">
+        <!-- Testimonial 1 -->
+        <div class="testimonial-card fade-in">
+          <div class="testimonial-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <blockquote>
+            <span data-lang="en">"Iron Lot Homes made selling my mobile home so easy. They handled everything and I got a fair price. Wayne was honest from day one. Highly recommend!"</span>
+            <span data-lang-inline="es">"Iron Lot Homes hizo que vender mi casa movil fuera muy facil. Se encargaron de todo y obtuve un precio justo. Wayne fue honesto desde el primer dia. Muy recomendados!"</span>
+          </blockquote>
+          <cite>&mdash; Satisfied Seller, Austin TX</cite>
+        </div>
+        <!-- Testimonial 2 -->
+        <div class="testimonial-card fade-in">
+          <div class="testimonial-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <blockquote>
+            <span data-lang="en">"We were able to buy our first home with owner financing and no credit check. Wayne and his team were amazing to work with. They spoke Spanish and made us feel comfortable."</span>
+            <span data-lang-inline="es">"Pudimos comprar nuestra primera casa con financiamiento del dueno y sin verificacion de credito. Wayne y su equipo fueron increibles. Hablaban espanol y nos hicieron sentir comodos."</span>
+          </blockquote>
+          <cite>&mdash; Happy Buyer, San Marcos TX</cite>
+        </div>
+        <!-- Testimonial 3 -->
+        <div class="testimonial-card fade-in">
+          <div class="testimonial-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <blockquote>
+            <span data-lang="en">"I was behind on payments and facing foreclosure. Iron Lot Homes helped me through their subject-to program and saved my credit. I can't thank them enough."</span>
+            <span data-lang-inline="es">"Estaba atrasado en pagos y enfrentando ejecucion hipotecaria. Iron Lot Homes me ayudo a traves de su programa subject-to y salvo mi credito. No puedo agradecerles lo suficiente."</span>
+          </blockquote>
+          <cite>&mdash; Grateful Seller, Lockhart TX</cite>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER CTA BAR ===== -->
+  <section class="footer-cta-bar">
+    <div class="container">
+      <h3 data-lang="en">Have Questions? We're Here to Help.</h3>
+      <h3 data-lang="es">Tiene Preguntas? Estamos Aqui para Ayudar.</h3>
+      <div class="cta-buttons">
+        <a href="tel:+15128504013" class="btn-accent" data-lang="en">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          Call (512) 850-4013
+        </a>
+        <a href="tel:+15128504013" class="btn-accent" data-lang-inline="es">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          Llamar (512) 850-4013
+        </a>
+        <a href="mailto:americansteele369@gmail.com" class="btn-outline-light" data-lang="en">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          Email Us
+        </a>
+        <a href="mailto:americansteele369@gmail.com" class="btn-outline-light" data-lang-inline="es">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          Enviarnos Email
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== TRUST BADGES ===== -->
+  <section class="trust-badges">
+    <div class="container">
+      <div class="trust-badges-grid fade-in">
+        <div class="trust-badge">
+          <div class="trust-badge-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          </div>
+          <span class="trust-badge-label" data-lang="en">Licensed</span>
+          <span class="trust-badge-label" data-lang-inline="es">Con Licencia</span>
+        </div>
+        <div class="trust-badge">
+          <div class="trust-badge-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+          </div>
+          <span class="trust-badge-label" data-lang="en">Insured</span>
+          <span class="trust-badge-label" data-lang-inline="es">Asegurado</span>
+        </div>
+        <div class="trust-badge">
+          <div class="trust-badge-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M9 12l2 2 4-4"/></svg>
+          </div>
+          <span class="trust-badge-label" data-lang="en">BBB</span>
+          <span class="trust-badge-label" data-lang-inline="es">BBB</span>
+        </div>
+        <div class="trust-badge">
+          <div class="trust-badge-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+          </div>
+          <span class="trust-badge-label" data-lang="en">Bilingual</span>
+          <span class="trust-badge-label" data-lang-inline="es">Bilingue</span>
+        </div>
       </div>
     </div>
   </section>
@@ -271,6 +1146,20 @@
             <li><a href="about.html" data-lang="en">About Us</a><a href="about.html" data-lang-inline="es">Nosotros</a></li>
           </ul>
         </div>
+        <div class="footer-links-section">
+          <h4 data-lang="en">Service Areas</h4>
+          <h4 data-lang="es">Áreas de Servicio</h4>
+          <ul class="footer-links">
+            <li><a href="locations/austin/">Austin</a></li>
+            <li><a href="locations/dallas/">Dallas</a></li>
+            <li><a href="locations/fort-worth/">Fort Worth</a></li>
+            <li><a href="locations/san-antonio/">San Antonio</a></li>
+            <li><a href="locations/san-marcos/">San Marcos</a></li>
+            <li><a href="locations/arlington/">Arlington</a></li>
+            <li><a href="locations/plano/">Plano</a></li>
+            <li><a href="locations/mckinney/">McKinney</a></li>
+          </ul>
+        </div>
         <div>
           <h4 data-lang="en">Contact</h4>
           <h4 data-lang="es">Contacto</h4>
@@ -284,7 +1173,8 @@
             &#128205; Austin, TX
           </div>
           <div class="footer-areas" style="margin-top:12px;">
-            <strong>Serving:</strong>
+            <strong data-lang="en">Serving:</strong>
+            <strong data-lang="es">Sirviendo:</strong>
             Austin, Dallas, Fort Worth, San Antonio, Arlington, Plano, McKinney, San Marcos, Lockhart, Kyle, Buda, Bastrop
           </div>
         </div>
@@ -295,6 +1185,58 @@
     </div>
   </footer>
 
+  <!-- ===== STICKY CTA (mobile) ===== -->
+  <div class="sticky-cta" id="stickyCta">
+    <div class="container">
+      <a href="tel:+15128504013" class="btn btn-primary" data-lang="en">Call Now</a>
+      <a href="tel:+15128504013" class="btn btn-primary" data-lang-inline="es">Llamar</a>
+      <a href="sell-your-mobile-home.html" class="btn btn-white" data-lang="en">Get Offer</a>
+      <a href="sell-your-mobile-home.html" class="btn btn-white" data-lang-inline="es">Oferta</a>
+    </div>
+  </div>
+
   <script src="js/main.js"></script>
+
+  <!-- Scroll Animation Observer -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      // Intersection Observer for fade-in animations
+      var fadeElements = document.querySelectorAll('.fade-in');
+      if ('IntersectionObserver' in window) {
+        var observer = new IntersectionObserver(function(entries) {
+          entries.forEach(function(entry) {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('visible');
+              observer.unobserve(entry.target);
+            }
+          });
+        }, { threshold: 0.15, rootMargin: '0px 0px -40px 0px' });
+
+        fadeElements.forEach(function(el) {
+          observer.observe(el);
+        });
+      } else {
+        // Fallback: show all elements immediately
+        fadeElements.forEach(function(el) {
+          el.classList.add('visible');
+        });
+      }
+
+      // Sticky CTA on scroll (mobile)
+      var stickyCta = document.getElementById('stickyCta');
+      if (stickyCta) {
+        var lastScroll = 0;
+        window.addEventListener('scroll', function() {
+          var currentScroll = window.pageYOffset;
+          if (currentScroll > 600) {
+            stickyCta.classList.add('show');
+          } else {
+            stickyCta.classList.remove('show');
+          }
+          lastScroll = currentScroll;
+        }, { passive: true });
+      }
+    });
+  </script>
 </body>
 </html>

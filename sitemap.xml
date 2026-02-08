@@ -1,0 +1,307 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+
+  <!-- English Main Pages -->
+  <url>
+    <loc>https://ironlothomes.com/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ironlothomes.com/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://ironlothomes.com/es/"/>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://ironlothomes.com/sell-your-mobile-home.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ironlothomes.com/sell-your-mobile-home.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://ironlothomes.com/es/vender-su-casa-movil.html"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://ironlothomes.com/buy-a-mobile-home.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ironlothomes.com/buy-a-mobile-home.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://ironlothomes.com/es/comprar-casa-movil.html"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://ironlothomes.com/about.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ironlothomes.com/about.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://ironlothomes.com/es/sobre-nosotros.html"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Spanish Main Pages -->
+  <url>
+    <loc>https://ironlothomes.com/es/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ironlothomes.com/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://ironlothomes.com/es/"/>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://ironlothomes.com/es/vender-su-casa-movil.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ironlothomes.com/sell-your-mobile-home.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://ironlothomes.com/es/vender-su-casa-movil.html"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://ironlothomes.com/es/comprar-casa-movil.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ironlothomes.com/buy-a-mobile-home.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://ironlothomes.com/es/comprar-casa-movil.html"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://ironlothomes.com/es/sobre-nosotros.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ironlothomes.com/about.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://ironlothomes.com/es/sobre-nosotros.html"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- English Location Pages -->
+  <url>
+    <loc>https://ironlothomes.com/locations/austin/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ironlothomes.com/locations/austin/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://ironlothomes.com/es/locations/austin/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ironlothomes.com/locations/san-antonio/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ironlothomes.com/locations/san-antonio/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://ironlothomes.com/es/locations/san-antonio/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ironlothomes.com/locations/san-marcos/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ironlothomes.com/locations/san-marcos/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://ironlothomes.com/es/locations/san-marcos/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ironlothomes.com/locations/kyle/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ironlothomes.com/locations/kyle/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://ironlothomes.com/es/locations/kyle/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ironlothomes.com/locations/buda/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ironlothomes.com/locations/buda/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://ironlothomes.com/es/locations/buda/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ironlothomes.com/locations/lockhart/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ironlothomes.com/locations/lockhart/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://ironlothomes.com/es/locations/lockhart/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ironlothomes.com/locations/bastrop/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ironlothomes.com/locations/bastrop/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://ironlothomes.com/es/locations/bastrop/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ironlothomes.com/locations/del-valle/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ironlothomes.com/locations/del-valle/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://ironlothomes.com/es/locations/del-valle/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ironlothomes.com/locations/dallas/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ironlothomes.com/locations/dallas/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://ironlothomes.com/es/locations/dallas/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ironlothomes.com/locations/fort-worth/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ironlothomes.com/locations/fort-worth/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://ironlothomes.com/es/locations/fort-worth/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ironlothomes.com/locations/arlington/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ironlothomes.com/locations/arlington/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://ironlothomes.com/es/locations/arlington/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ironlothomes.com/locations/plano/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ironlothomes.com/locations/plano/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://ironlothomes.com/es/locations/plano/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ironlothomes.com/locations/frisco/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ironlothomes.com/locations/frisco/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://ironlothomes.com/es/locations/frisco/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ironlothomes.com/locations/mckinney/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ironlothomes.com/locations/mckinney/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://ironlothomes.com/es/locations/mckinney/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ironlothomes.com/locations/princeton/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ironlothomes.com/locations/princeton/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://ironlothomes.com/es/locations/princeton/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ironlothomes.com/locations/denton/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ironlothomes.com/locations/denton/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://ironlothomes.com/es/locations/denton/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ironlothomes.com/locations/irving/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ironlothomes.com/locations/irving/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://ironlothomes.com/es/locations/irving/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Spanish Location Pages -->
+  <url>
+    <loc>https://ironlothomes.com/es/locations/austin/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ironlothomes.com/locations/austin/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://ironlothomes.com/es/locations/austin/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ironlothomes.com/es/locations/san-antonio/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ironlothomes.com/locations/san-antonio/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://ironlothomes.com/es/locations/san-antonio/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ironlothomes.com/es/locations/san-marcos/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ironlothomes.com/locations/san-marcos/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://ironlothomes.com/es/locations/san-marcos/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ironlothomes.com/es/locations/kyle/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ironlothomes.com/locations/kyle/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://ironlothomes.com/es/locations/kyle/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ironlothomes.com/es/locations/buda/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ironlothomes.com/locations/buda/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://ironlothomes.com/es/locations/buda/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ironlothomes.com/es/locations/lockhart/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ironlothomes.com/locations/lockhart/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://ironlothomes.com/es/locations/lockhart/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ironlothomes.com/es/locations/bastrop/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ironlothomes.com/locations/bastrop/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://ironlothomes.com/es/locations/bastrop/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ironlothomes.com/es/locations/del-valle/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ironlothomes.com/locations/del-valle/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://ironlothomes.com/es/locations/del-valle/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ironlothomes.com/es/locations/dallas/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ironlothomes.com/locations/dallas/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://ironlothomes.com/es/locations/dallas/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ironlothomes.com/es/locations/fort-worth/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ironlothomes.com/locations/fort-worth/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://ironlothomes.com/es/locations/fort-worth/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ironlothomes.com/es/locations/arlington/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ironlothomes.com/locations/arlington/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://ironlothomes.com/es/locations/arlington/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ironlothomes.com/es/locations/plano/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ironlothomes.com/locations/plano/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://ironlothomes.com/es/locations/plano/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ironlothomes.com/es/locations/frisco/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ironlothomes.com/locations/frisco/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://ironlothomes.com/es/locations/frisco/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ironlothomes.com/es/locations/mckinney/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ironlothomes.com/locations/mckinney/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://ironlothomes.com/es/locations/mckinney/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ironlothomes.com/es/locations/princeton/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ironlothomes.com/locations/princeton/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://ironlothomes.com/es/locations/princeton/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ironlothomes.com/es/locations/denton/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ironlothomes.com/locations/denton/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://ironlothomes.com/es/locations/denton/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ironlothomes.com/es/locations/irving/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ironlothomes.com/locations/irving/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://ironlothomes.com/es/locations/irving/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+</urlset>
