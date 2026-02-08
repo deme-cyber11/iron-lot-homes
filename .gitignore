@@ -1,0 +1,11 @@
+.env
+node_modules/
+.DS_Store
+
+# Reference materials (not part of the site)
+design-resources-for-developers/
+awesome-design/
+awesome-ui/
+awesome-ui-libraries/
+claude-skill-zips/
+Claude-Skills-Library/
