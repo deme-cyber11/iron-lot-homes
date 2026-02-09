@@ -172,6 +172,21 @@ p {
   transform: translateY(-50%);
 }
 
+.section-tag {
+  display: inline-block;
+  font-family: var(--font-body);
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  color: var(--color-secondary);
+  margin-bottom: 0.75rem;
+}
+
+.accent {
+  color: var(--color-secondary);
+}
+
 /* ==========================================================================
    BUTTONS - Sharp Industrial Style (no border-radius)
    ========================================================================== */
@@ -262,6 +277,31 @@ p {
   box-shadow: 0 6px 20px var(--color-shadow);
   transform: translateY(-2px);
   border-color: var(--color-primary);
+}
+
+.btn-dark {
+  background: var(--color-primary-dark);
+  color: var(--color-text-inverse);
+  box-shadow: 0 2px 8px var(--color-shadow);
+}
+
+.btn-dark:hover {
+  background: var(--color-primary);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px var(--color-shadow);
+  color: var(--color-text-inverse);
+}
+
+.btn-outline-dark {
+  background: transparent;
+  color: var(--color-primary-dark);
+  border: 2px solid var(--color-primary-dark);
+}
+
+.btn-outline-dark:hover {
+  background: var(--color-primary-dark);
+  color: var(--color-text-inverse);
+  transform: translateY(-2px);
 }
 
 .btn-lg {
@@ -739,7 +779,7 @@ p {
   border-bottom: 2px solid var(--color-border);
 }
 
-.trust-items {
+.trust-items, .trust-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 0;
@@ -1546,6 +1586,22 @@ p {
 .testimonial-location {
   font-size: 0.85rem;
   color: var(--color-text-muted);
+}
+
+.testimonial-avatar {
+  width: 48px;
+  height: 48px;
+  background: var(--color-primary);
+  color: var(--color-text-inverse);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 0.95rem;
+  letter-spacing: 0.5px;
+  margin-bottom: 12px;
+  border-bottom: 3px solid var(--color-secondary);
 }
 
 /* ==========================================================================
@@ -2435,6 +2491,23 @@ label {
 .animate-delay-5 { transition-delay: 0.5s; }
 .animate-delay-6 { transition-delay: 0.6s; }
 
+/* --- Focus-Visible Accessibility --- */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible,
+.btn:focus-visible {
+  outline: 3px solid var(--color-secondary);
+  outline-offset: 2px;
+}
+
+.nav-links a:focus-visible,
+.mobile-nav a:focus-visible {
+  outline: 3px solid var(--color-secondary);
+  outline-offset: 4px;
+}
+
 /* ==========================================================================
    LANGUAGE TOGGLE CSS - Bilingual site support
    ========================================================================== */
@@ -2617,7 +2690,7 @@ tr:hover td {
   }
 
   /* Trust Bar */
-  .trust-items {
+  .trust-items, .trust-grid {
     grid-template-columns: repeat(3, 1fr);
   }
 
@@ -2727,7 +2800,7 @@ tr:hover td {
   }
 
   /* Trust Bar */
-  .trust-items {
+  .trust-items, .trust-grid {
     grid-template-columns: repeat(5, 1fr);
   }
 
@@ -2900,7 +2973,7 @@ tr:hover td {
   }
 
   /* Trust Items */
-  .trust-items {
+  .trust-items, .trust-grid {
     grid-template-columns: repeat(2, 1fr);
   }
 
@@ -2987,7 +3060,7 @@ tr:hover td {
     margin-top: 32px;
   }
 
-  .trust-items {
+  .trust-items, .trust-grid {
     grid-template-columns: repeat(3, 1fr);
   }
 
