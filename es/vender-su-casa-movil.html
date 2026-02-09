@@ -174,19 +174,44 @@
     }
     .sell-hero-badge svg { width: 18px; height: 18px; stroke: #f0a030; flex-shrink: 0; }
 
-    /* Hero Form */
+    /* Hero Form — warm frosted glass */
     .sell-hero-form {
-      background: var(--color-card);
+      background: rgba(40, 18, 5, 0.45);
+      backdrop-filter: blur(18px);
+      -webkit-backdrop-filter: blur(18px);
       border-radius: var(--radius-xl);
       padding: 32px 28px;
-      color: var(--color-text);
-      box-shadow: 0 16px 48px rgba(0,0,0,0.2);
+      color: #fff;
+      box-shadow: 0 16px 48px rgba(0,0,0,0.25);
+      border: 1px solid rgba(255, 255, 255, 0.12);
       border-top: 4px solid #f0a030;
     }
-    .sell-hero-form h3 { margin-bottom: 4px; font-size: 1.25rem; }
-    .sell-hero-form > p { font-size: 0.88rem; color: var(--text-light); margin-bottom: 20px; }
+    .sell-hero-form h3 { margin-bottom: 4px; font-size: 1.25rem; color: #fff; }
+    .sell-hero-form > p { font-size: 0.88rem; color: rgba(255,255,255,0.7); margin-bottom: 20px; }
     .sell-hero-form .form-group { margin-bottom: 12px; }
-    .sell-hero-form .form-group label { font-size: 0.78rem; }
+    .sell-hero-form .form-group label { font-size: 0.78rem; color: rgba(255,255,255,0.8); }
+    .sell-hero-form .form-group input,
+    .sell-hero-form .form-group select {
+      background: rgba(255,255,255,0.1);
+      border-color: rgba(255,255,255,0.18);
+      color: #fff;
+    }
+    .sell-hero-form .form-group input::placeholder { color: rgba(255,255,255,0.4); }
+    .sell-hero-form .form-group select {
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%23ffffff' d='M6 8L1 3h10z'/%3E%3C/svg%3E");
+    }
+    .sell-hero-form .form-group select option { color: var(--color-text); background: var(--color-card); }
+    .sell-hero-form .form-group input:focus,
+    .sell-hero-form .form-group select:focus {
+      border-color: #f0a030;
+      box-shadow: 0 0 0 4px rgba(240,160,48,0.2);
+      background: rgba(255,255,255,0.15);
+    }
+    .sell-hero-form .responding-now { color: rgba(255,255,255,0.7); }
+    .sell-hero-form .responding-dot { background: #f0a030; }
+    .sell-hero-form .form-trust-row { border-top-color: rgba(255,255,255,0.12); }
+    .sell-hero-form .form-trust-badge { color: rgba(255,255,255,0.6); }
+    .sell-hero-form .form-trust-badge svg { color: rgba(255,255,255,0.6); stroke: rgba(255,255,255,0.6); }
 
     @media (min-width: 768px) {
       .sell-hero { padding: 64px 0 72px; }
