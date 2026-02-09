@@ -23,12 +23,20 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+      - name: Prepare deploy directory
+        run: |
+          mkdir -p _site
+          cp -r index.html about.html sell-your-mobile-home.html buy-a-mobile-home.html _site/ 2>/dev/null || true
+          cp -r 404.html _site/ 2>/dev/null || true
+          cp -r css js locations es images _site/ 2>/dev/null || true
+          cp -r sitemap.xml robots.txt favicon.svg .nojekyll _site/ 2>/dev/null || true
+          cp -r CNAME _site/ 2>/dev/null || true
       - name: Setup Pages
         uses: actions/configure-pages@v5
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: '.'
+          path: '_site'
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
