@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
   <title>Sell Your Mobile Home Fast Austin TX | Cash Offer | Iron Lot Homes</title>
   <meta name="description" content="Sell your mobile home fast for cash in Austin, TX. No fees, no commissions, no repairs needed. We buy mobile homes in any condition. Get a free offer today. Hablamos Espanol.">
   <meta name="keywords" content="sell my mobile home Austin TX, sell mobile home fast, we buy mobile homes Austin, cash offer mobile home, sell manufactured home Texas, sell trailer Austin TX">
@@ -118,373 +119,320 @@
   </script>
 
   <style>
-    /* ===== Service Page Overrides ===== */
-    .service-hero {
+    /* ===== Sell Page - Modern Conversion Layout ===== */
+
+    /* Hero with Side Form */
+    .sell-hero {
+      background: linear-gradient(160deg, var(--color-primary-dark) 0%, var(--color-primary) 60%, #1e4d73 100%);
+      color: var(--color-text-inverse);
+      padding: 48px 0 56px;
       position: relative;
-      background: linear-gradient(135deg, rgba(15,39,68,0.92) 0%, rgba(26,58,92,0.88) 100%),
-                  url('https://images.unsplash.com/photo-1558036117-15d82a90b9b1?w=1400&q=80') center/cover no-repeat;
-      color: var(--text-inverse);
-      padding: 56px 0 48px;
+      overflow: hidden;
     }
-    .service-hero .breadcrumb {
-      font-size: 0.85rem;
-      margin-bottom: 16px;
-      opacity: 0.8;
+    .sell-hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(ellipse at 80% 20%, rgba(212, 132, 42, 0.1) 0%, transparent 60%);
+      pointer-events: none;
     }
-    .service-hero .breadcrumb a { color: var(--accent-light); }
-    .service-hero .breadcrumb a:hover { color: #fff; }
-    .service-hero h1 { color: #fff; margin-bottom: 16px; }
-    .service-hero .hero-subtitle { font-size: 1.15rem; opacity: 0.92; max-width: 620px; margin-bottom: 0; }
-    .service-hero .accent-line {
-      width: 80px;
-      height: 4px;
-      background: var(--accent);
-      margin-top: 24px;
-    }
-
-    /* Urgency Banner */
-    .urgency-banner {
-      background: var(--accent);
-      color: #fff;
-      text-align: center;
-      padding: 10px 16px;
-      font-size: 0.9rem;
-      font-weight: 600;
-      letter-spacing: 0.3px;
-    }
-    .urgency-banner a { color: #fff; text-decoration: underline; }
-
-    /* Content Grid */
-    .content-grid {
+    .sell-hero .container { position: relative; z-index: 1; }
+    .sell-hero-grid {
       display: grid;
       grid-template-columns: 1fr;
-      gap: 40px;
+      gap: 36px;
+      align-items: center;
     }
-    @media (min-width: 1024px) {
-      .content-grid {
-        grid-template-columns: 2fr 1fr;
-        gap: 48px;
-      }
-    }
-
-    .main-content h2 {
-      font-size: 1.6rem;
-      margin-bottom: 16px;
-      margin-top: 40px;
-      color: var(--primary-dark);
-    }
-    .main-content h2:first-child { margin-top: 0; }
-    .main-content .lead {
+    .sell-hero .breadcrumb { font-size: 0.82rem; margin-bottom: 12px; opacity: 0.7; }
+    .sell-hero .breadcrumb a { color: rgba(255,255,255,0.8); }
+    .sell-hero .breadcrumb a:hover { color: #fff; }
+    .sell-hero h1 { color: #fff; margin-bottom: 14px; font-size: clamp(2rem, 5vw, 3rem); }
+    .sell-hero h1 .accent { color: var(--color-secondary); }
+    .sell-hero-sub {
       font-size: 1.1rem;
-      color: var(--text-light);
-      line-height: 1.8;
+      opacity: 0.9;
+      max-width: 520px;
+      line-height: 1.7;
       margin-bottom: 24px;
     }
-
-    /* Benefit Check List */
-    .check-list { list-style: none; padding: 0; margin: 0 0 24px 0; }
-    .check-list li {
-      position: relative;
-      padding: 10px 0 10px 36px;
-      border-bottom: 1px solid var(--border);
-      font-size: 1rem;
-    }
-    .check-list li::before {
-      content: '\2713';
-      position: absolute;
-      left: 0;
-      top: 10px;
-      width: 24px;
-      height: 24px;
-      background: var(--success);
-      color: #fff;
-      border-radius: 50%;
+    .sell-hero-badges {
       display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+    .sell-hero-badge {
+      display: inline-flex;
       align-items: center;
-      justify-content: center;
-      font-size: 0.75rem;
-      font-weight: 700;
+      gap: 6px;
+      background: rgba(255,255,255,0.08);
+      border: 1px solid rgba(255,255,255,0.15);
+      padding: 8px 16px;
+      border-radius: 100px;
+      font-size: 0.84rem;
+      font-weight: 500;
+    }
+    .sell-hero-badge svg { width: 18px; height: 18px; stroke: var(--color-secondary); flex-shrink: 0; }
+
+    /* Hero Form */
+    .sell-hero-form {
+      background: var(--color-card);
+      border-radius: var(--radius-xl);
+      padding: 32px 28px;
+      color: var(--color-text);
+      box-shadow: 0 16px 48px rgba(0,0,0,0.2);
+    }
+    .sell-hero-form h3 { margin-bottom: 4px; font-size: 1.25rem; }
+    .sell-hero-form > p { font-size: 0.88rem; color: var(--text-light); margin-bottom: 20px; }
+    .sell-hero-form .form-group { margin-bottom: 12px; }
+    .sell-hero-form .form-group label { font-size: 0.78rem; }
+
+    @media (min-width: 768px) {
+      .sell-hero { padding: 64px 0 72px; }
+      .sell-hero-grid { grid-template-columns: 1.1fr 0.9fr; gap: 48px; }
     }
 
-    /* Process Steps (inline) */
-    .process-steps { counter-reset: step; margin: 24px 0; }
-    .process-step {
-      display: flex;
-      gap: 20px;
-      padding: 20px 0;
-      border-bottom: 1px solid var(--border);
-      align-items: flex-start;
+    /* Value Props - Icon Cards */
+    .value-props { padding: var(--section-padding); }
+    .vp-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 16px;
+      margin-top: 48px;
     }
-    .process-step:last-child { border-bottom: none; }
-    .process-step-num {
-      counter-increment: step;
+    .vp-card {
+      background: var(--color-card);
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-lg);
+      padding: 28px 24px;
+      display: flex;
+      gap: 18px;
+      align-items: flex-start;
+      transition: all var(--transition);
+    }
+    .vp-card:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px var(--color-shadow);
+      border-color: var(--color-secondary);
+    }
+    .vp-icon {
       width: 44px;
       height: 44px;
       min-width: 44px;
-      background: var(--accent);
+      border-radius: var(--radius-md);
+      background: var(--color-secondary-light);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .vp-icon svg { width: 22px; height: 22px; stroke: var(--color-secondary); }
+    .vp-card h4 { font-size: 1.05rem; margin-bottom: 4px; }
+    .vp-card p { font-size: 0.92rem; color: var(--text-light); margin-bottom: 0; }
+
+    @media (min-width: 768px) {
+      .vp-grid { grid-template-columns: 1fr 1fr; }
+    }
+    @media (min-width: 1024px) {
+      .vp-grid { grid-template-columns: 1fr 1fr 1fr; }
+    }
+
+    /* Process Timeline */
+    .process-section { padding: var(--section-padding); background: var(--color-surface); }
+    .timeline {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 0;
+      margin-top: 48px;
+      max-width: 800px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .timeline-step {
+      display: flex;
+      gap: 24px;
+      padding: 28px 0;
+      border-bottom: 1px solid var(--color-border);
+      align-items: flex-start;
+    }
+    .timeline-step:last-child { border-bottom: none; }
+    .timeline-num {
+      width: 48px;
+      height: 48px;
+      min-width: 48px;
+      background: var(--color-secondary);
       color: #fff;
+      border-radius: var(--radius-md);
       display: flex;
       align-items: center;
       justify-content: center;
       font-family: var(--font-display);
       font-weight: 800;
-      font-size: 1.1rem;
-    }
-    .process-step h3 { font-size: 1.1rem; margin-bottom: 4px; }
-    .process-step p { margin-bottom: 0; font-size: 0.95rem; color: var(--text-light); }
-
-    /* Info Callout */
-    .info-callout {
-      background: var(--accent-light);
-      border-left: 5px solid var(--accent);
-      padding: 24px 28px;
-      margin: 28px 0;
-    }
-    .info-callout h3 {
       font-size: 1.15rem;
-      margin-bottom: 8px;
-      color: var(--primary-dark);
     }
-    .info-callout p { margin-bottom: 0; font-size: 0.95rem; color: var(--text); }
-    .info-callout ul { margin: 12px 0 0 20px; font-size: 0.95rem; color: var(--text); }
-    .info-callout ul li { margin-bottom: 4px; }
+    .timeline-step h3 { font-size: 1.1rem; margin-bottom: 4px; }
+    .timeline-step p { font-size: 0.92rem; color: var(--text-light); margin-bottom: 0; }
 
-    /* Situations Grid */
-    .situations-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 12px;
-      margin: 16px 0 24px;
+    /* Situations Chips */
+    .situations-section { padding: var(--section-padding); }
+    .chips-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 32px;
+      justify-content: center;
     }
-    .situation-tag {
-      background: var(--card);
-      border: 1px solid var(--border);
-      padding: 12px 16px;
+    .chip {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: var(--color-card);
+      border: 1px solid var(--color-border);
+      padding: 10px 18px;
+      border-radius: 100px;
       font-size: 0.9rem;
       font-weight: 500;
-      color: var(--primary-dark);
-      display: flex;
-      align-items: center;
-      gap: 8px;
+      color: var(--color-primary-dark);
+      transition: all var(--transition);
     }
-    .situation-tag::before {
-      content: '\2713';
-      color: var(--accent);
-      font-weight: 700;
+    .chip:hover {
+      border-color: var(--color-secondary);
+      background: var(--color-secondary-light);
+    }
+    .chip svg { width: 16px; height: 16px; stroke: var(--color-secondary); flex-shrink: 0; }
+
+    /* FAQ Section */
+    .faq-section { padding: var(--section-padding); background: var(--color-surface); }
+    .faq-list {
+      max-width: 760px;
+      margin: 48px auto 0;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+    .faq-item {
+      background: var(--color-card);
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      transition: all var(--transition);
+    }
+    .faq-item:hover { border-color: var(--color-secondary); }
+    .faq-q {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 24px;
+      cursor: pointer;
+      font-weight: 600;
+      font-size: 1rem;
+      color: var(--color-primary-dark);
+      background: none;
+      border: none;
+      width: 100%;
+      text-align: left;
+      font-family: var(--font-body);
+      gap: 16px;
+    }
+    .faq-q svg {
+      width: 20px;
+      height: 20px;
+      min-width: 20px;
+      stroke: var(--color-text-muted);
+      transition: transform var(--transition);
+    }
+    .faq-item.open .faq-q svg { transform: rotate(180deg); }
+    .faq-a {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s ease;
+    }
+    .faq-item.open .faq-a { max-height: 200px; }
+    .faq-a-inner {
+      padding: 0 24px 20px;
+      font-size: 0.95rem;
+      color: var(--text-light);
+      line-height: 1.7;
     }
 
-    /* Service Areas Inline */
-    .area-tags {
+    /* Testimonials */
+    .sell-testimonials { padding: var(--section-padding); }
+    .testi-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 20px;
+      margin-top: 48px;
+      max-width: 900px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    @media (min-width: 768px) { .testi-grid { grid-template-columns: 1fr 1fr; } }
+    .testi-card {
+      background: var(--color-card);
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-lg);
+      padding: 28px 24px;
+      transition: all var(--transition);
+    }
+    .testi-card:hover { transform: translateY(-2px); box-shadow: 0 8px 24px var(--color-shadow); }
+    .testi-stars { color: var(--color-secondary); font-size: 1rem; margin-bottom: 12px; letter-spacing: 2px; }
+    .testi-card blockquote {
+      font-size: 0.95rem;
+      line-height: 1.7;
+      font-style: italic;
+      margin-bottom: 16px;
+      color: var(--color-text);
+    }
+    .testi-author { font-weight: 700; font-size: 0.88rem; color: var(--color-primary-dark); }
+
+    /* Bottom CTA */
+    .sell-cta {
+      background: linear-gradient(160deg, var(--color-primary-dark) 0%, var(--color-primary) 100%);
+      color: #fff;
+      padding: 64px 0;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .sell-cta::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: var(--border-thick);
+      background: var(--color-secondary);
+    }
+    .sell-cta .container { position: relative; z-index: 1; }
+    .sell-cta h2 { color: #fff; margin-bottom: 12px; }
+    .sell-cta p { opacity: 0.9; font-size: 1.05rem; max-width: 480px; margin: 0 auto 24px; }
+    .sell-cta .cta-actions { display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; }
+
+    /* Service Areas */
+    .areas-bar {
+      background: var(--color-card);
+      border-top: 1px solid var(--color-border);
+      border-bottom: 1px solid var(--color-border);
+      padding: 28px 0;
+      text-align: center;
+    }
+    .areas-bar p { font-size: 0.9rem; color: var(--text-light); margin-bottom: 12px; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; }
+    .areas-tags {
       display: flex;
       flex-wrap: wrap;
       gap: 8px;
-      margin: 12px 0 24px;
-    }
-    .area-tag {
-      background: var(--bg-alt);
-      padding: 6px 14px;
-      font-size: 0.85rem;
-      font-weight: 500;
-      color: var(--primary-dark);
-      border: 1px solid var(--border);
-    }
-
-    /* CTA Box */
-    .cta-box {
-      background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary) 100%);
-      color: #fff;
-      padding: 36px 32px;
-      text-align: center;
-      margin: 32px 0;
-    }
-    .cta-box h3 { color: #fff; margin-bottom: 8px; font-size: 1.3rem; }
-    .cta-box p { opacity: 0.9; margin-bottom: 20px; }
-    .cta-box .btn-primary { font-size: 1.05rem; }
-
-    /* Sidebar */
-    .sidebar { position: relative; }
-    @media (min-width: 1024px) {
-      .sidebar { position: sticky; top: 120px; align-self: start; }
-    }
-
-    .sidebar-card {
-      background: var(--card);
-      border: 1px solid var(--border);
-      padding: 28px 24px;
-      margin-bottom: 20px;
-      box-shadow: var(--shadow-sm);
-    }
-    .sidebar-card h3 {
-      font-size: 1.1rem;
-      margin-bottom: 16px;
-      padding-bottom: 12px;
-      border-bottom: 2px solid var(--accent);
-    }
-    .sidebar-card .sidebar-list { list-style: none; padding: 0; margin: 0; }
-    .sidebar-card .sidebar-list li {
-      padding: 8px 0;
-      border-bottom: 1px solid var(--border);
-      font-size: 0.9rem;
-      display: flex;
-      align-items: center;
-      gap: 8px;
-    }
-    .sidebar-card .sidebar-list li:last-child { border-bottom: none; }
-    .sidebar-card .sidebar-list li::before {
-      content: '\2713';
-      color: var(--success);
-      font-weight: 700;
-      font-size: 0.8rem;
-    }
-
-    .sidebar-form-card {
-      background: var(--card);
-      border: 2px solid var(--accent);
-      padding: 28px 24px;
-      margin-bottom: 20px;
-      box-shadow: var(--shadow-md);
-    }
-    .sidebar-form-card h3 {
-      font-size: 1.15rem;
-      margin-bottom: 4px;
-      color: var(--primary-dark);
-    }
-    .sidebar-form-card > p {
-      font-size: 0.85rem;
-      color: var(--text-light);
-      margin-bottom: 16px;
-    }
-    .sidebar-form .form-group { margin-bottom: 12px; }
-    .sidebar-form .form-group label { font-size: 0.8rem; }
-    .sidebar-form .form-group input,
-    .sidebar-form .form-group select,
-    .sidebar-form .form-group textarea {
-      padding: 10px 14px;
-      font-size: 0.95rem;
-    }
-
-    .sidebar-phone {
-      background: var(--primary-dark);
-      color: #fff;
-      text-align: center;
-      padding: 20px;
-      margin-bottom: 20px;
-    }
-    .sidebar-phone p { margin-bottom: 4px; font-size: 0.85rem; opacity: 0.8; }
-    .sidebar-phone a {
-      color: #fff;
-      font-family: var(--font-display);
-      font-size: 1.4rem;
-      font-weight: 800;
-    }
-    .sidebar-phone a:hover { color: var(--accent-light); }
-
-    .sidebar-area-links { display: flex; flex-direction: column; gap: 0; }
-    .sidebar-area-links a {
-      display: block;
-      padding: 8px 0;
-      font-size: 0.9rem;
-      color: var(--primary-dark);
-      border-bottom: 1px solid var(--border);
-      font-weight: 500;
-    }
-    .sidebar-area-links a:last-child { border-bottom: none; }
-    .sidebar-area-links a:hover { color: var(--accent); }
-
-    /* Testimonials Section */
-    .testimonials-section { background: var(--bg-alt); padding: 64px 0; }
-    .testimonials-grid {
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 24px;
-      max-width: 900px;
-      margin: 0 auto;
-    }
-    @media (min-width: 768px) {
-      .testimonials-grid { grid-template-columns: 1fr 1fr; }
-    }
-    .testimonial-card {
-      background: var(--card);
-      padding: 28px 24px;
-      border-left: 4px solid var(--accent);
-      box-shadow: var(--shadow-sm);
-    }
-    .testimonial-stars {
-      color: var(--accent);
-      font-size: 1.1rem;
-      margin-bottom: 12px;
-      letter-spacing: 2px;
-    }
-    .testimonial-card blockquote {
-      font-size: 0.95rem;
-      line-height: 1.7;
-      color: var(--text);
-      font-style: italic;
-      margin-bottom: 16px;
-    }
-    .testimonial-author {
-      font-weight: 700;
-      font-size: 0.9rem;
-      color: var(--primary-dark);
-    }
-
-    /* Footer CTA Bar */
-    .footer-cta-bar {
-      background: var(--accent);
-      color: #fff;
-      padding: 40px 0;
-      text-align: center;
-    }
-    .footer-cta-bar h2 { color: #fff; margin-bottom: 8px; }
-    .footer-cta-bar p { opacity: 0.95; margin-bottom: 20px; max-width: 500px; margin-left: auto; margin-right: auto; }
-    .footer-cta-bar .btn {
-      background: var(--primary-dark);
-      color: #fff;
-    }
-    .footer-cta-bar .btn:hover {
-      background: var(--primary);
-      transform: translateY(-1px);
-    }
-
-    /* Trust Badges */
-    .trust-badges {
-      background: var(--card);
-      border-top: 1px solid var(--border);
-      border-bottom: 1px solid var(--border);
-      padding: 32px 0;
-    }
-    .badges-grid {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 16px;
-      text-align: center;
-    }
-    @media (min-width: 768px) {
-      .badges-grid { grid-template-columns: repeat(4, 1fr); }
-    }
-    .badge-item {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 8px;
-      padding: 12px;
-    }
-    .badge-icon {
-      width: 52px;
-      height: 52px;
-      background: var(--bg-alt);
-      border: 2px solid var(--border);
-      display: flex;
-      align-items: center;
       justify-content: center;
-      font-size: 1.5rem;
     }
-    .badge-label {
-      font-size: 0.8rem;
-      font-weight: 600;
-      color: var(--primary-dark);
-      text-transform: uppercase;
-      letter-spacing: 0.5px;
+    .areas-tag {
+      padding: 6px 14px;
+      font-size: 0.82rem;
+      font-weight: 500;
+      color: var(--color-primary-dark);
+      background: var(--color-surface);
+      border: 1px solid var(--color-border);
+      border-radius: 100px;
+      transition: all var(--transition);
+    }
+    .areas-tag:hover {
+      background: var(--color-secondary);
+      color: #fff;
+      border-color: var(--color-secondary);
     }
 
     /* Sticky CTA */
@@ -494,7 +442,7 @@
       left: 0;
       right: 0;
       z-index: 90;
-      background: var(--primary-dark);
+      background: var(--color-primary-dark);
       padding: 12px 20px;
       display: flex;
       justify-content: center;
@@ -505,22 +453,32 @@
       box-shadow: 0 -4px 20px rgba(0,0,0,0.2);
     }
     .sticky-cta.visible { transform: translateY(0); }
-    .sticky-cta a {
-      color: #fff;
-      font-weight: 700;
-      font-size: 1rem;
-    }
+    .sticky-cta a { color: #fff; font-weight: 700; font-size: 1rem; }
     .sticky-cta .btn { padding: 10px 24px; font-size: 0.9rem; }
 
-    /* Scroll animation */
-    .fade-in-up {
-      opacity: 0;
-      transform: translateY(24px);
-      transition: opacity 0.5s ease, transform 0.5s ease;
+    /* Trust Badges */
+    .sell-trust {
+      background: var(--color-surface);
+      padding: 32px 0;
     }
-    .fade-in-up.visible-anim {
-      opacity: 1;
-      transform: translateY(0);
+    .trust-row {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 32px;
+    }
+    .trust-item-inline {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: var(--color-primary-dark);
+    }
+    .trust-item-inline svg {
+      width: 20px;
+      height: 20px;
+      stroke: var(--color-secondary);
     }
   </style>
 </head>
@@ -606,428 +564,372 @@
     <a href="tel:+15128504013" class="btn btn-primary btn-block"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:middle;margin-right:4px"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg> (512) 850-4013</a>
   </div>
 
-  <!-- ===== URGENCY BANNER ===== -->
-  <div class="urgency-banner">
-    <span data-lang="en">Limited Time: We're actively buying mobile homes in Austin &amp; DFW. <a href="tel:+15128504013">Call now for a same-day offer!</a></span>
-    <span data-lang-inline="es">Tiempo Limitado: Estamos comprando casas moviles en Austin y DFW. <a href="tel:+15128504013">Llame ahora para oferta el mismo dia!</a></span>
-  </div>
-
-  <!-- ===== SERVICE HERO ===== -->
-  <section class="service-hero">
+  <!-- ===== HERO WITH FORM ===== -->
+  <section class="sell-hero">
     <div class="container">
-      <div class="breadcrumb">
-        <a href="index.html" data-lang="en">Home</a><a href="index.html" data-lang-inline="es">Inicio</a>
-        &nbsp;&rsaquo;&nbsp;
-        <span data-lang="en">Sell Your Mobile Home</span>
-        <span data-lang-inline="es">Vender Su Casa Movil</span>
+      <div class="sell-hero-grid">
+        <div>
+          <div class="breadcrumb">
+            <a href="index.html" data-lang="en">Home</a><a href="index.html" data-lang-inline="es">Inicio</a>
+            &nbsp;&rsaquo;&nbsp;
+            <span data-lang="en">Sell Your Mobile Home</span>
+            <span data-lang-inline="es">Vender Su Casa Movil</span>
+          </div>
+          <h1 data-lang="en">Sell Your Mobile Home <span class="accent">Fast for Cash</span></h1>
+          <h1 data-lang="es">Venda Su Casa Movil <span class="accent">Rapido por Efectivo</span></h1>
+          <p class="sell-hero-sub" data-lang="en">No fees. No commissions. No repairs needed. We buy mobile homes in any condition across Texas and close on your timeline.</p>
+          <p class="sell-hero-sub" data-lang="es">Sin cargos. Sin comisiones. Sin reparaciones. Compramos casas moviles en cualquier condicion en todo Texas.</p>
+          <div class="sell-hero-badges">
+            <span class="sell-hero-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg> <span data-lang="en">Close in 7 Days</span><span data-lang-inline="es">Cierre en 7 Dias</span></span>
+            <span class="sell-hero-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 1v22M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg> <span data-lang="en">Zero Fees</span><span data-lang-inline="es">Cero Cargos</span></span>
+            <span class="sell-hero-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg> <span data-lang="en">Hablamos Espanol</span><span data-lang-inline="es">Hablamos Espanol</span></span>
+          </div>
+        </div>
+
+        <!-- Inline Form -->
+        <div class="sell-hero-form" id="seller-form">
+          <h3 data-lang="en">Get Your Free Cash Offer</h3>
+          <h3 data-lang="es">Obtenga Su Oferta en Efectivo</h3>
+          <p data-lang="en">Takes less than 2 minutes. We respond within 24 hours.</p>
+          <p data-lang="es">Toma menos de 2 minutos. Respondemos en 24 horas.</p>
+
+          <form class="quick-form" data-form="seller-hero" action="https://api.web3forms.com/submit" method="POST">
+            <input type="hidden" name="access_key" value="YOUR_WEB3FORMS_KEY">
+            <input type="hidden" name="subject" value="Seller Lead (Hero) - Iron Lot Homes">
+            <input type="hidden" name="from_name" value="Iron Lot Homes Website">
+            <input type="checkbox" name="botcheck" style="display:none">
+
+            <div class="form-group">
+              <label data-lang="en">Phone Number *</label>
+              <label data-lang="es">Telefono *</label>
+              <input type="tel" name="phone" required placeholder="(512) 000-0000">
+            </div>
+            <div class="form-group">
+              <label data-lang="en">Your Name *</label>
+              <label data-lang="es">Su Nombre *</label>
+              <input type="text" name="name" required placeholder="John Doe">
+            </div>
+            <div class="form-group">
+              <label data-lang="en">Location (City or Park) *</label>
+              <label data-lang="es">Ubicacion *</label>
+              <input type="text" name="location" required placeholder="Austin, TX">
+            </div>
+            <div class="form-group">
+              <label data-lang="en">Home Type</label>
+              <label data-lang="es">Tipo de Casa</label>
+              <select name="home_type">
+                <option value="">Select / Seleccione...</option>
+                <option value="single_wide">Single Wide / Sencilla</option>
+                <option value="double_wide">Double Wide / Doble</option>
+              </select>
+            </div>
+
+            <button type="submit" class="btn btn-primary btn-block" data-lang="en">Get My Free Cash Offer</button>
+            <button type="submit" class="btn btn-primary btn-block" data-lang-inline="es">Obtener Mi Oferta Gratis</button>
+          </form>
+
+          <div class="form-success">
+            <div class="form-success-icon">&#10003;</div>
+            <h3 data-lang="en">Thank You!</h3>
+            <h3 data-lang="es">Gracias!</h3>
+            <p data-lang="en">We received your information. A team member will contact you within 24 hours.</p>
+            <p data-lang="es">Recibimos su informacion. Le contactaremos dentro de 24 horas.</p>
+          </div>
+        </div>
       </div>
-      <h1 data-lang="en">Sell Your Mobile Home Fast for Cash</h1>
-      <h1 data-lang="es">Venda Su Casa Movil Rapido por Efectivo</h1>
-      <p class="hero-subtitle" data-lang="en">No fees. No commissions. No repairs. We buy mobile homes in any condition across Texas and close on your timeline.</p>
-      <p class="hero-subtitle" data-lang="es">Sin cargos. Sin comisiones. Sin reparaciones. Compramos casas moviles en cualquier condicion en todo Texas y cerramos en su tiempo.</p>
-      <div class="accent-line"></div>
     </div>
   </section>
 
-  <!-- ===== CONTENT GRID ===== -->
-  <section class="section">
+  <!-- ===== TRUST BAR ===== -->
+  <div class="sell-trust">
     <div class="container">
-      <div class="content-grid">
+      <div class="trust-row">
+        <div class="trust-item-inline"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg> <span data-lang="en">50+ Homes Bought</span><span data-lang-inline="es">50+ Casas Compradas</span></div>
+        <div class="trust-item-inline"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg> <span data-lang="en">Licensed &amp; Insured</span><span data-lang-inline="es">Licenciados y Asegurados</span></div>
+        <div class="trust-item-inline"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg> <span data-lang="en">4.9 Star Rating</span><span data-lang-inline="es">4.9 Estrellas</span></div>
+        <div class="trust-item-inline"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg> <span data-lang="en">Bilingual EN/ES</span><span data-lang-inline="es">Bilingue EN/ES</span></div>
+      </div>
+    </div>
+  </div>
 
-        <!-- ===== MAIN CONTENT ===== -->
-        <div class="main-content">
+  <!-- ===== VALUE PROPOSITIONS ===== -->
+  <section class="value-props">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label" data-lang="en">Why Iron Lot Homes</span>
+        <span class="section-label" data-lang="es">Por Que Iron Lot Homes</span>
+        <h2 data-lang="en">Selling Made Simple</h2>
+        <h2 data-lang="es">Vender Hecho Simple</h2>
+        <p data-lang="en">We take the stress out of selling your mobile home. Here is what sets us apart.</p>
+        <p data-lang="es">Le quitamos el estres de vender su casa movil. Esto es lo que nos diferencia.</p>
+      </div>
 
-          <!-- Lead Paragraph -->
-          <p class="lead" data-lang="en">At Iron Lot Homes, we understand that selling a mobile home can feel overwhelming -- especially when you need to sell quickly. Whether you're relocating, facing financial challenges, dealing with an inherited property, or simply ready to move on, we make the process fast, fair, and stress-free. With over 4 years of experience and 50+ successful transactions, we buy mobile homes across Texas for cash with zero fees.</p>
-          <p class="lead" data-lang="es">En Iron Lot Homes, entendemos que vender una casa movil puede ser abrumador -- especialmente cuando necesita vender rapidamente. Ya sea que se este mudando, enfrentando desafios financieros, lidiando con una propiedad heredada, o simplemente listo para seguir adelante, hacemos el proceso rapido, justo y sin estres. Con mas de 4 anos de experiencia y mas de 50 transacciones exitosas, compramos casas moviles en todo Texas por efectivo y sin cargos.</p>
-
-          <!-- Why Sell to Iron Lot Homes -->
-          <h2 data-lang="en" class="fade-in-up">Why Sell to Iron Lot Homes?</h2>
-          <h2 data-lang="es" class="fade-in-up">Por Que Vender a Iron Lot Homes?</h2>
-
-          <ul class="check-list fade-in-up">
-            <li>
-              <strong data-lang="en">Sell As-Is, Any Condition</strong>
-              <strong data-lang="es">Venda Como Esta, Cualquier Condicion</strong>
-              <br>
-              <span data-lang="en">Fire damage, storm damage, outdated, no AC, bad plumbing -- we buy it all. No repairs needed.</span>
-              <span data-lang-inline="es">Danos por fuego, tormentas, antiguas, sin aire, plomeria mala -- compramos todo. Sin reparaciones.</span>
-            </li>
-            <li>
-              <strong data-lang="en">Zero Fees &amp; Zero Commissions</strong>
-              <strong data-lang="es">Cero Cargos y Cero Comisiones</strong>
-              <br>
-              <span data-lang="en">No realtor fees, no closing costs, no hidden charges. The offer you accept is what you get.</span>
-              <span data-lang-inline="es">Sin cargos de agente, sin costos de cierre, sin cargos ocultos. La oferta que acepte es lo que recibe.</span>
-            </li>
-            <li>
-              <strong data-lang="en">We Handle All the Paperwork</strong>
-              <strong data-lang="es">Nosotros Manejamos Todo el Papeleo</strong>
-              <br>
-              <span data-lang="en">Title transfers, contracts, notary, closing documents -- we take care of everything from start to finish.</span>
-              <span data-lang-inline="es">Transferencias de titulo, contratos, notario, documentos de cierre -- nos encargamos de todo de principio a fin.</span>
-            </li>
-            <li>
-              <strong data-lang="en">Multiple Selling Options</strong>
-              <strong data-lang="es">Multiples Opciones de Venta</strong>
-              <br>
-              <span data-lang="en">Cash purchase, consignment sale, or subject-to program. We tailor the solution to your situation.</span>
-              <span data-lang-inline="es">Compra en efectivo, venta por consignacion, o programa subject-to. Adaptamos la solucion a su situacion.</span>
-            </li>
-            <li>
-              <strong data-lang="en">Fast Closing -- Your Timeline</strong>
-              <strong data-lang="es">Cierre Rapido -- En Su Tiempo</strong>
-              <br>
-              <span data-lang="en">Close in as little as 7 days. Or take your time. We work on YOUR schedule.</span>
-              <span data-lang-inline="es">Cierre en tan solo 7 dias. O tome su tiempo. Trabajamos en SU horario.</span>
-            </li>
-            <li>
-              <strong data-lang="en">Bilingual Team -- Hablamos Espanol</strong>
-              <strong data-lang="es">Equipo Bilingue -- Hablamos Espanol</strong>
-              <br>
-              <span data-lang="en">85% of our clients are Spanish-speaking. We serve you in your preferred language.</span>
-              <span data-lang-inline="es">El 85% de nuestros clientes hablan espanol. Le atendemos en su idioma preferido.</span>
-            </li>
-          </ul>
-
-          <!-- How the Selling Process Works -->
-          <h2 data-lang="en" class="fade-in-up">How the Selling Process Works</h2>
-          <h2 data-lang="es" class="fade-in-up">Como Funciona el Proceso de Venta</h2>
-
-          <div class="process-steps fade-in-up">
-            <div class="process-step">
-              <div class="process-step-num">1</div>
-              <div>
-                <h3 data-lang="en">Contact Us</h3>
-                <h3 data-lang="es">Contactenos</h3>
-                <p data-lang="en">Fill out the quick form on this page or call us at (512) 850-4013. Tell us about your mobile home and your situation. It takes less than 2 minutes.</p>
-                <p data-lang="es">Complete el formulario rapido en esta pagina o llamenos al (512) 850-4013. Diganos sobre su casa movil y su situacion. Toma menos de 2 minutos.</p>
-              </div>
-            </div>
-            <div class="process-step">
-              <div class="process-step-num">2</div>
-              <div>
-                <h3 data-lang="en">Receive Your Free Cash Offer</h3>
-                <h3 data-lang="es">Reciba Su Oferta Gratis en Efectivo</h3>
-                <p data-lang="en">We evaluate your home and present you with a fair, no-obligation cash offer within 24 hours. No pressure, no games.</p>
-                <p data-lang="es">Evaluamos su casa y le presentamos una oferta justa en efectivo sin compromiso dentro de 24 horas. Sin presion, sin juegos.</p>
-              </div>
-            </div>
-            <div class="process-step">
-              <div class="process-step-num">3</div>
-              <div>
-                <h3 data-lang="en">Close &amp; Get Paid</h3>
-                <h3 data-lang="es">Cierre y Reciba Su Pago</h3>
-                <p data-lang="en">Accept the offer, choose your closing date, and get paid. We handle all the paperwork and make the process seamless.</p>
-                <p data-lang="es">Acepte la oferta, elija su fecha de cierre, y reciba su pago. Nos encargamos de todo el papeleo y hacemos el proceso facil.</p>
-              </div>
-            </div>
+      <div class="vp-grid">
+        <div class="vp-card">
+          <div class="vp-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 1v22M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg></div>
+          <div>
+            <h4 data-lang="en">Zero Fees &amp; Commissions</h4>
+            <h4 data-lang="es">Cero Cargos y Comisiones</h4>
+            <p data-lang="en">No realtor fees, no closing costs, no hidden charges. The offer you accept is what you get.</p>
+            <p data-lang-inline="es">Sin cargos de agente, sin costos de cierre, sin cargos ocultos.</p>
           </div>
-
-          <!-- Info Callout: Any Condition -->
-          <div class="info-callout fade-in-up">
-            <h3 data-lang="en">We Buy Mobile Homes In Any Condition</h3>
-            <h3 data-lang="es">Compramos Casas Moviles en Cualquier Condicion</h3>
-            <p data-lang="en">Don't worry about the state of your home. We've bought mobile homes with fire damage, flood damage, missing fixtures, broken HVAC, roof problems, and more. If it's a mobile home in Texas, we want to hear from you.</p>
-            <p data-lang="es">No se preocupe por el estado de su casa. Hemos comprado casas moviles con danos por fuego, danos por inundacion, accesorios faltantes, HVAC danado, problemas de techo, y mas. Si es una casa movil en Texas, queremos saber de usted.</p>
-          </div>
-
-          <!-- Situations We Help With -->
-          <h2 data-lang="en" class="fade-in-up">Situations We Help With</h2>
-          <h2 data-lang="es" class="fade-in-up">Situaciones en las Que Ayudamos</h2>
-          <p data-lang="en">No matter your situation, we have a solution. Here are some of the most common reasons people sell to us:</p>
-          <p data-lang="es">No importa su situacion, tenemos una solucion. Estas son algunas de las razones mas comunes por las que nos venden:</p>
-
-          <div class="situations-grid fade-in-up">
-            <div class="situation-tag">
-              <span data-lang="en">Foreclosure</span>
-              <span data-lang-inline="es">Ejecucion Hipotecaria</span>
-            </div>
-            <div class="situation-tag">
-              <span data-lang="en">Divorce</span>
-              <span data-lang-inline="es">Divorcio</span>
-            </div>
-            <div class="situation-tag">
-              <span data-lang="en">Inherited Property</span>
-              <span data-lang-inline="es">Propiedad Heredada</span>
-            </div>
-            <div class="situation-tag">
-              <span data-lang="en">Relocation / Job Transfer</span>
-              <span data-lang-inline="es">Reubicacion / Trabajo</span>
-            </div>
-            <div class="situation-tag">
-              <span data-lang="en">Behind on Payments</span>
-              <span data-lang-inline="es">Atrasado en Pagos</span>
-            </div>
-            <div class="situation-tag">
-              <span data-lang="en">Vacant / Abandoned Home</span>
-              <span data-lang-inline="es">Casa Vacante / Abandonada</span>
-            </div>
-            <div class="situation-tag">
-              <span data-lang="en">Code Violations</span>
-              <span data-lang-inline="es">Violaciones de Codigo</span>
-            </div>
-            <div class="situation-tag">
-              <span data-lang="en">Need Cash Fast</span>
-              <span data-lang-inline="es">Necesita Efectivo Rapido</span>
-            </div>
-            <div class="situation-tag">
-              <span data-lang="en">Park Issues / Eviction</span>
-              <span data-lang-inline="es">Problemas del Parque</span>
-            </div>
-            <div class="situation-tag">
-              <span data-lang="en">Downsizing / Upgrading</span>
-              <span data-lang-inline="es">Reducir / Mejorar</span>
-            </div>
-          </div>
-
-          <!-- Service Areas -->
-          <h2 data-lang="en" class="fade-in-up">Service Areas</h2>
-          <h2 data-lang="es" class="fade-in-up">Areas de Servicio</h2>
-          <p data-lang="en">We buy mobile homes across all of Texas. Here are some of our primary service areas:</p>
-          <p data-lang="es">Compramos casas moviles en todo Texas. Estas son algunas de nuestras areas de servicio principales:</p>
-
-          <div class="area-tags fade-in-up">
-            <span class="area-tag">Austin</span>
-            <span class="area-tag">Dallas</span>
-            <span class="area-tag">Fort Worth</span>
-            <span class="area-tag">San Antonio</span>
-            <span class="area-tag">Arlington</span>
-            <span class="area-tag">Plano</span>
-            <span class="area-tag">Frisco</span>
-            <span class="area-tag">Denton</span>
-            <span class="area-tag">McKinney</span>
-            <span class="area-tag">Princeton</span>
-            <span class="area-tag">San Marcos</span>
-            <span class="area-tag">Lockhart</span>
-            <span class="area-tag">Kyle</span>
-            <span class="area-tag">Buda</span>
-            <span class="area-tag">Bastrop</span>
-            <span class="area-tag">Del Valle</span>
-            <span class="area-tag">Hutto</span>
-            <span class="area-tag">New Braunfels</span>
-            <span class="area-tag">Seguin</span>
-          </div>
-
-          <!-- CTA Box -->
-          <div class="cta-box fade-in-up">
-            <h3 data-lang="en">Get Your Free Cash Offer Today</h3>
-            <h3 data-lang="es">Obtenga Su Oferta Gratis en Efectivo Hoy</h3>
-            <p data-lang="en">Fill out the form or call us right now. No obligation, no pressure. Just a fair cash offer for your mobile home.</p>
-            <p data-lang="es">Complete el formulario o llamenos ahora. Sin obligacion, sin presion. Solo una oferta justa en efectivo por su casa movil.</p>
-            <a href="tel:+15128504013" class="btn btn-primary" data-lang="en"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:middle;margin-right:4px"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg> Call (512) 850-4013</a>
-            <a href="tel:+15128504013" class="btn btn-primary" data-lang-inline="es"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:middle;margin-right:4px"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg> Llamar (512) 850-4013</a>
-          </div>
-
         </div>
-        <!-- END MAIN CONTENT -->
-
-        <!-- ===== SIDEBAR ===== -->
-        <div class="sidebar">
-
-          <!-- Quick Seller Form -->
-          <div class="sidebar-form-card">
-            <h3 data-lang="en">Get Your Free Cash Offer</h3>
-            <h3 data-lang="es">Obtenga Su Oferta en Efectivo Gratis</h3>
-            <p data-lang="en">Fill out this quick form. We'll respond within 24 hours.</p>
-            <p data-lang="es">Complete este formulario rapido. Respondemos en 24 horas.</p>
-
-            <form class="sidebar-form" data-form="seller-sidebar" action="https://api.web3forms.com/submit" method="POST">
-              <input type="hidden" name="access_key" value="YOUR_WEB3FORMS_KEY">
-              <input type="hidden" name="subject" value="Seller Lead (Sidebar) - Iron Lot Homes">
-              <input type="hidden" name="from_name" value="Iron Lot Homes Website">
-              <input type="checkbox" name="botcheck" style="display:none">
-
-              <div class="form-group">
-                <label data-lang="en">Phone Number *</label>
-                <label data-lang="es">Numero de Telefono *</label>
-                <input type="tel" name="phone" required placeholder="(512) 000-0000">
-              </div>
-              <div class="form-group">
-                <label data-lang="en">Your Name *</label>
-                <label data-lang="es">Su Nombre *</label>
-                <input type="text" name="name" required placeholder="John Doe">
-              </div>
-              <div class="form-group">
-                <label data-lang="en">Location (City or Park) *</label>
-                <label data-lang="es">Ubicacion (Ciudad o Parque) *</label>
-                <input type="text" name="location" required placeholder="Austin, TX">
-              </div>
-              <div class="form-group">
-                <label data-lang="en">Type of Home</label>
-                <label data-lang="es">Tipo de Casa</label>
-                <select name="home_type">
-                  <option value="">Select / Seleccione...</option>
-                  <option value="single_wide">Single Wide / Sencilla</option>
-                  <option value="double_wide">Double Wide / Doble</option>
-                </select>
-              </div>
-              <div class="form-group">
-                <label data-lang="en">Condition of Home</label>
-                <label data-lang="es">Condicion de la Casa</label>
-                <select name="condition">
-                  <option value="">Select / Seleccione...</option>
-                  <option value="move_in_ready">Move-in Ready / Lista para Mudarse</option>
-                  <option value="minor_repairs">Minor Repairs / Reparaciones Menores</option>
-                  <option value="major_repairs">Major Repairs / Reparaciones Mayores</option>
-                </select>
-              </div>
-              <div class="form-group">
-                <label data-lang="en">Additional Notes</label>
-                <label data-lang="es">Notas Adicionales</label>
-                <textarea name="notes" rows="3" placeholder="Optional details / Detalles opcionales..."></textarea>
-              </div>
-
-              <button type="submit" class="btn btn-primary btn-block" data-lang="en">Get My Free Cash Offer</button>
-              <button type="submit" class="btn btn-primary btn-block" data-lang-inline="es">Obtener Mi Oferta Gratis</button>
-            </form>
-
-            <div class="form-success">
-              <div class="form-success-icon">&#10003;</div>
-              <h3 data-lang="en">Thank You!</h3>
-              <h3 data-lang="es">Gracias!</h3>
-              <p data-lang="en">We received your information. A team member will contact you within 24 hours with a no-obligation cash offer.</p>
-              <p data-lang="es">Recibimos su informacion. Un miembro del equipo le contactara dentro de 24 horas con una oferta en efectivo sin compromiso.</p>
-            </div>
+        <div class="vp-card">
+          <div class="vp-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg></div>
+          <div>
+            <h4 data-lang="en">Sell As-Is, Any Condition</h4>
+            <h4 data-lang="es">Venda Como Esta</h4>
+            <p data-lang="en">Fire damage, storm damage, no AC, bad plumbing -- we buy it all. No repairs needed.</p>
+            <p data-lang-inline="es">Danos por fuego, tormentas, sin aire -- compramos todo. Sin reparaciones.</p>
           </div>
-
-          <!-- Why Choose Us Sidebar -->
-          <div class="sidebar-card">
-            <h3 data-lang="en">Why Choose Us</h3>
-            <h3 data-lang="es">Por Que Elegirnos</h3>
-            <ul class="sidebar-list">
-              <li>
-                <span data-lang="en">4+ years in business</span>
-                <span data-lang-inline="es">4+ anos en el negocio</span>
-              </li>
-              <li>
-                <span data-lang="en">50+ successful deals</span>
-                <span data-lang-inline="es">50+ transacciones exitosas</span>
-              </li>
-              <li>
-                <span data-lang="en">Zero losses in 4 years</span>
-                <span data-lang-inline="es">Cero perdidas en 4 anos</span>
-              </li>
-              <li>
-                <span data-lang="en">Fully bilingual team</span>
-                <span data-lang-inline="es">Equipo completamente bilingue</span>
-              </li>
-              <li>
-                <span data-lang="en">Licensed &amp; insured</span>
-                <span data-lang-inline="es">Licenciados y asegurados</span>
-              </li>
-              <li>
-                <span data-lang="en">Free, no-obligation offers</span>
-                <span data-lang-inline="es">Ofertas gratis, sin compromiso</span>
-              </li>
-              <li>
-                <span data-lang="en">Close on your timeline</span>
-                <span data-lang-inline="es">Cierre en su tiempo</span>
-              </li>
-            </ul>
-          </div>
-
-          <!-- Service Areas Sidebar -->
-          <div class="sidebar-card">
-            <h3 data-lang="en">Service Areas</h3>
-            <h3 data-lang="es">Areas de Servicio</h3>
-            <div class="sidebar-area-links">
-              <a href="#">Austin, TX</a>
-              <a href="#">Dallas / Fort Worth, TX</a>
-              <a href="#">San Antonio, TX</a>
-              <a href="#">San Marcos, TX</a>
-              <a href="#">Kyle / Buda, TX</a>
-              <a href="#">Lockhart / Bastrop, TX</a>
-              <a href="#">McKinney / Princeton, TX</a>
-            </div>
-          </div>
-
-          <!-- Phone CTA -->
-          <div class="sidebar-phone">
-            <p data-lang="en">Prefer to talk?</p>
-            <p data-lang="es">Prefiere hablar?</p>
-            <a href="tel:+15128504013"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:middle;margin-right:4px"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg> (512) 850-4013</a>
-          </div>
-
         </div>
-        <!-- END SIDEBAR -->
+        <div class="vp-card">
+          <div class="vp-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
+          <div>
+            <h4 data-lang="en">Close in as Little as 7 Days</h4>
+            <h4 data-lang="es">Cierre en Solo 7 Dias</h4>
+            <p data-lang="en">Fast closing on your schedule. Or take your time -- we work on YOUR timeline.</p>
+            <p data-lang-inline="es">Cierre rapido en su horario. O tome su tiempo -- trabajamos en SU tiempo.</p>
+          </div>
+        </div>
+        <div class="vp-card">
+          <div class="vp-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg></div>
+          <div>
+            <h4 data-lang="en">We Handle All Paperwork</h4>
+            <h4 data-lang="es">Manejamos Todo el Papeleo</h4>
+            <p data-lang="en">Title transfers, contracts, notary, closing docs -- we take care of everything.</p>
+            <p data-lang-inline="es">Transferencias, contratos, notario -- nos encargamos de todo.</p>
+          </div>
+        </div>
+        <div class="vp-card">
+          <div class="vp-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="8.5" cy="7" r="4"/><path d="M20 8v6M23 11h-6"/></svg></div>
+          <div>
+            <h4 data-lang="en">Multiple Selling Options</h4>
+            <h4 data-lang="es">Multiples Opciones de Venta</h4>
+            <p data-lang="en">Cash purchase, consignment sale, or subject-to program. We tailor the solution to you.</p>
+            <p data-lang-inline="es">Efectivo, consignacion, o subject-to. Adaptamos la solucion a usted.</p>
+          </div>
+        </div>
+        <div class="vp-card">
+          <div class="vp-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></div>
+          <div>
+            <h4 data-lang="en">Bilingual -- Hablamos Espanol</h4>
+            <h4 data-lang="es">Bilingue -- Hablamos Espanol</h4>
+            <p data-lang="en">85% of our clients are Spanish-speaking. We serve you in your preferred language.</p>
+            <p data-lang-inline="es">El 85% de nuestros clientes hablan espanol. Le atendemos en su idioma.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
+  <!-- ===== HOW IT WORKS ===== -->
+  <section class="process-section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label" data-lang="en">How It Works</span>
+        <span class="section-label" data-lang="es">Como Funciona</span>
+        <h2 data-lang="en">3 Simple Steps to Sell</h2>
+        <h2 data-lang="es">3 Pasos Simples para Vender</h2>
+      </div>
+
+      <div class="timeline">
+        <div class="timeline-step">
+          <div class="timeline-num">1</div>
+          <div>
+            <h3 data-lang="en">Contact Us</h3>
+            <h3 data-lang="es">Contactenos</h3>
+            <p data-lang="en">Fill out the form above or call us at (512) 850-4013. Tell us about your mobile home. It takes less than 2 minutes.</p>
+            <p data-lang="es">Complete el formulario o llamenos al (512) 850-4013. Diganos sobre su casa movil. Toma menos de 2 minutos.</p>
+          </div>
+        </div>
+        <div class="timeline-step">
+          <div class="timeline-num">2</div>
+          <div>
+            <h3 data-lang="en">Get Your Cash Offer</h3>
+            <h3 data-lang="es">Reciba Su Oferta en Efectivo</h3>
+            <p data-lang="en">We evaluate your home and present a fair, no-obligation cash offer within 24 hours. No pressure, no games.</p>
+            <p data-lang="es">Evaluamos su casa y le presentamos una oferta justa sin compromiso dentro de 24 horas. Sin presion.</p>
+          </div>
+        </div>
+        <div class="timeline-step">
+          <div class="timeline-num">3</div>
+          <div>
+            <h3 data-lang="en">Close &amp; Get Paid</h3>
+            <h3 data-lang="es">Cierre y Reciba Su Pago</h3>
+            <p data-lang="en">Accept the offer, choose your closing date, and get paid. We handle all the paperwork and make it seamless.</p>
+            <p data-lang="es">Acepte la oferta, elija su fecha de cierre, y reciba su pago. Nos encargamos de todo.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SITUATIONS WE HELP WITH ===== -->
+  <section class="situations-section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label" data-lang="en">We Can Help</span>
+        <span class="section-label" data-lang="es">Podemos Ayudar</span>
+        <h2 data-lang="en">No Matter Your Situation</h2>
+        <h2 data-lang="es">Sin Importar Su Situacion</h2>
+        <p data-lang="en">Whatever you are going through, we have a solution.</p>
+        <p data-lang="es">Lo que sea que este pasando, tenemos una solucion.</p>
+      </div>
+
+      <div class="chips-grid">
+        <span class="chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 4 12 14.01 9 11.01"/></svg> <span data-lang="en">Foreclosure</span><span data-lang-inline="es">Ejecucion Hipotecaria</span></span>
+        <span class="chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 4 12 14.01 9 11.01"/></svg> <span data-lang="en">Divorce</span><span data-lang-inline="es">Divorcio</span></span>
+        <span class="chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 4 12 14.01 9 11.01"/></svg> <span data-lang="en">Inherited Property</span><span data-lang-inline="es">Propiedad Heredada</span></span>
+        <span class="chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 4 12 14.01 9 11.01"/></svg> <span data-lang="en">Relocation</span><span data-lang-inline="es">Reubicacion</span></span>
+        <span class="chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 4 12 14.01 9 11.01"/></svg> <span data-lang="en">Behind on Payments</span><span data-lang-inline="es">Atrasado en Pagos</span></span>
+        <span class="chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 4 12 14.01 9 11.01"/></svg> <span data-lang="en">Vacant Home</span><span data-lang-inline="es">Casa Vacante</span></span>
+        <span class="chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 4 12 14.01 9 11.01"/></svg> <span data-lang="en">Code Violations</span><span data-lang-inline="es">Violaciones de Codigo</span></span>
+        <span class="chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 4 12 14.01 9 11.01"/></svg> <span data-lang="en">Need Cash Fast</span><span data-lang-inline="es">Necesita Efectivo</span></span>
+        <span class="chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 4 12 14.01 9 11.01"/></svg> <span data-lang="en">Park Issues</span><span data-lang-inline="es">Problemas del Parque</span></span>
+        <span class="chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 4 12 14.01 9 11.01"/></svg> <span data-lang="en">Downsizing</span><span data-lang-inline="es">Reducir Tamano</span></span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FAQ ===== -->
+  <section class="faq-section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label" data-lang="en">Common Questions</span>
+        <span class="section-label" data-lang="es">Preguntas Frecuentes</span>
+        <h2 data-lang="en">Frequently Asked Questions</h2>
+        <h2 data-lang="es">Preguntas Frecuentes</h2>
+      </div>
+
+      <div class="faq-list">
+        <div class="faq-item">
+          <button class="faq-q" onclick="this.parentElement.classList.toggle('open')">
+            <span data-lang="en">How fast can I sell my mobile home?</span>
+            <span data-lang-inline="es">Que tan rapido puedo vender mi casa movil?</span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="faq-a"><div class="faq-a-inner">
+            <span data-lang="en">We can close in as little as 7 days. Most transactions complete within 2-4 weeks depending on title and paperwork.</span>
+            <span data-lang-inline="es">Podemos cerrar en tan solo 7 dias. La mayoria de las transacciones se completan dentro de 2-4 semanas.</span>
+          </div></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" onclick="this.parentElement.classList.toggle('open')">
+            <span data-lang="en">Do I need to make repairs before selling?</span>
+            <span data-lang-inline="es">Necesito hacer reparaciones antes de vender?</span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="faq-a"><div class="faq-a-inner">
+            <span data-lang="en">No. We buy mobile homes in any condition -- fire damage, storm damage, outdated, or needing major repairs. Sell as-is.</span>
+            <span data-lang-inline="es">No. Compramos casas moviles en cualquier condicion -- danos por fuego, tormentas, antiguas, o que necesiten reparaciones mayores.</span>
+          </div></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" onclick="this.parentElement.classList.toggle('open')">
+            <span data-lang="en">Are there any fees or commissions?</span>
+            <span data-lang-inline="es">Hay algun cargo o comision?</span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="faq-a"><div class="faq-a-inner">
+            <span data-lang="en">Zero fees and zero commissions. The price we offer is what you receive -- no hidden charges.</span>
+            <span data-lang-inline="es">Cero cargos y cero comisiones. La oferta que le damos es lo que recibe -- sin cargos ocultos.</span>
+          </div></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" onclick="this.parentElement.classList.toggle('open')">
+            <span data-lang="en">What if I'm behind on payments?</span>
+            <span data-lang-inline="es">Que pasa si estoy atrasado en pagos?</span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="faq-a"><div class="faq-a-inner">
+            <span data-lang="en">We can help through our subject-to program where we take over your mortgage payments, helping you avoid foreclosure and protect your credit.</span>
+            <span data-lang-inline="es">Podemos ayudarle con nuestro programa subject-to donde nos hacemos cargo de sus pagos de hipoteca, ayudandole a evitar ejecucion hipotecaria.</span>
+          </div></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" onclick="this.parentElement.classList.toggle('open')">
+            <span data-lang="en">Do you buy mobile homes outside of Austin?</span>
+            <span data-lang-inline="es">Compran casas moviles fuera de Austin?</span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="faq-a"><div class="faq-a-inner">
+            <span data-lang="en">Yes. We buy mobile homes across all of Texas including Dallas-Fort Worth, San Antonio, San Marcos, Lockhart, Kyle, Buda, Bastrop, and more.</span>
+            <span data-lang-inline="es">Si. Compramos casas moviles en todo Texas incluyendo Dallas-Fort Worth, San Antonio, San Marcos, Lockhart, Kyle, Buda, Bastrop, y mas.</span>
+          </div></div>
+        </div>
       </div>
     </div>
   </section>
 
   <!-- ===== TESTIMONIALS ===== -->
-  <section class="testimonials-section">
+  <section class="sell-testimonials">
     <div class="container">
       <div class="section-header">
-        <span class="section-label" data-lang="en">Seller Testimonials</span>
-        <span class="section-label" data-lang="es">Testimonios de Vendedores</span>
+        <span class="section-label" data-lang="en">Seller Stories</span>
+        <span class="section-label" data-lang="es">Historias de Vendedores</span>
         <h2 data-lang="en">What Our Sellers Say</h2>
         <h2 data-lang="es">Lo Que Dicen Nuestros Vendedores</h2>
       </div>
-      <div class="testimonials-grid">
-        <div class="testimonial-card fade-in-up">
-          <div class="testimonial-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+      <div class="testi-grid">
+        <div class="testi-card">
+          <div class="testi-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
           <blockquote>
-            <span data-lang="en">"I needed to sell my mobile home fast because of a job relocation. Iron Lot Homes gave me a fair cash offer within a day and we closed in two weeks. They handled everything, including the paperwork. Zero stress."</span>
-            <span data-lang-inline="es">"Necesitaba vender mi casa movil rapido por una reubicacion de trabajo. Iron Lot Homes me dio una oferta justa en efectivo en un dia y cerramos en dos semanas. Se encargaron de todo, incluyendo el papeleo. Cero estres."</span>
+            <span data-lang="en">"I needed to sell fast because of a job relocation. Iron Lot Homes gave me a fair cash offer within a day and we closed in two weeks. They handled everything. Zero stress."</span>
+            <span data-lang-inline="es">"Necesitaba vender rapido por reubicacion de trabajo. Me dieron una oferta justa en un dia y cerramos en dos semanas. Se encargaron de todo. Cero estres."</span>
           </blockquote>
-          <div class="testimonial-author">
-            <span data-lang="en">-- Maria G., Austin TX</span>
-            <span data-lang-inline="es">-- Maria G., Austin TX</span>
-          </div>
+          <div class="testi-author">-- Maria G., Austin TX</div>
         </div>
-        <div class="testimonial-card fade-in-up">
-          <div class="testimonial-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <div class="testi-card">
+          <div class="testi-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
           <blockquote>
-            <span data-lang="en">"I was behind on payments and didn't know what to do. Wayne explained the subject-to program and took over my mortgage. He saved my credit and I didn't lose a penny. Truly grateful for this team."</span>
-            <span data-lang-inline="es">"Estaba atrasado en pagos y no sabia que hacer. Wayne me explico el programa subject-to y se hizo cargo de mi hipoteca. Salvo mi credito y no perdi ni un centavo. Realmente agradecido con este equipo."</span>
+            <span data-lang="en">"I was behind on payments and didn't know what to do. Wayne explained the subject-to program and took over my mortgage. He saved my credit. Truly grateful."</span>
+            <span data-lang-inline="es">"Estaba atrasado en pagos y no sabia que hacer. Wayne me explico el programa subject-to y se hizo cargo de mi hipoteca. Salvo mi credito. Realmente agradecido."</span>
           </blockquote>
-          <div class="testimonial-author">
-            <span data-lang="en">-- Carlos R., Lockhart TX</span>
-            <span data-lang-inline="es">-- Carlos R., Lockhart TX</span>
-          </div>
+          <div class="testi-author">-- Carlos R., Lockhart TX</div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ===== FOOTER CTA BAR ===== -->
-  <section class="footer-cta-bar">
+  <!-- ===== SERVICE AREAS BAR ===== -->
+  <div class="areas-bar">
+    <div class="container">
+      <p data-lang="en">Service Areas</p>
+      <p data-lang="es">Areas de Servicio</p>
+      <div class="areas-tags">
+        <a href="locations/austin/" class="areas-tag">Austin</a>
+        <a href="locations/dallas/" class="areas-tag">Dallas</a>
+        <a href="locations/fort-worth/" class="areas-tag">Fort Worth</a>
+        <a href="locations/san-antonio/" class="areas-tag">San Antonio</a>
+        <a href="locations/arlington/" class="areas-tag">Arlington</a>
+        <a href="locations/plano/" class="areas-tag">Plano</a>
+        <a href="locations/frisco/" class="areas-tag">Frisco</a>
+        <a href="locations/denton/" class="areas-tag">Denton</a>
+        <a href="locations/mckinney/" class="areas-tag">McKinney</a>
+        <a href="locations/princeton/" class="areas-tag">Princeton</a>
+        <a href="locations/san-marcos/" class="areas-tag">San Marcos</a>
+        <a href="locations/lockhart/" class="areas-tag">Lockhart</a>
+        <a href="locations/kyle/" class="areas-tag">Kyle</a>
+        <a href="locations/buda/" class="areas-tag">Buda</a>
+        <a href="locations/bastrop/" class="areas-tag">Bastrop</a>
+        <a href="locations/del-valle/" class="areas-tag">Del Valle</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== BOTTOM CTA ===== -->
+  <section class="sell-cta">
     <div class="container">
       <h2 data-lang="en">Ready to Sell? Get Your Free Offer Today</h2>
-      <h2 data-lang="es">Listo para Vender? Obtenga Su Oferta Gratis Hoy</h2>
-      <p data-lang="en">Call us right now or fill out the form above. No obligation, no pressure.</p>
+      <h2 data-lang="es">Listo para Vender? Obtenga Su Oferta Hoy</h2>
+      <p data-lang="en">Call us right now or scroll up to fill out the form. No obligation, no pressure.</p>
       <p data-lang="es">Llamenos ahora o complete el formulario arriba. Sin obligacion, sin presion.</p>
-      <a href="tel:+15128504013" class="btn" data-lang="en"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:middle;margin-right:4px"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg> Call (512) 850-4013</a>
-      <a href="tel:+15128504013" class="btn" data-lang-inline="es"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:middle;margin-right:4px"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg> Llamar (512) 850-4013</a>
-    </div>
-  </section>
-
-  <!-- ===== TRUST BADGES ===== -->
-  <section class="trust-badges">
-    <div class="container">
-      <div class="badges-grid">
-        <div class="badge-item">
-          <div class="badge-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="24" height="24"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg></div>
-          <span class="badge-label" data-lang="en">Licensed</span>
-          <span class="badge-label" data-lang="es">Licenciados</span>
-        </div>
-        <div class="badge-item">
-          <div class="badge-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="24" height="24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
-          <span class="badge-label" data-lang="en">Insured</span>
-          <span class="badge-label" data-lang="es">Asegurados</span>
-        </div>
-        <div class="badge-item">
-          <div class="badge-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="24" height="24"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg></div>
-          <span class="badge-label" data-lang="en">BBB Accredited</span>
-          <span class="badge-label" data-lang="es">Acreditados BBB</span>
-        </div>
-        <div class="badge-item">
-          <div class="badge-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="24" height="24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></div>
-          <span class="badge-label" data-lang="en">Bilingual EN/ES</span>
-          <span class="badge-label" data-lang="es">Bilingue EN/ES</span>
-        </div>
+      <div class="cta-actions">
+        <a href="tel:+15128504013" class="btn btn-primary" data-lang="en"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:middle;margin-right:4px"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg> Call (512) 850-4013</a>
+        <a href="tel:+15128504013" class="btn btn-primary" data-lang-inline="es"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:middle;margin-right:4px"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg> Llamar (512) 850-4013</a>
+        <a href="#seller-form" class="btn btn-white" data-lang="en">Fill Out Form</a>
+        <a href="#seller-form" class="btn btn-white" data-lang-inline="es">Llenar Formulario</a>
       </div>
     </div>
   </section>
@@ -1056,7 +958,7 @@
         </div>
         <div class="footer-links-section">
           <h4 data-lang="en">Service Areas</h4>
-          <h4 data-lang="es">Áreas de Servicio</h4>
+          <h4 data-lang="es">Areas de Servicio</h4>
           <ul class="footer-links">
             <li><a href="locations/austin/">Austin</a></li>
             <li><a href="locations/dallas/">Dallas</a></li>
@@ -1080,11 +982,6 @@
           <div class="footer-contact-item">
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:middle;margin-right:4px"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg> Austin, TX
           </div>
-          <div class="footer-areas" style="margin-top:12px;">
-            <strong data-lang="en">Serving:</strong>
-            <strong data-lang="es">Sirviendo:</strong>
-            Austin, Dallas, Fort Worth, San Antonio, Arlington, Plano, McKinney, San Marcos, Lockhart, Kyle, Buda, Bastrop
-          </div>
         </div>
       </div>
       <div class="footer-bottom">
@@ -1096,30 +993,13 @@
   <!-- ===== STICKY CTA ===== -->
   <div class="sticky-cta" id="stickyCta">
     <a href="tel:+15128504013"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:middle;margin-right:4px"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg> (512) 850-4013</a>
-    <a href="#seller-sidebar-form" class="btn btn-primary" data-lang="en">Get Cash Offer</a>
-    <a href="#seller-sidebar-form" class="btn btn-primary" data-lang-inline="es">Oferta en Efectivo</a>
+    <a href="#seller-form" class="btn btn-primary" data-lang="en">Get Cash Offer</a>
+    <a href="#seller-form" class="btn btn-primary" data-lang-inline="es">Oferta en Efectivo</a>
   </div>
 
   <script src="js/main.js"></script>
-
-  <!-- Scroll Animations + Sticky CTA -->
   <script>
-    // Scroll-triggered fade-in
-    (function() {
-      var els = document.querySelectorAll('.fade-in-up');
-      if (!els.length) return;
-      var observer = new IntersectionObserver(function(entries) {
-        entries.forEach(function(entry) {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('visible-anim');
-            observer.unobserve(entry.target);
-          }
-        });
-      }, { threshold: 0.15 });
-      els.forEach(function(el) { observer.observe(el); });
-    })();
-
-    // Sticky CTA
+    // Sticky CTA on scroll
     (function() {
       var sticky = document.getElementById('stickyCta');
       if (!sticky) return;

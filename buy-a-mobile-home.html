@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
   <title>Buy a Mobile Home Austin TX | Owner Financing, No Credit Check | Iron Lot Homes</title>
   <meta name="description" content="Buy an affordable mobile home in Austin, TX with owner financing. No credit check, no bank needed. Flexible payments and handyman specials available. Hablamos Espanol.">
   <meta name="keywords" content="buy mobile home Austin TX, mobile home owner financing Austin, mobile homes no credit check Texas, affordable mobile homes Austin, handyman special mobile home, rent to own mobile home Austin">
@@ -117,404 +118,386 @@
   </script>
 
   <style>
-    /* ===== Service Page Overrides ===== */
-    .service-hero {
+    /* ===== Buy Page - Modern Conversion Layout ===== */
+
+    /* Hero with Side Form */
+    .buy-hero {
+      background: linear-gradient(160deg, var(--color-primary-dark) 0%, var(--color-primary) 60%, #1e4d73 100%);
+      color: var(--color-text-inverse);
+      padding: 48px 0 56px;
       position: relative;
-      background: linear-gradient(135deg, rgba(15,39,68,0.92) 0%, rgba(26,58,92,0.88) 100%),
-                  url('https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=1400&q=80') center/cover no-repeat;
-      color: var(--text-inverse);
-      padding: 56px 0 48px;
+      overflow: hidden;
     }
-    .service-hero .breadcrumb {
-      font-size: 0.85rem;
-      margin-bottom: 16px;
-      opacity: 0.8;
+    .buy-hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(ellipse at 80% 20%, rgba(212, 132, 42, 0.1) 0%, transparent 60%);
+      pointer-events: none;
     }
-    .service-hero .breadcrumb a { color: var(--accent-light); }
-    .service-hero .breadcrumb a:hover { color: #fff; }
-    .service-hero h1 { color: #fff; margin-bottom: 16px; }
-    .service-hero .hero-subtitle { font-size: 1.15rem; opacity: 0.92; max-width: 620px; margin-bottom: 0; }
-    .service-hero .accent-line {
-      width: 80px;
-      height: 4px;
-      background: var(--accent);
-      margin-top: 24px;
-    }
-
-    /* Urgency Banner */
-    .urgency-banner {
-      background: var(--accent);
-      color: #fff;
-      text-align: center;
-      padding: 10px 16px;
-      font-size: 0.9rem;
-      font-weight: 600;
-      letter-spacing: 0.3px;
-    }
-    .urgency-banner a { color: #fff; text-decoration: underline; }
-
-    /* Content Grid */
-    .content-grid {
+    .buy-hero .container { position: relative; z-index: 1; }
+    .buy-hero-grid {
       display: grid;
       grid-template-columns: 1fr;
-      gap: 40px;
+      gap: 36px;
+      align-items: center;
     }
-    @media (min-width: 1024px) {
-      .content-grid {
-        grid-template-columns: 2fr 1fr;
-        gap: 48px;
-      }
-    }
-
-    .main-content h2 {
-      font-size: 1.6rem;
-      margin-bottom: 16px;
-      margin-top: 40px;
-      color: var(--primary-dark);
-    }
-    .main-content h2:first-child { margin-top: 0; }
-    .main-content .lead {
+    .buy-hero .breadcrumb { font-size: 0.82rem; margin-bottom: 12px; opacity: 0.7; }
+    .buy-hero .breadcrumb a { color: rgba(255,255,255,0.8); }
+    .buy-hero .breadcrumb a:hover { color: #fff; }
+    .buy-hero h1 { color: #fff; margin-bottom: 14px; font-size: clamp(2rem, 5vw, 3rem); }
+    .buy-hero h1 .accent { color: var(--color-secondary); }
+    .buy-hero-sub {
       font-size: 1.1rem;
-      color: var(--text-light);
-      line-height: 1.8;
+      opacity: 0.9;
+      max-width: 520px;
+      line-height: 1.7;
       margin-bottom: 24px;
     }
-
-    /* Benefit Check List */
-    .check-list { list-style: none; padding: 0; margin: 0 0 24px 0; }
-    .check-list li {
-      position: relative;
-      padding: 10px 0 10px 36px;
-      border-bottom: 1px solid var(--border);
-      font-size: 1rem;
-    }
-    .check-list li::before {
-      content: '\2713';
-      position: absolute;
-      left: 0;
-      top: 10px;
-      width: 24px;
-      height: 24px;
-      background: var(--success);
-      color: #fff;
-      border-radius: 50%;
+    .buy-hero-badges {
       display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+    .buy-hero-badge {
+      display: inline-flex;
       align-items: center;
-      justify-content: center;
-      font-size: 0.75rem;
-      font-weight: 700;
+      gap: 6px;
+      background: rgba(255,255,255,0.08);
+      border: 1px solid rgba(255,255,255,0.15);
+      padding: 8px 16px;
+      border-radius: 100px;
+      font-size: 0.84rem;
+      font-weight: 500;
+    }
+    .buy-hero-badge svg { width: 18px; height: 18px; stroke: var(--color-secondary); flex-shrink: 0; }
+
+    /* Hero Form */
+    .buy-hero-form {
+      background: var(--color-card);
+      border-radius: var(--radius-xl);
+      padding: 32px 28px;
+      color: var(--color-text);
+      box-shadow: 0 16px 48px rgba(0,0,0,0.2);
+    }
+    .buy-hero-form h3 { margin-bottom: 4px; font-size: 1.25rem; }
+    .buy-hero-form > p { font-size: 0.88rem; color: var(--text-light); margin-bottom: 20px; }
+    .buy-hero-form .form-group { margin-bottom: 12px; }
+    .buy-hero-form .form-group label { font-size: 0.78rem; }
+
+    @media (min-width: 768px) {
+      .buy-hero { padding: 64px 0 72px; }
+      .buy-hero-grid { grid-template-columns: 1.1fr 0.9fr; gap: 48px; }
     }
 
-    /* Process Steps (inline) */
-    .process-steps { counter-reset: step; margin: 24px 0; }
-    .process-step {
-      display: flex;
-      gap: 20px;
-      padding: 20px 0;
-      border-bottom: 1px solid var(--border);
-      align-items: flex-start;
+    /* Value Props - Icon Cards */
+    .value-props { padding: var(--section-padding); }
+    .vp-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 16px;
+      margin-top: 48px;
     }
-    .process-step:last-child { border-bottom: none; }
-    .process-step-num {
-      counter-increment: step;
+    .vp-card {
+      background: var(--color-card);
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-lg);
+      padding: 28px 24px;
+      display: flex;
+      gap: 18px;
+      align-items: flex-start;
+      transition: all var(--transition);
+    }
+    .vp-card:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px var(--color-shadow);
+      border-color: var(--color-secondary);
+    }
+    .vp-icon {
       width: 44px;
       height: 44px;
       min-width: 44px;
-      background: var(--accent);
+      border-radius: var(--radius-md);
+      background: var(--color-secondary-light);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .vp-icon svg { width: 22px; height: 22px; stroke: var(--color-secondary); }
+    .vp-card h4 { font-size: 1.05rem; margin-bottom: 4px; }
+    .vp-card p { font-size: 0.92rem; color: var(--text-light); margin-bottom: 0; }
+
+    @media (min-width: 768px) {
+      .vp-grid { grid-template-columns: 1fr 1fr; }
+    }
+    @media (min-width: 1024px) {
+      .vp-grid { grid-template-columns: 1fr 1fr 1fr; }
+    }
+
+    /* Process Timeline */
+    .process-section { padding: var(--section-padding); background: var(--color-surface); }
+    .timeline {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 0;
+      margin-top: 48px;
+      max-width: 800px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .timeline-step {
+      display: flex;
+      gap: 24px;
+      padding: 28px 0;
+      border-bottom: 1px solid var(--color-border);
+      align-items: flex-start;
+    }
+    .timeline-step:last-child { border-bottom: none; }
+    .timeline-num {
+      width: 48px;
+      height: 48px;
+      min-width: 48px;
+      background: var(--color-secondary);
       color: #fff;
+      border-radius: var(--radius-md);
       display: flex;
       align-items: center;
       justify-content: center;
       font-family: var(--font-display);
       font-weight: 800;
-      font-size: 1.1rem;
-    }
-    .process-step h3 { font-size: 1.1rem; margin-bottom: 4px; }
-    .process-step p { margin-bottom: 0; font-size: 0.95rem; color: var(--text-light); }
-
-    /* Info Callout */
-    .info-callout {
-      background: var(--accent-light);
-      border-left: 5px solid var(--accent);
-      padding: 24px 28px;
-      margin: 28px 0;
-    }
-    .info-callout h3 {
       font-size: 1.15rem;
-      margin-bottom: 8px;
-      color: var(--primary-dark);
     }
-    .info-callout p { margin-bottom: 0; font-size: 0.95rem; color: var(--text); }
-    .info-callout ul { margin: 12px 0 0 20px; font-size: 0.95rem; color: var(--text); }
-    .info-callout ul li { margin-bottom: 4px; }
+    .timeline-step h3 { font-size: 1.1rem; margin-bottom: 4px; }
+    .timeline-step p { font-size: 0.92rem; color: var(--text-light); margin-bottom: 0; }
 
-    /* Home Types Grid */
-    .home-types-grid {
+    /* Home Types */
+    .types-section { padding: var(--section-padding); }
+    .types-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 20px;
+      margin-top: 48px;
+      max-width: 960px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    @media (min-width: 768px) {
+      .types-grid { grid-template-columns: 1fr 1fr 1fr; }
+    }
+    .type-card {
+      background: var(--color-card);
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-lg);
+      padding: 32px 24px;
+      text-align: center;
+      transition: all var(--transition);
+      position: relative;
+      overflow: hidden;
+    }
+    .type-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 4px;
+      background: var(--color-secondary);
+    }
+    .type-card:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px var(--color-shadow);
+      border-color: var(--color-secondary);
+    }
+    .type-card-icon {
+      width: 56px;
+      height: 56px;
+      margin: 0 auto 16px;
+      border-radius: var(--radius-md);
+      background: var(--color-secondary-light);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .type-card-icon svg { width: 28px; height: 28px; stroke: var(--color-secondary); }
+    .type-card h4 { font-size: 1.1rem; margin-bottom: 8px; }
+    .type-card p { font-size: 0.9rem; color: var(--text-light); margin-bottom: 0; }
+
+    /* Qualify Section */
+    .qualify-section { padding: var(--section-padding); background: var(--color-surface); }
+    .qualify-list {
       display: grid;
       grid-template-columns: 1fr;
       gap: 16px;
-      margin: 16px 0 24px;
+      margin-top: 48px;
+      max-width: 700px;
+      margin-left: auto;
+      margin-right: auto;
     }
-    @media (min-width: 768px) {
-      .home-types-grid { grid-template-columns: 1fr 1fr 1fr; }
-    }
-    .home-type-card {
-      background: var(--card);
-      border: 1px solid var(--border);
-      border-top: 4px solid var(--accent);
-      padding: 24px 20px;
-      text-align: center;
-    }
-    .home-type-card .type-icon {
-      font-size: 2rem;
-      margin-bottom: 8px;
-    }
-    .home-type-card h4 { font-size: 1.05rem; margin-bottom: 8px; }
-    .home-type-card p { font-size: 0.9rem; color: var(--text-light); margin-bottom: 0; }
-
-    /* Qualify List */
-    .qualify-grid {
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 12px;
-      margin: 16px 0 24px;
-    }
-    .qualify-item {
-      background: var(--card);
-      border: 1px solid var(--border);
-      padding: 16px 20px;
+    .qualify-card {
+      background: var(--color-card);
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-lg);
+      padding: 24px;
       display: flex;
+      gap: 18px;
       align-items: flex-start;
-      gap: 14px;
+      transition: all var(--transition);
+    }
+    .qualify-card:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px var(--color-shadow);
     }
     .qualify-num {
-      width: 32px;
-      height: 32px;
-      min-width: 32px;
-      background: var(--primary-dark);
+      width: 40px;
+      height: 40px;
+      min-width: 40px;
+      background: var(--color-primary-dark);
       color: #fff;
+      border-radius: var(--radius-md);
       display: flex;
       align-items: center;
       justify-content: center;
       font-family: var(--font-display);
       font-weight: 800;
-      font-size: 0.9rem;
+      font-size: 1rem;
     }
-    .qualify-item h4 { font-size: 1rem; margin-bottom: 4px; }
-    .qualify-item p { font-size: 0.9rem; color: var(--text-light); margin-bottom: 0; }
+    .qualify-card h4 { font-size: 1.05rem; margin-bottom: 4px; }
+    .qualify-card p { font-size: 0.92rem; color: var(--text-light); margin-bottom: 0; }
 
-    /* Service Areas Inline */
-    .area-tags {
+    /* FAQ Section */
+    .faq-section { padding: var(--section-padding); }
+    .faq-list {
+      max-width: 760px;
+      margin: 48px auto 0;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+    .faq-item {
+      background: var(--color-card);
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      transition: all var(--transition);
+    }
+    .faq-item:hover { border-color: var(--color-secondary); }
+    .faq-q {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 24px;
+      cursor: pointer;
+      font-weight: 600;
+      font-size: 1rem;
+      color: var(--color-primary-dark);
+      background: none;
+      border: none;
+      width: 100%;
+      text-align: left;
+      font-family: var(--font-body);
+      gap: 16px;
+    }
+    .faq-q svg {
+      width: 20px;
+      height: 20px;
+      min-width: 20px;
+      stroke: var(--color-text-muted);
+      transition: transform var(--transition);
+    }
+    .faq-item.open .faq-q svg { transform: rotate(180deg); }
+    .faq-a {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s ease;
+    }
+    .faq-item.open .faq-a { max-height: 200px; }
+    .faq-a-inner {
+      padding: 0 24px 20px;
+      font-size: 0.95rem;
+      color: var(--text-light);
+      line-height: 1.7;
+    }
+
+    /* Testimonials */
+    .buy-testimonials { padding: var(--section-padding); background: var(--color-surface); }
+    .testi-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 20px;
+      margin-top: 48px;
+      max-width: 900px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    @media (min-width: 768px) { .testi-grid { grid-template-columns: 1fr 1fr; } }
+    .testi-card {
+      background: var(--color-card);
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-lg);
+      padding: 28px 24px;
+      transition: all var(--transition);
+    }
+    .testi-card:hover { transform: translateY(-2px); box-shadow: 0 8px 24px var(--color-shadow); }
+    .testi-stars { color: var(--color-secondary); font-size: 1rem; margin-bottom: 12px; letter-spacing: 2px; }
+    .testi-card blockquote {
+      font-size: 0.95rem;
+      line-height: 1.7;
+      font-style: italic;
+      margin-bottom: 16px;
+      color: var(--color-text);
+    }
+    .testi-author { font-weight: 700; font-size: 0.88rem; color: var(--color-primary-dark); }
+
+    /* Bottom CTA */
+    .buy-cta {
+      background: linear-gradient(160deg, var(--color-primary-dark) 0%, var(--color-primary) 100%);
+      color: #fff;
+      padding: 64px 0;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .buy-cta::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: var(--border-thick);
+      background: var(--color-secondary);
+    }
+    .buy-cta .container { position: relative; z-index: 1; }
+    .buy-cta h2 { color: #fff; margin-bottom: 12px; }
+    .buy-cta p { opacity: 0.9; font-size: 1.05rem; max-width: 480px; margin: 0 auto 24px; }
+    .buy-cta .cta-actions { display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; }
+
+    /* Service Areas */
+    .areas-bar {
+      background: var(--color-card);
+      border-top: 1px solid var(--color-border);
+      border-bottom: 1px solid var(--color-border);
+      padding: 28px 0;
+      text-align: center;
+    }
+    .areas-bar p { font-size: 0.9rem; color: var(--text-light); margin-bottom: 12px; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; }
+    .areas-tags {
       display: flex;
       flex-wrap: wrap;
       gap: 8px;
-      margin: 12px 0 24px;
-    }
-    .area-tag {
-      background: var(--bg-alt);
-      padding: 6px 14px;
-      font-size: 0.85rem;
-      font-weight: 500;
-      color: var(--primary-dark);
-      border: 1px solid var(--border);
-    }
-
-    /* CTA Box */
-    .cta-box {
-      background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary) 100%);
-      color: #fff;
-      padding: 36px 32px;
-      text-align: center;
-      margin: 32px 0;
-    }
-    .cta-box h3 { color: #fff; margin-bottom: 8px; font-size: 1.3rem; }
-    .cta-box p { opacity: 0.9; margin-bottom: 20px; }
-    .cta-box .btn-primary { font-size: 1.05rem; }
-
-    /* Sidebar */
-    .sidebar { position: relative; }
-    @media (min-width: 1024px) {
-      .sidebar { position: sticky; top: 120px; align-self: start; }
-    }
-
-    .sidebar-card {
-      background: var(--card);
-      border: 1px solid var(--border);
-      padding: 28px 24px;
-      margin-bottom: 20px;
-      box-shadow: var(--shadow-sm);
-    }
-    .sidebar-card h3 {
-      font-size: 1.1rem;
-      margin-bottom: 16px;
-      padding-bottom: 12px;
-      border-bottom: 2px solid var(--accent);
-    }
-    .sidebar-card .sidebar-list { list-style: none; padding: 0; margin: 0; }
-    .sidebar-card .sidebar-list li {
-      padding: 8px 0;
-      border-bottom: 1px solid var(--border);
-      font-size: 0.9rem;
-      display: flex;
-      align-items: center;
-      gap: 8px;
-    }
-    .sidebar-card .sidebar-list li:last-child { border-bottom: none; }
-    .sidebar-card .sidebar-list li::before {
-      content: '\2713';
-      color: var(--success);
-      font-weight: 700;
-      font-size: 0.8rem;
-    }
-
-    .sidebar-form-card {
-      background: var(--card);
-      border: 2px solid var(--accent);
-      padding: 28px 24px;
-      margin-bottom: 20px;
-      box-shadow: var(--shadow-md);
-    }
-    .sidebar-form-card h3 {
-      font-size: 1.15rem;
-      margin-bottom: 4px;
-      color: var(--primary-dark);
-    }
-    .sidebar-form-card > p {
-      font-size: 0.85rem;
-      color: var(--text-light);
-      margin-bottom: 16px;
-    }
-    .sidebar-form .form-group { margin-bottom: 12px; }
-    .sidebar-form .form-group label { font-size: 0.8rem; }
-    .sidebar-form .form-group input,
-    .sidebar-form .form-group select,
-    .sidebar-form .form-group textarea {
-      padding: 10px 14px;
-      font-size: 0.95rem;
-    }
-
-    .sidebar-phone {
-      background: var(--primary-dark);
-      color: #fff;
-      text-align: center;
-      padding: 20px;
-      margin-bottom: 20px;
-    }
-    .sidebar-phone p { margin-bottom: 4px; font-size: 0.85rem; opacity: 0.8; }
-    .sidebar-phone a {
-      color: #fff;
-      font-family: var(--font-display);
-      font-size: 1.4rem;
-      font-weight: 800;
-    }
-    .sidebar-phone a:hover { color: var(--accent-light); }
-
-    .sidebar-area-links { display: flex; flex-direction: column; gap: 0; }
-    .sidebar-area-links a {
-      display: block;
-      padding: 8px 0;
-      font-size: 0.9rem;
-      color: var(--primary-dark);
-      border-bottom: 1px solid var(--border);
-      font-weight: 500;
-    }
-    .sidebar-area-links a:last-child { border-bottom: none; }
-    .sidebar-area-links a:hover { color: var(--accent); }
-
-    /* Testimonials Section */
-    .testimonials-section { background: var(--bg-alt); padding: 64px 0; }
-    .testimonials-grid {
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 24px;
-      max-width: 900px;
-      margin: 0 auto;
-    }
-    @media (min-width: 768px) {
-      .testimonials-grid { grid-template-columns: 1fr 1fr; }
-    }
-    .testimonial-card {
-      background: var(--card);
-      padding: 28px 24px;
-      border-left: 4px solid var(--accent);
-      box-shadow: var(--shadow-sm);
-    }
-    .testimonial-stars {
-      color: var(--accent);
-      font-size: 1.1rem;
-      margin-bottom: 12px;
-      letter-spacing: 2px;
-    }
-    .testimonial-card blockquote {
-      font-size: 0.95rem;
-      line-height: 1.7;
-      color: var(--text);
-      font-style: italic;
-      margin-bottom: 16px;
-    }
-    .testimonial-author {
-      font-weight: 700;
-      font-size: 0.9rem;
-      color: var(--primary-dark);
-    }
-
-    /* Footer CTA Bar */
-    .footer-cta-bar {
-      background: var(--accent);
-      color: #fff;
-      padding: 40px 0;
-      text-align: center;
-    }
-    .footer-cta-bar h2 { color: #fff; margin-bottom: 8px; }
-    .footer-cta-bar p { opacity: 0.95; margin-bottom: 20px; max-width: 500px; margin-left: auto; margin-right: auto; }
-    .footer-cta-bar .btn {
-      background: var(--primary-dark);
-      color: #fff;
-    }
-    .footer-cta-bar .btn:hover {
-      background: var(--primary);
-      transform: translateY(-1px);
-    }
-
-    /* Trust Badges */
-    .trust-badges {
-      background: var(--card);
-      border-top: 1px solid var(--border);
-      border-bottom: 1px solid var(--border);
-      padding: 32px 0;
-    }
-    .badges-grid {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 16px;
-      text-align: center;
-    }
-    @media (min-width: 768px) {
-      .badges-grid { grid-template-columns: repeat(4, 1fr); }
-    }
-    .badge-item {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 8px;
-      padding: 12px;
-    }
-    .badge-icon {
-      width: 52px;
-      height: 52px;
-      background: var(--bg-alt);
-      border: 2px solid var(--border);
-      display: flex;
-      align-items: center;
       justify-content: center;
-      font-size: 1.5rem;
     }
-    .badge-label {
-      font-size: 0.8rem;
-      font-weight: 600;
-      color: var(--primary-dark);
-      text-transform: uppercase;
-      letter-spacing: 0.5px;
+    .areas-tag {
+      padding: 6px 14px;
+      font-size: 0.82rem;
+      font-weight: 500;
+      color: var(--color-primary-dark);
+      background: var(--color-surface);
+      border: 1px solid var(--color-border);
+      border-radius: 100px;
+      transition: all var(--transition);
+    }
+    .areas-tag:hover {
+      background: var(--color-secondary);
+      color: #fff;
+      border-color: var(--color-secondary);
     }
 
     /* Sticky CTA */
@@ -524,7 +507,7 @@
       left: 0;
       right: 0;
       z-index: 90;
-      background: var(--primary-dark);
+      background: var(--color-primary-dark);
       padding: 12px 20px;
       display: flex;
       justify-content: center;
@@ -535,22 +518,32 @@
       box-shadow: 0 -4px 20px rgba(0,0,0,0.2);
     }
     .sticky-cta.visible { transform: translateY(0); }
-    .sticky-cta a {
-      color: #fff;
-      font-weight: 700;
-      font-size: 1rem;
-    }
+    .sticky-cta a { color: #fff; font-weight: 700; font-size: 1rem; }
     .sticky-cta .btn { padding: 10px 24px; font-size: 0.9rem; }
 
-    /* Scroll animation */
-    .fade-in-up {
-      opacity: 0;
-      transform: translateY(24px);
-      transition: opacity 0.5s ease, transform 0.5s ease;
+    /* Trust Badges */
+    .buy-trust {
+      background: var(--color-surface);
+      padding: 32px 0;
     }
-    .fade-in-up.visible-anim {
-      opacity: 1;
-      transform: translateY(0);
+    .trust-row {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 32px;
+    }
+    .trust-item-inline {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: var(--color-primary-dark);
+    }
+    .trust-item-inline svg {
+      width: 20px;
+      height: 20px;
+      stroke: var(--color-secondary);
     }
   </style>
 </head>
@@ -636,449 +629,438 @@
     <a href="tel:+15128504013" class="btn btn-primary btn-block"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:middle;margin-right:4px"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg> (512) 850-4013</a>
   </div>
 
-  <!-- ===== URGENCY BANNER ===== -->
-  <div class="urgency-banner">
-    <span data-lang="en">New Homes Available! Owner financing with no credit check. <a href="tel:+15128504013">Call now to see what's available!</a></span>
-    <span data-lang-inline="es">Nuevas Casas Disponibles! Financiamiento del dueno sin verificacion de credito. <a href="tel:+15128504013">Llame ahora para ver disponibilidad!</a></span>
-  </div>
-
-  <!-- ===== SERVICE HERO ===== -->
-  <section class="service-hero">
+  <!-- ===== HERO WITH FORM ===== -->
+  <section class="buy-hero">
     <div class="container">
-      <div class="breadcrumb">
-        <a href="index.html" data-lang="en">Home</a><a href="index.html" data-lang-inline="es">Inicio</a>
-        &nbsp;&rsaquo;&nbsp;
-        <span data-lang="en">Buy a Mobile Home</span>
-        <span data-lang-inline="es">Comprar una Casa Movil</span>
+      <div class="buy-hero-grid">
+        <div>
+          <div class="breadcrumb">
+            <a href="index.html" data-lang="en">Home</a><a href="index.html" data-lang-inline="es">Inicio</a>
+            &nbsp;&rsaquo;&nbsp;
+            <span data-lang="en">Buy a Mobile Home</span>
+            <span data-lang-inline="es">Comprar una Casa Movil</span>
+          </div>
+          <h1 data-lang="en">Buy an Affordable Mobile Home <span class="accent">with Owner Financing</span></h1>
+          <h1 data-lang="es">Compre una Casa Movil Asequible <span class="accent">con Financiamiento del Dueno</span></h1>
+          <p class="buy-hero-sub" data-lang="en">No credit check. No bank needed. Flexible down payments and monthly terms designed to fit your budget. Homes available across Texas.</p>
+          <p class="buy-hero-sub" data-lang="es">Sin verificacion de credito. Sin banco. Pagos iniciales flexibles y plazos mensuales disenados para su presupuesto. Casas disponibles en todo Texas.</p>
+          <div class="buy-hero-badges">
+            <span class="buy-hero-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg> <span data-lang="en">No Credit Check</span><span data-lang-inline="es">Sin Credito</span></span>
+            <span class="buy-hero-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 1v22M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg> <span data-lang="en">Owner Financing</span><span data-lang-inline="es">Financiamiento Directo</span></span>
+            <span class="buy-hero-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg> <span data-lang="en">Hablamos Espanol</span><span data-lang-inline="es">Hablamos Espanol</span></span>
+          </div>
+        </div>
+
+        <!-- Inline Buyer Form -->
+        <div class="buy-hero-form" id="buyer-form">
+          <h3 data-lang="en">Find Your New Home</h3>
+          <h3 data-lang="es">Encuentre Su Nueva Casa</h3>
+          <p data-lang="en">Tell us what you are looking for. We respond within 24 hours.</p>
+          <p data-lang="es">Diganos lo que busca. Respondemos en 24 horas.</p>
+
+          <form class="quick-form" data-form="buyer-hero" action="https://api.web3forms.com/submit" method="POST">
+            <input type="hidden" name="access_key" value="YOUR_WEB3FORMS_KEY">
+            <input type="hidden" name="subject" value="Buyer Lead (Hero) - Iron Lot Homes">
+            <input type="hidden" name="from_name" value="Iron Lot Homes Website">
+            <input type="checkbox" name="botcheck" style="display:none">
+
+            <div class="form-group">
+              <label data-lang="en">Phone Number *</label>
+              <label data-lang="es">Telefono *</label>
+              <input type="tel" name="phone" required placeholder="(512) 000-0000">
+            </div>
+            <div class="form-group">
+              <label data-lang="en">Your Name *</label>
+              <label data-lang="es">Su Nombre *</label>
+              <input type="text" name="name" required placeholder="John Doe">
+            </div>
+            <div class="form-group">
+              <label data-lang="en">Desired Location</label>
+              <label data-lang="es">Ubicacion Deseada</label>
+              <input type="text" name="desired_location" placeholder="Austin, San Marcos, etc.">
+            </div>
+            <div class="form-group">
+              <label data-lang="en">Budget Range</label>
+              <label data-lang="es">Rango de Presupuesto</label>
+              <select name="budget_range">
+                <option value="">Select / Seleccione...</option>
+                <option value="under_25k">Under $25,000 / Menos de $25,000</option>
+                <option value="25k_50k">$25,000 - $50,000</option>
+                <option value="50k_75k">$50,000 - $75,000</option>
+                <option value="75k_plus">$75,000+ / Mas de $75,000</option>
+              </select>
+            </div>
+
+            <button type="submit" class="btn btn-primary btn-block" data-lang="en">Find My Home</button>
+            <button type="submit" class="btn btn-primary btn-block" data-lang-inline="es">Encontrar Mi Casa</button>
+          </form>
+
+          <div class="form-success">
+            <div class="form-success-icon">&#10003;</div>
+            <h3 data-lang="en">Thank You!</h3>
+            <h3 data-lang="es">Gracias!</h3>
+            <p data-lang="en">We received your information. A team member will reach out within 24 hours to discuss available homes.</p>
+            <p data-lang="es">Recibimos su informacion. Le contactaremos dentro de 24 horas para hablar sobre casas disponibles.</p>
+          </div>
+        </div>
       </div>
-      <h1 data-lang="en">Buy an Affordable Mobile Home in Austin TX</h1>
-      <h1 data-lang="es">Compre una Casa Movil Asequible en Austin TX</h1>
-      <p class="hero-subtitle" data-lang="en">Owner financing available. No credit check. No bank needed. Flexible payments designed to fit your budget.</p>
-      <p class="hero-subtitle" data-lang="es">Financiamiento del dueno disponible. Sin verificacion de credito. Sin banco. Pagos flexibles disenados para su presupuesto.</p>
-      <div class="accent-line"></div>
     </div>
   </section>
 
-  <!-- ===== CONTENT GRID ===== -->
-  <section class="section">
+  <!-- ===== TRUST BAR ===== -->
+  <div class="buy-trust">
     <div class="container">
-      <div class="content-grid">
+      <div class="trust-row">
+        <div class="trust-item-inline"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg> <span data-lang="en">50+ Homes Sold</span><span data-lang-inline="es">50+ Casas Vendidas</span></div>
+        <div class="trust-item-inline"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg> <span data-lang="en">Licensed &amp; Insured</span><span data-lang-inline="es">Licenciados y Asegurados</span></div>
+        <div class="trust-item-inline"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg> <span data-lang="en">4.9 Star Rating</span><span data-lang-inline="es">4.9 Estrellas</span></div>
+        <div class="trust-item-inline"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg> <span data-lang="en">Bilingual EN/ES</span><span data-lang-inline="es">Bilingue EN/ES</span></div>
+      </div>
+    </div>
+  </div>
 
-        <!-- ===== MAIN CONTENT ===== -->
-        <div class="main-content">
+  <!-- ===== VALUE PROPOSITIONS ===== -->
+  <section class="value-props">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label" data-lang="en">Why Iron Lot Homes</span>
+        <span class="section-label" data-lang="es">Por Que Iron Lot Homes</span>
+        <h2 data-lang="en">Buying Made Simple</h2>
+        <h2 data-lang="es">Comprar Hecho Simple</h2>
+        <p data-lang="en">We make homeownership accessible with owner financing and personalized service.</p>
+        <p data-lang="es">Hacemos la propiedad accesible con financiamiento del dueno y servicio personalizado.</p>
+      </div>
 
-          <!-- Lead Paragraph -->
-          <p class="lead" data-lang="en">At Iron Lot Homes, we believe everyone deserves a place to call home. That is why we offer affordable mobile homes across Texas with owner financing -- no bank required, no credit check. Whether you are a first-time buyer, have been turned down by traditional lenders, or simply want a more flexible path to homeownership, we are here to help. With over 4 years of experience and 50+ successful deals, we have helped dozens of families find their home.</p>
-          <p class="lead" data-lang="es">En Iron Lot Homes, creemos que todos merecen un lugar para llamar hogar. Por eso ofrecemos casas moviles asequibles en todo Texas con financiamiento del dueno -- sin banco, sin verificacion de credito. Ya sea que sea un comprador por primera vez, haya sido rechazado por prestamistas tradicionales, o simplemente quiera un camino mas flexible hacia ser dueno de casa, estamos aqui para ayudarle. Con mas de 4 anos de experiencia y mas de 50 transacciones exitosas, hemos ayudado a docenas de familias a encontrar su hogar.</p>
-
-          <!-- Why Buy from Iron Lot Homes -->
-          <h2 data-lang="en" class="fade-in-up">Why Buy from Iron Lot Homes?</h2>
-          <h2 data-lang="es" class="fade-in-up">Por Que Comprar de Iron Lot Homes?</h2>
-
-          <ul class="check-list fade-in-up">
-            <li>
-              <strong data-lang="en">Owner Financing -- No Bank Needed</strong>
-              <strong data-lang="es">Financiamiento del Dueno -- Sin Banco</strong>
-              <br>
-              <span data-lang="en">We finance directly. No mortgage applications, no bank approvals, no waiting weeks. We handle everything in-house.</span>
-              <span data-lang-inline="es">Nosotros financiamos directamente. Sin solicitudes de hipoteca, sin aprobaciones bancarias, sin esperar semanas. Manejamos todo internamente.</span>
-            </li>
-            <li>
-              <strong data-lang="en">No Credit Check Required</strong>
-              <strong data-lang="es">Sin Verificacion de Credito</strong>
-              <br>
-              <span data-lang="en">Your credit score does not matter to us. We only require income verification and a background check.</span>
-              <span data-lang-inline="es">Su puntaje de credito no nos importa. Solo requerimos verificacion de ingresos y revision de antecedentes.</span>
-            </li>
-            <li>
-              <strong data-lang="en">Flexible Down Payments &amp; Monthly Terms</strong>
-              <strong data-lang="es">Pagos Iniciales y Mensuales Flexibles</strong>
-              <br>
-              <span data-lang="en">We work with your budget. Flexible down payments, affordable monthly payments, and term lengths that fit your financial situation.</span>
-              <span data-lang-inline="es">Trabajamos con su presupuesto. Pagos iniciales flexibles, pagos mensuales asequibles, y plazos que se ajustan a su situacion financiera.</span>
-            </li>
-            <li>
-              <strong data-lang="en">Handyman Specials Available</strong>
-              <strong data-lang="es">Especiales para Reparar Disponibles</strong>
-              <br>
-              <span data-lang="en">Looking for a deal? We offer affordable fixer-uppers that let you get into a home for less and customize it your way.</span>
-              <span data-lang-inline="es">Buscando una ganga? Ofrecemos casas asequibles para reparar que le permiten obtener una casa por menos y personalizarla a su gusto.</span>
-            </li>
-            <li>
-              <strong data-lang="en">Full Paperwork Support</strong>
-              <strong data-lang="es">Apoyo Completo con Papeleo</strong>
-              <br>
-              <span data-lang="en">We handle all contracts, title work, and closing documents. You focus on moving in.</span>
-              <span data-lang-inline="es">Nos encargamos de todos los contratos, trabajo de titulo, y documentos de cierre. Usted enfoquese en mudarse.</span>
-            </li>
-            <li>
-              <strong data-lang="en">Bilingual Service -- Hablamos Espanol</strong>
-              <strong data-lang="es">Servicio Bilingue -- Hablamos Espanol</strong>
-              <br>
-              <span data-lang="en">85% of our clients are Spanish-speaking. Our entire team is fluent and ready to serve you in your language.</span>
-              <span data-lang-inline="es">El 85% de nuestros clientes hablan espanol. Todo nuestro equipo es bilingue y listo para atenderle en su idioma.</span>
-            </li>
-          </ul>
-
-          <!-- How Buyer Financing Works -->
-          <h2 data-lang="en" class="fade-in-up">How Buyer Financing Works</h2>
-          <h2 data-lang="es" class="fade-in-up">Como Funciona el Financiamiento para Compradores</h2>
-
-          <div class="process-steps fade-in-up">
-            <div class="process-step">
-              <div class="process-step-num">1</div>
-              <div>
-                <h3 data-lang="en">Tell Us What You Need</h3>
-                <h3 data-lang="es">Diganos Lo Que Necesita</h3>
-                <p data-lang="en">Fill out the form on this page or call us at (512) 850-4013. Tell us your budget, desired location, and what kind of home you are looking for.</p>
-                <p data-lang="es">Complete el formulario en esta pagina o llamenos al (512) 850-4013. Diganos su presupuesto, ubicacion deseada, y que tipo de casa esta buscando.</p>
-              </div>
-            </div>
-            <div class="process-step">
-              <div class="process-step-num">2</div>
-              <div>
-                <h3 data-lang="en">We Match You With a Home</h3>
-                <h3 data-lang="es">Le Conectamos con una Casa</h3>
-                <p data-lang="en">Based on your needs and budget, we present you with available homes that fit. We will walk you through all options and pricing.</p>
-                <p data-lang="es">Basado en sus necesidades y presupuesto, le presentamos casas disponibles que se ajusten. Le explicamos todas las opciones y precios.</p>
-              </div>
-            </div>
-            <div class="process-step">
-              <div class="process-step-num">3</div>
-              <div>
-                <h3 data-lang="en">Quick Qualification</h3>
-                <h3 data-lang="es">Calificacion Rapida</h3>
-                <p data-lang="en">Provide income verification and pass a background check. No credit check needed. We determine terms that work for both parties.</p>
-                <p data-lang="es">Proporcione verificacion de ingresos y pase una revision de antecedentes. Sin verificacion de credito. Determinamos terminos que funcionen para ambas partes.</p>
-              </div>
-            </div>
-            <div class="process-step">
-              <div class="process-step-num">4</div>
-              <div>
-                <h3 data-lang="en">Move Into Your New Home</h3>
-                <h3 data-lang="es">Mudese a Su Nueva Casa</h3>
-                <p data-lang="en">Make your down payment, sign the paperwork, and move in. We handle all the title work and contracts. Welcome home.</p>
-                <p data-lang="es">Haga su pago inicial, firme el papeleo, y mudese. Nos encargamos de todo el trabajo de titulo y contratos. Bienvenido a casa.</p>
-              </div>
-            </div>
+      <div class="vp-grid">
+        <div class="vp-card">
+          <div class="vp-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 1v22M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg></div>
+          <div>
+            <h4 data-lang="en">Owner Financing -- No Bank</h4>
+            <h4 data-lang="es">Financiamiento del Dueno</h4>
+            <p data-lang="en">We finance directly. No mortgage applications, no bank approvals, no waiting weeks.</p>
+            <p data-lang-inline="es">Financiamos directamente. Sin solicitudes, sin bancos, sin esperar semanas.</p>
           </div>
-
-          <!-- Info Callout: Owner Financing Benefits -->
-          <div class="info-callout fade-in-up">
-            <h3 data-lang="en">Owner Financing Benefits</h3>
-            <h3 data-lang="es">Beneficios del Financiamiento del Dueno</h3>
-            <ul>
-              <li>
-                <span data-lang="en">No bank or mortgage company involved</span>
-                <span data-lang-inline="es">Sin banco ni companias hipotecarias involucradas</span>
-              </li>
-              <li>
-                <span data-lang="en">No credit check -- your credit score does not matter</span>
-                <span data-lang-inline="es">Sin verificacion de credito -- su puntaje no importa</span>
-              </li>
-              <li>
-                <span data-lang="en">Flexible down payment amounts</span>
-                <span data-lang-inline="es">Montos de pago inicial flexibles</span>
-              </li>
-              <li>
-                <span data-lang="en">Affordable monthly payments tailored to your budget</span>
-                <span data-lang-inline="es">Pagos mensuales asequibles ajustados a su presupuesto</span>
-              </li>
-              <li>
-                <span data-lang="en">Faster approval and move-in than traditional financing</span>
-                <span data-lang-inline="es">Aprobacion y mudanza mas rapida que el financiamiento tradicional</span>
-              </li>
-              <li>
-                <span data-lang="en">Build equity and ownership from day one</span>
-                <span data-lang-inline="es">Construya equidad y propiedad desde el primer dia</span>
-              </li>
-            </ul>
-          </div>
-
-          <!-- Types of Homes Available -->
-          <h2 data-lang="en" class="fade-in-up">Types of Homes Available</h2>
-          <h2 data-lang="es" class="fade-in-up">Tipos de Casas Disponibles</h2>
-          <p data-lang="en">We carry a variety of mobile homes to fit different needs and budgets:</p>
-          <p data-lang="es">Tenemos una variedad de casas moviles para diferentes necesidades y presupuestos:</p>
-
-          <div class="home-types-grid fade-in-up">
-            <div class="home-type-card">
-              <div class="type-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="24" height="24"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></div>
-              <h4 data-lang="en">Single Wide</h4>
-              <h4 data-lang="es">Sencilla</h4>
-              <p data-lang="en">Compact and affordable. Perfect for individuals, couples, or small families. 2-3 bedrooms, 1-2 bathrooms.</p>
-              <p data-lang="es">Compacta y asequible. Perfecta para individuos, parejas, o familias pequenas. 2-3 recamaras, 1-2 banos.</p>
-            </div>
-            <div class="home-type-card">
-              <div class="type-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="24" height="24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
-              <h4 data-lang="en">Double Wide</h4>
-              <h4 data-lang="es">Doble</h4>
-              <p data-lang="en">More space for growing families. Open floor plans, 3-4 bedrooms, 2 bathrooms. Feels like a traditional home.</p>
-              <p data-lang="es">Mas espacio para familias en crecimiento. Planos abiertos, 3-4 recamaras, 2 banos. Se siente como una casa tradicional.</p>
-            </div>
-            <div class="home-type-card">
-              <div class="type-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="24" height="24"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg></div>
-              <h4 data-lang="en">Handyman Special</h4>
-              <h4 data-lang="es">Especial para Reparar</h4>
-              <p data-lang="en">Our most affordable option. Needs some work but priced significantly below market. Great for handy buyers.</p>
-              <p data-lang="es">Nuestra opcion mas asequible. Necesita algo de trabajo pero con precio muy por debajo del mercado. Ideal para compradores manosos.</p>
-            </div>
-          </div>
-
-          <!-- What You Need to Qualify -->
-          <h2 data-lang="en" class="fade-in-up">What You Need to Qualify</h2>
-          <h2 data-lang="es" class="fade-in-up">Lo Que Necesita para Calificar</h2>
-          <p data-lang="en">Our qualification process is simple and fast. Here is what we need from you:</p>
-          <p data-lang="es">Nuestro proceso de calificacion es simple y rapido. Esto es lo que necesitamos de usted:</p>
-
-          <div class="qualify-grid fade-in-up">
-            <div class="qualify-item">
-              <div class="qualify-num">1</div>
-              <div>
-                <h4 data-lang="en">Income Verification</h4>
-                <h4 data-lang="es">Verificacion de Ingresos</h4>
-                <p data-lang="en">Proof of steady income through pay stubs, bank statements, or tax returns. Self-employed? We work with that too.</p>
-                <p data-lang="es">Prueba de ingresos estables a traves de talones de pago, estados de cuenta bancarios, o declaraciones de impuestos. Trabaja por cuenta propia? Tambien trabajamos con eso.</p>
-              </div>
-            </div>
-            <div class="qualify-item">
-              <div class="qualify-num">2</div>
-              <div>
-                <h4 data-lang="en">Background Check</h4>
-                <h4 data-lang="es">Revision de Antecedentes</h4>
-                <p data-lang="en">A standard background check is required. This is not a credit check -- your credit score is not a factor.</p>
-                <p data-lang="es">Se requiere una revision de antecedentes estandar. Esto no es una verificacion de credito -- su puntaje de credito no es un factor.</p>
-              </div>
-            </div>
-            <div class="qualify-item">
-              <div class="qualify-num">3</div>
-              <div>
-                <h4 data-lang="en">Down Payment</h4>
-                <h4 data-lang="es">Pago Inicial</h4>
-                <p data-lang="en">A down payment is required. The amount varies by home and is flexible. We work with your budget to find the right fit.</p>
-                <p data-lang="es">Se requiere un pago inicial. El monto varia por casa y es flexible. Trabajamos con su presupuesto para encontrar lo adecuado.</p>
-              </div>
-            </div>
-          </div>
-
-          <!-- CTA Box -->
-          <div class="cta-box fade-in-up">
-            <h3 data-lang="en">Find Your New Home Today</h3>
-            <h3 data-lang="es">Encuentre Su Nueva Casa Hoy</h3>
-            <p data-lang="en">Fill out the form or call us right now. We will match you with available homes that fit your budget and needs.</p>
-            <p data-lang="es">Complete el formulario o llamenos ahora. Le conectaremos con casas disponibles que se ajusten a su presupuesto y necesidades.</p>
-            <a href="tel:+15128504013" class="btn btn-primary" data-lang="en"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:middle;margin-right:4px"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg> Call (512) 850-4013</a>
-            <a href="tel:+15128504013" class="btn btn-primary" data-lang-inline="es"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:middle;margin-right:4px"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg> Llamar (512) 850-4013</a>
-          </div>
-
         </div>
-        <!-- END MAIN CONTENT -->
-
-        <!-- ===== SIDEBAR ===== -->
-        <div class="sidebar">
-
-          <!-- Quick Buyer Form -->
-          <div class="sidebar-form-card">
-            <h3 data-lang="en">Find Your New Home</h3>
-            <h3 data-lang="es">Encuentre Su Nueva Casa</h3>
-            <p data-lang="en">Tell us what you are looking for. We will be in touch within 24 hours.</p>
-            <p data-lang="es">Diganos lo que busca. Le contactaremos dentro de 24 horas.</p>
-
-            <form class="sidebar-form" data-form="buyer-sidebar" action="https://api.web3forms.com/submit" method="POST">
-              <input type="hidden" name="access_key" value="YOUR_WEB3FORMS_KEY">
-              <input type="hidden" name="subject" value="Buyer Lead (Sidebar) - Iron Lot Homes">
-              <input type="hidden" name="from_name" value="Iron Lot Homes Website">
-              <input type="checkbox" name="botcheck" style="display:none">
-
-              <div class="form-group">
-                <label data-lang="en">Phone Number *</label>
-                <label data-lang="es">Numero de Telefono *</label>
-                <input type="tel" name="phone" required placeholder="(512) 000-0000">
-              </div>
-              <div class="form-group">
-                <label data-lang="en">Your Name *</label>
-                <label data-lang="es">Su Nombre *</label>
-                <input type="text" name="name" required placeholder="John Doe">
-              </div>
-              <div class="form-group">
-                <label data-lang="en">Desired Location</label>
-                <label data-lang="es">Ubicacion Deseada</label>
-                <input type="text" name="desired_location" placeholder="Austin, San Marcos, etc.">
-              </div>
-              <div class="form-group">
-                <label data-lang="en">Budget Range</label>
-                <label data-lang="es">Rango de Presupuesto</label>
-                <select name="budget_range">
-                  <option value="">Select / Seleccione...</option>
-                  <option value="under_25k">Under $25,000 / Menos de $25,000</option>
-                  <option value="25k_50k">$25,000 - $50,000</option>
-                  <option value="50k_75k">$50,000 - $75,000</option>
-                  <option value="75k_plus">$75,000+ / Mas de $75,000</option>
-                </select>
-              </div>
-              <div class="form-group">
-                <label data-lang="en">Credit Situation</label>
-                <label data-lang="es">Situacion de Credito</label>
-                <select name="credit_situation">
-                  <option value="">Select / Seleccione...</option>
-                  <option value="good">Good Credit / Buen Credito</option>
-                  <option value="fair">Fair Credit / Credito Regular</option>
-                  <option value="poor">Poor / No Credit / Malo o Sin Credito</option>
-                  <option value="not_sure">Not Sure / No Estoy Seguro</option>
-                </select>
-              </div>
-              <div class="form-group">
-                <label data-lang="en">Additional Notes</label>
-                <label data-lang="es">Notas Adicionales</label>
-                <textarea name="notes" rows="3" placeholder="Optional details / Detalles opcionales..."></textarea>
-              </div>
-
-              <button type="submit" class="btn btn-primary btn-block" data-lang="en">Find My Home</button>
-              <button type="submit" class="btn btn-primary btn-block" data-lang-inline="es">Encontrar Mi Casa</button>
-            </form>
-
-            <div class="form-success">
-              <div class="form-success-icon">&#10003;</div>
-              <h3 data-lang="en">Thank You!</h3>
-              <h3 data-lang="es">Gracias!</h3>
-              <p data-lang="en">We received your information. A team member will reach out within 24 hours to discuss available homes that match your needs.</p>
-              <p data-lang="es">Recibimos su informacion. Un miembro del equipo le contactara dentro de 24 horas para hablar sobre casas disponibles que se ajusten a sus necesidades.</p>
-            </div>
+        <div class="vp-card">
+          <div class="vp-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg></div>
+          <div>
+            <h4 data-lang="en">No Credit Check Required</h4>
+            <h4 data-lang="es">Sin Verificacion de Credito</h4>
+            <p data-lang="en">Your credit score does not matter. We only require income verification and a background check.</p>
+            <p data-lang-inline="es">Su puntaje de credito no importa. Solo verificacion de ingresos y antecedentes.</p>
           </div>
-
-          <!-- Financing Options Sidebar -->
-          <div class="sidebar-card">
-            <h3 data-lang="en">Financing Options</h3>
-            <h3 data-lang="es">Opciones de Financiamiento</h3>
-            <ul class="sidebar-list">
-              <li>
-                <span data-lang="en">Owner financing available</span>
-                <span data-lang-inline="es">Financiamiento del dueno</span>
-              </li>
-              <li>
-                <span data-lang="en">No credit check required</span>
-                <span data-lang-inline="es">Sin verificacion de credito</span>
-              </li>
-              <li>
-                <span data-lang="en">Flexible down payments</span>
-                <span data-lang-inline="es">Pagos iniciales flexibles</span>
-              </li>
-              <li>
-                <span data-lang="en">Affordable monthly payments</span>
-                <span data-lang-inline="es">Pagos mensuales asequibles</span>
-              </li>
-              <li>
-                <span data-lang="en">Cash purchases welcome</span>
-                <span data-lang-inline="es">Compras en efectivo bienvenidas</span>
-              </li>
-              <li>
-                <span data-lang="en">Fast approval process</span>
-                <span data-lang-inline="es">Proceso de aprobacion rapido</span>
-              </li>
-            </ul>
-          </div>
-
-          <!-- Available Areas Sidebar -->
-          <div class="sidebar-card">
-            <h3 data-lang="en">Available Areas</h3>
-            <h3 data-lang="es">Areas Disponibles</h3>
-            <div class="sidebar-area-links">
-              <a href="#">Austin, TX</a>
-              <a href="#">Dallas / Fort Worth, TX</a>
-              <a href="#">San Antonio, TX</a>
-              <a href="#">San Marcos, TX</a>
-              <a href="#">Kyle / Buda, TX</a>
-              <a href="#">Lockhart / Bastrop, TX</a>
-              <a href="#">McKinney / Princeton, TX</a>
-            </div>
-          </div>
-
-          <!-- Phone CTA -->
-          <div class="sidebar-phone">
-            <p data-lang="en">Ready to talk?</p>
-            <p data-lang="es">Listo para hablar?</p>
-            <a href="tel:+15128504013"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:middle;margin-right:4px"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg> (512) 850-4013</a>
-          </div>
-
         </div>
-        <!-- END SIDEBAR -->
+        <div class="vp-card">
+          <div class="vp-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="5" width="20" height="14" rx="2"/><line x1="2" y1="10" x2="22" y2="10"/></svg></div>
+          <div>
+            <h4 data-lang="en">Flexible Down Payments</h4>
+            <h4 data-lang="es">Pagos Iniciales Flexibles</h4>
+            <p data-lang="en">We work with your budget. Flexible down payments and affordable monthly terms.</p>
+            <p data-lang-inline="es">Trabajamos con su presupuesto. Pagos iniciales y mensuales flexibles.</p>
+          </div>
+        </div>
+        <div class="vp-card">
+          <div class="vp-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg></div>
+          <div>
+            <h4 data-lang="en">Handyman Specials Available</h4>
+            <h4 data-lang="es">Especiales para Reparar</h4>
+            <p data-lang="en">Affordable fixer-uppers priced below market. Get into a home for less and customize it.</p>
+            <p data-lang-inline="es">Casas asequibles a precios por debajo del mercado. Obtenga una casa por menos.</p>
+          </div>
+        </div>
+        <div class="vp-card">
+          <div class="vp-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg></div>
+          <div>
+            <h4 data-lang="en">Full Paperwork Support</h4>
+            <h4 data-lang="es">Apoyo Completo con Papeleo</h4>
+            <p data-lang="en">We handle all contracts, title work, and closing documents. You focus on moving in.</p>
+            <p data-lang-inline="es">Nos encargamos de contratos, titulo, y cierre. Usted enfoquese en mudarse.</p>
+          </div>
+        </div>
+        <div class="vp-card">
+          <div class="vp-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></div>
+          <div>
+            <h4 data-lang="en">Bilingual -- Hablamos Espanol</h4>
+            <h4 data-lang="es">Bilingue -- Hablamos Espanol</h4>
+            <p data-lang="en">85% of our clients are Spanish-speaking. We serve you in your preferred language.</p>
+            <p data-lang-inline="es">El 85% de nuestros clientes hablan espanol. Le atendemos en su idioma.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
+  <!-- ===== HOW IT WORKS ===== -->
+  <section class="process-section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label" data-lang="en">How It Works</span>
+        <span class="section-label" data-lang="es">Como Funciona</span>
+        <h2 data-lang="en">4 Simple Steps to Buy</h2>
+        <h2 data-lang="es">4 Pasos Simples para Comprar</h2>
+      </div>
+
+      <div class="timeline">
+        <div class="timeline-step">
+          <div class="timeline-num">1</div>
+          <div>
+            <h3 data-lang="en">Tell Us What You Need</h3>
+            <h3 data-lang="es">Diganos Lo Que Necesita</h3>
+            <p data-lang="en">Fill out the form above or call us at (512) 850-4013. Tell us your budget, desired location, and what kind of home you are looking for.</p>
+            <p data-lang="es">Complete el formulario o llamenos al (512) 850-4013. Diganos su presupuesto, ubicacion deseada, y que tipo de casa busca.</p>
+          </div>
+        </div>
+        <div class="timeline-step">
+          <div class="timeline-num">2</div>
+          <div>
+            <h3 data-lang="en">We Match You With a Home</h3>
+            <h3 data-lang="es">Le Conectamos con una Casa</h3>
+            <p data-lang="en">Based on your needs and budget, we present you with available homes that fit. We walk you through all options and pricing.</p>
+            <p data-lang="es">Basado en sus necesidades y presupuesto, le presentamos casas disponibles. Le explicamos todas las opciones y precios.</p>
+          </div>
+        </div>
+        <div class="timeline-step">
+          <div class="timeline-num">3</div>
+          <div>
+            <h3 data-lang="en">Quick Qualification</h3>
+            <h3 data-lang="es">Calificacion Rapida</h3>
+            <p data-lang="en">Provide income verification and pass a background check. No credit check needed. We determine terms that work for both parties.</p>
+            <p data-lang="es">Proporcione verificacion de ingresos y pase una revision de antecedentes. Sin verificacion de credito necesaria.</p>
+          </div>
+        </div>
+        <div class="timeline-step">
+          <div class="timeline-num">4</div>
+          <div>
+            <h3 data-lang="en">Move Into Your New Home</h3>
+            <h3 data-lang="es">Mudese a Su Nueva Casa</h3>
+            <p data-lang="en">Make your down payment, sign the paperwork, and move in. We handle all the title work and contracts. Welcome home.</p>
+            <p data-lang="es">Haga su pago inicial, firme el papeleo, y mudese. Nos encargamos de todo. Bienvenido a casa.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== TYPES OF HOMES ===== -->
+  <section class="types-section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label" data-lang="en">What We Offer</span>
+        <span class="section-label" data-lang="es">Lo Que Ofrecemos</span>
+        <h2 data-lang="en">Types of Homes Available</h2>
+        <h2 data-lang="es">Tipos de Casas Disponibles</h2>
+        <p data-lang="en">We carry a variety of mobile homes to fit different needs and budgets.</p>
+        <p data-lang="es">Tenemos una variedad de casas moviles para diferentes necesidades y presupuestos.</p>
+      </div>
+
+      <div class="types-grid">
+        <div class="type-card">
+          <div class="type-card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></div>
+          <h4 data-lang="en">Single Wide</h4>
+          <h4 data-lang="es">Sencilla</h4>
+          <p data-lang="en">Compact and affordable. Perfect for individuals, couples, or small families. 2-3 bedrooms, 1-2 bathrooms.</p>
+          <p data-lang="es">Compacta y asequible. Perfecta para individuos, parejas, o familias pequenas. 2-3 recamaras, 1-2 banos.</p>
+        </div>
+        <div class="type-card">
+          <div class="type-card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
+          <h4 data-lang="en">Double Wide</h4>
+          <h4 data-lang="es">Doble</h4>
+          <p data-lang="en">More space for growing families. Open floor plans, 3-4 bedrooms, 2 bathrooms. Feels like a traditional home.</p>
+          <p data-lang="es">Mas espacio para familias en crecimiento. Planos abiertos, 3-4 recamaras, 2 banos. Se siente como casa tradicional.</p>
+        </div>
+        <div class="type-card">
+          <div class="type-card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg></div>
+          <h4 data-lang="en">Handyman Special</h4>
+          <h4 data-lang="es">Especial para Reparar</h4>
+          <p data-lang="en">Our most affordable option. Needs some work but priced significantly below market. Great for handy buyers.</p>
+          <p data-lang="es">Nuestra opcion mas asequible. Necesita trabajo pero a precio muy por debajo del mercado. Ideal para compradores manosos.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== WHAT YOU NEED TO QUALIFY ===== -->
+  <section class="qualify-section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label" data-lang="en">Qualification</span>
+        <span class="section-label" data-lang="es">Calificacion</span>
+        <h2 data-lang="en">What You Need to Qualify</h2>
+        <h2 data-lang="es">Lo Que Necesita para Calificar</h2>
+        <p data-lang="en">Our qualification process is simple and fast. Here is what we need from you.</p>
+        <p data-lang="es">Nuestro proceso de calificacion es simple y rapido. Esto es lo que necesitamos.</p>
+      </div>
+
+      <div class="qualify-list">
+        <div class="qualify-card">
+          <div class="qualify-num">1</div>
+          <div>
+            <h4 data-lang="en">Income Verification</h4>
+            <h4 data-lang="es">Verificacion de Ingresos</h4>
+            <p data-lang="en">Proof of steady income through pay stubs, bank statements, or tax returns. Self-employed? We work with that too.</p>
+            <p data-lang="es">Prueba de ingresos estables con talones de pago, estados de cuenta, o impuestos. Trabaja por cuenta propia? Tambien.</p>
+          </div>
+        </div>
+        <div class="qualify-card">
+          <div class="qualify-num">2</div>
+          <div>
+            <h4 data-lang="en">Background Check</h4>
+            <h4 data-lang="es">Revision de Antecedentes</h4>
+            <p data-lang="en">A standard background check is required. This is not a credit check -- your credit score is not a factor.</p>
+            <p data-lang="es">Se requiere revision de antecedentes estandar. Esto no es una verificacion de credito -- su puntaje no es un factor.</p>
+          </div>
+        </div>
+        <div class="qualify-card">
+          <div class="qualify-num">3</div>
+          <div>
+            <h4 data-lang="en">Down Payment</h4>
+            <h4 data-lang="es">Pago Inicial</h4>
+            <p data-lang="en">A down payment is required. The amount varies by home and is flexible. We work with your budget to find the right fit.</p>
+            <p data-lang="es">Se requiere un pago inicial. El monto varia y es flexible. Trabajamos con su presupuesto.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FAQ ===== -->
+  <section class="faq-section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label" data-lang="en">Common Questions</span>
+        <span class="section-label" data-lang="es">Preguntas Frecuentes</span>
+        <h2 data-lang="en">Frequently Asked Questions</h2>
+        <h2 data-lang="es">Preguntas Frecuentes</h2>
+      </div>
+
+      <div class="faq-list">
+        <div class="faq-item">
+          <button class="faq-q" onclick="this.parentElement.classList.toggle('open')">
+            <span data-lang="en">Do I need good credit to buy a mobile home?</span>
+            <span data-lang-inline="es">Necesito buen credito para comprar una casa movil?</span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="faq-a"><div class="faq-a-inner">
+            <span data-lang="en">No. We offer owner financing with no credit check. We only require income verification and a background check. Your credit score does not matter.</span>
+            <span data-lang-inline="es">No. Ofrecemos financiamiento del dueno sin verificacion de credito. Solo requerimos verificacion de ingresos y revision de antecedentes.</span>
+          </div></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" onclick="this.parentElement.classList.toggle('open')">
+            <span data-lang="en">How does owner financing work?</span>
+            <span data-lang-inline="es">Como funciona el financiamiento del dueno?</span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="faq-a"><div class="faq-a-inner">
+            <span data-lang="en">Owner financing means we finance the home directly -- no bank required. You make a down payment and then monthly payments directly to us at agreed-upon terms.</span>
+            <span data-lang-inline="es">El financiamiento del dueno significa que financiamos la casa directamente -- sin banco. Usted hace un pago inicial y pagos mensuales directamente a nosotros.</span>
+          </div></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" onclick="this.parentElement.classList.toggle('open')">
+            <span data-lang="en">How much is the down payment?</span>
+            <span data-lang-inline="es">Cuanto es el pago inicial?</span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="faq-a"><div class="faq-a-inner">
+            <span data-lang="en">Down payments are flexible and vary depending on the home and your situation. We work with your budget to find terms that make sense for you.</span>
+            <span data-lang-inline="es">Los pagos iniciales son flexibles y varian segun la casa y su situacion. Trabajamos con su presupuesto para encontrar terminos adecuados.</span>
+          </div></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" onclick="this.parentElement.classList.toggle('open')">
+            <span data-lang="en">What types of mobile homes do you sell?</span>
+            <span data-lang-inline="es">Que tipos de casas moviles venden?</span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="faq-a"><div class="faq-a-inner">
+            <span data-lang="en">We sell single wide and double wide mobile homes across Texas. We also offer handyman specials for buyers who want a more affordable option and are willing to make repairs.</span>
+            <span data-lang-inline="es">Vendemos casas moviles sencillas y dobles en todo Texas. Tambien ofrecemos especiales para reparar para compradores que quieren una opcion mas asequible.</span>
+          </div></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" onclick="this.parentElement.classList.toggle('open')">
+            <span data-lang="en">Where are your mobile homes located?</span>
+            <span data-lang-inline="es">Donde estan ubicadas sus casas moviles?</span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="faq-a"><div class="faq-a-inner">
+            <span data-lang="en">We have homes available across Texas including Austin, Dallas-Fort Worth, San Antonio, San Marcos, Lockhart, Kyle, Buda, Bastrop, and surrounding areas.</span>
+            <span data-lang-inline="es">Tenemos casas disponibles en todo Texas incluyendo Austin, Dallas-Fort Worth, San Antonio, San Marcos, Lockhart, Kyle, Buda, Bastrop, y areas cercanas.</span>
+          </div></div>
+        </div>
       </div>
     </div>
   </section>
 
   <!-- ===== TESTIMONIALS ===== -->
-  <section class="testimonials-section">
+  <section class="buy-testimonials">
     <div class="container">
       <div class="section-header">
-        <span class="section-label" data-lang="en">Buyer Testimonials</span>
-        <span class="section-label" data-lang="es">Testimonios de Compradores</span>
+        <span class="section-label" data-lang="en">Buyer Stories</span>
+        <span class="section-label" data-lang="es">Historias de Compradores</span>
         <h2 data-lang="en">What Our Buyers Say</h2>
         <h2 data-lang="es">Lo Que Dicen Nuestros Compradores</h2>
       </div>
-      <div class="testimonials-grid">
-        <div class="testimonial-card fade-in-up">
-          <div class="testimonial-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+      <div class="testi-grid">
+        <div class="testi-card">
+          <div class="testi-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
           <blockquote>
             <span data-lang="en">"We were able to buy our first home with owner financing and no credit check. Wayne and his team explained everything clearly in Spanish and made us feel comfortable throughout the whole process. Our family finally has a home."</span>
-            <span data-lang-inline="es">"Pudimos comprar nuestra primera casa con financiamiento del dueno y sin verificacion de credito. Wayne y su equipo nos explicaron todo claramente en espanol y nos hicieron sentir comodos durante todo el proceso. Nuestra familia finalmente tiene un hogar."</span>
+            <span data-lang-inline="es">"Pudimos comprar nuestra primera casa con financiamiento del dueno y sin verificacion de credito. Wayne y su equipo nos explicaron todo claramente en espanol. Nuestra familia finalmente tiene un hogar."</span>
           </blockquote>
-          <div class="testimonial-author">
-            <span data-lang="en">-- Rosa &amp; Miguel L., San Marcos TX</span>
-            <span data-lang-inline="es">-- Rosa y Miguel L., San Marcos TX</span>
-          </div>
+          <div class="testi-author">-- Rosa &amp; Miguel L., San Marcos TX</div>
         </div>
-        <div class="testimonial-card fade-in-up">
-          <div class="testimonial-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <div class="testi-card">
+          <div class="testi-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
           <blockquote>
             <span data-lang="en">"I had bad credit and every bank turned me down. Iron Lot Homes worked with me, found a home in my budget, and set up payments I could actually afford. I moved in within three weeks. Best decision I ever made."</span>
-            <span data-lang-inline="es">"Tenia mal credito y cada banco me rechazo. Iron Lot Homes trabajo conmigo, encontro una casa en mi presupuesto, y establecio pagos que realmente podia pagar. Me mude en tres semanas. La mejor decision que he tomado."</span>
+            <span data-lang-inline="es">"Tenia mal credito y cada banco me rechazo. Iron Lot Homes trabajo conmigo, encontro una casa en mi presupuesto, y establecio pagos que podia pagar. Me mude en tres semanas. La mejor decision."</span>
           </blockquote>
-          <div class="testimonial-author">
-            <span data-lang="en">-- David S., Kyle TX</span>
-            <span data-lang-inline="es">-- David S., Kyle TX</span>
-          </div>
+          <div class="testi-author">-- David S., Kyle TX</div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ===== FOOTER CTA BAR ===== -->
-  <section class="footer-cta-bar">
+  <!-- ===== SERVICE AREAS BAR ===== -->
+  <div class="areas-bar">
+    <div class="container">
+      <p data-lang="en">Available Areas</p>
+      <p data-lang="es">Areas Disponibles</p>
+      <div class="areas-tags">
+        <a href="locations/austin/" class="areas-tag">Austin</a>
+        <a href="locations/dallas/" class="areas-tag">Dallas</a>
+        <a href="locations/fort-worth/" class="areas-tag">Fort Worth</a>
+        <a href="locations/san-antonio/" class="areas-tag">San Antonio</a>
+        <a href="locations/arlington/" class="areas-tag">Arlington</a>
+        <a href="locations/plano/" class="areas-tag">Plano</a>
+        <a href="locations/frisco/" class="areas-tag">Frisco</a>
+        <a href="locations/denton/" class="areas-tag">Denton</a>
+        <a href="locations/mckinney/" class="areas-tag">McKinney</a>
+        <a href="locations/princeton/" class="areas-tag">Princeton</a>
+        <a href="locations/san-marcos/" class="areas-tag">San Marcos</a>
+        <a href="locations/lockhart/" class="areas-tag">Lockhart</a>
+        <a href="locations/kyle/" class="areas-tag">Kyle</a>
+        <a href="locations/buda/" class="areas-tag">Buda</a>
+        <a href="locations/bastrop/" class="areas-tag">Bastrop</a>
+        <a href="locations/del-valle/" class="areas-tag">Del Valle</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== BOTTOM CTA ===== -->
+  <section class="buy-cta">
     <div class="container">
       <h2 data-lang="en">Ready to Find Your Home? Call Us Today</h2>
       <h2 data-lang="es">Listo para Encontrar Su Casa? Llamenos Hoy</h2>
       <p data-lang="en">Let us help you find an affordable home with flexible financing. No credit check, no hassle.</p>
-      <p data-lang="es">Dejenos ayudarle a encontrar una casa asequible con financiamiento flexible. Sin verificacion de credito, sin complicaciones.</p>
-      <a href="tel:+15128504013" class="btn" data-lang="en"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:middle;margin-right:4px"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg> Call (512) 850-4013</a>
-      <a href="tel:+15128504013" class="btn" data-lang-inline="es"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:middle;margin-right:4px"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg> Llamar (512) 850-4013</a>
-    </div>
-  </section>
-
-  <!-- ===== TRUST BADGES ===== -->
-  <section class="trust-badges">
-    <div class="container">
-      <div class="badges-grid">
-        <div class="badge-item">
-          <div class="badge-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="24" height="24"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg></div>
-          <span class="badge-label" data-lang="en">Licensed</span>
-          <span class="badge-label" data-lang="es">Licenciados</span>
-        </div>
-        <div class="badge-item">
-          <div class="badge-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="24" height="24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
-          <span class="badge-label" data-lang="en">Insured</span>
-          <span class="badge-label" data-lang="es">Asegurados</span>
-        </div>
-        <div class="badge-item">
-          <div class="badge-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="24" height="24"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg></div>
-          <span class="badge-label" data-lang="en">BBB Accredited</span>
-          <span class="badge-label" data-lang="es">Acreditados BBB</span>
-        </div>
-        <div class="badge-item">
-          <div class="badge-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="24" height="24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></div>
-          <span class="badge-label" data-lang="en">Bilingual EN/ES</span>
-          <span class="badge-label" data-lang="es">Bilingue EN/ES</span>
-        </div>
+      <p data-lang="es">Dejenos ayudarle a encontrar una casa asequible con financiamiento flexible. Sin complicaciones.</p>
+      <div class="cta-actions">
+        <a href="tel:+15128504013" class="btn btn-primary" data-lang="en"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:middle;margin-right:4px"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg> Call (512) 850-4013</a>
+        <a href="tel:+15128504013" class="btn btn-primary" data-lang-inline="es"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:middle;margin-right:4px"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg> Llamar (512) 850-4013</a>
+        <a href="#buyer-form" class="btn btn-white" data-lang="en">Fill Out Form</a>
+        <a href="#buyer-form" class="btn btn-white" data-lang-inline="es">Llenar Formulario</a>
       </div>
     </div>
   </section>
@@ -1107,7 +1089,7 @@
         </div>
         <div class="footer-links-section">
           <h4 data-lang="en">Service Areas</h4>
-          <h4 data-lang="es">Áreas de Servicio</h4>
+          <h4 data-lang="es">Areas de Servicio</h4>
           <ul class="footer-links">
             <li><a href="locations/austin/">Austin</a></li>
             <li><a href="locations/dallas/">Dallas</a></li>
@@ -1131,11 +1113,6 @@
           <div class="footer-contact-item">
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:middle;margin-right:4px"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg> Austin, TX
           </div>
-          <div class="footer-areas" style="margin-top:12px;">
-            <strong data-lang="en">Serving:</strong>
-            <strong data-lang="es">Sirviendo:</strong>
-            Austin, Dallas, Fort Worth, San Antonio, Arlington, Plano, McKinney, San Marcos, Lockhart, Kyle, Buda, Bastrop
-          </div>
         </div>
       </div>
       <div class="footer-bottom">
@@ -1147,30 +1124,13 @@
   <!-- ===== STICKY CTA ===== -->
   <div class="sticky-cta" id="stickyCta">
     <a href="tel:+15128504013"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:middle;margin-right:4px"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg> (512) 850-4013</a>
-    <a href="#buyer-sidebar-form" class="btn btn-primary" data-lang="en">Find a Home</a>
-    <a href="#buyer-sidebar-form" class="btn btn-primary" data-lang-inline="es">Buscar Casa</a>
+    <a href="#buyer-form" class="btn btn-primary" data-lang="en">Find a Home</a>
+    <a href="#buyer-form" class="btn btn-primary" data-lang-inline="es">Buscar Casa</a>
   </div>
 
   <script src="js/main.js"></script>
-
-  <!-- Scroll Animations + Sticky CTA -->
   <script>
-    // Scroll-triggered fade-in
-    (function() {
-      var els = document.querySelectorAll('.fade-in-up');
-      if (!els.length) return;
-      var observer = new IntersectionObserver(function(entries) {
-        entries.forEach(function(entry) {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('visible-anim');
-            observer.unobserve(entry.target);
-          }
-        });
-      }, { threshold: 0.15 });
-      els.forEach(function(el) { observer.observe(el); });
-    })();
-
-    // Sticky CTA
+    // Sticky CTA on scroll
     (function() {
       var sticky = document.getElementById('stickyCta');
       if (!sticky) return;
