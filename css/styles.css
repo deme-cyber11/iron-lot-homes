@@ -75,8 +75,8 @@ body {
   font-family: var(--font-body);
   color: var(--color-text);
   background: var(--color-background);
-  font-size: 1rem;
-  line-height: 1.7;
+  font-size: 1.05rem;
+  line-height: 1.75;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   overflow-x: hidden;
@@ -148,7 +148,7 @@ p {
 }
 
 .lead {
-  font-size: 1.15rem;
+  font-size: 1.2rem;
   line-height: 1.8;
   color: var(--color-text-muted);
 }
@@ -157,7 +157,7 @@ p {
 .section-label {
   display: inline-block;
   font-family: var(--font-body);
-  font-size: 0.75rem;
+  font-size: 0.82rem;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 3px;
@@ -181,7 +181,7 @@ p {
 .section-tag {
   display: inline-block;
   font-family: var(--font-body);
-  font-size: 0.75rem;
+  font-size: 0.82rem;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 3px;
@@ -204,7 +204,7 @@ p {
   gap: 8px;
   padding: 14px 36px;
   font-family: var(--font-body);
-  font-size: 0.9rem;
+  font-size: 0.95rem;
   font-weight: 600;
   letter-spacing: 0.3px;
   text-transform: uppercase;
@@ -710,7 +710,7 @@ p {
   border: 1px solid rgba(255, 255, 255, 0.15);
   padding: 8px 16px;
   border-radius: 100px;
-  font-size: 0.85rem;
+  font-size: 0.92rem;
   font-weight: 500;
   letter-spacing: 0.3px;
   transition: all var(--transition);
@@ -1748,7 +1748,7 @@ p {
 
 .hub-hq {
   display: inline-block;
-  font-size: 0.7rem;
+  font-size: 0.78rem;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 1px;
@@ -1765,8 +1765,8 @@ p {
 
 .hub-city {
   display: inline-block;
-  padding: 6px 14px;
-  font-size: 0.88rem;
+  padding: 8px 16px;
+  font-size: 0.95rem;
   font-weight: 500;
   color: var(--color-text);
   background: var(--color-surface);
@@ -1899,7 +1899,7 @@ footer,
 .footer {
   background: var(--color-primary-dark);
   color: var(--color-text-inverse);
-  padding: 56px 0 28px;
+  padding: 64px 0 36px;
   position: relative;
 }
 
@@ -1917,14 +1917,14 @@ footer,
   display: grid;
   grid-template-columns: 1fr;
   gap: 40px;
-  margin-bottom: 40px;
+  margin-bottom: 48px;
 }
 
 .footer-grid {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 32px;
-  margin-bottom: 32px;
+  gap: 36px;
+  margin-bottom: 40px;
 }
 
 .footer-section h3,
@@ -1932,7 +1932,7 @@ footer,
   color: var(--color-secondary);
   text-transform: uppercase;
   letter-spacing: 2px;
-  font-size: 0.85rem;
+  font-size: 0.9rem;
   font-weight: 700;
   margin-bottom: 20px;
 }
@@ -1950,7 +1950,7 @@ footer,
   list-style: none;
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 12px;
 }
 
 .footer-links a {
@@ -1966,9 +1966,10 @@ footer,
 
 .footer-bottom {
   border-top: 1px solid rgba(255, 255, 255, 0.1);
-  padding-top: 24px;
+  padding-top: 28px;
+  margin-top: 8px;
   text-align: center;
-  font-size: 0.85rem;
+  font-size: 0.9rem;
   opacity: 0.6;
 }
 
@@ -1976,14 +1977,15 @@ footer,
   display: flex;
   align-items: center;
   gap: 10px;
-  margin-bottom: 12px;
-  font-size: 0.95rem;
+  margin-bottom: 14px;
+  font-size: 1rem;
 }
 
 .footer-areas {
-  font-size: 0.88rem;
+  font-size: 0.92rem;
   opacity: 0.75;
   line-height: 1.7;
+  margin-top: 8px;
 }
 
 .footer .logo {
@@ -3428,6 +3430,158 @@ tr:hover td {
   margin: 0 auto;
 }
 
+/* ==========================================================================
+   SERVICE AREAS - Modern Region Cards
+   ========================================================================== */
+
+.sa-regions {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+  margin-top: 48px;
+  max-width: 960px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media (min-width: 768px) {
+  .sa-regions { grid-template-columns: 1fr 1fr; }
+}
+
+.sa-region {
+  background: var(--color-card);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: 32px 28px;
+  transition: all var(--transition);
+  position: relative;
+  overflow: hidden;
+}
+
+.sa-region::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: var(--color-secondary);
+}
+
+.sa-region:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 32px var(--color-shadow-heavy);
+  border-color: var(--color-secondary);
+}
+
+.sa-region-header {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  margin-bottom: 24px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.sa-region-header > svg {
+  width: 36px;
+  height: 36px;
+  min-width: 36px;
+  padding: 6px;
+  background: var(--color-primary);
+  color: #fff;
+  border-radius: var(--radius-md);
+}
+
+.sa-region-header h3 {
+  font-size: 1.25rem;
+  margin-bottom: 4px;
+}
+
+.sa-badge {
+  display: inline-block;
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: var(--color-secondary);
+  background: var(--color-secondary-light);
+  padding: 3px 10px;
+  border-radius: 100px;
+}
+
+.sa-badge-expand {
+  color: var(--color-primary);
+  background: rgba(26, 58, 92, 0.08);
+}
+
+.sa-cities {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 20px;
+}
+
+.sa-cities a {
+  display: inline-block;
+  padding: 7px 16px;
+  font-size: 0.92rem;
+  font-weight: 500;
+  color: var(--color-primary-dark);
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: 100px;
+  transition: all var(--transition);
+}
+
+.sa-cities a:hover {
+  background: var(--color-secondary);
+  color: #fff;
+  border-color: var(--color-secondary);
+  transform: translateY(-1px);
+}
+
+.sa-region-cta {
+  display: inline-block;
+  font-size: 0.92rem;
+  font-weight: 600;
+  color: var(--color-secondary);
+}
+
+.sa-region-cta:hover {
+  color: var(--color-secondary-hover);
+}
+
+.sa-note {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 32px;
+  padding: 20px 24px;
+  background: var(--color-card);
+  border: 1px solid var(--color-border);
+  border-left: 4px solid var(--color-secondary);
+  border-radius: var(--radius-md);
+  max-width: 960px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.sa-note svg {
+  color: var(--color-secondary);
+  flex-shrink: 0;
+}
+
+.sa-note p {
+  font-size: 0.95rem;
+  color: var(--color-text-muted);
+  margin-bottom: 0;
+}
+
+.sa-note a {
+  font-weight: 600;
+}
+
 .cities-column h4 {
   margin-bottom: 12px;
   color: var(--color-primary-dark);
@@ -3542,7 +3696,7 @@ tr:hover td {
 .trust-badge-item span {
   font-family: var(--font-display);
   font-weight: 600;
-  font-size: 0.85rem;
+  font-size: 0.92rem;
   color: var(--color-primary-dark);
 }
 

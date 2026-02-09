@@ -1,0 +1,114 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <defs>
+    <!-- Subtle gradient for background depth -->
+    <linearGradient id="bgGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#1a3a5c"/>
+      <stop offset="100%" stop-color="#12283f"/>
+    </linearGradient>
+    <!-- Orange accent gradient -->
+    <linearGradient id="orangeGrad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#d4842a"/>
+      <stop offset="100%" stop-color="#e6952f"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="630" fill="url(#bgGrad)"/>
+
+  <!-- Top orange accent bar -->
+  <rect x="0" y="0" width="1200" height="6" fill="url(#orangeGrad)"/>
+
+  <!-- Bottom orange accent bar -->
+  <rect x="0" y="624" width="1200" height="6" fill="url(#orangeGrad)"/>
+
+  <!-- Decorative geometric shapes (subtle) -->
+  <!-- Large faded circle bottom-right -->
+  <circle cx="1050" cy="520" r="200" fill="#ffffff" opacity="0.03"/>
+  <!-- Medium faded circle top-right -->
+  <circle cx="1100" cy="100" r="120" fill="#ffffff" opacity="0.02"/>
+  <!-- Diagonal accent line -->
+  <line x1="0" y1="630" x2="400" y2="430" stroke="#d4842a" stroke-width="1" opacity="0.15"/>
+  <line x1="0" y1="630" x2="500" y2="380" stroke="#d4842a" stroke-width="1" opacity="0.1"/>
+
+  <!-- Texas outline (simplified, subtle watermark) -->
+  <g transform="translate(820, 180) scale(0.55)" opacity="0.06" fill="#ffffff">
+    <path d="M60,10 L120,10 L130,25 L160,25 L170,10 L200,10 L210,30 L240,20 L270,30 L290,15 L310,25 L320,50 L310,70 L320,90 L340,100 L350,130 L370,150 L380,180 L370,200 L350,220 L340,260 L320,290 L290,310 L270,340 L240,360 L220,380 L200,400 L170,420 L140,410 L120,380 L100,360 L80,370 L60,350 L40,320 L20,280 L10,240 L20,200 L10,160 L30,120 L20,80 L40,50 Z"/>
+  </g>
+
+  <!-- Logo mark: IL badge -->
+  <rect x="70" y="50" width="86" height="86" rx="12" fill="#d4842a"/>
+  <rect x="74" y="54" width="78" height="78" rx="9" fill="none" stroke="#ffffff" stroke-width="2" opacity="0.3"/>
+  <text x="113" y="108" font-family="Arial, Helvetica, sans-serif" font-weight="bold" font-size="48" fill="#ffffff" text-anchor="middle" letter-spacing="-1">IL</text>
+
+  <!-- Company name -->
+  <text x="178" y="87" font-family="Arial, Helvetica, sans-serif" font-weight="bold" font-size="38" fill="#ffffff" letter-spacing="1">IRON LOT HOMES</text>
+  <!-- Subtitle under company name -->
+  <text x="180" y="118" font-family="Arial, Helvetica, sans-serif" font-weight="normal" font-size="16" fill="#d4842a" letter-spacing="3">MOBILE HOME SOLUTIONS</text>
+
+  <!-- Thin divider line -->
+  <line x1="70" y1="165" x2="750" y2="165" stroke="#d4842a" stroke-width="2" opacity="0.5"/>
+
+  <!-- Main tagline -->
+  <text x="70" y="240" font-family="Arial, Helvetica, sans-serif" font-weight="bold" font-size="56" fill="#ffffff">We Buy &amp; Sell</text>
+  <text x="70" y="310" font-family="Arial, Helvetica, sans-serif" font-weight="bold" font-size="56" fill="#ffffff">Mobile Homes</text>
+  <text x="70" y="375" font-family="Arial, Helvetica, sans-serif" font-weight="bold" font-size="52" fill="#d4842a">in Texas</text>
+
+  <!-- Phone number with icon -->
+  <g transform="translate(70, 430)">
+    <!-- Phone icon -->
+    <rect x="0" y="0" width="44" height="44" rx="8" fill="#d4842a" opacity="0.2"/>
+    <g transform="translate(11, 10)" fill="#d4842a">
+      <path d="M5,1 C3.5,1 2,2.5 2,4 C2,10 6,18 12,22 C14,23.5 16,22 17,21 L19,19 C19.5,18.5 19.5,17.5 19,17 L16,14 C15.5,13.5 14.5,13.5 14,14 L13,15 C11,13 9,11 7,9 L8,8 C8.5,7.5 8.5,6.5 8,6 L5,3 C4.5,2.5 3.5,2.5 3,3 L5,1 Z"/>
+    </g>
+    <text x="56" y="32" font-family="Arial, Helvetica, sans-serif" font-weight="bold" font-size="30" fill="#ffffff">(512) 850-4013</text>
+  </g>
+
+  <!-- Services bar at bottom -->
+  <rect x="0" y="510" width="1200" height="114" fill="#12283f" opacity="0.6"/>
+  <rect x="0" y="510" width="1200" height="2" fill="#d4842a" opacity="0.4"/>
+
+  <!-- Service items -->
+  <g transform="translate(0, 510)">
+    <!-- Cash Offers -->
+    <g transform="translate(100, 0)">
+      <!-- Dollar icon circle -->
+      <circle cx="28" cy="42" r="18" fill="none" stroke="#d4842a" stroke-width="2"/>
+      <text x="28" y="49" font-family="Arial, Helvetica, sans-serif" font-weight="bold" font-size="20" fill="#d4842a" text-anchor="middle">$</text>
+      <text x="60" y="49" font-family="Arial, Helvetica, sans-serif" font-weight="bold" font-size="22" fill="#ffffff">Cash Offers</text>
+    </g>
+
+    <!-- Divider -->
+    <line x1="340" y1="20" x2="340" y2="65" stroke="#ffffff" stroke-width="1" opacity="0.15"/>
+
+    <!-- Owner Financing -->
+    <g transform="translate(390, 0)">
+      <!-- Key/house icon circle -->
+      <circle cx="28" cy="42" r="18" fill="none" stroke="#d4842a" stroke-width="2"/>
+      <g transform="translate(19, 32)" fill="#d4842a">
+        <path d="M9,0 L17,6 L17,16 L12,16 L12,10 L6,10 L6,16 L1,16 L1,6 Z" transform="scale(0.7)"/>
+      </g>
+      <text x="60" y="49" font-family="Arial, Helvetica, sans-serif" font-weight="bold" font-size="22" fill="#ffffff">Owner Financing</text>
+    </g>
+
+    <!-- Divider -->
+    <line x1="680" y1="20" x2="680" y2="65" stroke="#ffffff" stroke-width="1" opacity="0.15"/>
+
+    <!-- Hablamos Espanol -->
+    <g transform="translate(730, 0)">
+      <!-- Chat bubble icon circle -->
+      <circle cx="28" cy="42" r="18" fill="none" stroke="#d4842a" stroke-width="2"/>
+      <g transform="translate(18, 33)" fill="#d4842a">
+        <path d="M0,8 C0,4 3,0 8,0 C13,0 16,4 16,8 C16,12 13,15 8,15 L4,18 L4,14 C2,13 0,11 0,8 Z" transform="scale(0.65)"/>
+      </g>
+      <text x="60" y="49" font-family="Arial, Helvetica, sans-serif" font-weight="bold" font-size="22" fill="#ffffff">Hablamos Espa&#xF1;ol</text>
+    </g>
+  </g>
+
+  <!-- Decorative corner accents -->
+  <!-- Top-right corner -->
+  <line x1="1150" y1="30" x2="1170" y2="30" stroke="#d4842a" stroke-width="2"/>
+  <line x1="1170" y1="30" x2="1170" y2="50" stroke="#d4842a" stroke-width="2"/>
+  <!-- Bottom-left corner -->
+  <line x1="30" y1="600" x2="50" y2="600" stroke="#d4842a" stroke-width="2"/>
+  <line x1="30" y1="580" x2="30" y2="600" stroke="#d4842a" stroke-width="2"/>
+</svg>
