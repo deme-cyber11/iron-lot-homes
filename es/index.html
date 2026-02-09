@@ -453,6 +453,67 @@
                 <option value="double_wide">Doble (Double Wide)</option>
               </select>
             </div>
+            <div class="form-group">
+              <label for="es-home-year">Ano de la Casa</label>
+              <input type="number" name="year" id="es-home-year" placeholder="ej. 2005" min="1950" max="2026">
+            </div>
+            <div class="form-group">
+              <label for="es-home-bedrooms">Recamaras</label>
+              <select name="bedrooms" id="es-home-bedrooms">
+                <option value="">Seleccione...</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4+">4+</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="es-home-bathrooms">Banos</label>
+              <select name="bathrooms" id="es-home-bathrooms">
+                <option value="">Seleccione...</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3+">3+</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="es-home-sqft">Pies Cuadrados Aproximados</label>
+              <input type="text" name="sqft" id="es-home-sqft" placeholder="ej. 1200">
+            </div>
+            <div class="form-group">
+              <label for="es-home-condition">Condicion de la Casa</label>
+              <select name="condition" id="es-home-condition">
+                <option value="">Seleccione...</option>
+                <option value="excellent">Excelente</option>
+                <option value="good">Buena</option>
+                <option value="fair">Regular</option>
+                <option value="poor">Mala</option>
+                <option value="major_repairs">Necesita Reparaciones Mayores</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="es-home-mortgage">Hipoteca o Gravamen Actual?</label>
+              <select name="mortgage_lien" id="es-home-mortgage">
+                <option value="">Seleccione...</option>
+                <option value="yes">Si</option>
+                <option value="no">No</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="es-home-balance">Saldo Pendiente (si aplica)</label>
+              <input type="text" name="outstanding_balance" id="es-home-balance" placeholder="$0">
+            </div>
+            <div class="form-group">
+              <label for="es-home-timeline">Cuando Desea Vender?</label>
+              <select name="timeline" id="es-home-timeline">
+                <option value="">Seleccione...</option>
+                <option value="asap">Lo Antes Posible</option>
+                <option value="1_month">Dentro de 1 Mes</option>
+                <option value="3_months">Dentro de 3 Meses</option>
+                <option value="6_months">6+ Meses</option>
+                <option value="exploring">Solo Explorando</option>
+              </select>
+            </div>
             <button type="submit" class="btn btn-primary btn-block">Obtener Mi Oferta</button>
             <div class="form-trust-row">
               <span>Sin cargos</span>
