@@ -4150,11 +4150,13 @@ tr:hover td {
   display: flex;
   align-items: center;
   gap: 16px;
-  background: var(--color-card);
+  background: #ffffff;
   border: 2px solid rgba(45, 138, 78, 0.25);
   border-radius: var(--radius-lg);
   padding: 20px 24px;
   margin-top: 24px;
+  position: relative;
+  z-index: 3;
 }
 
 .guarantee-icon {
