@@ -71,7 +71,7 @@ body {
   color: var(--color-text);
   background: var(--color-background);
   font-size: 1rem;
-  line-height: 1.7;
+  line-height: 1.75;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   overflow-x: hidden;
@@ -836,13 +836,13 @@ p {
 
 .section-subtitle {
   color: var(--color-text-muted);
-  font-size: 1.05rem;
+  font-size: 1.15rem;
   margin-top: 12px;
 }
 
 .section-header p {
   color: var(--color-text-muted);
-  font-size: 1.05rem;
+  font-size: 1.15rem;
 }
 
 .section-header h2 {
@@ -876,7 +876,7 @@ p {
   gap: 24px;
 }
 
-.process-step {
+.process-step, .process-card {
   background: var(--color-card);
   padding: 32px 24px;
   border: 2px solid var(--color-border);
@@ -886,7 +886,7 @@ p {
   transition: all var(--transition);
 }
 
-.process-step::before {
+.process-step::before, .process-card::before {
   content: '';
   position: absolute;
   top: 0;
@@ -896,7 +896,7 @@ p {
   background: var(--color-secondary);
 }
 
-.process-step:hover {
+.process-step:hover, .process-card:hover {
   transform: translateY(-4px);
   box-shadow: 0 8px 30px var(--color-shadow);
 }
@@ -916,14 +916,26 @@ p {
   border-radius: 0;
 }
 
-.process-step h3 {
+
+.process-icon {
+  width: 48px;
+  height: 48px;
+  margin: 0 auto 16px;
+  color: var(--color-secondary);
+}
+
+.process-icon svg {
+  width: 100%;
+  height: 100%;
+}
+.process-step h3, .process-card h3 {
   margin-bottom: 8px;
   font-size: 1.15rem;
 }
 
-.process-step p {
+.process-step p, .process-card p {
   color: var(--color-text-muted);
-  font-size: 0.95rem;
+  font-size: 1rem;
   margin-bottom: 0;
 }
 
@@ -1053,7 +1065,7 @@ p {
 
 .service-card p {
   color: var(--color-text-muted);
-  font-size: 0.95rem;
+  font-size: 1rem;
   margin-bottom: 0;
 }
 
@@ -1182,7 +1194,7 @@ p {
 
 .feature p, .feature-card p {
   color: rgba(255, 255, 255, 0.9);
-  font-size: 0.95rem;
+  font-size: 1rem;
   margin-bottom: 0;
 }
 
@@ -1633,53 +1645,108 @@ p {
 }
 
 .service-area-map {
-  border: 2px solid var(--color-border);
   border-radius: 0;
   overflow: hidden;
-  background: var(--color-card);
-  padding: 16px;
-  box-shadow: var(--shadow-sm);
 }
 
-.map-placeholder {
-  aspect-ratio: 4 / 3;
-  background: var(--color-surface);
+/* Service Area Hub Cards */
+.area-hubs {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.area-hub {
+  background: var(--color-card);
+  border: 2px solid var(--color-border);
+  padding: 28px 24px;
+  transition: all var(--transition);
+}
+
+.area-hub:hover {
+  border-color: var(--color-secondary);
+  box-shadow: 0 4px 20px var(--color-shadow);
+}
+
+.hub-header {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 20px;
+  padding-bottom: 16px;
+  border-bottom: 2px solid var(--color-surface);
+}
+
+.hub-icon {
+  width: 44px;
+  height: 44px;
+  flex-shrink: 0;
+  background: var(--color-primary);
   display: flex;
   align-items: center;
   justify-content: center;
-  color: var(--color-text-muted);
 }
 
-.area-map-svg {
-  width: 100%;
-  height: auto;
+.hub-icon svg {
+  width: 22px;
+  height: 22px;
+  color: var(--color-text-inverse);
 }
 
-/* SVG Map Labels */
-.texas-map {
-  background: var(--color-card);
-  padding: 20px;
-}
-
-.map-label-major {
+.hub-header h4 {
   font-family: var(--font-display);
-  font-size: 13px;
-  font-weight: 600;
-  fill: var(--color-primary);
-  letter-spacing: 0.02em;
-}
-
-.map-label-accent {
-  fill: var(--color-secondary);
+  font-size: 1.15rem;
   font-weight: 700;
-  font-size: 14px;
+  color: var(--color-primary-dark);
+  margin-bottom: 2px;
 }
 
-.map-label-minor {
-  font-family: var(--font-body);
-  font-size: 10px;
-  font-weight: 400;
-  fill: var(--color-text-muted);
+.hub-hq {
+  display: inline-block;
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--color-secondary);
+  background: rgba(212, 132, 42, 0.1);
+  padding: 2px 8px;
+}
+
+.hub-cities {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.hub-city {
+  display: inline-block;
+  padding: 6px 14px;
+  font-size: 0.88rem;
+  font-weight: 500;
+  color: var(--color-text);
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  transition: all var(--transition);
+}
+
+.hub-city:hover {
+  background: var(--color-secondary);
+  color: var(--color-text-inverse);
+  border-color: var(--color-secondary);
+  transform: translateY(-1px);
+}
+
+.hub-city-primary {
+  background: var(--color-primary);
+  color: var(--color-text-inverse);
+  border-color: var(--color-primary);
+  font-weight: 600;
+}
+
+.hub-city-primary:hover {
+  background: var(--color-secondary);
+  border-color: var(--color-secondary);
+}
 }
 
 .map-dot {
@@ -3293,6 +3360,8 @@ tr:hover td {
   display: grid;
   grid-template-columns: 1fr;
   gap: 40px;
+  max-width: 720px;
+  margin: 0 auto;
 }
 
 .cities-column h4 {

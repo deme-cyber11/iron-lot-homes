@@ -967,111 +967,57 @@
         <h2 data-lang="en">Serving Communities Across Texas</h2>
         <h2 data-lang="es">Sirviendo Comunidades en Todo Texas</h2>
       </div>
-      <div class="areas-map-wrap fade-in">
-        <!-- SVG Map: Texas with Austin, DFW, San Antonio connections -->
-        <div class="areas-svg">
-          <svg viewBox="0 0 560 440" xmlns="http://www.w3.org/2000/svg" class="texas-map area-map-svg" role="img" aria-label="Texas service area map showing Austin, Dallas-Fort Worth, and San Antonio">
-  <!-- Background -->
-  <rect width="560" height="440" fill="#fafaf8" rx="0"/>
-
-  <!-- Texas outline - cleaner -->
-  <path d="M80,60 L340,40 L370,65 L395,55 L415,72 L440,82 L455,115 L462,170 L470,220 L478,275 L465,320 L430,360 L385,390 L330,382 L290,375 L250,355 L215,330 L175,318 L140,300 L105,275 L75,240 L58,195 L62,140 Z" fill="var(--color-primary)" fill-opacity="0.04" stroke="var(--color-primary)" stroke-width="1.5" stroke-opacity="0.2"/>
-
-  <!-- Connection lines -->
-  <line x1="260" y1="260" x2="310" y2="95" stroke="var(--color-secondary)" stroke-width="1.5" stroke-dasharray="5,4" opacity="0.4"/>
-  <line x1="260" y1="260" x2="220" y2="340" stroke="var(--color-secondary)" stroke-width="1.5" stroke-dasharray="5,4" opacity="0.4"/>
-
-  <!-- Austin Hub ring -->
-  <circle cx="260" cy="260" r="18" fill="none" stroke="var(--color-secondary)" stroke-width="1" opacity="0.3"/>
-  <circle cx="260" cy="260" r="8" fill="var(--color-secondary)" class="map-dot map-dot-primary"/>
-  <text x="260" y="243" text-anchor="middle" class="map-label-major map-label-accent" font-size="14" font-weight="700" fill="#d4842a">Austin (HQ)</text>
-
-  <!-- DFW Hub ring -->
-  <circle cx="310" cy="95" r="14" fill="none" stroke="var(--color-primary)" stroke-width="1" opacity="0.2"/>
-  <circle cx="310" cy="95" r="6" fill="var(--color-primary)" class="map-dot"/>
-  <text x="310" y="80" text-anchor="middle" class="map-label-major" font-size="13" font-weight="600" fill="#1a3a5c">Dallas / Fort Worth</text>
-
-  <!-- San Antonio Hub -->
-  <circle cx="220" cy="340" r="6" fill="var(--color-primary)" class="map-dot"/>
-  <text x="220" y="360" text-anchor="middle" class="map-label-major" font-size="13" font-weight="600" fill="#1a3a5c">San Antonio</text>
-
-  <!-- Central TX cities -->
-  <circle cx="280" cy="280" r="3" fill="var(--color-primary)" opacity="0.5"/>
-  <text x="298" y="284" class="map-label-minor" font-size="10" fill="#6B6B6B">San Marcos</text>
-
-  <circle cx="272" cy="295" r="3" fill="var(--color-primary)" opacity="0.5"/>
-  <text x="290" y="299" class="map-label-minor" font-size="10" fill="#6B6B6B">Kyle</text>
-
-  <circle cx="265" cy="308" r="3" fill="var(--color-primary)" opacity="0.5"/>
-  <text x="283" y="312" class="map-label-minor" font-size="10" fill="#6B6B6B">Buda</text>
-
-  <circle cx="235" cy="285" r="3" fill="var(--color-primary)" opacity="0.5"/>
-  <text x="218" y="289" text-anchor="end" class="map-label-minor" font-size="10" fill="#6B6B6B">Lockhart</text>
-
-  <circle cx="290" cy="252" r="3" fill="var(--color-primary)" opacity="0.5"/>
-  <text x="308" y="256" class="map-label-minor" font-size="10" fill="#6B6B6B">Bastrop</text>
-
-  <circle cx="278" cy="240" r="3" fill="var(--color-primary)" opacity="0.5"/>
-  <text x="296" y="244" class="map-label-minor" font-size="10" fill="#6B6B6B">Del Valle</text>
-
-  <!-- DFW cities - spread out more -->
-  <circle cx="340" cy="82" r="3" fill="var(--color-primary)" opacity="0.5"/>
-  <text x="356" y="86" class="map-label-minor" font-size="10" fill="#6B6B6B">Plano</text>
-
-  <circle cx="355" cy="70" r="3" fill="var(--color-primary)" opacity="0.5"/>
-  <text x="371" y="74" class="map-label-minor" font-size="10" fill="#6B6B6B">McKinney</text>
-
-  <circle cx="370" cy="58" r="3" fill="var(--color-primary)" opacity="0.5"/>
-  <text x="386" y="62" class="map-label-minor" font-size="10" fill="#6B6B6B">Princeton</text>
-
-  <circle cx="280" cy="85" r="3" fill="var(--color-primary)" opacity="0.5"/>
-  <text x="263" y="89" text-anchor="end" class="map-label-minor" font-size="10" fill="#6B6B6B">Arlington</text>
-
-  <circle cx="345" cy="55" r="3" fill="var(--color-primary)" opacity="0.5"/>
-  <text x="361" y="50" class="map-label-minor" font-size="10" fill="#6B6B6B">Frisco</text>
-
-  <circle cx="290" cy="62" r="3" fill="var(--color-primary)" opacity="0.5"/>
-  <text x="273" y="57" text-anchor="end" class="map-label-minor" font-size="10" fill="#6B6B6B">Denton</text>
-
-  <circle cx="285" cy="100" r="3" fill="var(--color-primary)" opacity="0.5"/>
-  <text x="268" y="104" text-anchor="end" class="map-label-minor" font-size="10" fill="#6B6B6B">Irving</text>
-
-  <!-- SA surrounding -->
-  <circle cx="250" cy="315" r="3" fill="var(--color-primary)" opacity="0.5"/>
-  <text x="268" y="325" class="map-label-minor" font-size="10" fill="#6B6B6B">New Braunfels</text>
-
-  <circle cx="240" cy="350" r="3" fill="var(--color-primary)" opacity="0.5"/>
-  <text x="258" y="354" class="map-label-minor" font-size="10" fill="#6B6B6B">Seguin</text>
-</svg>
-        </div>
-        <!-- City Tags -->
-        <div>
-          <h3 style="margin-bottom:20px;" data-lang="en">Cities We Serve</h3>
-          <h3 style="margin-bottom:20px;" data-lang="es">Ciudades Que Servimos</h3>
-          <div class="areas-list">
-            <span class="area-tag area-tag--primary">Austin</span>
-            <span class="area-tag area-tag--primary">Dallas</span>
-            <span class="area-tag area-tag--primary">Fort Worth</span>
-            <span class="area-tag area-tag--primary">San Antonio</span>
-            <span class="area-tag">Arlington</span>
-            <span class="area-tag">Plano</span>
-            <span class="area-tag">Frisco</span>
-            <span class="area-tag">Denton</span>
-            <span class="area-tag">McKinney</span>
-            <span class="area-tag">Princeton</span>
-            <span class="area-tag">San Marcos</span>
-            <span class="area-tag">Lockhart</span>
-            <span class="area-tag">Kyle</span>
-            <span class="area-tag">Buda</span>
-            <span class="area-tag">Bastrop</span>
-            <span class="area-tag">Del Valle</span>
-            <span class="area-tag">Hutto</span>
-            <span class="area-tag">New Braunfels</span>
-            <span class="area-tag">Seguin</span>
+      <div class="areas-map-wrap fade-in" style="max-width:720px;margin:0 auto;">
+        <div class="area-hubs">
+          <div class="area-hub">
+            <div class="hub-header">
+              <div class="hub-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              </div>
+              <div>
+                <h4 data-lang="en">Central Texas</h4>
+                <h4 data-lang="es">Centro de Texas</h4>
+                <span class="hub-hq">Austin HQ</span>
+              </div>
+            </div>
+            <div class="hub-cities">
+              <a href="locations/austin/" class="hub-city hub-city-primary">Austin</a>
+              <a href="locations/san-marcos/" class="hub-city">San Marcos</a>
+              <a href="locations/kyle/" class="hub-city">Kyle</a>
+              <a href="locations/buda/" class="hub-city">Buda</a>
+              <a href="locations/lockhart/" class="hub-city">Lockhart</a>
+              <a href="locations/bastrop/" class="hub-city">Bastrop</a>
+              <a href="locations/del-valle/" class="hub-city">Del Valle</a>
+            </div>
           </div>
-          <p style="margin-top:16px;font-size:0.92rem;color:var(--text-light);" data-lang="en">Don't see your city? We likely serve your area too. <a href="tel:+15128504013">Call us to find out.</a></p>
-          <p style="margin-top:16px;font-size:0.92rem;color:var(--text-light);" data-lang="es">No ve su ciudad? Probablemente servimos su area tambien. <a href="tel:+15128504013">Llamenos para averiguar.</a></p>
+          <div class="area-hub">
+            <div class="hub-header">
+              <div class="hub-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              </div>
+              <div>
+                <h4 data-lang="en">DFW &amp; San Antonio</h4>
+                <h4 data-lang="es">DFW y San Antonio</h4>
+                <span class="hub-hq" data-lang="en">Expanding</span>
+                <span class="hub-hq" data-lang="es">Expandiendo</span>
+              </div>
+            </div>
+            <div class="hub-cities">
+              <a href="locations/dallas/" class="hub-city hub-city-primary">Dallas</a>
+              <a href="locations/fort-worth/" class="hub-city hub-city-primary">Fort Worth</a>
+              <a href="locations/san-antonio/" class="hub-city hub-city-primary">San Antonio</a>
+              <a href="locations/arlington/" class="hub-city">Arlington</a>
+              <a href="locations/plano/" class="hub-city">Plano</a>
+              <a href="locations/frisco/" class="hub-city">Frisco</a>
+              <a href="locations/mckinney/" class="hub-city">McKinney</a>
+              <a href="locations/princeton/" class="hub-city">Princeton</a>
+              <a href="locations/denton/" class="hub-city">Denton</a>
+              <a href="locations/irving/" class="hub-city">Irving</a>
+            </div>
+          </div>
         </div>
+        <p style="margin-top:16px;font-size:0.92rem;color:var(--text-light);" data-lang="en">Don't see your city? We likely serve your area too. <a href="tel:+15128504013">Call us to find out.</a></p>
+        <p style="margin-top:16px;font-size:0.92rem;color:var(--text-light);" data-lang="es">No ve su ciudad? Probablemente servimos su area tambien. <a href="tel:+15128504013">Llamenos para averiguar.</a></p>
       </div>
     </div>
   </section>
