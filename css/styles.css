@@ -693,8 +693,8 @@ p {
 }
 
 .hero-badge svg {
-  width: 16px;
-  height: 16px;
+  width: 20px;
+  height: 20px;
   flex-shrink: 0;
   stroke: var(--color-secondary);
 }
@@ -1102,7 +1102,7 @@ p {
 }
 
 .why-choose .section-header p {
-  color: rgba(255, 255, 255, 0.7);
+  color: rgba(255, 255, 255, 0.85);
 }
 
 .why-content {
@@ -1113,12 +1113,24 @@ p {
 .features-grid {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 20px;
+  gap: 16px;
   position: relative;
   z-index: 1;
 }
 
-.feature {
+@media (min-width: 768px) {
+  .features-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .features-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.feature, .feature-card {
   background: rgba(255, 255, 255, 0.05);
   border: 1px solid rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(10px);
@@ -1129,7 +1141,7 @@ p {
   position: relative;
 }
 
-.feature::after {
+.feature::after, .feature-card::after {
   content: '';
   position: absolute;
   bottom: 0;
@@ -1141,29 +1153,35 @@ p {
   transition: transform var(--transition);
 }
 
-.feature:hover::after {
+.feature:hover::after, .feature-card:hover::after {
   transform: scaleX(1);
 }
 
-.feature:hover {
+.feature:hover, .feature-card:hover {
   background: rgba(255, 255, 255, 0.1);
   transform: translateY(-2px);
 }
 
-.feature-icon {
-  font-size: 2rem;
-  margin-bottom: 16px;
+.feature-icon, .feature-card .feature-icon {
+  font-size: 1.5rem;
+  margin-bottom: 12px;
   color: var(--color-secondary);
 }
 
-.feature h3 {
+.feature-icon svg, .feature-card .feature-icon svg {
+  width: 28px;
+  height: 28px;
+  stroke: var(--color-secondary);
+}
+
+.feature h3, .feature-card h3 {
   color: var(--color-text-inverse);
   margin-bottom: 8px;
   font-size: 1.1rem;
 }
 
-.feature p {
-  color: rgba(255, 255, 255, 0.7);
+.feature p, .feature-card p {
+  color: rgba(255, 255, 255, 0.9);
   font-size: 0.95rem;
   margin-bottom: 0;
 }
@@ -1608,10 +1626,19 @@ p {
   align-items: start;
 }
 
+@media (min-width: 768px) {
+  .service-area-content {
+    grid-template-columns: 1.2fr 1fr;
+  }
+}
+
 .service-area-map {
   border: 2px solid var(--color-border);
   border-radius: 0;
   overflow: hidden;
+  background: var(--color-card);
+  padding: 16px;
+  box-shadow: var(--shadow-sm);
 }
 
 .map-placeholder {
@@ -1626,6 +1653,41 @@ p {
 .area-map-svg {
   width: 100%;
   height: auto;
+}
+
+/* SVG Map Labels */
+.texas-map {
+  background: var(--color-card);
+  padding: 20px;
+}
+
+.map-label-major {
+  font-family: var(--font-display);
+  font-size: 13px;
+  font-weight: 600;
+  fill: var(--color-primary);
+  letter-spacing: 0.02em;
+}
+
+.map-label-accent {
+  fill: var(--color-secondary);
+  font-weight: 700;
+  font-size: 14px;
+}
+
+.map-label-minor {
+  font-family: var(--font-body);
+  font-size: 10px;
+  font-weight: 400;
+  fill: var(--color-text-muted);
+}
+
+.map-dot {
+  transition: r 0.3s ease;
+}
+
+.map-dot-primary {
+  filter: drop-shadow(0 0 6px rgba(212, 132, 42, 0.4));
 }
 
 .service-area-cities {
