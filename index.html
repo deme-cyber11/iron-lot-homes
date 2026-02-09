@@ -412,19 +412,19 @@
 
           <div class="hero-badges">
             <div class="hero-badge">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
               <span data-lang="en">No Fees or Commissions</span><span data-lang-inline="es">Sin Cargos ni Comisiones</span>
             </div>
             <div class="hero-badge">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
               <span data-lang="en">Owner Financing Available</span><span data-lang-inline="es">Financiamiento Disponible</span>
             </div>
             <div class="hero-badge">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/></svg>
               <span data-lang="en">No Credit Check</span><span data-lang-inline="es">Sin Verificacion de Credito</span>
             </div>
             <div class="hero-badge">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
               <span data-lang="en">Hablamos Espanol</span><span data-lang-inline="es">Hablamos Espanol</span>
             </div>
           </div>
@@ -1020,74 +1020,79 @@
       <div class="service-area-layout">
         <!-- SVG Map -->
         <div class="service-area-map scroll-reveal">
-          <svg viewBox="0 0 500 400" xmlns="http://www.w3.org/2000/svg" class="texas-map">
-            <!-- Texas outline simplified -->
-            <path d="M50,50 L350,30 L380,60 L400,50 L420,70 L450,80 L460,120 L470,180 L480,220 L490,280 L470,320 L430,360 L380,390 L320,380 L280,370 L240,350 L200,320 L160,310 L120,290 L80,260 L50,220 L30,180 L40,120 Z" fill="none" stroke="#1a3a5c" stroke-width="2" opacity="0.3"/>
+          <svg viewBox="0 0 560 440" xmlns="http://www.w3.org/2000/svg" class="texas-map area-map-svg">
+  <!-- Background -->
+  <rect width="560" height="440" fill="#fafaf8" rx="0"/>
 
-            <!-- DFW Hub -->
-            <circle cx="280" cy="90" r="8" fill="#1a3a5c" class="map-dot"/>
-            <text x="280" y="75" text-anchor="middle" class="map-label-major">Dallas / Fort Worth</text>
+  <!-- Texas outline - cleaner -->
+  <path d="M80,60 L340,40 L370,65 L395,55 L415,72 L440,82 L455,115 L462,170 L470,220 L478,275 L465,320 L430,360 L385,390 L330,382 L290,375 L250,355 L215,330 L175,318 L140,300 L105,275 L75,240 L58,195 L62,140 Z" fill="var(--color-primary)" fill-opacity="0.04" stroke="var(--color-primary)" stroke-width="1.5" stroke-opacity="0.2"/>
 
-            <!-- Austin Hub (center) -->
-            <circle cx="230" cy="250" r="10" fill="#d4842a" class="map-dot map-dot-primary"/>
-            <text x="230" y="235" text-anchor="middle" class="map-label-major map-label-accent">Austin (HQ)</text>
+  <!-- Connection lines -->
+  <line x1="260" y1="260" x2="310" y2="95" stroke="var(--color-secondary)" stroke-width="1.5" stroke-dasharray="5,4" opacity="0.4"/>
+  <line x1="260" y1="260" x2="220" y2="340" stroke="var(--color-secondary)" stroke-width="1.5" stroke-dasharray="5,4" opacity="0.4"/>
 
-            <!-- San Antonio Hub -->
-            <circle cx="190" cy="320" r="8" fill="#1a3a5c" class="map-dot"/>
-            <text x="190" y="340" text-anchor="middle" class="map-label-major">San Antonio</text>
+  <!-- Austin Hub ring -->
+  <circle cx="260" cy="260" r="18" fill="none" stroke="var(--color-secondary)" stroke-width="1" opacity="0.3"/>
+  <circle cx="260" cy="260" r="8" fill="var(--color-secondary)" class="map-dot map-dot-primary"/>
+  <text x="260" y="243" text-anchor="middle" class="map-label-major map-label-accent" font-size="14" font-weight="700" fill="#d4842a">Austin (HQ)</text>
 
-            <!-- Connection lines -->
-            <line x1="230" y1="250" x2="280" y2="90" stroke="#d4842a" stroke-width="2" stroke-dasharray="6,4" opacity="0.6"/>
-            <line x1="230" y1="250" x2="190" y2="320" stroke="#d4842a" stroke-width="2" stroke-dasharray="6,4" opacity="0.6"/>
+  <!-- DFW Hub ring -->
+  <circle cx="310" cy="95" r="14" fill="none" stroke="var(--color-primary)" stroke-width="1" opacity="0.2"/>
+  <circle cx="310" cy="95" r="6" fill="var(--color-primary)" class="map-dot"/>
+  <text x="310" y="80" text-anchor="middle" class="map-label-major" font-size="13" font-weight="600" fill="#1a3a5c">Dallas / Fort Worth</text>
 
-            <!-- Surrounding cities -->
-            <circle cx="250" cy="270" r="4" fill="#1a3a5c" opacity="0.7"/>
-            <text x="270" y="275" class="map-label-minor">San Marcos</text>
+  <!-- San Antonio Hub -->
+  <circle cx="220" cy="340" r="6" fill="var(--color-primary)" class="map-dot"/>
+  <text x="220" y="360" text-anchor="middle" class="map-label-major" font-size="13" font-weight="600" fill="#1a3a5c">San Antonio</text>
 
-            <circle cx="240" cy="285" r="4" fill="#1a3a5c" opacity="0.7"/>
-            <text x="260" y="290" class="map-label-minor">Kyle</text>
+  <!-- Central TX cities -->
+  <circle cx="280" cy="280" r="3" fill="var(--color-primary)" opacity="0.5"/>
+  <text x="298" y="284" class="map-label-minor" font-size="10" fill="#6B6B6B">San Marcos</text>
 
-            <circle cx="235" cy="300" r="4" fill="#1a3a5c" opacity="0.7"/>
-            <text x="255" y="305" class="map-label-minor">Buda</text>
+  <circle cx="272" cy="295" r="3" fill="var(--color-primary)" opacity="0.5"/>
+  <text x="290" y="299" class="map-label-minor" font-size="10" fill="#6B6B6B">Kyle</text>
 
-            <circle cx="210" cy="275" r="4" fill="#1a3a5c" opacity="0.7"/>
-            <text x="185" y="275" text-anchor="end" class="map-label-minor">Lockhart</text>
+  <circle cx="265" cy="308" r="3" fill="var(--color-primary)" opacity="0.5"/>
+  <text x="283" y="312" class="map-label-minor" font-size="10" fill="#6B6B6B">Buda</text>
 
-            <circle cx="260" cy="240" r="4" fill="#1a3a5c" opacity="0.7"/>
-            <text x="280" y="245" class="map-label-minor">Bastrop</text>
+  <circle cx="235" cy="285" r="3" fill="var(--color-primary)" opacity="0.5"/>
+  <text x="218" y="289" text-anchor="end" class="map-label-minor" font-size="10" fill="#6B6B6B">Lockhart</text>
 
-            <circle cx="250" cy="225" r="4" fill="#1a3a5c" opacity="0.7"/>
-            <text x="270" y="230" class="map-label-minor">Del Valle</text>
+  <circle cx="290" cy="252" r="3" fill="var(--color-primary)" opacity="0.5"/>
+  <text x="308" y="256" class="map-label-minor" font-size="10" fill="#6B6B6B">Bastrop</text>
 
-            <circle cx="245" cy="210" r="4" fill="#1a3a5c" opacity="0.7"/>
-            <text x="265" y="215" class="map-label-minor">Hutto</text>
+  <circle cx="278" cy="240" r="3" fill="var(--color-primary)" opacity="0.5"/>
+  <text x="296" y="244" class="map-label-minor" font-size="10" fill="#6B6B6B">Del Valle</text>
 
-            <!-- DFW surrounding -->
-            <circle cx="300" cy="80" r="4" fill="#1a3a5c" opacity="0.7"/>
-            <text x="320" y="85" class="map-label-minor">Plano</text>
+  <!-- DFW cities - spread out more -->
+  <circle cx="340" cy="82" r="3" fill="var(--color-primary)" opacity="0.5"/>
+  <text x="356" y="86" class="map-label-minor" font-size="10" fill="#6B6B6B">Plano</text>
 
-            <circle cx="310" cy="70" r="4" fill="#1a3a5c" opacity="0.7"/>
-            <text x="330" y="75" class="map-label-minor">McKinney</text>
+  <circle cx="355" cy="70" r="3" fill="var(--color-primary)" opacity="0.5"/>
+  <text x="371" y="74" class="map-label-minor" font-size="10" fill="#6B6B6B">McKinney</text>
 
-            <circle cx="320" cy="60" r="4" fill="#1a3a5c" opacity="0.7"/>
-            <text x="340" y="65" class="map-label-minor">Princeton</text>
+  <circle cx="370" cy="58" r="3" fill="var(--color-primary)" opacity="0.5"/>
+  <text x="386" y="62" class="map-label-minor" font-size="10" fill="#6B6B6B">Princeton</text>
 
-            <circle cx="260" cy="80" r="4" fill="#1a3a5c" opacity="0.7"/>
-            <text x="240" y="80" text-anchor="end" class="map-label-minor">Arlington</text>
+  <circle cx="280" cy="85" r="3" fill="var(--color-primary)" opacity="0.5"/>
+  <text x="263" y="89" text-anchor="end" class="map-label-minor" font-size="10" fill="#6B6B6B">Arlington</text>
 
-            <circle cx="300" cy="60" r="4" fill="#1a3a5c" opacity="0.7"/>
-            <text x="320" y="55" class="map-label-minor">Frisco</text>
+  <circle cx="345" cy="55" r="3" fill="var(--color-primary)" opacity="0.5"/>
+  <text x="361" y="50" class="map-label-minor" font-size="10" fill="#6B6B6B">Frisco</text>
 
-            <circle cx="270" cy="65" r="4" fill="#1a3a5c" opacity="0.7"/>
-            <text x="250" y="60" text-anchor="end" class="map-label-minor">Denton</text>
+  <circle cx="290" cy="62" r="3" fill="var(--color-primary)" opacity="0.5"/>
+  <text x="273" y="57" text-anchor="end" class="map-label-minor" font-size="10" fill="#6B6B6B">Denton</text>
 
-            <!-- San Antonio surrounding -->
-            <circle cx="220" cy="305" r="4" fill="#1a3a5c" opacity="0.7"/>
-            <text x="240" y="315" class="map-label-minor">New Braunfels</text>
+  <circle cx="285" cy="100" r="3" fill="var(--color-primary)" opacity="0.5"/>
+  <text x="268" y="104" text-anchor="end" class="map-label-minor" font-size="10" fill="#6B6B6B">Irving</text>
 
-            <circle cx="210" cy="335" r="4" fill="#1a3a5c" opacity="0.7"/>
-            <text x="230" y="345" class="map-label-minor">Seguin</text>
-          </svg>
+  <!-- SA surrounding -->
+  <circle cx="250" cy="315" r="3" fill="var(--color-primary)" opacity="0.5"/>
+  <text x="268" y="325" class="map-label-minor" font-size="10" fill="#6B6B6B">New Braunfels</text>
+
+  <circle cx="240" cy="350" r="3" fill="var(--color-primary)" opacity="0.5"/>
+  <text x="258" y="354" class="map-label-minor" font-size="10" fill="#6B6B6B">Seguin</text>
+</svg>
         </div>
 
         <!-- Cities List -->
