@@ -406,12 +406,12 @@ p {
 .logo {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 12px;
   font-family: var(--font-display);
-  font-size: 1.35rem;
+  font-size: 1.2rem;
   font-weight: 700;
   color: var(--color-primary-dark);
-  letter-spacing: -0.02em;
+  letter-spacing: 0.06em;
   text-transform: uppercase;
 }
 
@@ -420,17 +420,32 @@ p {
 }
 
 .logo-icon {
-  width: 40px;
-  height: 40px;
-  background: var(--color-secondary);
-  border-radius: var(--radius-sm);
+  width: 42px;
+  height: 42px;
+  background: linear-gradient(135deg, var(--color-primary-dark) 0%, var(--color-primary) 100%);
+  border-radius: var(--radius-md);
   display: flex;
   align-items: center;
   justify-content: center;
   color: white;
   font-weight: 800;
-  font-size: 1rem;
-  letter-spacing: 0;
+  font-size: 0.95rem;
+  letter-spacing: 0.05em;
+  font-family: var(--font-display);
+  box-shadow: 0 2px 8px rgba(10, 36, 59, 0.3);
+  position: relative;
+}
+
+.logo-icon::after {
+  content: '';
+  position: absolute;
+  bottom: -3px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 18px;
+  height: 3px;
+  background: var(--color-secondary);
+  border-radius: 2px;
 }
 
 /* Nav Links */
@@ -2045,6 +2060,11 @@ footer,
 
 .footer .logo {
   color: var(--color-text-inverse);
+}
+
+.footer .logo-icon {
+  background: linear-gradient(135deg, rgba(255,255,255,0.15) 0%, rgba(255,255,255,0.08) 100%);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
 }
 
 /* ==========================================================================
