@@ -30,6 +30,74 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   }
 
+  // --- Mobile Dropdown Toggle ---
+  var mobileDropdowns = document.querySelectorAll('.mobile-dropdown-toggle');
+  mobileDropdowns.forEach(function (toggle) {
+    // Create dropdown content if it doesn't exist
+    var dropdownContent = toggle.nextElementSibling;
+    if (!dropdownContent || !dropdownContent.classList.contains('mobile-dropdown-content')) {
+      dropdownContent = document.createElement('div');
+      dropdownContent.className = 'mobile-dropdown-content';
+      dropdownContent.style.display = 'none';
+      dropdownContent.style.padding = '0 0 12px 16px';
+
+      // Get links from desktop dropdown
+      var desktopDropdown = document.querySelector('.dropdown-menu');
+      if (desktopDropdown) {
+        var links = desktopDropdown.querySelectorAll('a');
+        links.forEach(function (link) {
+          var mobileLink = document.createElement('a');
+          mobileLink.href = link.href;
+          mobileLink.textContent = link.textContent;
+          mobileLink.style.display = 'block';
+          mobileLink.style.padding = '10px 0';
+          mobileLink.style.fontSize = '1rem';
+          mobileLink.style.fontWeight = '500';
+          mobileLink.style.borderBottom = '1px solid var(--color-border, #D1CBC2)';
+          mobileLink.addEventListener('click', function () {
+            if (mobileNav) {
+              mobileNav.classList.remove('open');
+              document.body.style.overflow = '';
+            }
+          });
+          dropdownContent.appendChild(mobileLink);
+        });
+      }
+      toggle.parentNode.insertBefore(dropdownContent, toggle.nextSibling);
+    }
+
+    toggle.addEventListener('click', function (e) {
+      e.preventDefault();
+      var content = this.nextElementSibling;
+      if (content && content.classList.contains('mobile-dropdown-content')) {
+        var isOpen = content.style.display !== 'none';
+        content.style.display = isOpen ? 'none' : 'block';
+        this.textContent = isOpen ? 'Areas / Áreas ▾' : 'Areas / Áreas ▴';
+      }
+    });
+  });
+
+  // --- Desktop Dropdown Click Toggle ---
+  var dropdowns = document.querySelectorAll('.nav-links .dropdown > a');
+  dropdowns.forEach(function (trigger) {
+    trigger.addEventListener('click', function (e) {
+      e.preventDefault();
+      var parent = this.closest('.dropdown');
+      if (parent) {
+        parent.classList.toggle('active');
+      }
+    });
+  });
+
+  // Close dropdown when clicking outside
+  document.addEventListener('click', function (e) {
+    if (!e.target.closest('.dropdown')) {
+      document.querySelectorAll('.dropdown.active').forEach(function (d) {
+        d.classList.remove('active');
+      });
+    }
+  });
+
   // --- Language Toggle ---
   const langToggles = document.querySelectorAll('.lang-toggle');
   const currentLangSpans = document.querySelectorAll('.current-lang');
