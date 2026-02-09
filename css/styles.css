@@ -839,6 +839,17 @@ p {
   height: 32px;
 }
 
+.trust-text strong {
+  display: block;
+}
+
+.trust-text span {
+  display: block;
+  font-size: 0.88rem;
+  opacity: 0.7;
+  margin-top: 2px;
+}
+
 .trust-label {
   font-family: var(--font-display);
   font-size: 0.9rem;
