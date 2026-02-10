@@ -232,6 +232,10 @@
       .buy-hero { padding: 64px 0 72px; }
       .buy-hero-grid { grid-template-columns: 1.1fr 0.9fr; gap: 48px; }
     }
+    @media (min-width: 768px) and (max-width: 1024px) {
+      .buy-hero-grid { grid-template-columns: 1fr; gap: 32px; }
+      .buy-hero-form { max-width: 520px; }
+    }
 
     /* Value Props - Icon Cards */
     .value-props { padding: var(--section-padding); }
@@ -703,15 +707,15 @@
 
             <div class="form-group">
               <label for="es-buy-phone">Telefono *</label>
-              <input type="tel" name="phone" id="es-buy-phone" required placeholder="(512) 000-0000">
+              <input type="tel" name="phone" id="es-buy-phone" required placeholder="(512) 000-0000" autocomplete="tel">
             </div>
             <div class="form-group">
               <label for="es-buy-name">Nombre *</label>
-              <input type="text" name="name" id="es-buy-name" required placeholder="Juan Perez">
+              <input type="text" name="name" id="es-buy-name" required placeholder="Juan Perez" autocomplete="name">
             </div>
             <div class="form-group">
               <label for="es-buy-location">Ubicacion Deseada</label>
-              <input type="text" name="desired_location" id="es-buy-location" placeholder="Austin, San Marcos, etc.">
+              <input type="text" name="desired_location" id="es-buy-location" placeholder="Austin, San Marcos, etc." autocomplete="address-level2">
             </div>
             <div class="form-group">
               <label for="es-buy-budget">Rango de Presupuesto</label>

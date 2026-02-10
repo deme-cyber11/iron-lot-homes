@@ -183,9 +183,9 @@
           <p data-lang="en">Fill out this quick form and we'll contact you within 24 hours.</p><p data-lang="es">Complete este formulario rapido y le contactaremos dentro de 24 horas.</p>
           <form class="quick-form" data-form="quick-seller" action="https://api.web3forms.com/submit" method="POST">
             <input type="hidden" name="access_key" value="YOUR_WEB3FORMS_KEY"><input type="hidden" name="subject" value="New Seller Lead - Buda ES - Iron Lot Homes"><input type="hidden" name="from_name" value="Iron Lot Homes Website"><input type="checkbox" name="botcheck" style="display:none">
-            <div class="form-group"><label data-lang="en">Phone Number</label><label data-lang="es">Numero de Telefono</label><input type="tel" name="phone" required placeholder="(512) 000-0000"></div>
-            <div class="form-group"><label data-lang="en">Your Name</label><label data-lang="es">Su Nombre</label><input type="text" name="name" required placeholder="Juan Perez"></div>
-            <div class="form-group"><label data-lang="en">Home Location (City or Park Name)</label><label data-lang="es">Ubicacion de la Casa (Ciudad o Parque)</label><input type="text" name="location" required placeholder="Buda, TX o Nombre del Parque"></div>
+            <div class="form-group"><label data-lang="en">Phone Number</label><label data-lang="es">Numero de Telefono</label><input type="tel" name="phone" required placeholder="(512) 000-0000" autocomplete="tel"></div>
+            <div class="form-group"><label data-lang="en">Your Name</label><label data-lang="es">Su Nombre</label><input type="text" name="name" required placeholder="Juan Perez" autocomplete="name"></div>
+            <div class="form-group"><label data-lang="en">Home Location (City or Park Name)</label><label data-lang="es">Ubicacion de la Casa (Ciudad o Parque)</label><input type="text" name="location" required placeholder="Buda, TX o Nombre del Parque" autocomplete="address-level2"></div>
             <div class="form-group"><label data-lang="en">Type of Home</label><label data-lang="es">Tipo de Casa</label><select name="home_type" required><option value="">Select... / Seleccione...</option><option value="single_wide">Single Wide / Sencilla</option><option value="double_wide">Double Wide / Doble</option></select></div>
             <button type="submit" class="btn btn-primary btn-block" data-lang="en">Get My Cash Offer</button><button type="submit" class="btn btn-primary btn-block" data-lang-inline="es">Obtener Mi Oferta</button>
           </form>

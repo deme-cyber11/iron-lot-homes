@@ -234,6 +234,10 @@
       .sell-hero { padding: 64px 0 72px; }
       .sell-hero-grid { grid-template-columns: 1.1fr 0.9fr; gap: 48px; }
     }
+    @media (min-width: 768px) and (max-width: 1024px) {
+      .sell-hero-grid { grid-template-columns: 1fr; gap: 32px; }
+      .sell-hero-form { max-width: 520px; }
+    }
 
     /* Value Props - Icon Cards */
     .value-props { padding: var(--section-padding); }
@@ -639,15 +643,15 @@
 
             <div class="form-group">
               <label for="es-sell-phone">Telefono *</label>
-              <input type="tel" name="phone" id="es-sell-phone" required placeholder="(512) 000-0000">
+              <input type="tel" name="phone" id="es-sell-phone" required placeholder="(512) 000-0000" autocomplete="tel">
             </div>
             <div class="form-group">
               <label for="es-sell-name">Su Nombre *</label>
-              <input type="text" name="name" id="es-sell-name" required placeholder="Juan Perez">
+              <input type="text" name="name" id="es-sell-name" required placeholder="Juan Perez" autocomplete="name">
             </div>
             <div class="form-group">
               <label for="es-sell-location">Ubicacion (Ciudad o Parque) *</label>
-              <input type="text" name="location" id="es-sell-location" required placeholder="Austin, TX">
+              <input type="text" name="location" id="es-sell-location" required placeholder="Austin, TX" autocomplete="address-level2">
             </div>
             <div class="form-group">
               <label for="es-sell-type">Tipo de Casa</label>

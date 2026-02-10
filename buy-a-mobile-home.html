@@ -232,6 +232,10 @@
       .buy-hero { padding: 64px 0 72px; }
       .buy-hero-grid { grid-template-columns: 1.1fr 0.9fr; gap: 48px; }
     }
+    @media (min-width: 768px) and (max-width: 1024px) {
+      .buy-hero-grid { grid-template-columns: 1fr; gap: 32px; }
+      .buy-hero-form { max-width: 520px; }
+    }
 
     /* Value Props - Icon Cards */
     .value-props { padding: var(--section-padding); }
@@ -716,17 +720,17 @@
             <div class="form-group">
               <label for="buy-phone" data-lang="en">Phone Number *</label>
               <label for="buy-phone" data-lang="es">Telefono *</label>
-              <input type="tel" name="phone" id="buy-phone" required placeholder="(512) 000-0000">
+              <input type="tel" name="phone" id="buy-phone" required placeholder="(512) 000-0000" autocomplete="tel">
             </div>
             <div class="form-group">
               <label for="buy-name" data-lang="en">Your Name *</label>
               <label for="buy-name" data-lang="es">Su Nombre *</label>
-              <input type="text" name="name" id="buy-name" required placeholder="John Doe">
+              <input type="text" name="name" id="buy-name" required placeholder="John Doe" autocomplete="name">
             </div>
             <div class="form-group">
               <label for="buy-desired_location" data-lang="en">Desired Location</label>
               <label for="buy-desired_location" data-lang="es">Ubicacion Deseada</label>
-              <input type="text" name="desired_location" id="buy-desired_location" placeholder="Austin, San Marcos, etc.">
+              <input type="text" name="desired_location" id="buy-desired_location" placeholder="Austin, San Marcos, etc." autocomplete="address-level2">
             </div>
             <div class="form-group">
               <label for="buy-budget_range" data-lang="en">Budget Range</label>
