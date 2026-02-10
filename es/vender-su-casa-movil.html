@@ -672,7 +672,7 @@
   </section>
 
   <!-- ===== HOW IT WORKS ===== -->
-  <section class="process-section">
+  <section class="process-section scroll-reveal">
     <div class="container">
       <div class="section-header">
         <span class="section-label">Como Funciona</span>
@@ -706,7 +706,7 @@
   </section>
 
   <!-- ===== SITUATIONS WE HELP WITH ===== -->
-  <section class="situations-section">
+  <section class="situations-section scroll-reveal">
     <div class="container">
       <div class="section-header">
         <span class="section-label">Podemos Ayudar</span>
@@ -730,7 +730,7 @@
   </section>
 
   <!-- ===== FAQ ===== -->
-  <section class="faq-section">
+  <section class="faq-section scroll-reveal">
     <div class="container">
       <div class="section-header">
         <span class="section-label">Preguntas Frecuentes</span>
@@ -788,7 +788,7 @@
   </section>
 
   <!-- ===== TESTIMONIALS ===== -->
-  <section class="sell-testimonials">
+  <section class="sell-testimonials scroll-reveal">
     <div class="container">
       <div class="section-header">
         <span class="section-label">Historias de Vendedores</span>
@@ -920,6 +920,34 @@
       window.addEventListener('scroll', handleScroll, { passive: true });
       handleScroll();
     })();
+  </script>
+
+  <!-- IntersectionObserver for scroll animations -->
+  <script>
+  (function() {
+    var reveals = document.querySelectorAll('.scroll-reveal');
+    if (!reveals.length) return;
+    if ('IntersectionObserver' in window) {
+      var observer = new IntersectionObserver(function(entries) {
+        entries.forEach(function(entry) {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('revealed');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, {
+        threshold: 0.15,
+        rootMargin: '0px 0px -40px 0px'
+      });
+      reveals.forEach(function(el) {
+        observer.observe(el);
+      });
+    } else {
+      reveals.forEach(function(el) {
+        el.classList.add('revealed');
+      });
+    }
+  })();
   </script>
 
 </body>
