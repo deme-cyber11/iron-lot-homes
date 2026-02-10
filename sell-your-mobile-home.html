@@ -233,6 +233,10 @@
       .sell-hero { padding: 64px 0 72px; }
       .sell-hero-grid { grid-template-columns: 1.1fr 0.9fr; gap: 48px; }
     }
+    @media (min-width: 768px) and (max-width: 1024px) {
+      .sell-hero-grid { grid-template-columns: 1fr; gap: 32px; }
+      .sell-hero-form { max-width: 520px; }
+    }
 
     /* Value Props - Icon Cards */
     .value-props { padding: var(--section-padding); }
@@ -256,6 +260,9 @@
       transform: translateY(-2px);
       box-shadow: 0 8px 24px var(--color-shadow);
       border-color: var(--color-secondary);
+    }
+    @media (hover: none) {
+      .vp-card:hover { transform: none; box-shadow: none; border-color: var(--color-border); }
     }
     .vp-icon {
       width: 44px;
@@ -651,17 +658,17 @@
             <div class="form-group">
               <label for="sell-phone" data-lang="en">Phone Number *</label>
               <label for="sell-phone" data-lang="es">Telefono *</label>
-              <input type="tel" name="phone" id="sell-phone" required placeholder="(512) 000-0000">
+              <input type="tel" name="phone" id="sell-phone" required placeholder="(512) 000-0000" autocomplete="tel">
             </div>
             <div class="form-group">
               <label for="sell-name" data-lang="en">Your Name *</label>
               <label for="sell-name" data-lang="es">Su Nombre *</label>
-              <input type="text" name="name" id="sell-name" required placeholder="John Doe">
+              <input type="text" name="name" id="sell-name" required placeholder="John Doe" autocomplete="name">
             </div>
             <div class="form-group">
               <label for="sell-location" data-lang="en">Location (City or Park) *</label>
               <label for="sell-location" data-lang="es">Ubicacion *</label>
-              <input type="text" name="location" id="sell-location" required placeholder="Austin, TX">
+              <input type="text" name="location" id="sell-location" required placeholder="Austin, TX" autocomplete="address-level2">
             </div>
             <div class="form-group">
               <label for="sell-home_type" data-lang="en">Home Type</label>

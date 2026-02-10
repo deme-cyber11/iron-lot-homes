@@ -3191,6 +3191,7 @@ tr:hover td {
   border-radius: var(--radius-lg);
   z-index: 150;
   min-width: 440px;
+  max-width: calc(100vw - 32px);
   padding: 20px;
 }
 
@@ -4370,6 +4371,41 @@ tr:hover td {
 
   .trust-item:last-child {
     grid-column: 1 / -1;
+  }
+}
+
+/* ==========================================================================
+   HOVER SCOPING - Prevent sticky hover on touch devices
+   ========================================================================== */
+
+@media (hover: none) {
+  .hero-badge:hover {
+    background: rgba(255, 255, 255, 0.08);
+    border-color: rgba(255, 255, 255, 0.15);
+  }
+
+  .process-step:hover, .process-card:hover,
+  .service-card:hover,
+  .feature:hover, .feature-card:hover,
+  .testimonial-card:hover {
+    transform: none;
+    box-shadow: 0 2px 12px var(--color-shadow);
+  }
+
+  .service-card:hover::before {
+    transform: scaleY(0);
+  }
+
+  .feature:hover::after, .feature-card:hover::after {
+    transform: scaleX(0);
+  }
+
+  .trust-item:hover::after {
+    width: 0;
+  }
+
+  .service-card:hover {
+    border-color: var(--color-border);
   }
 }
 

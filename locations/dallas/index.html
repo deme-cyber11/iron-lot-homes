@@ -29,6 +29,11 @@
   <link href="https://api.fontshare.com/v2/css?f[]=clash-display@400,500,600,700&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="../../css/styles.css">
+  <style>
+    @media (max-width: 600px) {
+      .location-hero { background-image: url('https://images.unsplash.com/photo-1545194445-dddb8f4487c6?auto=format&fit=crop&w=800&q=75') !important; }
+    }
+  </style>
 
   <!-- Schema: LocalBusiness -->
   <script type="application/ld+json">
@@ -446,17 +451,17 @@
               <div class="form-group">
                 <label data-lang="en">Phone Number</label>
                 <label data-lang="es">Numero de Telefono</label>
-                <input type="tel" name="phone" required placeholder="(214) 000-0000">
+                <input type="tel" name="phone" required placeholder="(214) 000-0000" autocomplete="tel">
               </div>
               <div class="form-group">
                 <label data-lang="en">Your Name</label>
                 <label data-lang="es">Su Nombre</label>
-                <input type="text" name="name" required placeholder="John Doe">
+                <input type="text" name="name" required placeholder="John Doe" autocomplete="name">
               </div>
               <div class="form-group">
                 <label data-lang="en">Home Location (City or Park Name)</label>
                 <label data-lang="es">Ubicacion (Ciudad o Nombre del Parque)</label>
-                <input type="text" name="location" required placeholder="Dallas, TX or Park Name">
+                <input type="text" name="location" required placeholder="Dallas, TX or Park Name" autocomplete="address-level2">
               </div>
               <div class="form-group">
                 <label data-lang="en">Type of Home</label>
