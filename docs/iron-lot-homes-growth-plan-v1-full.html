@@ -450,99 +450,124 @@
   }
 
   /* ========================================
-     REVENUE LEAK (CRITICAL SECTION)
+     STATUS SECTION
      ======================================== */
-  .revenue-leak-section {
+  .status-section {
     background: var(--navy);
     color: var(--white);
     position: relative;
     overflow: hidden;
   }
 
-  .revenue-leak-section::before {
+  .status-section::before {
     content: '';
     position: absolute;
     top: 0;
     left: 0;
     right: 0;
     height: 4px;
-    background: linear-gradient(90deg, var(--red) 0%, var(--orange) 100%);
+    background: linear-gradient(90deg, var(--orange) 0%, var(--green) 100%);
   }
 
-  .revenue-leak-section .section-label {
-    background: rgba(231, 76, 60, 0.2);
-    color: var(--red-light);
+  .status-section .section-label {
+    background: rgba(230, 126, 34, 0.2);
+    color: var(--orange-light);
   }
 
-  .revenue-leak-section h2 { color: var(--white); }
+  .status-section h2 { color: var(--white); }
 
-  .leak-visual {
-    margin: 36px 0;
-    padding: 36px;
-    background: rgba(231, 76, 60, 0.1);
-    border: 1px solid rgba(231, 76, 60, 0.25);
-    border-radius: var(--radius-md);
-    text-align: center;
-  }
-
-  .leak-visual .big-zero {
-    font-size: 6rem;
-    font-weight: 900;
-    color: var(--red);
-    line-height: 1;
-    margin-bottom: 8px;
-  }
-
-  .leak-visual .big-zero-label {
-    font-size: 1.25rem;
-    color: rgba(255,255,255,0.7);
-    font-weight: 500;
-  }
-
-  .leak-code {
-    margin: 28px 0;
-    padding: 20px 24px;
-    background: rgba(0,0,0,0.3);
-    border-radius: var(--radius-sm);
-    font-family: var(--font-mono);
-    font-size: 0.85rem;
-    color: var(--red-light);
-    overflow-x: auto;
-    border-left: 3px solid var(--red);
-  }
-
-  .leak-code .comment { color: rgba(255,255,255,0.3); }
-  .leak-code .key-text { color: var(--orange-light); }
-
-  .leak-math {
+  .status-comparison {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: 1fr 1fr;
     gap: 20px;
-    margin: 36px 0;
+    margin: 32px 0;
   }
 
-  .leak-math-item {
-    text-align: center;
-    padding: 24px 16px;
-    background: rgba(255,255,255,0.05);
+  .status-card {
+    padding: 28px 24px;
     border-radius: var(--radius-md);
-    border: 1px solid rgba(255,255,255,0.08);
+    text-align: center;
   }
 
-  .leak-math-item .math-number {
-    display: block;
-    font-size: 1.75rem;
+  .status-card.current {
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(255,255,255,0.1);
+  }
+
+  .status-card.launched {
+    background: rgba(39,174,96,0.1);
+    border: 1px solid rgba(39,174,96,0.25);
+  }
+
+  .status-card .status-heading {
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+  }
+
+  .status-card.current .status-heading { color: var(--gray-500); }
+  .status-card.launched .status-heading { color: var(--green-light); }
+
+  .status-card .status-value {
+    font-size: 1.5rem;
     font-weight: 800;
-    color: var(--orange);
-    margin-bottom: 4px;
+    margin-bottom: 6px;
   }
 
-  .leak-math-item .math-label {
-    font-size: 0.8rem;
+  .status-card.current .status-value { color: rgba(255,255,255,0.6); }
+  .status-card.launched .status-value { color: var(--green-light); }
+
+  .status-card .status-desc {
+    font-size: 0.85rem;
     color: rgba(255,255,255,0.5);
   }
 
-  .leak-fix-banner {
+  .checklist-status {
+    margin: 28px 0;
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    border: 1px solid rgba(255,255,255,0.1);
+  }
+
+  .checklist-status-header {
+    background: rgba(255,255,255,0.08);
+    padding: 14px 24px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.5);
+  }
+
+  .checklist-status-row {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 12px 24px;
+    border-bottom: 1px solid rgba(255,255,255,0.06);
+  }
+
+  .checklist-status-row:last-child { border-bottom: none; }
+
+  .status-dot { font-size: 1.1rem; font-weight: 800; }
+  .status-name { color: rgba(255,255,255,0.9); font-weight: 600; }
+  .status-detail { color: rgba(255,255,255,0.4); flex: 1; text-align: right; font-size: 0.85rem; }
+
+  .status-badge-sm {
+    font-size: 0.7rem;
+    font-weight: 700;
+    padding: 3px 10px;
+    border-radius: 20px;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+
+  .status-badge-sm.done { background: rgba(76,175,80,0.15); color: #4CAF50; }
+  .status-badge-sm.pending { background: rgba(230,126,34,0.15); color: var(--orange-light); }
+
+  .launch-banner {
     margin-top: 32px;
     padding: 24px 32px;
     background: linear-gradient(135deg, rgba(39,174,96,0.15) 0%, rgba(46,204,113,0.1) 100%);
@@ -553,21 +578,20 @@
     gap: 16px;
   }
 
-  .leak-fix-banner .fix-icon {
+  .launch-banner .fix-icon {
     font-size: 2rem;
     flex-shrink: 0;
   }
 
-  .leak-fix-banner .fix-text {
+  .launch-banner .fix-text {
     font-size: 1rem;
     color: rgba(255,255,255,0.9);
   }
 
-  .leak-fix-banner .fix-text strong { color: var(--green-light); }
+  .launch-banner .fix-text strong { color: var(--green-light); }
 
   @media (max-width: 600px) {
-    .leak-math { grid-template-columns: 1fr; }
-    .leak-visual .big-zero { font-size: 4rem; }
+    .status-comparison { grid-template-columns: 1fr; }
   }
 
   /* ========================================
@@ -603,7 +627,7 @@
     flex-shrink: 0;
   }
 
-  .phase-badge.urgent { background: linear-gradient(135deg, var(--red) 0%, #c0392b 100%); color: var(--white); }
+  .phase-badge.urgent { background: linear-gradient(135deg, var(--orange) 0%, var(--orange-dark) 100%); color: var(--white); }
   .phase-badge.build { background: linear-gradient(135deg, var(--orange) 0%, var(--orange-dark) 100%); color: var(--white); }
   .phase-badge.grow { background: linear-gradient(135deg, var(--orange-light) 0%, var(--orange) 100%); color: var(--white); }
   .phase-badge.scale { background: linear-gradient(135deg, var(--green) 0%, #1e8449 100%); color: var(--white); }
@@ -778,7 +802,7 @@
     color: var(--navy);
   }
 
-  .roi-table .revenue-row td.now-val { color: var(--red); }
+  .roi-table .revenue-row td.now-val { color: var(--gray-500); }
 
   .roi-note {
     margin-top: 16px;
@@ -940,7 +964,7 @@
   .pricing-list li:last-child { border-bottom: none; }
 
   .pricing-list li::before {
-    content: '&#9654;';
+    content: '\25B6';
     position: absolute;
     left: 0;
     color: var(--orange);
@@ -1330,7 +1354,7 @@
     transition: width 0.3s ease;
   }
 
-  .timeline-bar .segment.week1 { background: var(--red); width: 12%; }
+  .timeline-bar .segment.week1 { background: var(--orange); width: 12%; }
   .timeline-bar .segment.week23 { background: var(--orange); width: 18%; }
   .timeline-bar .segment.week46 { background: var(--orange-light); width: 20%; }
   .timeline-bar .segment.month23 { background: var(--green); width: 25%; }
@@ -1348,7 +1372,7 @@
     font-weight: 600;
   }
 
-  .timeline-labels span:nth-child(1) { width: 12%; color: var(--red); }
+  .timeline-labels span:nth-child(1) { width: 12%; color: var(--orange); }
   .timeline-labels span:nth-child(2) { width: 18%; color: var(--orange); }
   .timeline-labels span:nth-child(3) { width: 20%; color: var(--orange-light); }
   .timeline-labels span:nth-child(4) { width: 25%; color: var(--green); }
@@ -1410,10 +1434,10 @@
       <li><a href="#welcome">Welcome &amp; Executive Summary</a></li>
       <li><a href="#strengths">What's Already Built &amp; Ready</a></li>
       <li><a href="#scorecard">Your Website Scorecard</a></li>
-      <li><a href="#revenue-leak">The Opportunity Cost &mdash; Why Launch Timing Matters</a></li>
+      <li><a href="#status">Where Things Stand Today</a></li>
       <li><a href="#issues">Pre-Launch Checklist</a></li>
       <li><a href="#roadmap">Your 90-Day Growth Roadmap</a></li>
-      <li><a href="#roi">ROI Projection</a></li>
+      <li><a href="#roi">Growth Benchmarks</a></li>
       <li><a href="#deliverables">What You Get Every Month</a></li>
       <li><a href="#investment">Your Investment</a></li>
       <li><a href="#start">Let's Get Started</a></li>
@@ -1587,83 +1611,64 @@
   </section>
 
   <!-- ============================================
-       SECTION 4: THE REVENUE LEAK
+       SECTION 4: WHERE THINGS STAND
        ============================================ -->
-  <section class="revenue-leak-section page-break" id="revenue-leak">
+  <section class="status-section page-break" id="status">
     <div class="section-label">Section 04</div>
-    <h2 class="section-title">The Opportunity Cost</h2>
-    <p style="font-size: 1.15rem; color: rgba(255,255,255,0.7); margin-bottom: 32px; line-height: 1.7;">
-      Wayne, your website is built and sitting on GitHub as a demo. <strong style="color: var(--red-light);">It's not live yet.</strong> Until it's connected to your domain and submitted to Google, it can't generate leads.
+    <h2 class="section-title">Where Things Stand Today</h2>
+    <p style="font-size: 1.1rem; color: rgba(255,255,255,0.7); margin-bottom: 32px; line-height: 1.7;">
+      Your website is built and available as a demo. Here's a straightforward look at what's done and what's left to go live.
     </p>
 
-    <div class="leak-visual">
-      <div class="big-zero">$0</div>
-      <div class="big-zero-label">Leads captured from your website right now</div>
+    <div class="status-comparison">
+      <div class="status-card current">
+        <div class="status-heading">Today</div>
+        <div class="status-value">Demo</div>
+        <div class="status-desc">Site is built, hosted on GitHub for preview</div>
+      </div>
+      <div class="status-card launched">
+        <div class="status-heading">After Launch</div>
+        <div class="status-value">Live</div>
+        <div class="status-desc">On your domain, indexed by Google, capturing leads</div>
+      </div>
     </div>
 
-    <p style="color: rgba(255,255,255,0.8); font-size: 1rem; line-height: 1.7;">
-      Your site is built. The content is ready. The forms work (on the demo). But until it's connected to your custom domain, submitted to Google, and properly indexed, <strong style="color: var(--red-light);">nobody can find it</strong>. That means zero organic traffic. Zero form submissions. Zero leads. Every potential seller who searches "sell my mobile home Austin" right now finds your competitors instead.
-    </p>
-
-    <div style="margin: 28px 0; border-radius: 12px; overflow: hidden; border: 1px solid rgba(255,255,255,0.1);">
-      <div style="background: rgba(255,255,255,0.08); padding: 14px 24px; font-size: 0.75rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: rgba(255,255,255,0.5);">Current Status</div>
-      <div style="padding: 8px 0;">
-        <div style="display: flex; align-items: center; gap: 14px; padding: 12px 24px; border-bottom: 1px solid rgba(255,255,255,0.06);">
-          <span style="color: #4CAF50; font-size: 1.1rem; font-weight: 800;">&#9632;</span>
-          <span style="color: rgba(255,255,255,0.9); font-weight: 600;">Demo Site</span>
-          <span style="color: rgba(255,255,255,0.4); flex: 1; text-align: right; font-size: 0.85rem;">github.io/iron-lot-homes</span>
-          <span style="background: rgba(76,175,80,0.15); color: #4CAF50; font-size: 0.7rem; font-weight: 700; padding: 3px 10px; border-radius: 20px; text-transform: uppercase; letter-spacing: 0.05em;">Built</span>
-        </div>
-        <div style="display: flex; align-items: center; gap: 14px; padding: 12px 24px; border-bottom: 1px solid rgba(255,255,255,0.06);">
-          <span style="color: var(--red); font-size: 1.1rem; font-weight: 800;">&#9632;</span>
-          <span style="color: rgba(255,255,255,0.9); font-weight: 600;">Custom Domain</span>
-          <span style="color: rgba(255,255,255,0.4); flex: 1; text-align: right; font-size: 0.85rem;">ironlothomes.com</span>
-          <span style="background: rgba(239,68,68,0.15); color: var(--red-light); font-size: 0.7rem; font-weight: 700; padding: 3px 10px; border-radius: 20px; text-transform: uppercase; letter-spacing: 0.05em;">Not Connected</span>
-        </div>
-        <div style="display: flex; align-items: center; gap: 14px; padding: 12px 24px; border-bottom: 1px solid rgba(255,255,255,0.06);">
-          <span style="color: var(--red); font-size: 1.1rem; font-weight: 800;">&#9632;</span>
-          <span style="color: rgba(255,255,255,0.9); font-weight: 600;">Google Search Console</span>
-          <span style="flex: 1;"></span>
-          <span style="background: rgba(239,68,68,0.15); color: var(--red-light); font-size: 0.7rem; font-weight: 700; padding: 3px 10px; border-radius: 20px; text-transform: uppercase; letter-spacing: 0.05em;">Not Submitted</span>
-        </div>
-        <div style="display: flex; align-items: center; gap: 14px; padding: 12px 24px;">
-          <span style="color: var(--red); font-size: 1.1rem; font-weight: 800;">&#9632;</span>
-          <span style="color: rgba(255,255,255,0.9); font-weight: 600;">Google Business Profile</span>
-          <span style="flex: 1;"></span>
-          <span style="background: rgba(239,68,68,0.15); color: var(--red-light); font-size: 0.7rem; font-weight: 700; padding: 3px 10px; border-radius: 20px; text-transform: uppercase; letter-spacing: 0.05em;">Not Created</span>
-        </div>
+    <div class="checklist-status">
+      <div class="checklist-status-header">Launch Checklist</div>
+      <div class="checklist-status-row">
+        <span class="status-dot" style="color: #4CAF50;">&#9632;</span>
+        <span class="status-name">Demo Site</span>
+        <span class="status-detail">github.io/iron-lot-homes</span>
+        <span class="status-badge-sm done">Built</span>
       </div>
-      <div style="background: rgba(239,68,68,0.08); padding: 12px 24px; text-align: center; font-size: 0.8rem; color: var(--red-light); font-weight: 600; letter-spacing: 0.03em;">Invisible to Google, invisible to customers</div>
-    </div>
-
-    <h3 style="color: var(--white); margin: 32px 0 20px; font-size: 1.2rem;">What Delaying Launch Is Costing You</h3>
-
-    <div class="leak-math">
-      <div class="leak-math-item">
-        <span class="math-number">0</span>
-        <span class="math-label">Monthly visitors (site not live)</span>
+      <div class="checklist-status-row">
+        <span class="status-dot" style="color: var(--orange);">&#9632;</span>
+        <span class="status-name">Custom Domain</span>
+        <span class="status-detail">ironlothomes.com</span>
+        <span class="status-badge-sm pending">Ready to Connect</span>
       </div>
-      <div class="leak-math-item">
-        <span class="math-number">0</span>
-        <span class="math-label">Leads per month (not indexed by Google)</span>
+      <div class="checklist-status-row">
+        <span class="status-dot" style="color: var(--orange);">&#9632;</span>
+        <span class="status-name">Google Search Console</span>
+        <span class="status-detail"></span>
+        <span class="status-badge-sm pending">At Launch</span>
       </div>
-      <div class="leak-math-item">
-        <span class="math-number">$0</span>
-        <span class="math-label">Revenue from organic search</span>
+      <div class="checklist-status-row">
+        <span class="status-dot" style="color: var(--orange);">&#9632;</span>
+        <span class="status-name">Google Business Profile</span>
+        <span class="status-detail"></span>
+        <span class="status-badge-sm pending">At Launch</span>
       </div>
     </div>
 
     <p style="color: rgba(255,255,255,0.7); font-size: 0.95rem; line-height: 1.7;">
-      Once launched and properly optimized, similar sites in your market generate 3-8 leads per month within 60-90 days. At $5,000 to $15,000 per closed deal, that's potentially <strong style="color: var(--orange);">$15,000 to $120,000 per year</strong> in organic revenue. But the clock doesn't start until the site goes live.
-    </p>
-    <p style="color: rgba(255,255,255,0.7); font-size: 0.95rem; line-height: 1.7;">
-      The sooner the site goes live, the sooner Google begins indexing your pages and the sooner leads can start coming in.
+      The site, content, and forms are all ready. The remaining steps &mdash; connecting your domain, submitting to Google, and installing analytics &mdash; happen at launch. Once live, Google typically begins indexing pages within 1-2 weeks.
     </p>
 
-    <div class="leak-fix-banner">
+    <div class="launch-banner">
       <div class="fix-icon" aria-hidden="true">&#9654;</div>
       <div class="fix-text">
-        <strong>Your site is ready to launch.</strong> We connect your custom domain, configure DNS, submit to Google Search Console, install analytics, and your site goes live. You start appearing in Google within 1-2 weeks.
+        <strong>What launch looks like:</strong> We connect your custom domain, configure DNS, submit to Google Search Console, install analytics, and your site goes live.
       </div>
     </div>
   </section>
@@ -1683,7 +1688,7 @@
       <ul class="issue-list">
         <li>
           <span class="issue-num critical-num">1</span>
-          <div><strong>Connect custom domain.</strong> Currently serving from GitHub Pages. Need to connect ironlothomes.com, configure DNS, and verify ownership. Without this, the site remains invisible to customers.</div>
+          <div><strong>Connect custom domain.</strong> Currently serving from GitHub Pages. Need to connect ironlothomes.com, configure DNS, and verify ownership so customers can find you at your own address.</div>
         </li>
         <li>
           <span class="issue-num critical-num">2</span>
@@ -1898,15 +1903,15 @@
        ============================================ -->
   <section class="roi-section page-break" id="roi">
     <div class="section-label">Section 07</div>
-    <h2 class="section-title">ROI Projection for Iron Lot Homes</h2>
-    <p class="section-subtitle">Conservative estimates based on your market, deal sizes, and the growth trajectory we've seen with similar local service businesses.</p>
+    <h2 class="section-title">Growth Benchmarks</h2>
+    <p class="section-subtitle">General benchmarks for what growth typically looks like for local service businesses investing in SEO and digital marketing. Your results will vary based on market, competition, and engagement.</p>
 
     <div class="roi-table-wrap">
       <table class="roi-table">
         <thead>
           <tr>
             <th>Metric</th>
-            <th class="now-col">Now</th>
+            <th class="now-col">Starting Point</th>
             <th class="m3-col">Month 3</th>
             <th class="m6-col">Month 6</th>
             <th class="m12-col">Month 12</th>
@@ -1915,52 +1920,45 @@
         <tbody>
           <tr>
             <td>Monthly Website Visitors</td>
-            <td style="color: var(--red); font-weight: 700;">0 (not live)</td>
+            <td style="color: var(--gray-500); font-weight: 600;">Baseline</td>
             <td>300-500</td>
             <td>800-1,200</td>
-            <td>2,000-3,000</td>
+            <td>1,500-2,500</td>
           </tr>
           <tr>
             <td>Form Submissions / Month</td>
-            <td style="color: var(--red); font-weight: 700;">0 (not live)</td>
-            <td>10-20</td>
-            <td>25-40</td>
-            <td>60-90</td>
+            <td style="color: var(--gray-500); font-weight: 600;">Baseline</td>
+            <td>5-15</td>
+            <td>15-30</td>
+            <td>30-50</td>
           </tr>
           <tr>
             <td>Phone Calls / Month</td>
-            <td style="color: var(--red); font-weight: 700;">0 (not live)</td>
-            <td>15-25</td>
-            <td>35-50</td>
-            <td>70-100</td>
+            <td style="color: var(--gray-500); font-weight: 600;">Baseline</td>
+            <td>10-20</td>
+            <td>20-35</td>
+            <td>35-60</td>
           </tr>
           <tr>
             <td>Google Rankings (Top 10)</td>
-            <td style="color: var(--red); font-weight: 700;">0 (not indexed)</td>
-            <td>8-12</td>
-            <td>20-30</td>
-            <td>50+</td>
+            <td style="color: var(--gray-500); font-weight: 600;">Baseline</td>
+            <td>5-10</td>
+            <td>15-25</td>
+            <td>30-50</td>
           </tr>
           <tr>
             <td>Google Reviews</td>
             <td>0</td>
-            <td>10-15</td>
-            <td>25-35</td>
-            <td>50+</td>
-          </tr>
-          <tr class="revenue-row">
-            <td>Est. Monthly Revenue from Web Leads</td>
-            <td class="now-val">$0</td>
-            <td>$10K-$25K</td>
-            <td>$25K-$60K</td>
-            <td>$60K-$135K</td>
+            <td>8-12</td>
+            <td>20-30</td>
+            <td>40+</td>
           </tr>
         </tbody>
       </table>
     </div>
 
     <p class="roi-note">
-      Revenue estimates based on 5-10% lead-to-close rate at $5,000-$15,000 average deal size. Actual results depend on market conditions, response time, and close rate. These are conservative projections &mdash; top performers in this space often exceed these numbers.
+      These are general benchmarks, not guarantees. Every market is different. We'll set specific, realistic targets for your business once we have baseline data. Results depend on market conditions, how quickly leads are followed up on, and overall engagement with the process.
     </p>
   </section>
 
@@ -2098,8 +2096,8 @@
     <div class="cta-steps">
       <div class="cta-step">
         <div class="step-number">1</div>
-        <h4>Say the Word</h4>
-        <p>Reply to this email, call, or text us. That's it. No lengthy onboarding process, no paperwork marathon.</p>
+        <h4>Let Us Know</h4>
+        <p>Reply to this email, call, or text us. We'll answer any questions and send over a simple agreement.</p>
       </div>
       <div class="cta-step">
         <div class="step-number">2</div>
@@ -2108,13 +2106,13 @@
       </div>
       <div class="cta-step">
         <div class="step-number">3</div>
-        <h4>Leads Start Flowing</h4>
-        <p>Within 2-4 weeks, you start appearing in search results. First organic leads arrive. You focus on closing deals &mdash; we handle growth.</p>
+        <h4>Growth Begins</h4>
+        <p>Within 2-4 weeks, you start appearing in search results. You focus on your business &mdash; we handle the online side.</p>
       </div>
     </div>
 
     <div class="cta-contact">
-      <p style="font-size: 1rem; margin-bottom: 4px; color: rgba(255,255,255,0.6);">Ready to get started?</p>
+      <p style="font-size: 1rem; margin-bottom: 4px; color: rgba(255,255,255,0.6);">Questions or ready to move forward?</p>
       <div class="contact-row">
         <div class="contact-item">
           <a href="tel:7344761457">(734) 476-1457</a>
@@ -2127,7 +2125,7 @@
 
     <div class="cta-closing">
       <p>
-        Your website is ready to go, Wayne. The foundation is built. The next step is yours.
+        Wayne, the foundation is built. We're here whenever you're ready to talk it through.
       </p>
     </div>
   </section>
