@@ -28,7 +28,7 @@ jobs:
           mkdir -p _site
           cp -r index.html about.html sell-your-mobile-home.html buy-a-mobile-home.html _site/ 2>/dev/null || true
           cp -r 404.html _site/ 2>/dev/null || true
-          cp -r css js locations es images _site/ 2>/dev/null || true
+          cp -r css js locations es images docs _site/ 2>/dev/null || true
           cp -r sitemap.xml robots.txt favicon.svg .nojekyll _site/ 2>/dev/null || true
           cp -r CNAME _site/ 2>/dev/null || true
       - name: Setup Pages
