@@ -866,12 +866,12 @@
     border: 1px solid rgba(255,255,255,0.1);
   }
 
-  .pricing-card.monthly {
+  .pricing-card.monthly, .pricing-card.featured {
     background: linear-gradient(145deg, rgba(230,126,34,0.15) 0%, rgba(243,156,18,0.1) 100%);
     border: 2px solid var(--orange);
   }
 
-  .pricing-card.monthly::before {
+  .pricing-card.monthly::before, .pricing-card.featured::before {
     content: 'RECOMMENDED';
     position: absolute;
     top: -12px;
@@ -918,6 +918,77 @@
     color: rgba(255,255,255,0.7);
     line-height: 1.6;
   }
+
+  .pricing-card.featured .pricing-amount { color: var(--orange); }
+
+  .pricing-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: left;
+  }
+
+  .pricing-list li {
+    padding: 10px 0;
+    border-bottom: 1px solid rgba(255,255,255,0.06);
+    color: rgba(255,255,255,0.8);
+    font-size: 0.9rem;
+    padding-left: 20px;
+    position: relative;
+  }
+
+  .pricing-list li:last-child { border-bottom: none; }
+
+  .pricing-list li::before {
+    content: '&#9654;';
+    position: absolute;
+    left: 0;
+    color: var(--orange);
+    font-size: 0.6rem;
+    top: 13px;
+  }
+
+  .addon-card {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 24px 32px;
+    background: rgba(255,255,255,0.04);
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: var(--radius-lg);
+    margin-bottom: 36px;
+  }
+
+  .addon-label {
+    font-size: 0.65rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: rgba(255,255,255,0.4);
+    margin-bottom: 6px;
+  }
+
+  .addon-info h4 {
+    color: var(--white);
+    font-size: 1.05rem;
+    margin-bottom: 4px;
+  }
+
+  .addon-info p {
+    color: rgba(255,255,255,0.5);
+    font-size: 0.85rem;
+    margin: 0;
+  }
+
+  .addon-price {
+    font-size: 2rem;
+    font-weight: 900;
+    color: var(--orange);
+    white-space: nowrap;
+  }
+
+  .addon-price .dollar { font-size: 1.2rem; vertical-align: super; }
+  .addon-period { font-size: 0.85rem; font-weight: 400; color: rgba(255,255,255,0.4); }
 
   .pricing-context {
     text-align: center;
@@ -969,6 +1040,7 @@
   @media (max-width: 600px) {
     .pricing-cards { grid-template-columns: 1fr; }
     .pricing-card .pricing-amount { font-size: 2.75rem; }
+    .addon-card { flex-direction: column; text-align: center; gap: 16px; }
   }
 
   /* ========================================
@@ -1359,7 +1431,7 @@
         We've spent the past week building and reviewing your demo website for <strong>ironlothomes.com</strong>. We created all 36 pages with bilingual content, implemented schema markup across every page, built 34 location-specific pages, and designed a conversion-focused layout that follows proven best practices.
       </p>
       <p>
-        Here's the headline: <span class="highlight">You have something genuinely impressive ready to launch.</span> The bilingual architecture, the 34 location pages with unique localized content, the schema markup, the conversion-focused layout &mdash; this is a foundation that most competitors in your space don't have and would pay thousands to build.
+        Here's the summary: <span class="highlight">Your site is built and ready to launch.</span> The bilingual architecture, the 34 location pages with unique localized content, the schema markup, the conversion-focused layout &mdash; this is a solid foundation that most competitors in your space don't have.
       </p>
       <p>
         But here's the reality: <strong>It's not live yet.</strong>
@@ -1371,7 +1443,7 @@
         The good news? Your site is ready to launch. Within 2-4 weeks, you should see your first organic leads. The rest of this document shows exactly what happens in what order, and what the results will look like.
       </p>
       <p>
-        Let's launch this website and turn it into a deal-generating machine.
+        Here's what the launch process looks like and the growth plan that follows.
       </p>
     </div>
 
@@ -1518,10 +1590,10 @@
        SECTION 4: THE REVENUE LEAK
        ============================================ -->
   <section class="revenue-leak-section page-break" id="revenue-leak">
-    <div class="section-label">Critical Finding</div>
+    <div class="section-label">Section 04</div>
     <h2 class="section-title">The Opportunity Cost</h2>
     <p style="font-size: 1.15rem; color: rgba(255,255,255,0.7); margin-bottom: 32px; line-height: 1.7;">
-      Wayne, this is the single most important thing in this document. You have a professionally-built website sitting on GitHub. <strong style="color: var(--red-light);">It's not live yet.</strong> Every day it sits unlaunched is a day you're not capturing leads.
+      Wayne, your website is built and sitting on GitHub as a demo. <strong style="color: var(--red-light);">It's not live yet.</strong> Until it's connected to your domain and submitted to Google, it can't generate leads.
     </p>
 
     <div class="leak-visual">
@@ -1585,13 +1657,13 @@
       Once launched and properly optimized, similar sites in your market generate 3-8 leads per month within 60-90 days. At $5,000 to $15,000 per closed deal, that's potentially <strong style="color: var(--orange);">$15,000 to $120,000 per year</strong> in organic revenue. But the clock doesn't start until the site goes live.
     </p>
     <p style="color: rgba(255,255,255,0.7); font-size: 0.95rem; line-height: 1.7;">
-      Every week you wait to launch is another week your competitors are capturing those searchers. Time to market matters.
+      The sooner the site goes live, the sooner Google begins indexing your pages and the sooner leads can start coming in.
     </p>
 
     <div class="leak-fix-banner">
       <div class="fix-icon" aria-hidden="true">&#9654;</div>
       <div class="fix-text">
-        <strong>Your site is ready to launch.</strong> We connect your custom domain, configure DNS, submit to Google Search Console, install analytics, and your site goes live. You start appearing in Google within 1-2 weeks. This is Day 1, Priority 1.
+        <strong>Your site is ready to launch.</strong> We connect your custom domain, configure DNS, submit to Google Search Console, install analytics, and your site goes live. You start appearing in Google within 1-2 weeks.
       </div>
     </div>
   </section>
@@ -1695,7 +1767,7 @@
   <section class="roadmap-section page-break" id="roadmap">
     <div class="section-label">Section 06</div>
     <h2 class="section-title">Your 90-Day Growth Roadmap</h2>
-    <p class="section-subtitle">A prioritized action plan, starting with the changes that generate immediate revenue and building toward market dominance.</p>
+    <p class="section-subtitle">A prioritized action plan, starting with the changes that have the most immediate impact and building toward long-term growth.</p>
 
     <div class="timeline-bar">
       <div class="segment week1"></div>
@@ -1805,7 +1877,7 @@
     <div class="roadmap-phase">
       <div class="phase-header">
         <div class="phase-badge dominate">M4</div>
-        <h3>Market Domination <span class="timeframe">Months 4-6</span></h3>
+        <h3>Sustained Growth <span class="timeframe">Months 4-6</span></h3>
       </div>
       <ul class="phase-tasks">
         <li>Expand location page coverage to additional Central Texas and DFW cities</li>
@@ -1816,7 +1888,7 @@
         <li>A/B test landing pages and form variations for conversion rate optimization</li>
       </ul>
       <div class="phase-result">
-        <strong>Result:</strong> Dominant local presence across Central Texas and DFW. Consistent lead flow from organic, local, social, and paid channels. Predictable deal pipeline.
+        <strong>Result:</strong> Strong local presence across Central Texas and DFW. Consistent lead flow from organic, local, social, and paid channels. Predictable deal pipeline.
       </div>
     </div>
   </section>
@@ -1929,7 +2001,7 @@
       <div class="deliverable-card">
         <span class="d-icon" aria-hidden="true">&#9632;</span>
         <h4>Competitor Monitoring</h4>
-        <p>Track how your top competitors rank, what content they're publishing, and where you can outmaneuver them. Stay one step ahead.</p>
+        <p>Track how your top competitors rank, what content they're publishing, and where opportunities exist to differentiate.</p>
       </div>
       <div class="deliverable-card">
         <span class="d-icon" aria-hidden="true">&#9654;</span>
@@ -1950,30 +2022,48 @@
   <section class="investment-section page-break" id="investment">
     <div class="section-label">Section 09</div>
     <h2 class="section-title">Your Investment</h2>
-    <p class="section-subtitle">Straightforward pricing. No hidden fees. No long-term contracts. No BS.</p>
+    <p class="section-subtitle">Straightforward pricing. No hidden fees. No long-term contracts.</p>
 
     <div class="pricing-cards">
       <div class="pricing-card one-time">
-        <div class="pricing-type">One-Time</div>
+        <div class="pricing-type">Launch Package</div>
         <div class="pricing-amount"><span class="dollar">$</span>300</div>
-        <div class="pricing-period">Launch & Setup</div>
-        <div class="pricing-desc">
-          Custom domain connection, DNS configuration, form setup, analytics installation, Search Console submission, and all launch deliverables. Your site goes from demo to live and generating leads.
-        </div>
+        <div class="pricing-period">One-Time</div>
+        <ul class="pricing-list">
+          <li>36+ page site deployed to your domain</li>
+          <li>Google Business Profile setup</li>
+          <li>GA4, Search Console &amp; conversion tracking</li>
+          <li>Lead capture forms &amp; call tracking</li>
+          <li>Professional business email setup</li>
+        </ul>
       </div>
-      <div class="pricing-card monthly">
-        <div class="pricing-type">Monthly</div>
+      <div class="pricing-card monthly featured">
+        <div class="pricing-type">Growth &amp; SEO</div>
         <div class="pricing-amount"><span class="dollar">$</span>300</div>
-        <div class="pricing-period">SEO &amp; Lead Generation</div>
-        <div class="pricing-desc">
-          Ongoing optimization, content creation, Google Business Profile management, local SEO, keyword tracking, monthly reporting, bi-weekly calls, and unlimited support.
-        </div>
+        <div class="pricing-period">Per Month</div>
+        <ul class="pricing-list">
+          <li>Active lead generation &amp; tracking</li>
+          <li>Monthly SEO &amp; content strategy</li>
+          <li>Google Business Profile management</li>
+          <li>Performance reports &amp; strategy calls</li>
+          <li>Dedicated account manager</li>
+          <li>On-demand technical support</li>
+        </ul>
       </div>
+    </div>
+
+    <div class="addon-card">
+      <div class="addon-info">
+        <div class="addon-label">Optional Add-On</div>
+        <h4>Social Media Management</h4>
+        <p>Platform management &#183; Content calendar &#183; 3-4 posts/week &#183; Community engagement</p>
+      </div>
+      <div class="addon-price">+<span class="dollar">$</span>100<span class="addon-period"> /month</span></div>
     </div>
 
     <div class="pricing-context">
       <p>
-        <strong>For context:</strong> One closed mobile home deal ($5K-$15K) pays for an entire year of our services. Your total first-year investment is $3,600. One deal covers that. Everything after is pure profit from a channel that compounds over time.
+        <strong>For context:</strong> Your total first-year investment is $3,900. One closed mobile home deal ($5K-$15K) covers the full year of service.
       </p>
     </div>
 
@@ -2003,7 +2093,7 @@
   <section class="cta-section page-break" id="start">
     <div class="section-label">Section 10</div>
     <h2 class="section-title">Let's Get Started</h2>
-    <p class="section-subtitle" style="max-width: 600px; margin-left: auto; margin-right: auto;">Three simple steps to turn your website into a lead-generating machine.</p>
+    <p class="section-subtitle" style="max-width: 600px; margin-left: auto; margin-right: auto;">Three steps to go from demo to live.</p>
 
     <div class="cta-steps">
       <div class="cta-step">
@@ -2024,7 +2114,7 @@
     </div>
 
     <div class="cta-contact">
-      <p style="font-size: 1rem; margin-bottom: 4px; color: rgba(255,255,255,0.6);">Ready to stop leaving money on the table?</p>
+      <p style="font-size: 1rem; margin-bottom: 4px; color: rgba(255,255,255,0.6);">Ready to get started?</p>
       <div class="contact-row">
         <div class="contact-item">
           <a href="tel:7344761457">(734) 476-1457</a>
@@ -2037,7 +2127,7 @@
 
     <div class="cta-closing">
       <p>
-        Your website is ready to go, Wayne. You have a professionally-built foundation that most competitors don't have and would pay thousands for. Let us launch it and turn it into a revenue-generating asset.
+        Your website is ready to go, Wayne. The foundation is built. The next step is yours.
       </p>
     </div>
   </section>
