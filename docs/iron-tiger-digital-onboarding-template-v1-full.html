@@ -1,0 +1,1662 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Onboarding Guide — [CLIENT_BUSINESS_NAME] | Iron Tiger Digital</title>
+
+<!-- Open Graph / Facebook -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="[DEMO_URL]">
+<meta property="og:title" content="Onboarding Guide — [CLIENT_BUSINESS_NAME]">
+<meta property="og:description" content="Your complete onboarding roadmap with growth strategy, benchmarks, and timeline. See what's included in your digital marketing partnership.">
+<meta property="og:image" content="[OG_IMAGE_URL]">
+
+<!-- Twitter -->
+<meta property="twitter:card" content="summary_large_image">
+<meta property="twitter:url" content="[DEMO_URL]">
+<meta property="twitter:title" content="Onboarding Guide — [CLIENT_BUSINESS_NAME]">
+<meta property="twitter:description" content="Your complete onboarding roadmap with growth strategy, benchmarks, and timeline. See what's included in your digital marketing partnership.">
+<meta property="twitter:image" content="[OG_IMAGE_URL]">
+<style>
+  /* ===== RESET & BASE ===== */
+  *, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  html {
+    font-size: 16px;
+    -webkit-text-size-adjust: 100%;
+  }
+
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    background-color: #F5F1EB;
+    color: #2c2c2c;
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  /* ===== CONFIDENTIAL BAR ===== */
+  .confidential-bar {
+    background-color: #1a2332;
+    color: #ffffff;
+    text-align: center;
+    padding: 10px 20px;
+    font-size: 0.75rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    font-weight: 600;
+    position: relative;
+    z-index: 100;
+  }
+
+  .confidential-bar span {
+    opacity: 0.85;
+  }
+
+  /* ===== DOCUMENT HEADER ===== */
+  .doc-header {
+    background: linear-gradient(135deg, #1a2332 0%, #2a3f5f 50%, #1a2332 100%);
+    color: #ffffff;
+    padding: 60px 20px 50px;
+    text-align: center;
+  }
+
+  .doc-header-inner {
+    max-width: 900px;
+    margin: 0 auto;
+  }
+
+  .doc-label {
+    display: inline-block;
+    background-color: rgba(255, 107, 53, 0.15);
+    border: 1px solid rgba(255, 107, 53, 0.4);
+    color: #ff8c61;
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    padding: 5px 16px;
+    border-radius: 20px;
+    margin-bottom: 20px;
+  }
+
+  .doc-header h1 {
+    font-size: 2.2rem;
+    font-weight: 800;
+    line-height: 1.2;
+    margin-bottom: 8px;
+    letter-spacing: -0.02em;
+  }
+
+  .doc-header h1 span {
+    color: #ff8c61;
+  }
+
+  .doc-header .subtitle {
+    font-size: 1.1rem;
+    opacity: 0.75;
+    font-weight: 400;
+    margin-bottom: 24px;
+  }
+
+  .client-meta {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 24px;
+    margin-top: 28px;
+    padding-top: 24px;
+    border-top: 1px solid rgba(255,255,255,0.1);
+  }
+
+  .client-meta-item {
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    opacity: 0.7;
+  }
+
+  .client-meta-item strong {
+    display: block;
+    font-size: 0.95rem;
+    opacity: 1;
+    color: #ffffff;
+    text-transform: none;
+    letter-spacing: 0;
+    margin-top: 2px;
+  }
+
+  /* ===== MAIN CONTAINER ===== */
+  .container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 30px 20px 60px;
+  }
+
+  /* ===== SECTION CARDS ===== */
+  .section-card {
+    background: #ffffff;
+    border-radius: 10px;
+    padding: 44px 40px;
+    margin-bottom: 28px;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.06), 0 4px 16px rgba(0,0,0,0.04);
+    border: 1px solid rgba(0,0,0,0.04);
+  }
+
+  .section-badge {
+    display: inline-block;
+    background-color: #ff6b35;
+    color: #ffffff;
+    font-size: 0.6rem;
+    font-weight: 800;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    padding: 4px 12px;
+    border-radius: 4px;
+    margin-bottom: 16px;
+  }
+
+  .section-card h2 {
+    font-size: 1.65rem;
+    font-weight: 800;
+    color: #1a2332;
+    margin-bottom: 6px;
+    line-height: 1.25;
+    letter-spacing: -0.01em;
+  }
+
+  .section-card h2 span {
+    color: #ff6b35;
+  }
+
+  .section-divider {
+    width: 50px;
+    height: 3px;
+    background-color: #ff6b35;
+    border: none;
+    border-radius: 2px;
+    margin: 16px 0 24px;
+  }
+
+  .section-card h3 {
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: #1a2332;
+    margin: 28px 0 12px;
+    line-height: 1.3;
+  }
+
+  .section-card p {
+    font-size: 0.95rem;
+    color: #444;
+    margin-bottom: 16px;
+    line-height: 1.75;
+  }
+
+  /* ===== TRUST BAR ===== */
+  .trust-bar {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+    margin: 28px 0;
+  }
+
+  .trust-item {
+    background: #f8f9fa;
+    border: 1px solid #e9ecef;
+    border-radius: 8px;
+    padding: 18px 14px;
+    text-align: center;
+    transition: border-color 0.2s;
+  }
+
+  .trust-item:hover {
+    border-color: #ff6b35;
+  }
+
+  .trust-item .trust-icon {
+    font-size: 1.3rem;
+    color: #ff6b35;
+    margin-bottom: 6px;
+  }
+
+  .trust-item .trust-stat {
+    font-size: 0.82rem;
+    font-weight: 700;
+    color: #1a2332;
+    line-height: 1.3;
+  }
+
+  .trust-item .trust-label {
+    font-size: 0.7rem;
+    color: #888;
+    margin-top: 2px;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+
+  /* ===== CALLOUT BOX ===== */
+  .callout {
+    background: linear-gradient(135deg, #fff5f0 0%, #ffe8dc 100%);
+    border-left: 4px solid #ff6b35;
+    border-radius: 0 8px 8px 0;
+    padding: 24px 28px;
+    margin: 24px 0;
+  }
+
+  .callout h4 {
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: #1a2332;
+    margin-bottom: 8px;
+  }
+
+  .callout p {
+    font-size: 0.9rem;
+    color: #555;
+    margin-bottom: 0;
+    line-height: 1.7;
+  }
+
+  .callout-navy {
+    background: linear-gradient(135deg, #f0f1f5 0%, #ecedf2 100%);
+    border-left-color: #1a2332;
+  }
+
+  /* ===== DISCLAIMER BOX ===== */
+  .disclaimer-box {
+    background: #f8f9fa;
+    border: 1px solid #dee2e6;
+    border-radius: 8px;
+    padding: 20px 24px;
+    margin: 24px 0;
+  }
+
+  .disclaimer-box p {
+    font-size: 0.82rem;
+    color: #666;
+    margin-bottom: 0;
+    font-style: italic;
+    line-height: 1.65;
+  }
+
+  /* ===== TABLES ===== */
+  .table-wrapper {
+    overflow-x: auto;
+    margin: 20px 0;
+    border-radius: 8px;
+    border: 1px solid #e9ecef;
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.88rem;
+  }
+
+  thead th {
+    background-color: #1a2332;
+    color: #ffffff;
+    font-size: 0.72rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    padding: 14px 18px;
+    text-align: left;
+    white-space: nowrap;
+  }
+
+  thead th:first-child {
+    border-radius: 7px 0 0 0;
+  }
+
+  thead th:last-child {
+    border-radius: 0 7px 0 0;
+  }
+
+  tbody td {
+    padding: 13px 18px;
+    border-bottom: 1px solid #F5F1EB;
+    color: #444;
+    vertical-align: top;
+  }
+
+  tbody tr:last-child td {
+    border-bottom: none;
+  }
+
+  tbody tr:nth-child(even) {
+    background-color: #FBF9F6;
+  }
+
+  tbody tr:hover {
+    background-color: #fff5f0;
+  }
+
+  td.before-col {
+    color: #999;
+  }
+
+  td.after-col {
+    color: #1a2332;
+    font-weight: 600;
+  }
+
+  /* ===== HIGHLIGHT BOX ===== */
+  .highlight-box {
+    background: #ffffff;
+    border: 2px solid #ff6b35;
+    border-radius: 10px;
+    padding: 28px 30px;
+    margin: 28px 0;
+  }
+
+  .highlight-box h4 {
+    font-size: 1rem;
+    font-weight: 700;
+    color: #ff6b35;
+    margin-bottom: 16px;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+  }
+
+  .highlight-box ol {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .highlight-box ol li {
+    padding: 12px 0;
+    border-bottom: 1px solid #F5F1EB;
+    font-size: 0.9rem;
+    color: #444;
+    line-height: 1.65;
+  }
+
+  .highlight-box ol li:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+  }
+
+  .highlight-box ol li strong {
+    color: #1a2332;
+  }
+
+  .opportunity-number {
+    display: inline-block;
+    background-color: #ff6b35;
+    color: #ffffff;
+    width: 22px;
+    height: 22px;
+    line-height: 22px;
+    text-align: center;
+    border-radius: 50%;
+    font-size: 0.7rem;
+    font-weight: 700;
+    margin-right: 10px;
+    flex-shrink: 0;
+    vertical-align: middle;
+  }
+
+  /* ===== PHASE CARDS ===== */
+  .phase-card {
+    background: #f8f9fa;
+    border-radius: 10px;
+    padding: 28px 30px;
+    margin: 20px 0;
+    border: 1px solid #e9ecef;
+    position: relative;
+  }
+
+  .phase-card::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 4px;
+    background-color: #ff6b35;
+    border-radius: 10px 0 0 10px;
+  }
+
+  .phase-number {
+    display: inline-block;
+    background-color: #ff6b35;
+    color: #ffffff;
+    font-size: 0.6rem;
+    font-weight: 800;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    padding: 3px 10px;
+    border-radius: 4px;
+    margin-bottom: 8px;
+  }
+
+  .phase-card h4 {
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: #1a2332;
+    margin-bottom: 4px;
+  }
+
+  .phase-timeline {
+    font-size: 0.78rem;
+    color: #ff6b35;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: 14px;
+  }
+
+  .phase-card ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .phase-card ul li {
+    padding: 6px 0;
+    font-size: 0.88rem;
+    color: #555;
+    line-height: 1.55;
+    padding-left: 20px;
+    position: relative;
+  }
+
+  .phase-card ul li::before {
+    content: '▸';
+    color: #ff6b35;
+    position: absolute;
+    left: 0;
+    font-size: 0.85rem;
+  }
+
+  .phase-card .optional-tag {
+    display: inline-block;
+    background-color: rgba(255, 107, 53, 0.12);
+    color: #ff6b35;
+    font-size: 0.65rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    padding: 2px 8px;
+    border-radius: 3px;
+    margin-left: 6px;
+    vertical-align: middle;
+  }
+
+  /* ===== NUMBERED METRICS LIST ===== */
+  .metrics-list {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
+  }
+
+  .metrics-list li {
+    display: flex;
+    align-items: flex-start;
+    padding: 14px 0;
+    border-bottom: 1px solid #F5F1EB;
+    font-size: 0.9rem;
+    color: #444;
+    line-height: 1.6;
+  }
+
+  .metrics-list li:last-child {
+    border-bottom: none;
+  }
+
+  .metric-num {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 30px;
+    height: 30px;
+    background-color: #1a2332;
+    color: #ffffff;
+    font-size: 0.75rem;
+    font-weight: 700;
+    border-radius: 50%;
+    margin-right: 16px;
+    flex-shrink: 0;
+    margin-top: 2px;
+  }
+
+  .metric-content strong {
+    color: #1a2332;
+    display: block;
+    margin-bottom: 2px;
+  }
+
+  .metric-content span {
+    color: #777;
+    font-size: 0.84rem;
+  }
+
+  /* ===== SAMPLE REPORT MOCKUP ===== */
+  .report-mockup {
+    background: linear-gradient(135deg, #1a2332 0%, #2a3f5f 100%);
+    border-radius: 10px;
+    padding: 30px 32px;
+    margin: 24px 0;
+    color: #ffffff;
+  }
+
+  .report-mockup h4 {
+    font-size: 0.95rem;
+    font-weight: 700;
+    margin-bottom: 4px;
+    color: #ffffff;
+  }
+
+  .report-mockup .report-date {
+    font-size: 0.75rem;
+    color: #ff8c61;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    font-weight: 600;
+    margin-bottom: 20px;
+  }
+
+  .report-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 14px;
+    margin-bottom: 18px;
+  }
+
+  .report-metric-box {
+    background: rgba(255,255,255,0.08);
+    border-radius: 8px;
+    padding: 14px;
+    text-align: center;
+    border: 1px solid rgba(255,255,255,0.06);
+  }
+
+  .report-metric-box .report-val {
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: #ff8c61;
+    margin-bottom: 3px;
+  }
+
+  .report-metric-box .report-label {
+    font-size: 0.68rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: rgba(255,255,255,0.55);
+  }
+
+  .report-bottom {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+    margin-top: 14px;
+  }
+
+  .report-bottom-item {
+    background: rgba(255,255,255,0.05);
+    border-radius: 6px;
+    padding: 12px 14px;
+    border: 1px solid rgba(255,255,255,0.06);
+  }
+
+  .report-bottom-item .rbi-label {
+    font-size: 0.65rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: rgba(255,255,255,0.45);
+    margin-bottom: 4px;
+  }
+
+  .report-bottom-item .rbi-value {
+    font-size: 0.82rem;
+    color: rgba(255,255,255,0.85);
+    line-height: 1.45;
+  }
+
+  /* ===== COMMUNICATION CADENCE ===== */
+  .cadence-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 14px;
+    margin: 20px 0;
+  }
+
+  .cadence-item {
+    background: #f8f9fa;
+    border-radius: 8px;
+    padding: 18px 20px;
+    border: 1px solid #e9ecef;
+  }
+
+  .cadence-item .cadence-freq {
+    font-size: 0.65rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: #ff6b35;
+    margin-bottom: 6px;
+  }
+
+  .cadence-item .cadence-desc {
+    font-size: 0.85rem;
+    color: #555;
+    line-height: 1.55;
+  }
+
+  /* ===== GROWTH TIMELINE ===== */
+  .growth-timeline {
+    position: relative;
+    padding-left: 40px;
+    margin: 28px 0;
+  }
+
+  .growth-timeline::before {
+    content: '';
+    position: absolute;
+    left: 14px;
+    top: 8px;
+    bottom: 8px;
+    width: 2px;
+    background: linear-gradient(to bottom, #ff6b35, #1a2332);
+    border-radius: 2px;
+  }
+
+  .timeline-item {
+    position: relative;
+    padding: 12px 0 28px;
+  }
+
+  .timeline-item:last-child {
+    padding-bottom: 0;
+  }
+
+  .timeline-item::before {
+    content: '';
+    position: absolute;
+    left: -31px;
+    top: 18px;
+    width: 12px;
+    height: 12px;
+    background-color: #ff6b35;
+    border-radius: 50%;
+    border: 3px solid #ffffff;
+    box-shadow: 0 0 0 2px #ff6b35;
+    z-index: 1;
+  }
+
+  .timeline-item:last-child::before {
+    background-color: #1a2332;
+    box-shadow: 0 0 0 2px #1a2332;
+  }
+
+  .timeline-period {
+    font-size: 0.72rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: #ff6b35;
+    margin-bottom: 4px;
+  }
+
+  .timeline-item:last-child .timeline-period {
+    color: #1a2332;
+  }
+
+  .timeline-desc {
+    font-size: 0.9rem;
+    color: #555;
+    line-height: 1.55;
+  }
+
+  /* ===== PRICING CARDS ===== */
+  .pricing-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+    margin: 24px 0;
+  }
+
+  .pricing-card {
+    background: #f8f9fa;
+    border-radius: 10px;
+    padding: 24px 20px;
+    text-align: center;
+    border: 2px solid #e9ecef;
+    transition: border-color 0.2s;
+  }
+
+  .pricing-card:hover {
+    border-color: #ff6b35;
+  }
+
+  .pricing-card.featured {
+    border-color: #ff6b35;
+    background: linear-gradient(135deg, #fff5f0 0%, #ffe8dc 100%);
+  }
+
+  .pricing-card .price-label {
+    font-size: 0.68rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: #888;
+    margin-bottom: 10px;
+  }
+
+  .pricing-card .price-amount {
+    font-size: 2rem;
+    font-weight: 800;
+    color: #1a2332;
+    line-height: 1;
+    margin-bottom: 4px;
+  }
+
+  .pricing-card .price-period {
+    font-size: 0.78rem;
+    color: #999;
+    margin-bottom: 12px;
+  }
+
+  .pricing-card .price-desc {
+    font-size: 0.82rem;
+    color: #666;
+    line-height: 1.5;
+  }
+
+  .pricing-card .optional-badge {
+    display: inline-block;
+    background-color: rgba(255, 107, 53, 0.12);
+    color: #ff6b35;
+    font-size: 0.6rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    padding: 3px 8px;
+    border-radius: 3px;
+    margin-bottom: 10px;
+  }
+
+  /* ===== ONBOARDING STEPS ===== */
+  .steps-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+    margin: 24px 0;
+  }
+
+  .step-card {
+    background: #f8f9fa;
+    border-radius: 10px;
+    padding: 24px 20px;
+    text-align: center;
+    border: 1px solid #e9ecef;
+    position: relative;
+  }
+
+  .step-num {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    background-color: #ff6b35;
+    color: #ffffff;
+    font-size: 0.9rem;
+    font-weight: 800;
+    border-radius: 50%;
+    margin-bottom: 14px;
+  }
+
+  .step-card h4 {
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: #1a2332;
+    margin-bottom: 8px;
+  }
+
+  .step-card p {
+    font-size: 0.82rem;
+    color: #666;
+    line-height: 1.55;
+    margin-bottom: 0;
+  }
+
+  /* ===== NO-CONTRACT CALLOUT ===== */
+  .no-contract {
+    background: linear-gradient(135deg, #1a2332 0%, #2a3f5f 100%);
+    border-radius: 10px;
+    padding: 28px 32px;
+    margin: 24px 0;
+    text-align: center;
+  }
+
+  .no-contract p {
+    color: rgba(255,255,255,0.88);
+    font-size: 0.95rem;
+    line-height: 1.7;
+    margin-bottom: 0;
+    max-width: 650px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .no-contract .nc-headline {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #ff8c61;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+  }
+
+  /* ===== CONTACT BLOCK ===== */
+  .contact-block {
+    background: #f8f9fa;
+    border: 2px solid #ff6b35;
+    border-radius: 10px;
+    padding: 28px 32px;
+    margin: 24px 0;
+    text-align: center;
+  }
+
+  .contact-block h4 {
+    font-size: 1rem;
+    font-weight: 700;
+    color: #1a2332;
+    margin-bottom: 12px;
+  }
+
+  .contact-details {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 24px;
+    font-size: 0.88rem;
+    color: #555;
+  }
+
+  .contact-details a {
+    color: #ff6b35;
+    text-decoration: none;
+    font-weight: 600;
+  }
+
+  .contact-details a:hover {
+    text-decoration: underline;
+  }
+
+  /* ===== FOOTER ===== */
+  .doc-footer {
+    background-color: #1a2332;
+    color: rgba(255,255,255,0.5);
+    text-align: center;
+    padding: 32px 20px;
+    font-size: 0.75rem;
+    line-height: 1.7;
+  }
+
+  .doc-footer .footer-brand {
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: #ff8c61;
+    margin-bottom: 6px;
+    letter-spacing: 0.04em;
+  }
+
+  .doc-footer .footer-contact {
+    margin-bottom: 10px;
+  }
+
+  .doc-footer a {
+    color: rgba(255,255,255,0.6);
+    text-decoration: none;
+  }
+
+  .doc-footer a:hover {
+    color: #ff8c61;
+  }
+
+  .doc-footer .footer-copy {
+    margin-top: 12px;
+    padding-top: 12px;
+    border-top: 1px solid rgba(255,255,255,0.08);
+    font-size: 0.7rem;
+  }
+
+  /* ===== RESPONSIVE ===== */
+  @media (max-width: 768px) {
+    .doc-header {
+      padding: 40px 16px 36px;
+    }
+
+    .doc-header h1 {
+      font-size: 1.6rem;
+    }
+
+    .section-card {
+      padding: 28px 22px;
+    }
+
+    .trust-bar {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    .report-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    .report-bottom {
+      grid-template-columns: 1fr;
+    }
+
+    .cadence-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .pricing-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .steps-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .client-meta {
+      gap: 16px;
+    }
+
+    .table-wrapper {
+      font-size: 0.82rem;
+    }
+
+    thead th, tbody td {
+      padding: 10px 12px;
+    }
+
+    .contact-details {
+      flex-direction: column;
+      gap: 8px;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .trust-bar {
+      grid-template-columns: 1fr;
+    }
+
+    .doc-header h1 {
+      font-size: 1.35rem;
+    }
+
+    .section-card h2 {
+      font-size: 1.3rem;
+    }
+  }
+
+  /* ===== PRINT STYLES ===== */
+  @media print {
+    body {
+      background: #ffffff;
+      color: #000000;
+      font-size: 11pt;
+      line-height: 1.5;
+    }
+
+    .confidential-bar {
+      background: #000000 !important;
+      color: #ffffff !important;
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+    }
+
+    .doc-header {
+      background: #1a2332 !important;
+      color: #ffffff !important;
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+      padding: 30px 20px;
+    }
+
+    .container {
+      padding: 10px 0;
+    }
+
+    .section-card {
+      box-shadow: none;
+      border: 1px solid #ddd;
+      page-break-inside: avoid;
+      padding: 24px 20px;
+      margin-bottom: 16px;
+    }
+
+    .phase-card {
+      page-break-inside: avoid;
+    }
+
+    .section-badge {
+      background: #ff6b35 !important;
+      color: #ffffff !important;
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+    }
+
+    .phase-number {
+      background: #ff6b35 !important;
+      color: #ffffff !important;
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+    }
+
+    thead th {
+      background: #1a2332 !important;
+      color: #ffffff !important;
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+    }
+
+    .report-mockup {
+      background: #1a2332 !important;
+      color: #ffffff !important;
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+    }
+
+    .no-contract {
+      background: #1a2332 !important;
+      color: #ffffff !important;
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+    }
+
+    .metric-num {
+      background: #1a2332 !important;
+      color: #ffffff !important;
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+    }
+
+    .step-num {
+      background: #ff6b35 !important;
+      color: #ffffff !important;
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+    }
+
+    .opportunity-number {
+      background: #ff6b35 !important;
+      color: #ffffff !important;
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+    }
+
+    .doc-footer {
+      background: #1a2332 !important;
+      color: rgba(255,255,255,0.5) !important;
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+    }
+
+    a {
+      color: #ff6b35 !important;
+      text-decoration: none !important;
+    }
+  }
+</style>
+</head>
+<body>
+
+<!-- CONFIDENTIAL BAR -->
+<div class="confidential-bar">
+  <span>&#9632; Confidential — Prepared Exclusively for [CLIENT_CONTACT_NAME] &#9632;</span>
+</div>
+
+<!-- DOCUMENT HEADER -->
+<header class="doc-header">
+  <div class="doc-header-inner">
+    <div class="doc-label">Document 2 of 2 &#9642; Onboarding Guide</div>
+    <h1>Your <span>Onboarding Guide</span></h1>
+    <p class="subtitle">[CLIENT_BUSINESS_NAME] &#8212; Growth Roadmap &amp; Partnership Overview</p>
+    <div class="client-meta">
+      <div class="client-meta-item">
+        Prepared For
+        <strong>[CLIENT_CONTACT_NAME]</strong>
+      </div>
+      <div class="client-meta-item">
+        Business
+        <strong>[CLIENT_BUSINESS_NAME]</strong>
+      </div>
+      <div class="client-meta-item">
+        Service Area
+        <strong>[SERVICE_AREA]</strong>
+      </div>
+      <div class="client-meta-item">
+        Date
+        <strong>[DOCUMENT_DATE]</strong>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- MAIN CONTENT -->
+<main class="container">
+
+  <!-- ============================== -->
+  <!-- SECTION 01: WELCOME -->
+  <!-- ============================== -->
+  <div class="section-card">
+    <div class="section-badge">Section 01</div>
+    <h2>Welcome &amp; Why We're a <span>Good Fit</span></h2>
+    <hr class="section-divider">
+
+    <p>[CLIENT_CONTACT_NAME], thank you for considering [AGENCY_NAME] as the team behind your online growth. [AGENCY_NAME] is a small digital marketing team based in [AGENCY_LOCATION], and we work exclusively with service-based businesses like [CLIENT_BUSINESS_NAME]. Our model is simple: take on fewer clients, deliver better results, and build real partnerships &#8212; not transactional vendor relationships.</p>
+
+    <p>We have already built a comprehensive [TOTAL_PAGES]+ page website for [CLIENT_BUSINESS_NAME], complete with [LOCATION_PAGES] location-specific pages across [SERVICE_AREA], [BLOG_ARTICLES] blog articles, and strategic lead capture systems. This onboarding guide lays out exactly what happens next &#8212; from launch day through long-term growth.</p>
+
+    <!-- Trust Bar -->
+    <div class="trust-bar">
+      <div class="trust-item">
+        <div class="trust-icon">&#9670;</div>
+        <div class="trust-stat">[ACTIVE_CLIENTS_COUNT]+ Active Clients</div>
+        <div class="trust-label">At Any Time</div>
+      </div>
+      <div class="trust-item">
+        <div class="trust-icon">&#9670;</div>
+        <div class="trust-stat">Direct Access</div>
+        <div class="trust-label">No Middlemen</div>
+      </div>
+      <div class="trust-item">
+        <div class="trust-icon">&#9670;</div>
+        <div class="trust-stat">$0 Long-Term</div>
+        <div class="trust-label">Contracts</div>
+      </div>
+      <div class="trust-item">
+        <div class="trust-icon">&#9670;</div>
+        <div class="trust-stat">Cancel Anytime</div>
+        <div class="trust-label">No Penalties</div>
+      </div>
+    </div>
+
+    <!-- Why a Small Roster Matters -->
+    <div class="callout">
+      <h4>&#9654; Why a Small Roster Matters</h4>
+      <p>Large agencies juggle 50+ accounts across multiple account managers. [AGENCY_NAME] keeps its client roster intentionally small &#8212; currently working with [ACTIVE_CLIENTS_COUNT]+ businesses. That means you get direct attention, faster responses, and someone who actually knows your business. You're not a ticket number passed between departments &#8212; you're working directly with our team.</p>
+    </div>
+
+    <h3>Partnership Timeline Overview</h3>
+    <p>Here's what the next 6 months look like &#8212; and what you can expect at every stage. This guide covers the full roadmap, from launch foundations and visibility building to consistent lead generation and long-term growth. Each phase builds on the last, and you will receive transparent reporting at every milestone.</p>
+  </div>
+
+  <!-- ============================== -->
+  <!-- SECTION 02: BEFORE VS. WITH US -->
+  <!-- ============================== -->
+  <div class="section-card">
+    <div class="section-badge">Section 02</div>
+    <h2>Your Digital Presence &#8212; <span>Before Us</span> vs. <span>With Us</span></h2>
+    <hr class="section-divider">
+
+    <p>The table below is a straightforward gap analysis. It shows where [CLIENT_BUSINESS_NAME] stands today without a digital marketing strategy compared to what is now in place (or will be activated) with Iron Tiger Digital managing your online presence.</p>
+
+    <!-- Gap Analysis Table -->
+    <div class="table-wrapper">
+      <table>
+        <thead>
+          <tr>
+            <th>Category</th>
+            <th>Before</th>
+            <th>With Iron Tiger</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Website</strong></td>
+            <td class="before-col">No professional website</td>
+            <td class="after-col">[TOTAL_PAGES]+ page SEO-optimized site</td>
+          </tr>
+          <tr>
+            <td><strong>Google Business Profile</strong></td>
+            <td class="before-col">Not optimized or unclaimed</td>
+            <td class="after-col">Fully optimized, connected to site</td>
+          </tr>
+          <tr>
+            <td><strong>Online Reviews</strong></td>
+            <td class="before-col">No review strategy</td>
+            <td class="after-col">Review generation system active</td>
+          </tr>
+          <tr>
+            <td><strong>Google Analytics</strong></td>
+            <td class="before-col">No visitor tracking</td>
+            <td class="after-col">GA4 tracking all traffic &amp; conversions</td>
+          </tr>
+          <tr>
+            <td><strong>Local SEO</strong></td>
+            <td class="before-col">Not ranking for local searches</td>
+            <td class="after-col">[LOCATION_PAGES] location pages targeting [CITY_EXAMPLES]</td>
+          </tr>
+          <tr>
+            <td><strong>Content Marketing</strong></td>
+            <td class="before-col">No blog or content</td>
+            <td class="after-col">[BLOG_ARTICLES] articles driving organic traffic</td>
+          </tr>
+          <tr>
+            <td><strong>Lead Capture</strong></td>
+            <td class="before-col">Relying on word-of-mouth only</td>
+            <td class="after-col">24/7 automated lead generation</td>
+          </tr>
+          <tr>
+            <td><strong>Service Visibility</strong></td>
+            <td class="before-col">Services not listed online</td>
+            <td class="after-col">[SERVICE_PAGES] detailed service pages with pricing</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Biggest Opportunities -->
+    <div class="highlight-box">
+      <h4>&#9650; Biggest Opportunities</h4>
+      <ol>
+        <li>
+          <span class="opportunity-number">1</span>
+          <strong>Organic Search = 53% of All Traffic, You're Getting 0%</strong> &#8212; You're completely invisible in all of web traffic from organic search. Every "[PRIMARY_SERVICE_1] [CITY_EXAMPLES]" or "[PRIMARY_SERVICE_2]" search goes to competitors while you rely solely on word-of-mouth and referrals that don't scale.
+        </li>
+        <li>
+          <span class="opportunity-number">2</span>
+          <strong>Local 3-Pack = 44% of Clicks, You Can't Compete</strong> &#8212; The Google Local 3-Pack (map results at top) captures nearly half of all local search clicks. You're locked out of these spots&#8212;the most valuable real estate goes to competitors with inferior service but better SEO.
+        </li>
+        <li>
+          <span class="opportunity-number">3</span>
+          <strong>No 24/7 Lead Capture for Emergencies</strong> &#8212; Homeowners searching at 2 AM after [EMERGENCY_SCENARIO] can't submit emergency requests&#8212;you have no online contact forms. Competitors collect high-margin emergency leads through instant quote forms while you're unreachable online, even if your phone is on.
+        </li>
+        <li>
+          <span class="opportunity-number">4</span>
+          <strong>78% of Customers Research Online Before Calling</strong> &#8212; You're filtered out before the phone rings&#8212;even when you're the best option. Without a website to validate your business, showcase your work, and establish credibility, you can't make it into the consideration set.
+        </li>
+      </ol>
+    </div>
+  </div>
+
+  <!-- ============================== -->
+  <!-- SECTION 03: GROWTH STRATEGY -->
+  <!-- ============================== -->
+  <div class="section-card">
+    <div class="section-badge">Section 03</div>
+    <h2>Our <span>Growth Strategy</span></h2>
+    <hr class="section-divider">
+
+    <p>Growth does not happen overnight &#8212; it happens in phases. Below is the detailed 4-phase roadmap we will execute for [CLIENT_BUSINESS_NAME]. Each phase builds on the previous one, establishing a foundation first and then scaling what works.</p>
+
+    <!-- Phase 1 -->
+    <div class="phase-card">
+      <div class="phase-number">Phase 1</div>
+      <h4>Launch &amp; Foundation</h4>
+      <div class="phase-timeline">Weeks 1&#8211;2</div>
+      <ul>
+        <li>Deploy site to custom domain</li>
+        <li>Install Google Analytics 4 &amp; configure conversion tracking</li>
+        <li>Set up Google Search Console &amp; submit sitemap</li>
+        <li>Optimize Google Business Profile (hours, photos, categories, description)</li>
+        <li>Configure business email</li>
+        <li>Verify all [LOCATION_PAGES] location pages are indexed</li>
+        <li>Test all forms and lead notifications</li>
+        <li>Set up call tracking (if applicable)</li>
+      </ul>
+    </div>
+
+    <!-- Phase 2 -->
+    <div class="phase-card">
+      <div class="phase-number">Phase 2</div>
+      <h4>Visibility</h4>
+      <div class="phase-timeline">Weeks 3&#8211;6</div>
+      <ul>
+        <li>Begin monthly SEO optimization cycle</li>
+        <li>Submit to local business directories (Yelp, Angi, HomeAdvisor, BBB, Thumbtack)</li>
+        <li>Implement review generation strategy (post-service email/text sequence)</li>
+        <li>Optimize existing blog content for target keywords</li>
+        <li>Build local citations (NAP consistency across 20+ directories)</li>
+        <li>Monitor and respond to first Google Search Console data</li>
+        <li>Begin link-building outreach to local partners</li>
+      </ul>
+    </div>
+
+    <!-- Phase 3 -->
+    <div class="phase-card">
+      <div class="phase-number">Phase 3</div>
+      <h4>Traction</h4>
+      <div class="phase-timeline">Months 2&#8211;3</div>
+      <ul>
+        <li>Analyze first full month of traffic data</li>
+        <li>Identify top-performing pages and double down</li>
+        <li>Publish 2&#8211;4 new blog articles targeting high-value keywords</li>
+        <li>Expand location page content based on search data</li>
+        <li>A/B test form placements and CTAs</li>
+        <li>Social Media Management <span class="optional-tag">Optional +[SOCIAL_MEDIA_ADDON]/mo</span> &#8212; platform setup, content calendar, 3&#8211;4 posts/week, community engagement, before/after project showcases</li>
+        <li>First monthly performance report delivered</li>
+      </ul>
+    </div>
+
+    <!-- Phase 4 -->
+    <div class="phase-card">
+      <div class="phase-number">Phase 4</div>
+      <h4>Growth &amp; Expansion</h4>
+      <div class="phase-timeline">Months 4+</div>
+      <ul>
+        <li>Scale what's working based on data</li>
+        <li>Target new keyword opportunities identified through analytics</li>
+        <li>Seasonal content campaigns ([SEASONAL_CAMPAIGNS])</li>
+        <li>Quarterly strategy review and goal adjustment</li>
+        <li>Explore paid advertising if organic traction supports it</li>
+        <li>Consider Spanish-language content expansion based on market demand</li>
+        <li>Ongoing technical maintenance and site updates</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- ============================== -->
+  <!-- SECTION 04: MONTHLY DELIVERABLES -->
+  <!-- ============================== -->
+  <div class="section-card">
+    <div class="section-badge">Section 04</div>
+    <h2>What You'll Receive <span>Each Month</span></h2>
+    <hr class="section-divider">
+
+    <p>Transparency is non-negotiable. Every month you will receive a comprehensive performance report covering 7 core metrics, along with a strategy call to review the data and plan next steps.</p>
+
+    <h3>7 Metrics We Track</h3>
+    <ol class="metrics-list">
+      <li>
+        <span class="metric-num">1</span>
+        <div class="metric-content">
+          <strong>&#9632; Website Traffic</strong>
+          <span>Total visitors, unique visitors, traffic sources</span>
+        </div>
+      </li>
+      <li>
+        <span class="metric-num">2</span>
+        <div class="metric-content">
+          <strong>&#9632; Search Rankings</strong>
+          <span>Position tracking for target keywords across [CITY_EXAMPLES]</span>
+        </div>
+      </li>
+      <li>
+        <span class="metric-num">3</span>
+        <div class="metric-content">
+          <strong>&#9632; Lead Generation</strong>
+          <span>Form submissions, phone calls, quote requests</span>
+        </div>
+      </li>
+      <li>
+        <span class="metric-num">4</span>
+        <div class="metric-content">
+          <strong>&#9632; Google Business Profile</strong>
+          <span>Views, clicks, direction requests, calls</span>
+        </div>
+      </li>
+      <li>
+        <span class="metric-num">5</span>
+        <div class="metric-content">
+          <strong>&#9632; Content Performance</strong>
+          <span>Blog traffic, time on page, top-performing articles</span>
+        </div>
+      </li>
+      <li>
+        <span class="metric-num">6</span>
+        <div class="metric-content">
+          <strong>&#9632; Local SEO</strong>
+          <span>Location page rankings, local 3-pack visibility</span>
+        </div>
+      </li>
+      <li>
+        <span class="metric-num">7</span>
+        <div class="metric-content">
+          <strong>&#9632; Technical Health</strong>
+          <span>Site speed, mobile performance, indexing status</span>
+        </div>
+      </li>
+    </ol>
+
+    <!-- Sample Report Mockup -->
+    <h3>Sample Monthly Report</h3>
+    <div class="report-mockup">
+      <h4>&#9670; Monthly Performance Report</h4>
+      <div class="report-date">[DOCUMENT_DATE]</div>
+      <div class="report-grid">
+        <div class="report-metric-box">
+          <div class="report-val">[tracked]</div>
+          <div class="report-label">Website Visits</div>
+        </div>
+        <div class="report-metric-box">
+          <div class="report-val">[tracked]</div>
+          <div class="report-label">Form Submissions</div>
+        </div>
+        <div class="report-metric-box">
+          <div class="report-val">[tracked]</div>
+          <div class="report-label">Top Keyword</div>
+        </div>
+        <div class="report-metric-box">
+          <div class="report-val">[tracked]</div>
+          <div class="report-label">GBP Views</div>
+        </div>
+        <div class="report-metric-box">
+          <div class="report-val">[tracked]</div>
+          <div class="report-label">New Reviews</div>
+        </div>
+        <div class="report-metric-box">
+          <div class="report-val">[tracked]</div>
+          <div class="report-label">Indexed Pages</div>
+        </div>
+      </div>
+      <div class="report-bottom">
+        <div class="report-bottom-item">
+          <div class="rbi-label">Key Wins</div>
+          <div class="rbi-value">[Summary of top achievements, new rankings, and conversions for the month]</div>
+        </div>
+        <div class="report-bottom-item">
+          <div class="rbi-label">Next Month Focus</div>
+          <div class="rbi-value">[Upcoming priorities, content plans, and optimization targets]</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Communication Cadence -->
+    <h3>Communication Cadence</h3>
+    <div class="cadence-grid">
+      <div class="cadence-item">
+        <div class="cadence-freq">&#9632; [MONTHLY_REPORTING_FREQUENCY]</div>
+        <div class="cadence-desc">Full performance report + [STRATEGY_CALL_DURATION]-minute strategy call</div>
+      </div>
+      <div class="cadence-item">
+        <div class="cadence-freq">&#9632; Bi-Weekly</div>
+        <div class="cadence-desc">Quick check-in via email or text</div>
+      </div>
+      <div class="cadence-item">
+        <div class="cadence-freq">&#9632; Quarterly</div>
+        <div class="cadence-desc">Deep-dive review with updated strategy and goals</div>
+      </div>
+      <div class="cadence-item">
+        <div class="cadence-freq">&#9632; Anytime</div>
+        <div class="cadence-desc">Direct access for urgent questions or requests</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============================== -->
+  <!-- SECTION 05: GROWTH GOALS -->
+  <!-- ============================== -->
+  <div class="section-card">
+    <div class="section-badge">Section 05</div>
+    <h2>Growth Goals &amp; <span>What to Expect</span></h2>
+    <hr class="section-divider">
+
+    <p>Digital marketing is a compounding investment. The work we do in Month 1 lays the groundwork for everything that follows. Below is a realistic growth trajectory based on what we see with service-based businesses in competitive local markets.</p>
+
+    <!-- Growth Timeline -->
+    <h3>Growth Trajectory</h3>
+    <div class="growth-timeline">
+      <div class="timeline-item">
+        <div class="timeline-period">Month 1</div>
+        <div class="timeline-desc">Foundation set, site live on custom domain, all tracking active. Google begins indexing your [TOTAL_PAGES]+ pages. Baseline data collection starts.</div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-period">Months 2&#8211;3</div>
+        <div class="timeline-desc">First organic traffic growth appears. Initial keyword rankings emerge across [CITY_EXAMPLES] location pages. Review generation system begins building social proof.</div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-period">Months 4&#8211;6</div>
+        <div class="timeline-desc">Consistent lead flow develops. Keyword visibility expands across multiple service and location combinations. Content strategy shows measurable ROI.</div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-period">Months 7&#8211;12</div>
+        <div class="timeline-desc">Strong local presence established. Predictable lead generation from organic search. [CLIENT_BUSINESS_NAME] becomes a recognized name in [SERVICE_AREA] [PRIMARY_SERVICE_1] and [PRIMARY_SERVICE_2] searches.</div>
+      </div>
+    </div>
+
+    <!-- Benchmark Table -->
+    <h3>Benchmark Comparisons</h3>
+    <div class="table-wrapper">
+      <table>
+        <thead>
+          <tr>
+            <th>Metric</th>
+            <th>Without Marketing</th>
+            <th>With Iron Tiger (Goal)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Monthly Website Visitors</strong></td>
+            <td class="before-col">0</td>
+            <td class="after-col">Work toward [TARGET_MONTHLY_VISITORS]+</td>
+          </tr>
+          <tr>
+            <td><strong>Monthly Lead Inquiries</strong></td>
+            <td class="before-col">1&#8211;2 (referrals only)</td>
+            <td class="after-col">Work toward [TARGET_MONTHLY_LEADS]</td>
+          </tr>
+          <tr>
+            <td><strong>Google Keywords Ranked</strong></td>
+            <td class="before-col">0</td>
+            <td class="after-col">Work toward [TARGET_KEYWORDS_RANKED]+</td>
+          </tr>
+          <tr>
+            <td><strong>Google Business Profile Views</strong></td>
+            <td class="before-col">0</td>
+            <td class="after-col">Work toward [TARGET_GBP_VIEWS]+/month</td>
+          </tr>
+          <tr>
+            <td><strong>Online Reviews</strong></td>
+            <td class="before-col">Sporadic</td>
+            <td class="after-col">Work toward [TARGET_REVIEWS_MONTHLY] new/month</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Forecast -->
+    <div class="callout">
+      <h4>&#9654; Estimated Forecast for [CLIENT_BUSINESS_NAME]</h4>
+      <p>The [SERVICE_AREA] region generates thousands of high-intent [PRIMARY_SERVICE_1] searches monthly&#8212;currently going to competitors. Once your site launches with [LOCATION_PAGES] location-optimized pages, [BLOG_ARTICLES] authority-building blog articles, and systematic review generation, you'll intercept searches that should be yours. When homeowners search "[PRIMARY_SERVICE_1] [CITY_EXAMPLES]" at 3 AM, they need help now. Your optimized site will be positioned to capture those calls before competitors do.</p>
+    </div>
+
+    <!-- Disclaimer -->
+    <div class="disclaimer-box">
+      <p>&#9632; The goals outlined above represent targets we will work toward together. They are not guarantees. Results vary based on market conditions, competition, seasonality, and client participation. Our commitment is to transparent reporting and continuous optimization.</p>
+    </div>
+  </div>
+
+  <!-- ============================== -->
+  <!-- SECTION 06: INVESTMENT & NEXT STEPS -->
+  <!-- ============================== -->
+  <div class="section-card">
+    <div class="section-badge">Section 06</div>
+    <h2>Investment &amp; <span>Next Steps</span></h2>
+    <hr class="section-divider">
+
+    <p>Our pricing is straightforward &#8212; no hidden fees, no surprise charges, and no long-term commitments. Below is the complete investment breakdown for [CLIENT_BUSINESS_NAME].</p>
+
+    <!-- Pricing -->
+    <div class="pricing-grid">
+      <div class="pricing-card">
+        <div class="price-label">Launch Package</div>
+        <div class="price-amount">[LAUNCH_FEE]</div>
+        <div class="price-period">One-Time</div>
+        <div class="price-desc">Site deployment, analytics setup, Google Business Profile optimization, full launch</div>
+      </div>
+      <div class="pricing-card featured">
+        <div class="price-label">Growth &amp; SEO</div>
+        <div class="price-amount">[MONTHLY_SEO_PRICE]</div>
+        <div class="price-period">Per Month</div>
+        <div class="price-desc">Active lead generation and tracking, monthly SEO, content optimization, reporting, strategy calls, ongoing growth</div>
+      </div>
+      <div class="pricing-card">
+        <div class="optional-badge">Optional Add-On</div>
+        <div class="price-label">Social Media</div>
+        <div class="price-amount">[SOCIAL_MEDIA_ADDON]</div>
+        <div class="price-period">Per Month</div>
+        <div class="price-desc">Platform management, content calendar, 3&#8211;4 posts/week, community engagement</div>
+      </div>
+    </div>
+
+    <!-- No Contract -->
+    <div class="no-contract">
+      <div class="nc-headline">&#9670; Our No-Contract Guarantee &#9670;</div>
+      <p>No long-term contracts. No hidden fees. No cancellation penalties. If we're not delivering value, you're free to walk away. We earn your business every month.</p>
+    </div>
+
+    <!-- 3-Step Onboarding -->
+    <h3>3-Step Onboarding Process</h3>
+    <div class="steps-grid">
+      <div class="step-card">
+        <div class="step-num">1</div>
+        <h4>Say "Let's Go"</h4>
+        <p>Reply to this guide or call us at [PHONE_NUMBER] to get started.</p>
+      </div>
+      <div class="step-card">
+        <div class="step-num">2</div>
+        <h4>[STRATEGY_CALL_DURATION]-Minute Kickoff Call</h4>
+        <p>We'll collect your business details, domain preferences, and launch priorities.</p>
+      </div>
+      <div class="step-card">
+        <div class="step-num">3</div>
+        <h4>Launch &amp; Go Live</h4>
+        <p>Your site goes live within [LAUNCH_TURNAROUND] of kickoff. Leads start flowing.</p>
+      </div>
+    </div>
+
+    <!-- Contact Block -->
+    <div class="contact-block">
+      <h4>Ready to Get Started?</h4>
+      <div class="contact-details">
+        <span>&#9632; <strong>[AGENCY_NAME]</strong></span>
+        <span>&#9742; <a href="tel:[PHONE_NUMBER]">[PHONE_NUMBER]</a></span>
+        <span>&#9993; <a href="mailto:[EMAIL_ADDRESS]">[EMAIL_ADDRESS]</a></span>
+        <span>&#9670; <a href="[COMPANY_WEBSITE]" target="_blank" rel="noopener">[COMPANY_WEBSITE]</a></span>
+      </div>
+    </div>
+  </div>
+
+</main>
+
+<!-- FOOTER -->
+<footer class="doc-footer">
+  <div class="footer-brand">[AGENCY_NAME]</div>
+  <div class="footer-contact">
+    Digital Marketing Agency &#9642; [AGENCY_LOCATION]<br>
+    <a href="tel:[PHONE_NUMBER]">[PHONE_NUMBER]</a> &#9642;
+    <a href="mailto:[EMAIL_ADDRESS]">[EMAIL_ADDRESS]</a> &#9642;
+    <a href="[COMPANY_WEBSITE]" target="_blank" rel="noopener">[COMPANY_WEBSITE]</a>
+  </div>
+  <div class="footer-copy">
+    &copy; 2026 [AGENCY_NAME]. All rights reserved. This document is confidential and intended solely for the use of [CLIENT_CONTACT_NAME] and [CLIENT_BUSINESS_NAME].
+  </div>
+</footer>
+
+</body>
+</html>
