@@ -9,3 +9,26 @@ awesome-ui/
 awesome-ui-libraries/
 claude-skill-zips/
 Claude-Skills-Library/
+
+# Business strategy & sensitive docs
+**/discovery-call-notes*
+**/growth-plan*
+**/GAME-PLAN*
+**/COMPETITOR-ANALYSIS*
+**/PROJECT-STATUS*
+**/PROJECT-LOG*
+**/keyword-strategy*
+**/onboarding-guide*
+CLAUDE.md
+
+# Dev tooling
+skills/
+skills_extracted*/
+Claude-Skills-Library/
+
+# System files
+.DS_Store
+desktop.ini
+*.zip
+tmp/
+temp_*/
